@@ -1,0 +1,288 @@
+@import url('../w2ui/w2ui-1.5.rc1.min.css');
+@import url('../visjs/vis.min.css');
+@import url('../chartist/chartist.css');
+@import url('fa/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+ul.doclist {
+list-style-image: url('images/hero_icon.png');
+margin: 40px;
+}
+
+.w2ui-sidebar-div {
+	background-color: white;
+}
+.w2ui-sidebar .w2ui-sidebar-div .w2ui-level-0 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+	font-weight: 700;
+	color: #444444;
+	border-bottom: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+}
+.w2ui-sidebar .w2ui-sidebar-div .w2ui-node-group :nth-child(1) {
+	font-family: 'Raleway', sans-serif;
+	font-size: 15px;
+	font-weight: 200;
+}
+.w2ui-sidebar .w2ui-sidebar-div .w2ui-node .w2ui-node-caption,
+.w2ui-sidebar .w2ui-sidebar-div .w2ui-node .w2ui-node-image,
+.w2ui-sidebar .w2ui-sidebar-div .w2ui-node .w2ui-node-image > span,
+.w2ui-sidebar .w2ui-sidebar-div .w2ui-node td.w2ui-node-dots {
+
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: #444444;
+
+
+}
+.w2ui-sidebar .w2ui-sidebar-top {
+	background: #FFF;
+}
+
+.introbtn {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  width: 200px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #09e06a;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.introbtn:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #808080);
+  background-image: -moz-linear-gradient(top, #000000, #808080);
+  background-image: -ms-linear-gradient(top, #000000, #808080);
+  background-image: -o-linear-gradient(top, #000000, #808080);
+  background-image: linear-gradient(to bottom, #000000, #808080);
+  text-decoration: none;
+}
+
+.repbtn {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  width: 150px;
+  font-family: 'Monserrat', sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background: #09e06a;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.repbtn:hover {
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #808080);
+  background-image: -moz-linear-gradient(top, #000000, #808080);
+  background-image: -ms-linear-gradient(top, #000000, #808080);
+  background-image: -o-linear-gradient(top, #000000, #808080);
+  background-image: linear-gradient(to bottom, #000000, #808080);
+  text-decoration: none;
+}
+
+
+
+.w2ui-sidebar .w2ui-sidebar-div .w2ui-selected,
+.w2ui-sidebar .w2ui-sidebar-div .w2ui-selected:hover {
+  position: relative;
+  background-image: -webkit-linear-gradient(#c7c9ca, #9faeba);
+  background-image: -moz-linear-gradient(#c7c9ca, #9faeba);
+  background-image: -ms-linear-gradient(#c7c9ca, #9faeba);
+  background-image: -o-linear-gradient(#c7c9ca, #9faeba);
+  background-image: linear-gradient(#c7c9ca, #9faeba);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff69b1e0', endColorstr='#ff4a96d3', GradientType=0);
+  border-top: 1px solid #c7c9ca;
+  border-bottom: 1px solid #9faeba;
+}
+
+.w2ui-grid .w2ui-grid-header {
+
+	font-size: 22px;
+	height: 34px;
+        font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	color: #444444;
+	background-image: -webkit-linear-gradient(#dae6f3, #a0a5ab);
+	background-image: -moz-linear-gradient(#dae6f3, #a0a5ab);
+	background-image: -ms-linear-gradient(#dae6f3, #a0a5ab);
+	background-image: -o-linear-gradient(#dae6f3, #a0a5ab);
+	background-image: linear-gradient(#dae6f3, #a0a5ab);
+}
+
+.instructions {
+
+        font-size: 18px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+	padding: 10px;
+        color: #444444;
+	background-color: lightgray;
+
+}
+
+.instructions2 {
+
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+	margin: 10px;
+        padding: 10px;
+        color: #444444;
+        background-color: lightgray;
+
+}
+
+
+
+.w2ui-form .w2ui-form-header {
+
+        font-size: 22px;
+	height: 34px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        color: #444444;
+        background-image: -webkit-linear-gradient(#dae6f3, #a0a5ab);
+        background-image: -moz-linear-gradient(#dae6f3, #a0a5ab);
+        background-image: -ms-linear-gradient(#dae6f3, #a0a5ab);
+        background-image: -o-linear-gradient(#dae6f3, #a0a5ab);
+        background-image: linear-gradient(#dae6f3, #a0a5ab);
+}
+div#w2ui-overlay {
+min-width: 200px;
+}
+
+.w2ui-toolbar table.w2ui-button .w2ui-tb-caption {
+    color: #444444;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 0px 4px 0px 2px;
+}
+
+.w2ui-reset table tr th, .w2ui-reset table tr td {
+
+    color: #444444;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+
+
+}
+
+.w2ui-grid .w2ui-grid-body div.w2ui-col-header {
+    color: #444444;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 400;
+}
+
+#nocherotext{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+	color: darkslategray;
+	position: absolute;
+	top: 65%;
+	right: -20%;
+	width: 100%;
+}
+
+div#nocherologo {
+	height: 140px; 
+	padding: 10px 5px; 
+	border-bottom: 4px solid #444444; 
+	border-right: 1px solid lightgray; 
+
+}
+img#nocheroicon {
+	height: 70px;
+	width: 182px;
+}
+
+.two-col {
+    overflow: hidden;
+}
+
+.two-col .col1,
+.two-col .col2 {
+    width 49%;
+}
+
+.two-col .col1 {
+    float: left;
+}
+
+.two-col .col2 {
+    float: right;
+}
+
+.two-col label {
+    display: block;
+}
+
+// Slack Console CSS
+#form_commandForm_toolbar {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.icon-main {
+  height: 16px !important;
+  width: 16px !important;
+  padding-left:10px;
+  padding-right: 4px;
+}
+.icon-save { 
+  background: url('images/save_as.png');
+}
+.icon-delete { 
+  background: url('images/delete2.png'); 
+}
+.icon-clear { 
+  background: url('images/eraser.png'); 
+}
+.icon-execute { 
+  background: url('images/signal_flag_red.png');
+}
+
+.vis-item.green {
+      background-color: green;
+      color: white;
+      border-color: green;
+      box-shadow: 0 0 10px gray;
+}
+
+    /* create a custom sized dot at the bottom of the red item */
+
+.vis-item.red {
+      background-color: red;
+      border-color: red;
+      color: white;
+      box-shadow: 0 0 10px gray;
+}
+
+.custom-graph-style1 {
+    fill: #f2ea00;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #b3ab00;
+}
+
+.custom-graph-style2 {
+    fill: #00a0f2;
+    stroke-width:2px;
+    stroke: #050092;
+}
+
+.custom-graph-style3 {
+    fill: #00f201;
+    fill-opacity:0;
+    stroke-width:2px;
+    stroke: #029200;
+}
