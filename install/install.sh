@@ -158,6 +158,7 @@ fi
 
 
 echo -e "Now we need to update cron.  We are going to add a line that updates your tasks in the actiontext section.\n"
+echo -e "WE ARE SETTING UP THE CRON SCHEDULER WITH THE DEFAULT USER AND PASS.  IF YOU CHANGE THE ADMIN PASSWORD,  YOU WILL NEED TO UPDATE CRON.\n"
 
 crontab -l > crontemp.txt
 
@@ -165,8 +166,10 @@ cronsize=`wc -c < crontemp.txt`
 
 if [ $cronsize == '0' ]; then
 echo "* * * * * /bin/bash ${PWD}/updateactions.sh 2> /dev/null >&1" > crontemp.txt
+echo "* * * * * ${PHPPATH} ${BASEDIR}/app/server/admin/wfcron.php 'admin' 'admin' > /dev/null 2>&1" > crontemp.txt
 else
 sed -i -e "\$a* * * * * /bin/bash ${PWD}/updateactions.sh 2> /dev/null >&1" crontemp.txt
+sed -i -e "\$a* * * * * ${PHPPATH} ${BASEDIR}/app/server/admin/wfcron.php 'admin' 'admin' 2> /dev/null >&1" crontemp.txt
 fi 
 
 crontab crontemp.txt

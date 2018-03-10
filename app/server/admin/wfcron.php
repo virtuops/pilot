@@ -1,7 +1,7 @@
 <?php
 
-require_once 'WorkFlowExecute.php';
-require_once 'WFScheduleCrud.php';
+require_once __DIR__.'/WorkFlowExecute.php';
+require_once __DIR__.'/WFScheduleCrud.php';
 
 /*
 *
