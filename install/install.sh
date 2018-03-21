@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Welcome to the NOC HERO™ Pilot installer!  In this installer you will need
+# Welcome to the VirtuOps™ Pilot installer!  In this installer you will need
 #
 #	- A License file
 #	- PHP version 5.5+, can be installed with yum, check out this page (https://webtatic.com/projects/yum-repository/)
@@ -11,7 +11,7 @@
 #
 # The installer will do the following:  
 # Validate you have the right version of PHP (5.5 or higher)
-# Install the database and tables for NOC HERO™ Pilot
+# Install the database and tables for VirtuOps™ Pilot
 # Update your config.ini
 # 
 # Do NOT move this script from this location
@@ -138,7 +138,7 @@ EOF
 
 startingNote(){
 
-echo -e "\n\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<STARTING INSTALLATION>>>>>>>>>>>>>>>>>>>>>>>>>>\n\nWelcome to the NOC HERO™ Pilot installer.\n\nThis script will guide you through your installation.  It will only take a few minutes if you have all of the pre-requisites satisfied, which we will show you below or you can read about at https://www.virtuops.com/nochero-prerequisites.\n\nAfter installation, you need to get a license.txt file and put it in <web path>/app/license.txt after installation.  The license file should be in <installdir>/app/license.txt.\n\nIf you need a subscription, go to https://www.virtuops.com and select Support -> Contact Us.\n"
+echo -e "\n\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<STARTING INSTALLATION>>>>>>>>>>>>>>>>>>>>>>>>>>\n\nWelcome to the VirtuOps™ Pilot installer.\n\nThis script will guide you through your installation.  It will only take a few minutes if you have all of the pre-requisites satisfied, which we will show you below or you can read about at https://www.virtuops.com/nochero-prerequisites.\n\nAfter installation, you need to get a license.txt file and put it in <web path>/app/license.txt after installation.  The license file should be in <installdir>/app/license.txt.\n\nIf you need a subscription, go to https://www.virtuops.com and select Support -> Contact Us.\n"
 
 }
 
@@ -325,7 +325,7 @@ dbParams(){
 
                 while [ ${#user} -lt 1 ]
                 do
-                read -p "Please enter the DB username that will connect to the NOC HERO™ Pilot database: " user
+                read -p "Please enter the DB username that will connect to the VirtuOps™ Pilot database: " user
                 done
 
                 while [ ${#password} -lt 1 ]
@@ -345,13 +345,13 @@ dbParams(){
 
                 while [ ${#db} -lt 1 ]
                 do
-                read -p "Please enter the Database name for NOC HERO™ Pilot (usually nochero_pilot): " db
+                read -p "Please enter the Database name for VirtuOps™ Pilot (usually nochero_pilot): " db
                 done
 }
 
 connectionSuccess(){
 	echo -e "Connection SUCCESS!\n"
-        echo -e "\nNOC HERO™ Pilot will connect to database ${db} using the following information.";
+        echo -e "\nVirtuOps™ Pilot will connect to database ${db} using the following information.";
         echo -e "  Mysql client: ${dbclient}";
         echo -e "  Hostname: ${host}";
         echo -e "  DB Name: ${db}";
@@ -482,7 +482,7 @@ installLb(){
 }
 
 finishInstall(){
-echo -e "\nCongratulations!  You have successfully installed NOC HERO™ Pilot.  Now open a browser and go to ${WEBURLPATH} to log in"
+echo -e "\nCongratulations!  You have successfully installed VirtuOps™ Pilot.  Now open a browser and go to ${WEBURLPATH} to log in"
 exit
 
 }
@@ -547,13 +547,13 @@ fi
 }
 
 exitInstall() {
-echo -e "\nYou've chosen to exit installation. To continue installation, please run the NOC HERO™ Pilot install script again.\n"
+echo -e "\nYou've chosen to exit installation. To continue installation, please run the VirtuOps™ Pilot install script again.\n"
 exit
 }
 
 startingNote
 
-echo -e "Do you wish to install NOC HERO™ Pilot on this machine (y|n)? \n"
+echo -e "Do you wish to install VirtuOps™ Pilot on this machine (y|n)? \n"
 read yn
 
 if [ "$yn" == 'Yes' ] || [ "$yn" == 'Y' ] || [ "$yn" == 'y' ] || [ "$yn" == 'yes' ]

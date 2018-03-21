@@ -89,8 +89,8 @@ Class Upload {
                                 $this->ReturnData('error',$message);
                                 }
                         } else {
-                        $this->l->varErrorLog('{"status":"error","message":"'.$name.'" did not load, please make sure that your basedir is set in settings, which should be the directory into which you installed NOC HERO™."}');
-                        $message = "$name did not load, please make sure that your basedir is set in settings, which should be the directory into which you installed NOC HERO™.";
+                        $this->l->varErrorLog('{"status":"error","message":"'.$name.'" did not load, please make sure that your basedir is set in settings, which should be the directory into which you installed VirtuOps™."}');
+                        $message = "$name did not load, please make sure that your basedir is set in settings, which should be the directory into which you installed VirtuOps™.";
                         $this->ReturnData('error',$message);
                         }
 

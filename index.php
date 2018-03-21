@@ -5,7 +5,7 @@ include("security.php");
 <!DOCTYPE html>
 <html>
 <head>
-    <title>NOC HERO&trade; Pilot</title>
+    <title>VirtuOps&trade; Pilot</title>
     <script src="libs/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="libs/w2ui/w2ui-1.5.rc1.min.js" type="text/javascript"></script>
     <script src="libs/visjs/vis.min.js" type="text/javascript"></script>

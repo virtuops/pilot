@@ -13,7 +13,7 @@ replaceCmd(){
 }
 
 startingNote(){
-echo -e "\n\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<STARTING INSTALLATION>>>>>>>>>>>>>>>>>>>>>>>>>>\n\nWelcome to the NOC HERO™ DB Failover script.\n\nThis script will guide you through setting up master-master failover between two MariaDB instances.  It will only take a few minutes if you have all of the pre-requisites satisfied, which we will show you below or you can read about at https://www.virtuops.com/nochero-prerequisites.\n\nThis script needs to be run in two places.  It needs to be run on the first master DB and then on the second master DB.  For this to work, you will need the following:\n\n1)  Two installed NOC HERO™ databases on two separate VMs/servers\n2)  Connectivity between the two databases on the database ports (usually 3306, but you need to check if they have changed\n3)  DB credentials for a db user that can create a replication user and establish replication on both servers.\n4)  Your two master dbs must have the same name for the NOC HERO™ database that you are going to replicate in master-master mode.\n\n"
+echo -e "\n\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<STARTING INSTALLATION>>>>>>>>>>>>>>>>>>>>>>>>>>\n\nWelcome to the VirtuOps™ DB Failover script.\n\nThis script will guide you through setting up master-master failover between two MariaDB instances.  It will only take a few minutes if you have all of the pre-requisites satisfied, which we will show you below or you can read about at https://www.virtuops.com/nochero-prerequisites.\n\nThis script needs to be run in two places.  It needs to be run on the first master DB and then on the second master DB.  For this to work, you will need the following:\n\n1)  Two installed VirtuOps™ databases on two separate VMs/servers\n2)  Connectivity between the two databases on the database ports (usually 3306, but you need to check if they have changed\n3)  DB credentials for a db user that can create a replication user and establish replication on both servers.\n4)  Your two master dbs must have the same name for the VirtuOps™ database that you are going to replicate in master-master mode.\n\n"
 }
 
 getCnfVars(){
@@ -50,8 +50,8 @@ done
 
 while [ ${#dbname} -lt 1 ]
 do
-echo -e "\nNeed the name of the NOC HERO™ database that we will replicate.  NOTE:  THIS NEEDS TO BE THE SAME ON BOTH SERVERS!!!  Check your config.ini if you don't remember.\n"
-read -p "NOC HERO™ DB name: " dbname 
+echo -e "\nNeed the name of the VirtuOps™ database that we will replicate.  NOTE:  THIS NEEDS TO BE THE SAME ON BOTH SERVERS!!!  Check your config.ini if you don't remember.\n"
+read -p "VirtuOps™ DB name: " dbname 
 done
 
 echo "Params read in, thanks\n";

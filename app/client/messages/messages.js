@@ -372,7 +372,7 @@ define(function (require) {
 
         helpabout: function() {
                 w2popup.open({
-                        title     : 'About NOC HERO™ Pilot',
+                        title     : 'About VirtuOps™ Pilot',
                         body      : '<div class="w2ui-centered" style="color: black;"><b>Linux Version 2.1.1, February 2017.</b><br>Copyright 2017 MKAdvantage, Inc. All rights reserved.</div>',
                         buttons   : '<button class="w2ui-btn" onclick="w2popup.close();">Close</button>',
                         width     : 500,

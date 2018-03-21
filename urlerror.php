@@ -18,7 +18,7 @@ $error = <<<EOT
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>NOC HERO™ Pilot Login</title>
+    <title>VirtuOps™ Pilot Login</title>
         <link rel="stylesheet" href="libs/css/login.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>

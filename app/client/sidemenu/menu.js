@@ -8,7 +8,7 @@ define(function (require) {
     return {
         sidebar: {
                 name       : 'sidebar',
-                topHTML    : '<div id="nocherologo"><img id="nocheroicon" src="libs/css/images/virtuops.png"></img><div id="nocherotext">NOC HERO&trade;</div></div>',
+                topHTML    : '<div id="nocherologo"><img id="nocheroicon" src="libs/css/images/virtuops.png"></img><div id="nocherotext">VirtuOps&trade;</div></div>',
                 onRender: function(event) {
                         sessionid = LOGIN.getsessionid('PHPSESSID');
 
