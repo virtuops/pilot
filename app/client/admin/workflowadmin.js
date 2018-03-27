@@ -71,7 +71,7 @@ define(function (require) {
                               linkVerticalDecal: 1,
                               multipleLinksOnInput: true,
                               multipleLinksOnOutput: true,
-                              linkWidth: 6,
+                              linkWidth: 2,
                               onOperatorSelect: function(operatorId) {
                                 //TODO:  On clicking an operator, bring up for to update/modify operator
                                 var taskId = $flowchart.flowchart('getOperatorTitle', operatorId);
@@ -79,9 +79,7 @@ define(function (require) {
                                 var operatorData = $flowchart.flowchart('getOperatorData',operatorId)
                                 selectedId = operatorId;
                                 selectedTask = operatorData;
-
                                 return true;
-
                               },
                               onOperatorDelete: function(operatorId) {
 
