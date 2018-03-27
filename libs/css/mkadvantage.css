@@ -4,6 +4,9 @@
 @import url('fa/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
 
 ul.doclist {
 list-style-image: url('images/hero_icon.png');
@@ -31,7 +34,7 @@ margin: 40px;
 .w2ui-sidebar .w2ui-sidebar-div .w2ui-node .w2ui-node-image > span,
 .w2ui-sidebar .w2ui-sidebar-div .w2ui-node td.w2ui-node-dots {
 
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Proxima Nova', sans-serif;
         font-size: 15px;
         font-weight: 400;
         color: #444444;
@@ -116,6 +119,7 @@ margin: 40px;
 	background-image: linear-gradient(#dae6f3, #a0a5ab);
 }
 
+
 .instructions {
 
         font-size: 18px;
@@ -143,27 +147,69 @@ margin: 40px;
 
 .w2ui-form .w2ui-form-header {
 
-        font-size: 22px;
+        font-size: 17px;
 	height: 34px;
-        font-family: 'Raleway', sans-serif;
+        font-family: 'Proxima Nova', sans-serif;
         font-weight: 700;
-        color: #444444;
-        background-image: -webkit-linear-gradient(#dae6f3, #a0a5ab);
-        background-image: -moz-linear-gradient(#dae6f3, #a0a5ab);
-        background-image: -ms-linear-gradient(#dae6f3, #a0a5ab);
-        background-image: -o-linear-gradient(#dae6f3, #a0a5ab);
-        background-image: linear-gradient(#dae6f3, #a0a5ab);
+        color: white;
+        background-image: -webkit-linear-gradient(#5DADE2, #5DADE2);
+        background-image: -moz-linear-gradient(#5DADE2, #5DADE2);
+        background-image: -ms-linear-gradient(#5DADE2, #5DADE2);
+        background-image: -o-linear-gradient(#5DADE2, #5DADE2);
+        background-image: linear-gradient(#5DADE2, #5DADE2);
 }
+
+.w2ui-grid .w2ui-grid-header {
+font-size: 17px;
+        height: 34px;
+        font-family: 'Proxima Nova', sans-serif;
+        font-weight: 700;
+        color: white;
+        background-image: -webkit-linear-gradient(#5DADE2, #5DADE2);
+        background-image: -moz-linear-gradient(#5DADE2, #5DADE2);
+        background-image: -ms-linear-gradient(#5DADE2, #5DADE2);
+        background-image: -o-linear-gradient(#5DADE2, #5DADE2);
+        background-image: linear-gradient(#5DADE2, #5DADE2);
+}
+
+.w2ui-popup .w2ui-popup-title {
+        font-family: 'Proxima Nova', sans-serif;
+        font-weight: 700;
+        color: white;
+        background-image: -webkit-linear-gradient(#5DADE2, #5DADE2);
+        background-image: -moz-linear-gradient(#5DADE2, #5DADE2);
+        background-image: -ms-linear-gradient(#5DADE2, #5DADE2);
+        background-image: -o-linear-gradient(#5DADE2, #5DADE2);
+        background-image: linear-gradient(#5DADE2, #5DADE2);
+}
+
+.w2ui-popup .w2ui-popup-body {
+	background-color: #FFFFFF;
+        font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+
 div#w2ui-overlay {
 min-width: 200px;
 }
 
+.w2ui-toolbar {
+    background: white;
+}
+
 .w2ui-toolbar table.w2ui-button .w2ui-tb-caption {
     color: #444444;
-    font-family: 'Monserrat', sans-serif;
+font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    //font-family: 'Monserrat', sans-serif;
     font-weight: 400;
     font-size: 13px;
     padding: 0px 4px 0px 2px;
+}
+
+.w2ui-form .w2ui-tabs .w2ui-tab {
+font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
 
 .w2ui-reset table tr th, .w2ui-reset table tr td {
@@ -183,8 +229,8 @@ min-width: 200px;
 }
 
 #nocherotext{
-        font-family: 'Montserrat', sans-serif;
-        font-size: 28px;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
         font-weight: 700;
 	color: darkslategray;
 	position: absolute;
@@ -285,4 +331,98 @@ img#nocheroicon {
     fill-opacity:0;
     stroke-width:2px;
     stroke: #029200;
+}
+
+.hide-scroll-bars{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.chart-frame-content{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  margin-right: 14px;
+  padding-right: 28px; 
+  padding-bottom: 15px; 
+}
+
+#connectionform * {
+
+	box-sizing: border-box;
+}
+
+.w2ui-layout>div .w2ui-panel .w2ui-panel-content {
+background-color: #FFFFFF;
+}
+
+.w2ui-grid .w2ui-grid-toolbar {
+background-color: #FFFFFF;
+}
+
+.saveicon {
+background-image: url("../../html/images/icons8-save-as-16.png");
+}
+.refreshicon {
+background-image: url("../../html/images/icons8-available-updates-16.png");
+}
+.reseticon {
+background-image: url("../../html/images/icons8-undo-16.png");
+}
+.newicon {
+background-image: url("../../html/images/icons8-document-16.png");
+}
+.removeicon {
+background-image: url("../../html/images/icons8-trash-can-16.png");
+}
+.cancelicon {
+background-image: url("../../html/images/icons8-cancel-16.png");
+}
+.loadvotype {
+background-image: url("../../html/images/icons8-downloads-16.png");
+}
+.usericon {
+background-image: url("../../html/images/icons8-user-16.png");
+}
+.usergroupicon {
+background-image: url("../../html/images/icons8-user-groups-16.png");
+}
+.connectionicon {
+background-image: url("../../html/images/icons8-electrical-16.png");
+}
+.dataseticon {
+background-image: url("../../html/images/icons8-database-16.png");
+}
+.toolsicon {
+background-image: url("../../html/images/icons8-maintenance-16.png");
+}
+.viewsicon {
+background-image: url("../../html/images/icons8-combo-chart-16.png");
+}
+.viewobjectsicon {
+background-image: url("../../html/images/icons8-speedometer-16.png");
+}
+.menuicon {
+background-image: url("../../html/images/icons8-menu-16.png");
+}
+.settingsicon {
+background-image: url("../../html/images/icons8-workstation-16.png");
+}
+.logouticon {
+background-image: url("../../html/images/icons8-door-opened-16.png");
+}
+.infoicon {
+background-image: url("../../html/images/icons8-about-16.png");
+}
+.clouduploadicon {
+background-image: url("../../html/images/icons8-upload-to-the-cloud-16.png");
+}
+.wizardicon {
+background-image: url("../../html/images/icons8-fantasy-16.png");
+}
+.booksicon {
+background-image: url("../../html/images/icons8-books-16.png");
+}
+.workflowicon {
+background-image: url("../../html/images/icons8-workflow-16.png");
 }

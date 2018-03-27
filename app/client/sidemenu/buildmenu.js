@@ -3,37 +3,37 @@ define(function (require) {
     return {
         buildsidebar: function(userobj){
                 var sidebarobj = w2ui.sidebar;
-                var allmenu = { id: 'gettingstarted', text: 'Getting Started', icon: 'fa fa-home fa-fw', group: true};
+                var allmenu = { id: 'gettingstarted', text: 'Getting Started', img: 'infoicon', group: true};
                 var allmenunodes =  [ { id: 'intro', text: 'Introduction' }
                                 ];
                 var adminmenu =  { id: 'admin', text: 'Admin', img: 'icon-folder', group: true };
                 var adminmenunodes = [
-                                       { id: 'adminwizard', text: 'Admin Wizard' },
-                                       { id: 'taskadmin', text: 'Task Admin' },
-                                       { id: 'users', text: 'User Admin' },
-                                       { id: 'groups', text: 'Group Admin' },
-                                       { id: 'runbookadmin', text: 'Runbook Admin' },
-                                       { id: 'workflowadmin', text: 'Workflow Admin' },
+                                       { id: 'adminwizard', text: 'Admin Wizard', img:'wizardicon' },
+                                       { id: 'taskadmin', text: 'Task Admin', img: 'toolsicon' },
+                                       { id: 'users', text: 'User Admin', img: 'usericon' },
+                                       { id: 'groups', text: 'Group Admin', img: 'usergroupicon' },
+                                       { id: 'runbookadmin', text: 'Runbook Admin', img: 'booksicon' },
+                                       { id: 'workflowadmin', text: 'Workflow Admin', img: 'workflowicon' },
                                      ];
                 var reportmenu = { id: 'reports', text: 'Intel Center', group: true };
                 var reportmenunodes =  [
-                                {id: 'taskreports', text: 'Tasks'},
-                                {id: 'workflowreports', text: 'Workflows'}
+                                {id: 'taskreports', text: 'Tasks', img: 'viewsicon'},
+                                {id: 'workflowreports', text: 'Workflows', img: 'viewsicon'}
                 ];
 
                 var runbooks = { id: 'runbooks', text: 'Runbooks', group: true };
                 var runbooknodes = [];
 
                 var adminusersettingsmenu = { id: 'usersettings', text: 'Settings', group: true, nodes: [
-                                        { id: 'settings', text: 'Server Settings' },
-                                        { id: 'helpabout', text: 'About' },
-                                        { id: 'logout', text: 'Logout' }
+                                        { id: 'settings', text: 'Server Settings', img: 'settingsicon' },
+                                        { id: 'helpabout', text: 'About', img: 'infoicon' },
+                                        { id: 'logout', text: 'Logout', img: 'logouticon' }
                                         ], group: true, expanded: false };
 
 
                 var usersettingsmenu = { id: 'usersettings', text: 'Settings', group: true, nodes: [
-                                        { id: 'helpabout', text: 'About' },
-                                        { id: 'logout', text: 'Logout' }
+                                        { id: 'helpabout', text: 'About', img: 'infoicon' },
+                                        { id: 'logout', text: 'Logout', img: 'logouticon' }
                                         ], group: true, expanded: false };
 
                 userobj.runbooks.forEach(function(element){
