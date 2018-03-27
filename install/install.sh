@@ -138,7 +138,7 @@ EOF
 
 startingNote(){
 
-echo -e "\n\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<STARTING INSTALLATION>>>>>>>>>>>>>>>>>>>>>>>>>>\n\nWelcome to the VirtuOps™ Pilot installer.\n\nThis script will guide you through your installation.  It will only take a few minutes if you have all of the pre-requisites satisfied, which we will show you below or you can read about at https://www.virtuops.com/nochero-prerequisites.\n\nAfter installation, you need to get a license.txt file and put it in <web path>/app/license.txt after installation.  The license file should be in <installdir>/app/license.txt.\n\nIf you need a subscription, go to https://www.virtuops.com and select Support -> Contact Us.\n"
+echo -e "\n\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<STARTING INSTALLATION>>>>>>>>>>>>>>>>>>>>>>>>>>\n\nWelcome to the VirtuOps™ Pilot installer.\n\nThis script will guide you through your installation.  It will only take a few minutes if you have all of the pre-requisites satisfied, which we will show you below or you can read about at https://www.virtuops.com/pilot-prerequisites.\n\nAfter installation, you need to get a license.txt file and put it in <web path>/app/license.txt after installation.  The license file should be in <installdir>/app/license.txt.\n\nIf you need a subscription, go to https://www.virtuops.com and select Support -> Contact Us.\n"
 
 }
 
@@ -292,7 +292,7 @@ setBaseDir(){
 setWebPath(){
 
 	echo -e "\n";
-        read -p "Please enter the full web url for this instance.  Example - http://myserver.com/nochero_pilot  Example 2 - https://mysecureserver.com/nochero_pilot  Example 3 - http://mydiffport.com:8081/nochero_pilot.  MAKE SURE TO INCLUDE THE 'nochero_pilot' SUBDIR and change it if you are installing this into somewhere different than 'nochero_pilot': " WEBURLPATH
+        read -p "Please enter the full web url for this instance.  Example - http://myserver.com/pilot  Example 2 - https://mysecureserver.com/pilot  Example 3 - http://mydiffport.com:8081/pilot.  MAKE SURE TO INCLUDE THE 'pilot' SUBDIR and change it if you are installing this into somewhere different than 'pilot': " WEBURLPATH
 
         echo -e "\n";
         read -p "Please enter the linux user that is running the web server (usually www-data or apache):  " WEBUSER
@@ -345,7 +345,7 @@ dbParams(){
 
                 while [ ${#db} -lt 1 ]
                 do
-                read -p "Please enter the Database name for VirtuOps™ Pilot (usually nochero_pilot): " db
+                read -p "Please enter the Database name for VirtuOps™ Pilot (usually pilot): " db
                 done
 }
 
@@ -380,7 +380,7 @@ dbTests(){
 
 dbInstall(){
 	dbParams
-        read -p "[OPTIONAL] If you want a different database user to access the nochero_pilot db, enter it here or just press the ENTER key to leave it blank: " dbuser
+        read -p "[OPTIONAL] If you want a different database user to access the pilot db, enter it here or just press the ENTER key to leave it blank: " dbuser
 
 	`${dbclient} -u${user} -p${password} -e "drop database if exists ${db}"`
         if [ ! $? -eq 0 ] 
@@ -395,7 +395,7 @@ dbInstall(){
 		exit
 	fi
 
-	`${dbclient} -u${user} -p${password} ${db}  < nochero_pilot.sql`
+	`${dbclient} -u${user} -p${password} ${db}  < pilot.sql`
          if [ ! $? -eq 0 ]; then 
 		echo -e "\nError $?: Could not populate database ${db}. Please examine your DB settings and run the installer again."
 	exit

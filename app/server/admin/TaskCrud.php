@@ -52,41 +52,35 @@ Class Task {
                 $actionlanguage = ($params['actionlanguage'] ? $params['actionlanguage'] : '');
                 $actionfilename = $params['actionfilename'] ? $params['actionfilename'] : '';
                 $taskdescription = $params['taskdescription'] ? $params['taskdescription'] : '';
-                $tasktype = $params['tasktype'];
                 $datatype = 'JSON';
                 $jprop = $params['jprop'] ? $params['jprop'] : '';
                 $fieldseparator = $params['fieldseparator'] ? $params['fieldseparator'] : '';
                 $recordseparator = $params['recordseparator'] ? $params['recordseparator'] : '';
                 $outputfields = $params['outputfields'] ? $params['outputfields'] : '';
                 $outputactions = $params['outputactions'] ? $params['outputactions'] : '';
-                $iframesrc = $params['iframesrc'] ? $params['iframesrc'] : '';
-                $htmlcode = $params['htmlcode'] ? $params['htmlcode'] : '';
-                $instructions = $params['instructions'] ? $params['instructions'] : '';
                 $saveoptions = isset($params['saveoptions']) ? $params['saveoptions'] : '';
 
                 // Perform syntax checking first, if error then we skip saving the task.
                 if ($saveoptions != 'force') {
-                        if (strtolower($tasktype) == 'grid' || strtolower($tasktype) == 'form') {
-                                $actionfilenamefile = __DIR__.'/../actiontext/'.$actionfilename;
-                                file_put_contents($actionfilenamefile, $actiontext);
-                                chmod($actionfilenamefile, 0775);
+                    $actionfilenamefile = __DIR__.'/../actiontext/'.$actionfilename;
+                    file_put_contents($actionfilenamefile, $actiontext);
+                    chmod($actionfilenamefile, 0775);
 
-                                // Check if the actiontext syntax checks out.
-                                $err = $this->lintFile($actionfilenamefile, $actionlanguage);
-                                if ($err) {
-                                        echo "LINTERROR:$err";
-                                        return;
-                                }
-                        }
+                    // Check if the actiontext syntax checks out.
+                    $err = $this->lintFile($actionfilenamefile, $actionlanguage);
+                    if ($err) {
+                            echo "LINTERROR:$err";
+                            return;
+                    }
                 }
 
 
-                $sql = "replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, tasktype, datatype, jprop, fieldseparator, recordseparator, iframesrc, htmlcode, instructions) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $sql = "replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
                 $this->l->varErrorLog("\nExecuting sql $sql\n");
                 $stmt = $con->prepare($sql);
 
-                $stmt->bind_param('sssssssssssssssss', $taskname, $urlparams, $userparams, $actiontext, $actionlanguage, $actionfilename, $outputfields, $outputactions, $taskdescription, $tasktype,$datatype, $jprop, $fieldseparator, $recordseparator, $iframesrc, $htmlcode, $instructions);
+                $stmt->bind_param('sssssssssssss', $taskname, $urlparams, $userparams, $actiontext, $actionlanguage, $actionfilename, $outputfields, $outputactions, $taskdescription,$datatype, $jprop, $fieldseparator, $recordseparator);
                 $stmt->execute();
 
                 $this->l->varErrorLog("TaskCreateUpdate DB Error: ");

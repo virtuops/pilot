@@ -1,8 +1,8 @@
--- MySQL dump 10.16  Distrib 10.1.16-MariaDB, for Linux (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.10-MariaDB, for Linux (x86_64)
 --
--- Host: localhost    Database: nochero
+-- Host: localhost    Database: pilot
 -- ------------------------------------------------------
--- Server version       10.1.16-MariaDB
+-- Server version	10.1.10-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,14 +16,16 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `auth_servers`
+-- Current Database: `pilot`
 --
 
-DROP DATABASE IF EXISTS `nochero_pilot`;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `pilot` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-CREATE DATABASE `nochero_pilot`;
+USE `pilot`;
 
-USE `nochero_pilot`;
+--
+-- Table structure for table `auth_servers`
+--
 
 DROP TABLE IF EXISTS `auth_servers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -84,6 +86,15 @@ CREATE TABLE `group_runbooks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `group_runbooks`
+--
+
+LOCK TABLES `group_runbooks` WRITE;
+/*!40000 ALTER TABLE `group_runbooks` DISABLE KEYS */;
+INSERT INTO `group_runbooks` VALUES ('admingroup','NHP');
+/*!40000 ALTER TABLE `group_runbooks` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `groups`
@@ -109,6 +120,28 @@ INSERT INTO `groups` VALUES ('admingroup','Admin Group');
 /*!40000 ALTER TABLE `groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
+--
+-- Table structure for table `logs`
+--
+
+DROP TABLE IF EXISTS `logs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `logs` (
+  `logdate` datetime DEFAULT NULL,
+  `logmsg` mediumtext,
+  `debuglevel` int(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `logs`
+--
+
+LOCK TABLES `logs` WRITE;
+/*!40000 ALTER TABLE `logs` DISABLE KEYS */;
+/*!40000 ALTER TABLE `logs` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `runbooks`
@@ -124,6 +157,15 @@ CREATE TABLE `runbooks` (
   PRIMARY KEY (`runbookid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `runbooks`
+--
+
+LOCK TABLES `runbooks` WRITE;
+/*!40000 ALTER TABLE `runbooks` DISABLE KEYS */;
+/*!40000 ALTER TABLE `runbooks` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `task_logs`
@@ -149,8 +191,18 @@ CREATE TABLE `task_logs` (
   `taskmetadata` mediumtext,
   PRIMARY KEY (`id`),
   UNIQUE KEY `taskserial` (`taskserial`)
-) ENGINE=InnoDB AUTO_INCREMENT=1278 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `task_logs`
+--
+
+LOCK TABLES `task_logs` WRITE;
+/*!40000 ALTER TABLE `task_logs` DISABLE KEYS */;
+INSERT INTO `task_logs` VALUES ('NH Ping Device','NHP','admin','ping.pl','2018-03-05 16:18:26',0.093463,'ZXml5tCMV9fnIS2',6127,'STOPPED','0','{\"status\":\"alive\",\"host\":\"localhost\"}',1,'','\"\"');
+/*!40000 ALTER TABLE `task_logs` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `task_problems`
@@ -165,6 +217,14 @@ CREATE TABLE `task_problems` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `task_problems`
+--
+
+LOCK TABLES `task_problems` WRITE;
+/*!40000 ALTER TABLE `task_problems` DISABLE KEYS */;
+/*!40000 ALTER TABLE `task_problems` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `task_runbooks`
@@ -180,6 +240,14 @@ CREATE TABLE `task_runbooks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `task_runbooks`
+--
+
+LOCK TABLES `task_runbooks` WRITE;
+/*!40000 ALTER TABLE `task_runbooks` DISABLE KEYS */;
+/*!40000 ALTER TABLE `task_runbooks` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `tasks`
@@ -196,21 +264,24 @@ CREATE TABLE `tasks` (
   `actionlanguage` varchar(24) DEFAULT NULL,
   `actionfilename` varchar(128) DEFAULT NULL,
   `taskdescription` mediumtext,
-  `tasktype` varchar(24) NOT NULL,
   `datatype` varchar(24) DEFAULT NULL,
   `jprop` varchar(512) DEFAULT NULL,
   `fieldseparator` varchar(8) DEFAULT NULL,
   `recordseparator` varchar(8) DEFAULT NULL,
   `outputfields` mediumtext,
   `outputactions` mediumtext,
-  `iframesrc` varchar(255) DEFAULT NULL,
-  `htmlcode` mediumtext,
-  `instructions` mediumtext,
-  `iframepath` varchar(355),
   PRIMARY KEY (`taskname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `tasks`
+--
+
+LOCK TABLES `tasks` WRITE;
+/*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `user_groups`
@@ -263,8 +334,33 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('admin','Administrator','User','Local','$2y$10$kkxz8dBRUbJZtFIyBz2Ecey6Hebka5gAu9jO0ppCDtyjt7d34NCKW','user@company.com','f4bt42aekf2rq6gootvj5q3441',NULL,1,'2017-07-11 10:04:46');
+INSERT INTO `users` VALUES ('admin','Administrator','User','Local','$2y$10$kkxz8dBRUbJZtFIyBz2Ecey6Hebka5gAu9jO0ppCDtyjt7d34NCKW','user@company.com','nreklldf0sc3ubr2sv31eelvc5',NULL,1,'2017-07-11 10:04:46');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wf_tasks`
+--
+
+DROP TABLE IF EXISTS `wf_tasks`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wf_tasks` (
+  `taskserial` varchar(48) NOT NULL,
+  `wfserial` varchar(255) NOT NULL,
+  PRIMARY KEY (`taskserial`),
+  CONSTRAINT `fk_task_workflow` FOREIGN KEY (`taskserial`) REFERENCES `task_logs` (`taskserial`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wf_tasks`
+--
+
+LOCK TABLES `wf_tasks` WRITE;
+/*!40000 ALTER TABLE `wf_tasks` DISABLE KEYS */;
+INSERT INTO `wf_tasks` VALUES ('ZXml5tCMV9fnIS2','zQFHrNa0U3kgsq1');
+/*!40000 ALTER TABLE `wf_tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -292,49 +388,8 @@ CREATE TABLE `workflowhist` (
 
 LOCK TABLES `workflowhist` WRITE;
 /*!40000 ALTER TABLE `workflowhist` DISABLE KEYS */;
+INSERT INTO `workflowhist` VALUES ('ybclX4eyfEtGJZ9','First Flow','2018-03-05 16:17:27','2018-03-05 16:17:27','\"\"',0.218041,'admin'),('zQFHrNa0U3kgsq1','First Flow','2018-03-05 16:18:26','2018-03-05 16:18:26','\"\"',0.435015,'admin');
 /*!40000 ALTER TABLE `workflowhist` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for `logs`
---
-
-DROP TABLE IF EXISTS `logs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `logs` (
-  `logdate` datetime DEFAULT NULL,
-  `logmsg` mediumtext,
-  `debuglevel` int(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `logs`
---
-
-LOCK TABLES `logs` WRITE;
-/*!40000 ALTER TABLE `logs` DISABLE KEYS */;
-/*!40000 ALTER TABLE `logs` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
---
--- Table structure for wf_tasks
---
-DROP TABLE IF EXISTS `wf_tasks`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `wf_tasks` (
-  `taskserial` varchar(48) NOT NULL,
-  `wfserial` varchar(255) NOT NULL,
-  PRIMARY KEY (`taskserial`),
-  CONSTRAINT `fk_task_workflow` FOREIGN KEY (`taskserial`) REFERENCES `task_logs` (`taskserial`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-LOCK TABLES `wf_tasks` WRITE;
-/*!40000 ALTER TABLE `wf_tasks` DISABLE KEYS */;
-/*!40000 ALTER TABLE `wf_tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -354,6 +409,16 @@ CREATE TABLE `workflows` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `workflows`
+--
+
+LOCK TABLES `workflows` WRITE;
+/*!40000 ALTER TABLE `workflows` DISABLE KEYS */;
+INSERT INTO `workflows` VALUES ('First Flow','{\"operators\":{\"start\":{\"top\":20,\"left\":20,\"properties\":{\"objecttype\":\"startnode\",\"class\":\"flowchart-start-operator\",\"runbookid\":\"\",\"runbookname\":\"\",\"title\":\"Start\",\"inputs\":{},\"outputs\":{\"output_1\":{\"label\":\"Begin\"}}}},\"end\":{\"top\":40,\"left\":940,\"properties\":{\"objecttype\":\"endnode\",\"class\":\"flowchart-end-operator\",\"runbookid\":\"\",\"runbookname\":\"\",\"title\":\"Stop\",\"inputs\":{\"input_1\":{\"label\":\"End\"}},\"outputs\":{}}},\"task1\":{\"top\":60,\"left\":480,\"properties\":{\"objecttype\":\"task\",\"class\":\"flowchart-task-operator\",\"runbookid\":\"\",\"runbookname\":\"\",\"title\":\"Ping Device\",\"inputs\":{\"input_1\":{\"label\":\"In\"}},\"outputs\":{\"output_1\":{\"label\":\"Out\"}},\"task\":{\"taskname\":\"NH Ping Device\",\"parameters\":\"{\\n\\\"host\\\":\\\"localhost\\\"\\n}\",\"runbookname\":\"NHP\",\"runbookid\":\"NHP\"}}}},\"links\":{\"0\":{\"fromOperator\":\"start\",\"fromConnector\":\"output_1\",\"fromSubConnector\":0,\"toOperator\":\"task1\",\"toConnector\":\"input_1\",\"toSubConnector\":0},\"1\":{\"fromOperator\":\"task1\",\"fromConnector\":\"output_1\",\"fromSubConnector\":0,\"toOperator\":\"end\",\"toConnector\":\"input_1\",\"toSubConnector\":0}},\"operatorTypes\":{}}','* * * * *','enabled','stopped');
+/*!40000 ALTER TABLE `workflows` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
@@ -363,5 +428,4 @@ CREATE TABLE `workflows` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-07-12  9:59:56
-
+-- Dump completed on 2018-03-27 19:34:21

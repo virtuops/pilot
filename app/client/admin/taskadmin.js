@@ -67,7 +67,6 @@ define(function (require) {
         { field: 'outputactions', caption: 'Output Actions', size: '80px', sortable: false, hidden: true },
         { field: 'actiontext', caption: 'Action Text', size: '80px', sortable: true, hidden: true },
         { field: 'taskname', caption: 'Name', size: '140px', sortable: true },
-        { field: 'tasktype', caption: 'Type', size: '140px', sortable: true },
         { field: 'taskdescription', caption: 'Description', size: '50%', sortable: true },
         { field: 'htmlcode', hidden: true, caption: 'HTML Code', size: '100px', sortable: true },
         { field: 'instructions', hidden: true, caption: 'Instructions', size: '100px', sortable: true },
