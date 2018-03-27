@@ -426,8 +426,23 @@ background-image: url("../../html/images/icons8-books-16.png");
 .workflowicon {
 background-image: url("../../html/images/icons8-workflow-16.png");
 }
+.loadwficon {
+background-image: url("../../html/images/icons8-hierarchy-16.png");
+}
+.routeicon {
+background-image: url("../../html/images/icons8-tree-structure-16.png");
+}
+.configicon {
+background-image: url("../../html/images/icons8-support-16.png");
+}
 .taskicon {
 background-image: url("../../html/images/icons8-automatic-16.png");
+}
+.addicon {
+background-image: url("../../html/images/icons8-plus-16.png");
+}
+.controlsicon {
+background-image: url("../../html/images/icons8-timer-16.png");
 }
 .taskadminicon {
 background-image: url("../../html/images/icons8-report-card-16.png");

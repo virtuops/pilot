@@ -111,22 +111,22 @@ define(function (require) {
                                             return html;
                                         }
                                 },
-                                { id: 'loadworkflow', type: 'button', caption: 'Load WF', icon: 'fa fa-sitemap'},
-                                { id: 'controls', type: 'button', caption: 'Controls', icon: 'fa fa-clock-o' },
+                                { id: 'loadworkflow', type: 'button', caption: 'Load WF', img: 'workflowicon'},
+                                { id: 'controls', type: 'button', caption: 'Controls', img: 'controlsicon' },
                                 { id: 'break1', type: 'break'},
-                                { id: 'createtask', type: 'button', caption: 'Add Task', icon: 'fa fa-plus-square-o' },
-                                { id: 'configtask', type: 'button', caption: 'Config Task', icon: 'fa fa-wrench' },
+                                { id: 'createtask', type: 'button', caption: 'Add Task', img: 'addicon' },
+                                { id: 'configtask', type: 'button', caption: 'Config Task', img: 'configicon' },
                                 { id: 'break2', type: 'break'},
 
-                                { id: 'createroute', type: 'button', group: 2, caption: 'Add RT', icon: 'fa fa-code-fork' },
-                                { id: 'configroute', type: 'button', group: 2, caption: 'Config RT', icon: 'fa fa-wrench' },
+                                { id: 'createroute', type: 'button', group: 2, caption: 'Add RT', img: 'routeicon' },
+                                { id: 'configroute', type: 'button', group: 2, caption: 'Config RT', img: 'configicon' },
                                 { id: 'break3', type: 'break'},
-                                { id: 'eraseobject', type: 'button', caption: 'Erase Object', icon: 'fa fa-eraser' },
+                                { id: 'eraseobject', type: 'button', caption: 'Erase Object', img: 'cancelicon' },
                                 { id: 'break4', type: 'break'},
-                                { id: 'deleteworkflow', type: 'button', caption: 'Delete WF', icon: 'fa fa-trash-o' },
+                                { id: 'deleteworkflow', type: 'button', caption: 'Delete WF', img: 'removeicon' },
                                 { id: 'break5', type: 'break'},
-                                { id: 'clear', type: 'button', caption: 'Reset', icon: 'fa fa-file-o' },
-                                { id: 'save', type: 'button', caption: 'Save', icon: 'fa fa-floppy-o' },
+                                { id: 'clear', type: 'button', caption: 'Reset', img: 'reseticon' },
+                                { id: 'save', type: 'button', caption: 'Save', img: 'saveicon' },
                         ],
                         onClick: function (event) {
                                 if (event.target == 'clear') {
