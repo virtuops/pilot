@@ -15,7 +15,7 @@ define(function (require) {
                 toolbar: {
                         items: [
                                 { id: 'clear', type: 'button', caption: 'Reset', img: 'reseticon' },
-                                { id: 'submit', type: 'button', caption: 'Submit', icon: 'uploadcloudicon' }
+                                { id: 'submit', type: 'button', caption: 'Submit', img: 'clouduploadicon' }
                         ],
                         onClick: function (event) {
                                 if (event.target == 'clear') w2ui.adminwizard.clear();
