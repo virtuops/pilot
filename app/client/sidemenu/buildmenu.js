@@ -9,7 +9,7 @@ define(function (require) {
                 var adminmenu =  { id: 'admin', text: 'Admin', img: 'icon-folder', group: true };
                 var adminmenunodes = [
                                        { id: 'adminwizard', text: 'Admin Wizard', img:'wizardicon' },
-                                       { id: 'taskadmin', text: 'Task Admin', img: 'toolsicon' },
+                                       { id: 'taskadmin', text: 'Task Admin', img: 'taskadminicon' },
                                        { id: 'users', text: 'User Admin', img: 'usericon' },
                                        { id: 'groups', text: 'Group Admin', img: 'usergroupicon' },
                                        { id: 'runbookadmin', text: 'Runbook Admin', img: 'booksicon' },

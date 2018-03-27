@@ -24,7 +24,7 @@ define(function (require) {
 
 				results.records.forEach(function(task){
 				var menuid = element.id+'_'+task.recid;
-				w2ui.sidebar.add(element.id, {id: menuid, text: task.taskname});
+				w2ui.sidebar.add(element.id, {id: menuid, text: task.taskname, img: 'taskicon'});
 				TASKCODE.buildtask(menuid, task.taskname, element.id);
 				});
 			});	

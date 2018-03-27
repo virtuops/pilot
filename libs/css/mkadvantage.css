@@ -426,3 +426,9 @@ background-image: url("../../html/images/icons8-books-16.png");
 .workflowicon {
 background-image: url("../../html/images/icons8-workflow-16.png");
 }
+.taskicon {
+background-image: url("../../html/images/icons8-automatic-16.png");
+}
+.taskadminicon {
+background-image: url("../../html/images/icons8-report-card-16.png");
+}
