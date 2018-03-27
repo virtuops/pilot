@@ -1,0 +1,3 @@
+#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE
+filename, text,  true, true, Filename, style="width: 300px"
+status,  text,  false, true, Status, style="width: 300px"

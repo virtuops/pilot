@@ -278,23 +278,19 @@ Class Upload {
                 $outputfields = file_get_contents($fields);
                 $outputactions = '';
                 $taskdescription=$taskparams->taskdescription;
-                $tasktype=$taskparams->tasktype;
                 $datatype=$taskparams->datatype;
                 $jprop = '';
                 $fieldseparator=$taskparams->fieldseparator;
                 $recordseparator=$taskparams->recordseparator;
-                $iframesrc = '';
-                $htmlcode = '';
-                $instructions = '';
 
-                $sql = "replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, tasktype, datatype, jprop, fieldseparator, recordseparator, iframesrc, htmlcode, instructions) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $sql = "replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
                 $this->l->varErrorLog("\nExecuting sql $sql\n");
 
                 $this->l->varErrorLog("\nExecuting sql $sql\n");
                 $stmt = $con->prepare($sql);
 
-                $stmt->bind_param('sssssssssssssssss', $taskname, $urlparams, $userparams, $actiontext, $actionlanguage, $actionfilename, $outputfields, $outputactions, $taskdescription, $tasktype,$datatype, $jprop, $fieldseparator, $recordseparator, $iframesrc, $htmlcode, $instructions);
+                $stmt->bind_param('sssssssssssss', $taskname, $urlparams, $userparams, $actiontext, $actionlanguage, $actionfilename, $outputfields, $outputactions, $taskdescription, $datatype, $jprop, $fieldseparator, $recordseparator);
                 $stmt->execute();
 
                 $this->l->varErrorLog("Upload DB Error: ");
