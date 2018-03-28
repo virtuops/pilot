@@ -1,6 +1,6 @@
 
 	
-	{"taskname":"NH Ping Device",
+	{"taskname":"VP Ping Device",
 	"urlparams":"host",
 	"actionlanguage":"perl",
 	"actionfilename":"ping.pl",
