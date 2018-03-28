@@ -495,7 +495,9 @@ define(function (require) {
         ]
     },
     form: {
-        header: 'Controls for '+workflowname,
+	show: {
+		header: 'false'
+	},
         name: 'wfcontrols',
         fields: [
                 { field: 'minutes', type: 'radio'},
@@ -852,7 +854,7 @@ define(function (require) {
         });
 
             w2popup.open({
-                title   : ' ',
+                title   : 'Controls for '+workflowname,
                 width   : 1050,
                 height  : 900,
                 showClose: false,

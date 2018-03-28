@@ -17,14 +17,16 @@ define(function (require) {
         ]
     },
     form: {
-        header: 'Load a WorkFlow',
+	show: {
+		header: 'false'
+	},
         name: 'listworkflowsform',
         fields: [
                 { field: 'workflowname', type: 'list', options: { items: [] }},
         ],
         toolbar: {
             items: [
-                { id: 'load', type: 'button', caption: 'Load', img: 'fa fa-tasks' }
+                { id: 'load', type: 'button', caption: 'Load', img: 'loadvotype' }
             ],
             onClick: function (event) {
                 if (event.target == 'load') {
@@ -80,7 +82,7 @@ define(function (require) {
 
             var showFlows = function(){
             w2popup.open({
-                title   : ' ',
+                title   : 'Load Workflow',
                 width   : 600,
                 height  : 300,
                 showMax : true,

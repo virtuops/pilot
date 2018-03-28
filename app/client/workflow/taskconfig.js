@@ -24,11 +24,10 @@ define(function (require) {
     },
     tasksideform: {
       name: 'tasksideform',
-      header: 'Action Description',
       url: 'app/server/main.php',
       method: 'POST',
       show: {
-        header         : true,
+        header         : false,
         toolbar        : true,
         footer        : true
       },
@@ -223,7 +222,7 @@ define(function (require) {
 
                         var showConfig = function(){
             w2popup.open({
-                title   : ' ',
+                title   : 'Action Description',
                 width   : 1350,
                 height  : 900,
                 showMax : true,

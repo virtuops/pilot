@@ -159,8 +159,8 @@ define(function (require) {
       records: [
       ],
       formHTML: '<div>' +
-      '  <div style="padding:3px;font-weight:bold;color:#777">User Details</div>' +
-      '    <div class="w2ui-group" style="height:240px">' +
+      '  <div style="font-family:\'Lucida Sans Unicode\', \'Lucida Grande\', sans-serif; padding:3px;font-weight:bold;color:#777">User Details</div>' +
+      '    <div class="w2ui-group" style="height:240px; font-family:\'Lucida Sans Unicode\', \'Lucida Grande\', sans-serif;">' +
       '      <div class="w2ui-field">' +
       '        <label>Record ID: </label>' +
       '        <div><input name="recid" type="text" readonly maxlength="10"></div>' +
@@ -191,8 +191,8 @@ define(function (require) {
       '      </div>' +
       '    </div>' +
       '  </div>' +
-      '  <div style="padding:3px;font-weight:bold;color:#777">Change Password</div>' +
-      '    <div class="w2ui-group" style="height:90px">' +
+      '  <div style="padding:3px;font-weight:bold;color:#777;font-family:\'Lucida Sans Unicode\', \'Lucida Grande\', sans-serif;">Change Password</div>' +
+      '    <div class="w2ui-group" style="height:90px; font-family:\'Lucida Sans Unicode\', \'Lucida Grande\', sans-serif;">' +
       '      <div class="w2ui-field">' +
       '        <label>New Password: </label>' +
       '        <div><input name="newpassword" type="password" width="200px"></div>' +

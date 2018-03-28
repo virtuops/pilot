@@ -1,0 +1,15 @@
+
+	
+	{"taskname":"VP Read Data",
+	"urlparams":"data, espression",
+	"actionlanguage":"perl",
+	"actionfilename":"readdata.pl",
+	"taskdescription":"Synopsis: This will read an incoming data string, search for a matching expression and return the expression.\\\n\\\nInput param:  \\\ndata = Incoming data from a wfv to search for\\\nexpression = An expression to match on and return.\\\n\\\nOutput param:  status\\\nOutput values:  Either an empty string or the return value specified in the parentheses\\\n\\\nSample Params Config (fill in over on the left): \\\n{\\\n\"data\":\"message\",\\\n\"expression\":\"(High CPU)\"\\\n}",
+	"tasktype":"Form",
+	"datatype":"JSON",
+	"fieldseparator":"",
+	"recordseparator":"",
+	"actioncodefile":"readdata.pl",
+	"libs":[{"module1":"JSON"}]
+	}
+

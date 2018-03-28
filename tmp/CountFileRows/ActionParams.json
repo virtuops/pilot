@@ -1,0 +1,15 @@
+
+	
+	{"taskname":"VM Count File Rows",
+	"urlparams":"filename",
+	"actionlanguage":"perl",
+	"actionfilename":"countfilerows.pl",
+	"taskdescription":"Synopsis:  Utility that counts rows of data in a file. \\\n\\\nInput param:  \\\nfilename = File name to count rows.  MAKE SURE that the file is readable by the web server user\\\n\\\nOutput param:  status\\\nOutput values:  <integer value of rows>, <error, something like Cannot read...>\\\n\\\nSample Params Config (fill in over on the left): \\\n{\\\n\"filename\":\"\/var\/www\/html\/nochero\/tmp\/files\/cooloutput.txt\"\\\n}",
+	"tasktype":"Form",
+	"datatype":"JSON",
+	"fieldseparator":"",
+	"recordseparator":"",
+	"actioncodefile":"countfilerows.pl",
+	"libs":[{"module1":"JSON"}]
+	}
+
