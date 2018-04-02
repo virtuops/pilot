@@ -18,7 +18,7 @@ $logout = <<<EOT
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>VirtuOps™ Pilot Login</title>
+    <title>VirtuOps&reg; Pilot Login</title>
         <link rel="stylesheet" href="libs/css/login.css">
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
@@ -26,7 +26,7 @@ $logout = <<<EOT
   <body>
     <div class="wrapper">
         <div class="container">
-                <h1>You have logged out of VirtuOps™ Pilot</h1>
+                <h1>You have logged out of VirtuOps<sup><span style="font-size: 10px;">&reg;</span></sup> Pilot</h1>
 
         </div>
 
