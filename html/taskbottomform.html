@@ -12,9 +12,8 @@
                         </div>
                 </div>
                 <div class="w2ui-field">
-                        <label>Description</label>
-                        <div>
-                        <textarea name="taskdescription" type="text" style="width: 100%; font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; height: 300px; resize: none"></textarea>
+                        <label style="margin-right: 12px;">Description</label>
+			<div id="taskdescription" style="width: 1000px; height: 400px; margin-top: 10px;">
                         </div>
                 </div>
         </div>
@@ -38,9 +37,17 @@
                         </div>
                 </div>
                 <div class="w2ui-field">
-                        <label>Action Code</label>
-                        <div id="actiontext">
-                        <textarea name="actiontext" type="text" style="width: 100%; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; height: 400px; resize: none"></textarea>
+                        <label style="margin-right: 12px;">Action Code</label>
+                        <div id="actiontext" style="width: 1000px; height: 400px; margin-top: 10px;">
                         </div>
                 </div>
         </div>
+	<script>
+var taskdescr = ace.edit("taskdescription");
+        taskdescr.setTheme("ace/theme/chrome");
+
+        var actiontext = ace.edit("actiontext");
+        actiontext.setTheme("ace/theme/chrome");
+        actiontext.session.setMode("ace/mode/perl");
+
+</script>

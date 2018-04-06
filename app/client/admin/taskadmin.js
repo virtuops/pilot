@@ -3,6 +3,7 @@ define(function (require) {
   var UTILS = require('../../client/utils/misc')
   var MESSAGES = require('../../client/messages/messages');
 
+
   var refreshTaskGrid = function(callback) {
     UTILS.ajaxPost('get', 'tasks', '', function(response) {
       w2ui.tasktopgrid.records = response.records
@@ -63,17 +64,15 @@ define(function (require) {
         { field: 'actionfilename', caption: 'File Name', size: '80px', sortable: true, hidden: true },
         { field: 'actionlanguage', caption: 'Programming Language', size: '80px', sortable: true, hidden: true },
         { field: 'urlparams', caption: 'URL Params', size: '80px', sortable: true, hidden: true },
-        { field: 'outputfields', caption: 'Output Fields', size: '80px', sortable: false, hidden: true },
-        { field: 'outputactions', caption: 'Output Actions', size: '80px', sortable: false, hidden: true },
         { field: 'actiontext', caption: 'Action Text', size: '80px', sortable: true, hidden: true },
         { field: 'taskname', caption: 'Name', size: '140px', sortable: true },
         { field: 'taskdescription', caption: 'Description', size: '50%', sortable: true },
-        { field: 'htmlcode', hidden: true, caption: 'HTML Code', size: '100px', sortable: true },
-        { field: 'instructions', hidden: true, caption: 'Instructions', size: '100px', sortable: true },
-        { field: 'iframesrc', hidden: true, caption: 'IFrame Path', size: '100px', sortable: true },
       ],
       onRender: function(event) {
-        event.onComplete = function() { refreshTaskGrid() }
+        event.onComplete = function() { refreshTaskGrid() 
+	    taskdescr.setValue("Task Info");
+	    actiontext.setValue("Action Code");
+	    }
       },
       onClick: function(event) {
         var grid = this;
@@ -82,6 +81,8 @@ define(function (require) {
           if (sel.length == 1) {
             w2ui.taskbottomform.recid  = sel[0];
             w2ui.taskbottomform.record = $.extend(true, {}, grid.get(sel[0]));
+	    taskdescr.setValue(w2ui.taskbottomform.record.taskdescription);
+	    actiontext.setValue(w2ui.taskbottomform.record.actiontext);
             w2ui.taskbottomform.refresh();
           } else {
             w2ui.taskbottomform.clear();
@@ -112,6 +113,10 @@ define(function (require) {
           if (event.target == 'clear') w2ui.taskbottomform.clear();
           if (event.target == 'save') { 
             var record = w2ui.taskbottomform.record
+	    var td = taskdescr.getValue();
+	    var at = actiontext.getValue();
+		record.taskdescription = td;
+		record.actiontext = at;
 		
             // The corresponding part of the record for dropdowns should be objects, but check just in case.
             if (record.tasktype instanceof Object)
@@ -150,11 +155,9 @@ define(function (require) {
         { name: 'actionfilename', type: 'text', required: false, html: { caption: 'File Name', attr: 'size="80" maxlength="80"' } },
         { name: 'actionlanguage',  type: 'list', required: false, options: { items: [ 'shell', 'perl', 'php', 'python', 'other' ] }, html: { caption: 'Prog. Language', attr: 'size="40" maxlength="40"' }},
         { name:'urlparams', type: 'text', required: false, html: { caption: 'URL Params', attr: 'size="80" maxlength="80"' } },
-        { name:'outputfields', type: 'text', required: false, html: { caption: 'Output Fields', attr: 'size="80" maxlength="80"' } },
-        { name:'outputactions', type: 'text', required: false, html: { caption: 'Output Actions', attr: 'size="80" maxlength="80"' } },
-        { name: 'actiontext', type: 'textarea', required: false, html: { caption: 'Script', attr: 'rows="50" cols="150"' } },
+        //{ name: 'actiontext', type: 'textarea', required: false, html: { caption: 'Script', attr: 'rows="50" cols="150"' } },
         { name: 'taskname', type: 'text', required: false, html: { caption: 'Name', attr: 'size="40" maxlength="40"' }},
-        { name: 'taskdescription', type: 'textarea', required: false, html: { caption: 'Description', attr: 'rows="50" cols="150"' }}
+        //{ name: 'taskdescription', type: 'textarea', required: false, html: { caption: 'Description', attr: 'rows="50" cols="150"' }}
       ],
       records: [
       ]
@@ -162,6 +165,9 @@ define(function (require) {
     init: function(){
       $().w2grid(this.tasktopgrid);
       $('#taskbottomform').w2form(this.taskbottomform);
+	taskdescr.resize(true);
+	actiontext.resize(true);
+
     }
   };
 });

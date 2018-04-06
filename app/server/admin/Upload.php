@@ -153,7 +153,8 @@ Class Upload {
 
                 //TODO, need to specify unzip location in settings at install time and add tmp dir in build
 
-                $unzip = $this->globalconf['unzip'];
+                //$unzip = $this->globalconf['unzip'];
+		$zip = new ZipArchive();
                 $tmpdir = $this->globalconf['basedir'].'/tmp';
                 $longdirparts = explode('_', $name);
                 $zipname = end($longdirparts);
@@ -162,33 +163,41 @@ Class Upload {
 
 
                 //UNPACK THE FILE INTO TMP DIR.  SHOULD CREATE A DIR UNDER <ROOT>/tmp/$targetdir with all contents
-                `$unzip -o -d $tmpdir $zipfile`;
+                //`$unzip -o -d $tmpdir $zipfile`;
+
+		$res = $zip->open($zipfile);
+		if ($res === TRUE) {
+		  $zip->extractTo($tmpdir);
+		  $zip->close();
+		} else {
+		  $message = "The unzip process did not work.  Please examine your zip file and make sure there are no errors.";
+		  $this->ReturnData('error',$message);
+		}
 
 
                 if (file_exists($tmpdir.'/'.$targetdir)) {
 
                         if (file_exists($tmpdir.'/'.$targetdir.'/ActionParams.json')){
                                 $actionparams = file_get_contents($tmpdir.'/'.$targetdir.'/ActionParams.json');
+                                $taskdescr = file_get_contents($tmpdir.'/'.$targetdir.'/description.txt');
                                 $actionparams = json_decode($actionparams);
                                 $modulesComply = $this->CheckModules($actionparams);
                                 if ($modulesComply === true) {
                                         $addAction = $this->AddAction($tmpdir.'/'.$targetdir.'/'.$actionparams->actioncodefile, $actionparams->actioncodefile,$con);
                                         if ($addAction) {
                                                 $taskFields = $tmpdir.'/'.$targetdir.'/outputfields.txt';
-                                                $addTaskParams = $this->AddTaskParams($actionparams, $taskFields, $tmpdir.'/'.$targetdir, $con);
+                                                $addTaskParams = $this->AddTaskParams($taskdescr, $actionparams, $taskFields, $tmpdir.'/'.$targetdir, $con);
                                                 if ($addTaskParams) {
 
                                                 } else {//Something wrong with mysql insert/update of task table
 
                                                 $message = "Could not add Task Fields or params for the task.  If you got this from the VirtuOps Action Library, please send an email to support@virtuops.com and attach the package zip file.";
-                                                $this->l->varErrorLog('{"status":"error","message":"Could not add Task Fields or params for the task.  If you got this from the VirtuOps Action Library, please send an email to support@virtuops.com and attach the package zip file."}');
                                                 $this->ReturnData('error',$message);
 
                                                 }
 
                                         } else {//Something wrong with copy
                                                 $message = "Could not copy the action script.  Please make sure that your ".$tmpdir."/".$targetdir."/".$actionparams->actioncodefile." and your ".$this->globalconf['basedir']."/app/server/actiontext directory exists and are writable by the user that is running your web server.";
-                                                $this->l->varErrorLog('{"status":"error","message":"Could not copy the action script.  Please make sure that your "'.$tmpdir.'"/"'.$targetdir.'"/"'.$actionparams->actioncodefile.'" and your "'.$this->globalconf['basedir'].'"/app/server/actiontext directory exists and are writable by the user that is running your web server."}');
                                                 $this->ReturnData('error',$message);
 
                                         }
@@ -262,10 +271,7 @@ Class Upload {
 
         }
 
-        private function AddTaskParams($taskparams, $fields, $targetdir, $con) {
-
-                $this->l->varErrorLog('Task params: ');
-                $this->l->varErrorLog($taskparams);
+        private function AddTaskParams($taskdescr, $taskparams, $fields, $targetdir, $con) {
 
                 $actioncode = file_get_contents($targetdir.'/'.$taskparams->actioncodefile);
 
@@ -277,7 +283,7 @@ Class Upload {
                 $actionfilename=$taskparams->actionfilename;
                 $outputfields = file_get_contents($fields);
                 $outputactions = '';
-                $taskdescription=$taskparams->taskdescription;
+                $taskdescription = $taskdescr === false || strlen($taskdescr) == 0 ? 'No Description or No File' : $taskdescr;
                 $datatype=$taskparams->datatype;
                 $jprop = '';
                 $fieldseparator=$taskparams->fieldseparator;
@@ -285,9 +291,6 @@ Class Upload {
 
                 $sql = "replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-                $this->l->varErrorLog("\nExecuting sql $sql\n");
-
-                $this->l->varErrorLog("\nExecuting sql $sql\n");
                 $stmt = $con->prepare($sql);
 
                 $stmt->bind_param('sssssssssssss', $taskname, $urlparams, $userparams, $actiontext, $actionlanguage, $actionfilename, $outputfields, $outputactions, $taskdescription, $datatype, $jprop, $fieldseparator, $recordseparator);

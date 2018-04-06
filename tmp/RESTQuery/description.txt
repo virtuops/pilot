@@ -1,0 +1,34 @@
+Synopsis:  Performs REST Query to an endpoint.
+
+Input params: 
+
+user = string for the REST user credentials
+password = string for the REST Password credentials
+curlpath = path to curl on your server
+nheader<1-3> = headers to pass to the request, example Accept:application/json
+url = string for the url for the REST service.
+method = POST, GET, PUT etc.
+data = string that you pass to the REST request that is used as data for the request.
+cmdoutput = string that indicates where you will store the reply from the rest service.  
+     Needs to be a full path to a file on your pilot server that your web server user can write to.   
+	 Example /var/www/html/pilot/tmp/files/restresult.json
+
+Output param:  
+	status
+ 
+Output values:  
+
+	Created, Problem Creating Entry
+	
+Sample Params Config (fill in over on the left): 
+
+{
+"user":"restuser",
+"password":"restpass",
+"method":"POST",
+"curlpath":"/bin/curl",
+"url":"https://mycompany.restinterface.com/some/rest/query/endpoint",
+"header1":"Accept:application/json",
+"cmdoutput":"/var/www/html/pilot/tmp/files/out.json",
+"data":{"field1":"value1","field2":"value2"}
+}"	

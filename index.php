@@ -16,6 +16,7 @@ include("security.php");
     <script src="libs/jquery/jquery.panzoom-master/dist/jquery.panzoom.min.js" type="text/javascript"></script>
     <script src="libs/jquery/jquery-mousewheel-master/jquery.mousewheel.min.js" type="text/javascript"></script>
     <script src="libs/jquery/jquery.flowchart.js" type="text/javascript"></script>
+    <script src="libs/ace/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
     <script data-main="libs/main" src="libs/require/require.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="libs/css/mkadvantage.css" />
     <link rel="stylesheet" type="text/css" href="libs/css/login.css" />
