@@ -378,6 +378,14 @@ dbTests(){
 	connectionSuccess
 }
 
+
+updateSQL(){
+
+cp -rp pilot.sql pilot.inst_sql
+sed -i "s/__DB__/${db}/g" pilot.inst_sql
+
+}
+
 dbInstall(){
 	dbParams
         read -p "[OPTIONAL] If you want a different database user to access the pilot db, enter it here or just press the ENTER key to leave it blank: " dbuser
@@ -395,7 +403,9 @@ dbInstall(){
 		exit
 	fi
 
-	`${dbclient} -u${user} -p${password} ${db}  < pilot.sql`
+	updateSQL
+
+	`${dbclient} -u${user} -p${password} ${db}  < pilot.inst_sql`
          if [ ! $? -eq 0 ]; then 
 		echo -e "\nError $?: Could not populate database ${db}. Please examine your DB settings and run the installer again."
 	exit

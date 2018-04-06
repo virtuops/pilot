@@ -1,6 +1,6 @@
 -- MySQL dump 10.16  Distrib 10.1.10-MariaDB, for Linux (x86_64)
 --
--- Host: localhost    Database: pilot
+-- Host: localhost    Database: __DB__
 -- ------------------------------------------------------
 -- Server version	10.1.10-MariaDB
 
@@ -16,12 +16,12 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `pilot`
+-- Current Database: `__DB__`
 --
 
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `pilot` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `__DB__` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `pilot`;
+USE `__DB__`;
 
 --
 -- Table structure for table `auth_servers`
