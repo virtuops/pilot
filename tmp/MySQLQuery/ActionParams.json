@@ -1,0 +1,14 @@
+
+	
+	{"taskname":"VP MySQL Query",
+	"urlparams":"host,user,password,database,query,port,queryoutput",
+	"actionlanguage":"perl",
+	"actionfilename":"mysqlquery.pl",
+	"tasktype":"Form",
+	"datatype":"JSON",
+	"fieldseparator":"",
+	"recordseparator":"",
+	"actioncodefile":"mysqlquery.pl",
+	"libs":[{"module1":"DBI"},{"module2":"DBD::mysql"}]
+	}
+

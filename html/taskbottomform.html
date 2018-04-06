@@ -1,53 +1,54 @@
-        <div class="w2ui-page page-0" style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">
+        <div class="w2ui-page page-0">
                 <div class="w2ui-field">
-                        <label>ID</label>
+                        <label style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">ID</label>
                         <div>
                         <input name="recid" type="text" style="width: 100%; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif" maxlength="100" size="60" readonly/>
                         </div>
                 </div>
                 <div class="w2ui-field">
-                        <label>Name</label>
+                        <label style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Name</label>
                         <div>
                         <input name="taskname" type="text" style="width: 100%; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif" maxlength="100" size="60"/>
                         </div>
                 </div>
                 <div class="w2ui-field">
-                        <label style="margin-right: 12px;">Description</label>
-			<div id="taskdescription" style="width: 1000px; height: 400px; margin-top: 10px;">
+                        <label style="margin-right: 12px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Description</label>
+			<div id="taskdescription">
                         </div>
                 </div>
         </div>
-        <div class="w2ui-page page-1" style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">
+        <div class="w2ui-page page-1">
                 <div class="w2ui-field">
-                        <label>File Name</label>
+                        <label style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">File Name</label>
                         <div>
                         <input name="actionfilename" type="text" style="width: 100%; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif" maxlength="100" size="60"/>
                         </div>
                 </div>
                 <div class="w2ui-field">
-                        <label>Params</label>
+                        <label style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Params</label>
                         <div>
                         <textarea name="urlparams" type="text" style="width: 100%; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif; height: 40px; resize: none"></textarea>
                         </div>
                 </div>
                 <div class="w2ui-field">
-                        <label>Programming Language</label>
+                        <label style="font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Programming Language</label>
                         <div>
                         <input name="actionlanguage" style="width: 100%; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif" type="text" maxlength="24" size="60"/>
                         </div>
                 </div>
                 <div class="w2ui-field">
-                        <label style="margin-right: 12px;">Action Code</label>
-                        <div id="actiontext" style="width: 1000px; height: 400px; margin-top: 10px;">
+                        <label style="margin-right: 12px; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Action Code</label>
+                        <div id="actiontext">
                         </div>
                 </div>
         </div>
 	<script>
 var taskdescr = ace.edit("taskdescription");
         taskdescr.setTheme("ace/theme/chrome");
+	taskdescr.setShowPrintMargin(false);
 
         var actiontext = ace.edit("actiontext");
         actiontext.setTheme("ace/theme/chrome");
         actiontext.session.setMode("ace/mode/perl");
-
+	actiontext.setShowPrintMargin(false);
 </script>

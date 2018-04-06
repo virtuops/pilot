@@ -3,6 +3,7 @@ define(function () {
         init: function () {
                 $('#layout').w2layout(this.layoutmain);
                 $().w2layout(this.layout2080);
+                $().w2layout(this.layout7030);
                 $().w2layout(this.layout5050);
                 $().w2layout(this.layoutsingle);
         },
@@ -17,6 +18,13 @@ define(function () {
                 name: 'layout2080',
                 panels: [
                         { type: 'top', size: '30%', resizable: true },
+                        { type: 'main', size: '70%', resizable: true }
+                ]
+        },
+        layout7030: {
+                name: 'layout7030',
+                panels: [
+                        { type: 'right', size: '30%', resizable: true },
                         { type: 'main', size: '70%', resizable: true }
                 ]
         },

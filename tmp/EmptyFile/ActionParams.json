@@ -4,7 +4,6 @@
 	"urlparams":"filename",
 	"actionlanguage":"perl",
 	"actionfilename":"emptyfile.pl",
-	"taskdescription":"Synopsis:  Empties a file.  Good if you want to clear a file you were writing to.   USE CAUTION.  THIS EMPTIES A FILE.  TEST THIS IN DEV FIRST.\\\n\\\nInput param:  \\\nfilename = File name to empty.  MAKE SURE that the file is writable by the web server user\\\n\\\nOutput param:  status\\\nOutput values:  emptied, <error, something like Cannot write to...>\\\n\\\nSample Params Config (fill in over on the left): \\\n{\\\n\"filename\":\"\/var\/www\/html\/nochero\/tmp\/files\/cooloutput.txt\",\\\n}",
 	"tasktype":"Form",
 	"datatype":"JSON",
 	"fieldseparator":"",

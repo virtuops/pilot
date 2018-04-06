@@ -1,6 +1,6 @@
 
 	
-	{"taskname":"VM Count File Rows",
+	{"taskname":"VP Count File Rows",
 	"urlparams":"filename",
 	"actionlanguage":"perl",
 	"actionfilename":"countfilerows.pl",

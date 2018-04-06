@@ -1,0 +1,12 @@
+Synopsis:  Utility that counts rows of data in a file.
+
+Input param:  
+filename = File name to count rows.  MAKE SURE that the file is readable by the web server user
+
+Output param:  status
+Output values:  <integer value of rows>, <error, something like Cannot read...>
+
+Sample Params Config (fill in over on the left): 
+{
+"filename":"/var/www/html/nochero/tmp/files/cooloutput.txt"
+}

@@ -32,9 +32,9 @@ define(function (require) {
                     //var sidebar = this;
                     switch (event.target) {
                         case 'taskadmin':
-                            w2ui.layoutmain.content('main',w2ui.layout2080);
-                            w2ui.layout2080.content('top',w2ui.tasktopgrid);
-                            w2ui.layout2080.content('main',w2ui.taskbottomform);
+                            w2ui.layoutmain.content('main',w2ui.layout7030);
+                            w2ui.layout7030.content('right',w2ui.tasktopgrid);
+                            w2ui.layout7030.content('main',w2ui.taskbottomform);
                             setTimeout(function(){w2ui.taskbottomform.refresh();}, 400);
                             break;
                         case 'workflowadmin':

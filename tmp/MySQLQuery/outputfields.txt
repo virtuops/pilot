@@ -1,0 +1,2 @@
+#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE
+status,  text,  false, true, Status, style="width: 300px"

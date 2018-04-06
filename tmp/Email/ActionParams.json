@@ -2,7 +2,6 @@
 	"urlparams":"smtpuser,smtppassword,smtpport,smtpserver,recipient,subject,body",
 	"actionlanguage":"perl",
 	"actionfilename":"email.pl",
-	"taskdescription":"Synopsis:  Send an Email using SMTPS.  All fields are mandatory or your email will fail.\\\n\\\nInput params:  smtpuser,smtppassword,smtpserver,smtpport,recipient,subject,body\\\nInput values expected:\\\n   smtpuser = user that can log into email and send email (the sender)\\\n   smtppassword = user password\\\n   smtpserver = the mail server (something like smtp.gmail.com)\\\n   smtpport = secure port used (587 works on gmail as of 2017)\\\n   recipient = email address of person receiving email\\\n   subject = email subjectline\\\n   body = body of email\\\n\\\nOutput param:  status\\\nOutput values:  Message Sent, FAILURE:  Message Not Sent\\\n\\\nSample Params Config (fill in over on the left): \\\n{\\\n\"smtpuser\":\"me@company.com\",\\\n\"smtppassword\":\"em@1lp@55w0rd\",\\\n\"smtpserver\":\"smtp.gmail.com\",\\\n\"smtpport\":\"587\",\\\n\"recipient\":\"you@othercompany.com\",\\\n\"subject\":\"Some Email Subject\",\\\n\"body\":\"Here is an explanation of what is going on, I can really tell you a lot here.....\"\\\n}",
 	"tasktype":"Form",
 	"datatype":"JSON",
 	"fieldseparator":"",

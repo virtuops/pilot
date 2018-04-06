@@ -1,0 +1,12 @@
+Synopsis:  Ping a device and get a result back.
+
+Input param:  host
+Input value expected:  hostname or IP address
+
+Output param:  status
+Output values:  alive, unreachable
+
+Sample Params Config (fill in over on the left): 
+{
+"host":"10.23.16.193"
+}

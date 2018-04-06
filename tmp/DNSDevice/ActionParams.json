@@ -4,7 +4,6 @@
 	"urlparams":"host",
 	"actionlanguage":"perl",
 	"actionfilename":"dnsdevice.pl",
-	"taskdescription":"Synopsis:  Perform DNS Query and get a result back.\\\n\\\nInput param:  host\\\nInput value expected:  FQDN or IP address\\\n\\\nOutput param:  status\\\nOutput values:  IP: <IP address>, Name:<FQDN>, QUERY FAILED!\\\n\\\nSample Params Config (fill in over on the left): \\\n{\\\n\"host\":\"10.23.16.193\"\\\n}",
 	"tasktype":"Form",
 	"datatype":"JSON",
 	"fieldseparator":"",

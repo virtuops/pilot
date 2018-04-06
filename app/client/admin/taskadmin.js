@@ -65,13 +65,12 @@ define(function (require) {
         { field: 'actionlanguage', caption: 'Programming Language', size: '80px', sortable: true, hidden: true },
         { field: 'urlparams', caption: 'URL Params', size: '80px', sortable: true, hidden: true },
         { field: 'actiontext', caption: 'Action Text', size: '80px', sortable: true, hidden: true },
-        { field: 'taskname', caption: 'Name', size: '140px', sortable: true },
-        { field: 'taskdescription', caption: 'Description', size: '50%', sortable: true },
+        { field: 'taskname', caption: 'Name', size: '20%', sortable: true },
+        { field: 'taskdescription', caption: 'Description', size: '50%', sortable: true, hidden: true },
       ],
       onRender: function(event) {
-        event.onComplete = function() { refreshTaskGrid() 
-	    taskdescr.setValue("Task Info");
-	    actiontext.setValue("Action Code");
+        event.onComplete = function() { 
+		refreshTaskGrid() 
 	    }
       },
       onClick: function(event) {
@@ -81,8 +80,11 @@ define(function (require) {
           if (sel.length == 1) {
             w2ui.taskbottomform.recid  = sel[0];
             w2ui.taskbottomform.record = $.extend(true, {}, grid.get(sel[0]));
-	    taskdescr.setValue(w2ui.taskbottomform.record.taskdescription);
-	    actiontext.setValue(w2ui.taskbottomform.record.actiontext);
+	    taskdescr.setValue(w2ui.taskbottomform.record.taskdescription,-1);
+	    actiontext.setValue(w2ui.taskbottomform.record.actiontext,-1);
+	    taskdescr.resize();
+            actiontext.resize();
+
             w2ui.taskbottomform.refresh();
           } else {
             w2ui.taskbottomform.clear();
@@ -150,6 +152,12 @@ define(function (require) {
           }
         }
       },
+      onRender: function(event){
+		event.onComplete = function(){
+                taskdescr.setValue('');
+                actiontext.setValue('');
+		}
+      },
       fields: [
         { name: 'recid', type: 'text', html: { caption: 'ID', attr: 'size="10" readonly' }},
         { name: 'actionfilename', type: 'text', required: false, html: { caption: 'File Name', attr: 'size="80" maxlength="80"' } },
@@ -165,9 +173,6 @@ define(function (require) {
     init: function(){
       $().w2grid(this.tasktopgrid);
       $('#taskbottomform').w2form(this.taskbottomform);
-	taskdescr.resize(true);
-	actiontext.resize(true);
-
     }
   };
 });
