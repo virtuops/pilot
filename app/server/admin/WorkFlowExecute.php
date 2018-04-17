@@ -6,7 +6,7 @@ require_once __DIR__.'/../utils/Log.php';
 Class WorkFlowExecute {
 
         private $globalconf;
-	private $con;
+        private $con;
         private $l;
         private $s;
         private $wfdata;
@@ -19,6 +19,7 @@ Class WorkFlowExecute {
         private $wfserial;
         private $wfstarttime;
         private $wfstoptime;
+        private $lastout;
 
         public function __construct()
         {
@@ -32,7 +33,7 @@ Class WorkFlowExecute {
         public function WorkFlowExecuteOperation($action, $params, $con){
 
 
-		$this->con = $con;
+                $this->con = $con;
                 if ($action == 'start') {
                         $this->Start($params, $con);
                 } else if ($action == 'stop') {
@@ -170,7 +171,7 @@ Class WorkFlowExecute {
         private function RunTask($op){
                 $settings = $this->s->getSettings();
                 $curl = $settings['curl'];
-		$con = $this->con;
+                $con = $this->con;
                 $weburl = $settings['weburl'];
                 $workflow = json_decode($this->wfdata);
                 $wfuser = $this->wfuser;
@@ -190,6 +191,8 @@ Class WorkFlowExecute {
                 $parray = '';
                 $pcount = 1;
 
+                $this->l->varErrorLog("GETTING PARAMS WITH WFV OF ");
+                $this->l->varErrorLog($wfv);
                 $params = $this->GetParams($workflow->operators->{$op}->properties->task->parameters, $wfv);
                 $taskmeta = json_encode($taskmetadata);
                 $this->l->varErrorLog("TASK META IS NOW $taskmeta");
@@ -212,8 +215,10 @@ Class WorkFlowExecute {
                                 $this->l->varErrorLog($taskoutput);
                                 $taskoutvars = preg_split("/\n+/",$taskoutput);
                                 $toutput = end($taskoutvars);
-                                $this->l->varErrorLog('TASKOUT OUTPUT IS ....');
-                                $this->l->varErrorLog($toutput);
+                                $this->lastout = $toutput;
+                                $this->l->varErrorLog('LAST OUTPUT IS ....');
+                                $this->l->varErrorLog($this->lastout);
+                                $this->AddOutputToWFV($taskname, $this->lastout);
                                 $this->GetNextOperator($from_op, $from_conn_id, $to_op, $toutput);
                         }
                 }
@@ -223,6 +228,17 @@ Class WorkFlowExecute {
                         exit();
                 }
 
+        }
+
+        private function AddOutputToWFV($lasttask, $lastout) {
+                $wfv = $this->wfv;
+                $lo_array = json_decode($lastout);
+                foreach ($lo_array as $k=>$v) {
+                $wfv->{$k} = $v;
+                }
+                $this->wfv = $wfv;
+                $this->l->varErrorLog("WFV ADDED....");
+                $this->l->varErrorLog($this->wfv);
         }
 
         private function EvalRoute($op, $output=null){
@@ -316,13 +332,38 @@ Class WorkFlowExecute {
                 $this->l->varErrorLog("WFV....");
                 $this->l->varErrorLog($wfv);
 
-                $p_array = json_decode($params, true);
+                $params = json_decode($params);
+
+                //$p_array = json_decode($params, true);
 
                 foreach ($wfv as $key=>$value) {
+                $this->l->varErrorLog("KEY....");
+                $this->l->varErrorLog($key);
+                $this->l->varErrorLog("VALUE....");
+                $this->l->varErrorLog($value);
+                $this->l->varErrorLog("PARAMS");
+                $this->l->varErrorLog($params);
 
-                $params = str_replace("$key","$value","$params",$replcount);
+                foreach ($params as $k=>$v) {
+                                //going one level down
+                                if (is_object($v)) {
+                                        foreach ($v as $vk=>$vv) {
+                                                if ($vv == $key) {
+                                                $params->{$k} = $vv;
+                                                }
+                                        }
+
+                                } else {
+                                        if ($v == $key) {
+                                        $params->{$k} = $value;
+                                        }
+                                }
+
+                        }
 
                 }
+
+                $params = json_encode($params);
 
                 if (strlen($params) == 0) {
                 $params = '{}';
@@ -445,4 +486,5 @@ Class WorkFlowExecute {
         }
 
 }
+
 

@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__.'/../admin/Settings.php';
+require_once __DIR__.'/../utils/Log.php';
 require_once __DIR__.'/Api.php';
 
 
@@ -8,6 +9,8 @@ class Workflows
 {
     public static function workflowRun($args)
     {
+
+        $l = new Log();
 
         $wfuser = Api::getParam("wfuser", $args);
         $wfpassword = Api::getParam("wfpassword", $args);
@@ -27,6 +30,7 @@ class Workflows
 
         Api::logDebug("... received workflow_run, params are wfuser='$wfuser', wfpassword='$wfpassword', workflowname='$workflowname', wfv='$wfv', taskmeta='$taskmeta', wfmeta='$wfmeta'");
         Api::logDebug("... running workflow workflowname='$workflowname'");
+
 
         $runwf = $php." ".__DIR__."/../admin/wfwrapper.php ".$wfuser." ".$wfpassword." '".$workflowname."' '".$wfv."' '".$taskmeta."' '".$wfmeta."'";
         $wfout = `$runwf`;

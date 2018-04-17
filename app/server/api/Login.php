@@ -12,7 +12,6 @@ class Login
         $a = new ApiUtils();
         $l = new Log();
 
-        $l->varErrorLog('Auth Login');
 
         if (!isset($_SERVER['PHP_AUTH_USER'])) {
             header('WWW-Authenticate: Basic realm="NOCHero"');
@@ -26,18 +25,21 @@ class Login
         $username = $_SERVER['PHP_AUTH_USER'];
         $pw = $_SERVER['PHP_AUTH_PW'];
 
-	$settings = parse_ini_file('../config.ini');
-	$dbhost = $settings['dbhost'];
-	$dbuser = $settings['dbuser'];
-	$dbpass = $settings['dbpass'];
-	$dbname = $settings['dbname'];
-	$dbport = $settings['dbport'];
+        $settings = parse_ini_file('../config.ini');
+        $dbhost = $settings['dbhost'];
+        $dbuser = $settings['dbuser'];
+        $dbpass = $settings['dbpass'];
+        $dbname = $settings['dbname'];
+        $dbport = $settings['dbport'];
 
-	$con = new mysqli($dbhost, $dbuser, $dbpass, $dbname, $dbport);
+        $con = new mysqli($dbhost, $dbuser, $dbpass, $dbname, $dbport);
 
         $params = array("singleuser"=>"true", "username"=>"$username");
 
         $user = $a->ApiUtilsOperation('getuser',$params, $con);
+        $username = $user['username'];
+
+
 
         if (!$user || !password_verify($pw, $user['password'])) {
             header('WWW-Authenticate: Basic realm="NOCHero"');
@@ -50,13 +52,13 @@ class Login
         $args['_user'] = $username;
         $args['con'] = $con;
 
-        if (!forward_static_call(array($class, $method), $args)) {
+        $wfcall = forward_static_call(array($class, $method), $args);
+        if (!$wfcall) {
             Api::logError("Error calling $class::$method with args:\n".json_encode($args));
             Api::sendError("Error calling $class::$method.");
             exit;
         }
-
-	$con->close();
+        $con->close();
 
     }
 }

@@ -79,6 +79,9 @@ class Api
     {
         $val = '';
 
+        if ($name == 'taskmetadata' || $name == 'wfmetadata' || $name == 'wfv') {
+                $required = false;
+        }
 
         if (array_key_exists($name, $array))
             $val = $array[$name];

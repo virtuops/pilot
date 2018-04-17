@@ -1,8 +1,19 @@
 <?php
 
 require_once 'WorkFlowExecute.php';
+require_once 'Settings.php';
 
 $wf = new WorkFlowExecute();
+$s = new Settings();
+
+$settings = $s->getSettings();
+$host = $settings['dbhost'];
+$username = $settings['dbuser'];
+$password = $settings['dbpass'];
+$dbname = $settings['dbname'];
+$port = $settings['dbport'];
+
+$con = new mysqli($host, $username, $password, $dbname, $port);
 
 $user = $argv[1];
 $password = $argv[2];
@@ -35,4 +46,7 @@ $params = array(
         "wfmeta" => $wfmeta_arr
         );
 
-$wf->WorkFlowExecuteOperation('start',$params);
+$wf->WorkFlowExecuteOperation('start',$params, $con);
+
+$con->close();
+
