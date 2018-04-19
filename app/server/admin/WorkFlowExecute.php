@@ -55,7 +55,7 @@ Class WorkFlowExecute {
                 $this->wfuser = $params['wfuser'];
                 $this->wfpassword = $params['wfpassword'];
                 $this->wfname = $params['wfname'];
-                $this->wfv = isset($params['wfv']) ? $params['wfv'] : array();
+                $this->wfv = isset($params['wfv']) ? $params['wfv'] : new stdClass();
                 $this->wfmeta = isset($params['wfmeta']) ? $params['wfmeta'] : '';
                 $this->wfmeta = json_encode($this->wfmeta);
                 $this->taskmeta = isset($params['taskmeta']) ? $params['taskmeta'] : '';
@@ -233,9 +233,13 @@ Class WorkFlowExecute {
         private function AddOutputToWFV($lasttask, $lastout) {
                 $wfv = $this->wfv;
                 $lo_array = json_decode($lastout);
+                $this->l->varErrorLog("LAST OUT ARRAY....");
+                $this->l->varErrorLog($lo_array);
                 foreach ($lo_array as $k=>$v) {
                 $wfv->{$k} = $v;
                 }
+                $this->l->varErrorLog("WFV OUT ARRAY....");
+                $this->l->varErrorLog($wfv);
                 $this->wfv = $wfv;
                 $this->l->varErrorLog("WFV ADDED....");
                 $this->l->varErrorLog($this->wfv);
@@ -280,13 +284,22 @@ Class WorkFlowExecute {
         }
 
         private function ProcessRoute ($taskout, $current_op, $outputid, $param, $compare, $value) {
+                $this->l->varErrorLog("COMPARE IS");
+                $this->l->varErrorLog($compare);
+                $this->l->varErrorLog("COMP PARAM IS ");
+                $this->l->varErrorLog($taskout->{$param});
+                $this->l->varErrorLog("COMP VALUE IS ");
+                $this->l->varErrorLog($value);
+
                 $workflow = json_decode($this->wfdata);
 
                 foreach ($workflow->links as $key=>$link) {
                         if ($current_op === $link->fromOperator && $link->fromConnector === $outputid) {
                                 $getnext = 0;
                         if ($compare === '=') {
-                               if ($taskout->{$param} === $value) {
+                                $this->l->varErrorLog('We should be here');
+                               if ($taskout->{$param} == $value) {
+                                $this->l->varErrorLog('AND HERE');
                                $getnext = 1;
                                }
                         } else if ($compare === '>') {
@@ -337,12 +350,6 @@ Class WorkFlowExecute {
                 //$p_array = json_decode($params, true);
 
                 foreach ($wfv as $key=>$value) {
-                $this->l->varErrorLog("KEY....");
-                $this->l->varErrorLog($key);
-                $this->l->varErrorLog("VALUE....");
-                $this->l->varErrorLog($value);
-                $this->l->varErrorLog("PARAMS");
-                $this->l->varErrorLog($params);
 
                 foreach ($params as $k=>$v) {
                                 //going one level down
