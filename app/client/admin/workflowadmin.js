@@ -79,6 +79,17 @@ define(function (require) {
                                 var operatorData = $flowchart.flowchart('getOperatorData',operatorId)
                                 selectedId = operatorId;
                                 selectedTask = operatorData;
+
+				var workflowname = w2ui.workflowadmin.toolbar.get('workflowname').value;
+				 if (typeof workflowname !== 'undefined') {
+				    if (selectedId.substring(0,4) == 'task') {
+                                    WFTC.launch(selectedId,workflowname);
+				    } else if (selectedId.substring(0,5) == 'route') {
+                                    WFRC.launch(selectedId,workflowname);
+				    }
+                                 } else {
+                                    MESSAGES.noworkflowname();
+                                 }
                                 return true;
                               },
                               onOperatorDelete: function(operatorId) {
@@ -115,11 +126,9 @@ define(function (require) {
                                 { id: 'controls', type: 'button', caption: 'Controls', img: 'controlsicon' },
                                 { id: 'break1', type: 'break'},
                                 { id: 'createtask', type: 'button', caption: 'Add Task', img: 'addicon' },
-                                { id: 'configtask', type: 'button', caption: 'Config Task', img: 'configicon' },
                                 { id: 'break2', type: 'break'},
 
                                 { id: 'createroute', type: 'button', group: 2, caption: 'Add RT', img: 'routeicon' },
-                                { id: 'configroute', type: 'button', group: 2, caption: 'Config RT', img: 'configicon' },
                                 { id: 'break3', type: 'break'},
                                 { id: 'eraseobject', type: 'button', caption: 'Erase Object', img: 'cancelicon' },
                                 { id: 'break4', type: 'break'},
@@ -206,6 +215,7 @@ define(function (require) {
                                       var $flowchart = $('#workflow_1');
 
                                       $flowchart.flowchart('createOperator', operatorId, operatorData);
+					
 
                                 }
                                 else if (event.target == 'createroute') {
@@ -258,36 +268,6 @@ define(function (require) {
 
                                       var $flowchart = $('#workflow_1');
                                       $flowchart.flowchart('createOperator', operatorId, operatorData);
-                                }
-                                else if (event.target == 'configtask') {
-                                        var selId = $('#workflow_1').flowchart('getSelectedOperatorId');
-                                        var operatorData = $('#workflow_1').flowchart('getOperatorData',selId);
-
-                                        if (operatorData.properties.objecttype !== 'task') {
-                                        MESSAGES.notatask();
-                                        } else {
-                                        var workflowname = w2ui.workflowadmin.toolbar.get('workflowname').value;
-                                                if (typeof workflowname !== 'undefined') {
-                                                        WFTC.launch(selId,workflowname);
-                                                } else {
-                                                        MESSAGES.noworkflowname();
-                                                }
-                                        }
-                                }
-                                else if (event.target == 'configroute') {
-                                        var selId = $('#workflow_1').flowchart('getSelectedOperatorId');
-                                        var operatorData = $('#workflow_1').flowchart('getOperatorData',selId);
-
-                                        if (operatorData.properties.objecttype !== 'route') {
-                                        MESSAGES.notaroute();
-                                        } else {
-                                                var workflowname = w2ui.workflowadmin.toolbar.get('workflowname').value;
-                                                if (typeof workflowname !== 'undefined') {
-                                                WFRC.launch(selId,workflowname);
-                                                } else {
-                                                MESSAGES.noworkflowname();
-                                                }
-                                        }
                                 }
                                 else if (event.target === 'controls') {
 
