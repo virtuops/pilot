@@ -1,4 +1,7 @@
-Pinged %host% %counter% times
-Pinged %host% %counter% times
-Pinged %host% %counter% times
-Pinged %host% %counter% times
+Pinged localhost is alive %counter% times
+Pinged localhost is alive %counter% times
+Pinged localhost is alive %counter% times
+Pinged localhost is alive %counter% times
+Pinged localhost is alive %counter% times
+Pinged localhost is alive %counter% times
+Pinged localhost is alive %counter% times

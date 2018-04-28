@@ -4,6 +4,7 @@ define(function (require) {
         var WFTC = require('../../client/workflow/taskconfig');
         var WFRCIE = require('../../client/workflow/routeconfig-ifelse');
         var WFRCWL = require('../../client/workflow/routeconfig-whileloop');
+        var WFRCFE = require('../../client/workflow/routeconfig-foreach');
         var WFRCCONTINUE = require('../../client/workflow/routeconfig-continue');
         var WFRCBREAK = require('../../client/workflow/routeconfig-break');
         var WFS = require('../../client/workflow/wfcontrols');
@@ -97,6 +98,8 @@ define(function (require) {
                                     	WFRCIE.launch(selectedId,workflowname);
 					} else if (selectedId.substring(6,11) == 'while') {
                                     	WFRCWL.launch(selectedId,workflowname);
+					} else if (selectedId.substring(6,13) == 'foreach') {
+                                    	WFRCFE.launch(selectedId,workflowname);
 					} else if (selectedId.substring(6,14) == 'continue') {
                                     	WFRCCONTINUE.launch(selectedId,workflowname);
 					} else if (selectedId.substring(6,11) == 'break') {
@@ -152,7 +155,6 @@ define(function (require) {
 				{ id: 'route', type: 'menu', caption: 'Routes', img: 'routeicon', selected: 'id1',
 					items: [{ text: 'if-else', img: 'routeicon'},
                 			{ text: 'while', img: 'routeicon'},
-                			{ text: 'do-while', img: 'routeicon'},
                 			{ text: 'foreach', img: 'routeicon'},
                 			{ text: 'break', img: 'routeicon'},
                 			{ text: 'continue', img: 'routeicon'},
@@ -203,8 +205,7 @@ define(function (require) {
                                             });
                                         }
 
-                                }
-                                else if (event.target == 'createtask') {
+                                } else if (event.target == 'createtask') {
                                         var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
                                         var re = /task/;
                                         var highestNumber = 0;
@@ -246,8 +247,7 @@ define(function (require) {
                                       $flowchart.flowchart('createOperator', operatorId, operatorData);
 					
 
-                                }
-				else if (event.target == 'route:break') {
+                                } else if (event.target == 'route:break') {
                                         var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
                                         var re = /route:break/;
                                         var highestNumber = 0;
@@ -288,8 +288,7 @@ define(function (require) {
                                       $flowchart.flowchart('createOperator', operatorId, operatorData);
 
 
-				} 
-				else if (event.target == 'route:continue') {
+				} else if (event.target == 'route:continue') {
                                         var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
                                         var re = /route:continue/;
                                         var highestNumber = 0;
@@ -329,8 +328,7 @@ define(function (require) {
                                       var $flowchart = $('#workflow_1');
                                       $flowchart.flowchart('createOperator', operatorId, operatorData);
 
-				}
-                                else if (event.target == 'route:if-else') {
+				} else if (event.target == 'route:if-else') {
                                         var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
                                         var re = /route:if-else/;
                                         var highestNumber = 0;
@@ -386,8 +384,7 @@ define(function (require) {
 
 
 
-                                }
-				else if (event.target === 'route:while') {
+                                } else if (event.target === 'route:while') {
                                         var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
                                         var re = /route:while/;
                                         var highestNumber = 0;
@@ -431,17 +428,49 @@ define(function (require) {
                                       var $flowchart = $('#workflow_1');
                                       $flowchart.flowchart('createOperator', operatorId, operatorData);
 
-				} 
-				else if (event.target === 'route:do-while') {
+				} else if (event.target === 'route:foreach') {
+                                        var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
+                                        var re = /route:foreach/;
+                                        var highestNumber = 0;
+                                        operatorNames.forEach(function(name){
+                                                if (re.test(name) === true){
+                                                        num = parseInt(name.replace('route:foreach',''));
+                                                        if (num > highestNumber) {
+                                                                highestNumber = num;
+                                                        }
+                                                }
+                                        });
 
+                                        var nextRoute = highestNumber + 1;
+                                        var operatorId = 'route:foreach' + nextRoute;
 
+                                      var operatorData = {
+                                        top: 60,
+                                        left: 500,
+                                        properties: {
+                                          objecttype: 'route:foreach',
+				          class: 'flowchart-route-operator',
+                                          title: 'ForEach',
+                                          inputs: {
+                                            input_1: {
+                                              label: 'In',
+                                              conntype: 'input'
+                                            }
+                                          },
+                                          outputs: {
+                                            output_1: {
+                                              label: 'Out 1',
+                                              conntype: 'output',
+                                              array: 'array',
+                                              key: 'key',
+                                              value: 'value'
+                                            }
+                                          }
+                                        }
+                                      };
 
-				}
-				else if (event.target === 'route:for') {
-
-
-				}
-				else if (event.target === 'route:foreach') {
+                                      var $flowchart = $('#workflow_1');
+                                      $flowchart.flowchart('createOperator', operatorId, operatorData);
 
 				}
                                 else if (event.target === 'controls') {

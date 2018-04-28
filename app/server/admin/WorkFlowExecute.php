@@ -74,7 +74,6 @@ Class WorkFlowExecute {
                 foreach ($workflow->links as $linkid=>$linkobj)  {
                         foreach($linkobj as $key=>$value) {
                                 if ($key === 'fromOperator' && $value==='start') {
-					$this->l->varErrorLog("Operator key is $key and value is $value");
                                         array_push($next, $linkobj->toOperator);
                                 }
                         }
@@ -132,8 +131,6 @@ Class WorkFlowExecute {
 
 
         private function EvalFirstOperators($operators){
-		$this->l->varErrorLog('FIRST OPERATORS');	
-		$this->l->varErrorLog($operators);
               foreach ($operators as $op) {
                       if (substr($op, 0, 4) === 'task') {
                               $this->RunTask($op);
@@ -185,8 +182,6 @@ Class WorkFlowExecute {
                 $toutput = end($tout_array);
 
                 $this->lastout = $toutput;
-                $this->l->varErrorLog('LAST OUTPUT IS ....');
-                $this->l->varErrorLog($this->lastout);
 
                 $this->WFTaskRecord($taskserial, $this->wfserial, $con);
                 $this->AddOutputToWFV($taskname, $this->lastout);
@@ -324,33 +319,17 @@ Class WorkFlowExecute {
 
 
         private function GetParams($params, $wfv){
-
-                $params = json_decode($params);
-
-                //$p_array = json_decode($params, true);
-
+		
                 foreach ($wfv as $key=>$value) {
-
-                foreach ($params as $k=>$v) {
-                                //going one level down
-                                if (is_object($v)) {
-                                        foreach ($v as $vk=>$vv) {
-                                                if ($vv == $key) {
-                                                $params->{$k} = $vv;
-                                                }
-                                        }
-
-                                } else {
-                                        if ($v == $key) {
-                                        $params->{$k} = $value;
-                                        }
-                                }
-
-                        }
-
+			if (! is_object($value)) {
+			$replace = $value;
+			$search = '/[%]'.$key.'[%]/';
+			$string = $params;
+			
+			$params = preg_replace($search, $replace, $string);
+			}
                 }
 
-                $params = json_encode($params);
 
                 if (strlen($params) == 0) {
                 $params = '{}';
@@ -373,7 +352,6 @@ Class WorkFlowExecute {
         private function GetNextOperator($from_op, $from_conn_id, $to_op, $output=null){
                 $workflow = json_decode($this->wfdata);
                 $wfname = $this->wfname;
-		$this->l->varErrorLog("Evaluating GetNextOperator params $from_op, $from_conn_id, $to_op");
 
                         //left off here, this seems to make sense.  Need to keep it from getting too stupid with all the loops.
                 foreach ($workflow->links as $key=>$link) {
