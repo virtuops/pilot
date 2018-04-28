@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Settings.php';
+require_once 'IfElse.php';
 require_once __DIR__.'/../utils/Log.php';
 
 Class WorkFlowExecute {
@@ -20,11 +21,14 @@ Class WorkFlowExecute {
         private $wfstarttime;
         private $wfstoptime;
         private $lastout;
+	private $ifelse;
+	private $whileloop;
 
         public function __construct()
         {
                 $this->s = new Settings();
                 $this->l = new Log();
+		$this->ifelse = new IfElse();
                 $settings = $this->s->getSettings();
                 $this->wfstarttime = microtime(true);
 
@@ -39,10 +43,6 @@ Class WorkFlowExecute {
                 } else if ($action == 'stop') {
                         $this->wfname = $params['wfname'];
                         $this->Stop($this->wfname, $con);
-                } else if ($action == 'pause') {
-                        $this->Pause($params, $con);
-                } else if ($action == 'resume') {
-                        $this->Resume($params, $con);
                 } else if ($action == 'get') {
                         $this->Read($params, $con);
                 }
@@ -63,35 +63,24 @@ Class WorkFlowExecute {
                 $wfstart = date('Y-m-d H:i:s');
                 $this->WFRecord($this->wfserial,$this->wfname,$this->wfuser,$wfstart,'null',$this->wfmeta,'null','start',$con);
 
-
-                //$this->UpdateTracker($this->wfname,'Start','start');
                 $this->wfdata = $this->GetWFData($params, $con);
-
+			
                 $workflow = json_decode($this->wfdata);
-
-                /*
-                * Record the workflow name and start time, then get the links
-                * For each link, get the end point
-                *    1)  If end point is a task, run the task and save the task results
-                *    2)  If the end point is a route, take the results from the task it was linked to and eval results
-                *        and execute the next task.
-                */
 
                 $this->SetStateRunning($this->wfname, $con);
 
+                $next = array();
 
-                foreach ($workflow->links as $linkid=>$link) {
-
-                        $next = array();
-                        foreach($link as $key=>$value) {
+                foreach ($workflow->links as $linkid=>$linkobj)  {
+                        foreach($linkobj as $key=>$value) {
                                 if ($key === 'fromOperator' && $value==='start') {
-                                        array_push($next, $link->toOperator);
+					$this->l->varErrorLog("Operator key is $key and value is $value");
+                                        array_push($next, $linkobj->toOperator);
                                 }
                         }
 
-                $this->EvalOperators($next);
-
                 }
+                $this->EvalFirstOperators($next);
                 $status = "success";
                 $msg = 'Started Workflow '.$this->wfname;
                 $this->ReturnData($status, $msg);
@@ -142,22 +131,24 @@ Class WorkFlowExecute {
         }
 
 
-        private function EvalOperators($operators){
-                $workflow = json_decode($this->wfdata);
-                //need a foreach of links from start to task operators
-          foreach ($workflow->links as $key=>$link) {
-                if ($link->fromOperator === 'start') {
-                        foreach ($operators as $op){
-                                if ($link->toOperator === $op) {
-                                        $this->RunTask($op);
-                                } else if (preg_match('/route/', $op) === 1){
-                                        //Need to consider this...when would we have a Start node, then a route?  There is no output after start.
-                                        //Do nothing....what is there to eval????
-                                }
-                        }
-                }
-
-          }
+        private function EvalFirstOperators($operators){
+		$this->l->varErrorLog('FIRST OPERATORS');	
+		$this->l->varErrorLog($operators);
+              foreach ($operators as $op) {
+                      if (substr($op, 0, 4) === 'task') {
+                              $this->RunTask($op);
+                      } else if (substr($op, 6, 5) === 'while') {
+				$this->EvalRoute('while',$op);
+		      } else if (substr($op, 6, 8) === 'continue') {
+				$this->EvalRoute('continue',$op);
+		      } else if (substr($op, 6, 5) === 'break') {
+				$this->EvalRoute('break',$op);
+		      } else {
+			      $status = "Error";
+			      $msg = "Logic or Task not found";
+			      $this->ReturnData($status, $msg);	
+		      }
+              }
         }
 
         private function RunTask($op){
@@ -178,8 +169,6 @@ Class WorkFlowExecute {
                 $to_op = '';
                 $from_conn_id = '';
                 $from_op = $op;
-                //$problems = array();
-                //$problems = $this->p->ProblemLogOperation('getids',$wfname);
                 $parray = '';
                 $pcount = 1;
 
@@ -193,22 +182,17 @@ Class WorkFlowExecute {
                 $taskoutput = `$runtask`;
                 $tout_array = preg_split("/\n+/",$taskoutput);
                 $taskserial = $tout_array[count($tout_array)-2];
+                $toutput = end($tout_array);
+
+                $this->lastout = $toutput;
+                $this->l->varErrorLog('LAST OUTPUT IS ....');
+                $this->l->varErrorLog($this->lastout);
 
                 $this->WFTaskRecord($taskserial, $this->wfserial, $con);
+                $this->AddOutputToWFV($taskname, $this->lastout);
 
-                foreach ($workflow->links as $key=>$val) {
-                        if ($val->fromOperator === $op) {
-                                $from_conn_id = $val->fromConnector;
-                                $to_op = $val->toOperator;
-                                $taskoutvars = preg_split("/\n+/",$taskoutput);
-                                $toutput = end($taskoutvars);
-                                $this->lastout = $toutput;
-                                $this->l->varErrorLog('LAST OUTPUT IS ....');
-                                $this->l->varErrorLog($this->lastout);
-                                $this->AddOutputToWFV($taskname, $this->lastout);
-                                $this->GetNextOperator($from_op, $from_conn_id, $to_op, $toutput);
-                        }
-                }
+		$nextobj = $this->GetConnIdTask($workflow->links, $op);
+                $this->GetNextOperator($from_op, $nextobj[0], $nextobj[1], $toutput);
 
                 } else {
                         $this->l->varErrorLog("$wfname is not running");
@@ -226,90 +210,118 @@ Class WorkFlowExecute {
                 $this->wfv = $wfv;
         }
 
-        private function EvalRoute($op, $output=null){
+        private function EvalRoute($logic, $op, $output=null){
                 $workflow = json_decode($this->wfdata);
-                //print "Evaluating Route ".$workflow->operators->{$op}->properties->title." with output ".$output."\n";
                 $taskout = json_decode($output);
                 $outputs = $workflow->operators->{$op}->properties->outputs;
                 $getnext = 0;
                 $next_arr = array();
                 $nexthop = new \stdClass;
 
-                foreach ($outputs as $key=>$value) {
-                        $comp_param = $value->parameter;
-                        $comp_compare = $value->comparison;
-                        $comp_value = $value->value;
-                        $outputid = $key;
+		if ($logic === 'if-else') {	
+			foreach ($outputs as $key=>$value) {
+				$comp_param = $value->parameter;
+				$comp_compare = $value->comparison;
+				$comp_value = $value->value;
+				$comp_increment = $value->increment;
+				$outputid = $key;
+				$getnext = $this->ifelse->ProcessRoute($this->wfv, $workflow, $taskout, $op, $key, $comp_param, $comp_compare, $comp_value);
+				if ($getnext === 1) {
+				$nexthop->fromop = $op;
+				$nexthop->fromconnid = $key;
+				foreach ($workflow->links as $key=>$val) {
+					if ($val->fromOperator === $op && $val->fromConnector === $outputid) {
+						$nexthop->toop = $val->toOperator;
+					}
+				}
+				array_push($next_arr, $nexthop);
+				}
+			}
 
-                        //print "Process route is sending $op, $key, $comp_param, $comp_compare, $comp_value\n";
-                        $getnext = $this->ProcessRoute ($taskout, $op, $key, $comp_param, $comp_compare, $comp_value);
-                        //print "Get next is ".$getnext."\n";
-                        if ($getnext === 1) {
-                        $nexthop->fromop = $op;
-                        $nexthop->fromconnid = $key;
-                        foreach ($workflow->links as $key=>$val) {
-                                if ($val->fromOperator === $op && $val->fromConnector === $outputid) {
-                                        $nexthop->toop = $val->toOperator;
-                                }
-                        }
-                        array_push($next_arr, $nexthop);
-                        }
-                }
+			foreach ($next_arr as $gn) {
+				$from_op = $gn->fromop;
+				$from_conn_id = $gn->fromconnid;
+				$to_op = $gn->toop;
+				$this->GetNextOperator($from_op, $from_conn_id, $to_op, $taskout);
+			}
+		} else if ($logic == 'while') {
 
-                foreach ($next_arr as $gn) {
-                        $from_op = $gn->fromop;
-                        $from_conn_id = $gn->fromconnid;
-                        $to_op = $gn->toop;
-                        $this->GetNextOperator($from_op, $from_conn_id, $to_op, $taskout);
-                }
+			$this->wfv->{$op}->counter = 0;
+                        $this->wfv->{$op}->compare = $workflow->operators->{$op}->properties->outputs->output_1->comparison->text;
+                        $this->wfv->{$op}->value = $workflow->operators->{$op}->properties->outputs->output_1->value;
+                        $this->wfv->{$op}->increment = $workflow->operators->{$op}->properties->outputs->output_1->increment;
+
+			$nextobj = $this->GetConnIdTask($workflow->links, $op);
+			$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+
+		} else if ($logic == 'continue') {
+			$loop = $workflow->operators->{$op}->properties->loopid;
+			$counter = (int)$this->wfv->{$loop}->counter;
+			$compare = $this->wfv->{$loop}->compare;
+			$value = (int)$this->wfv->{$loop}->value;
+			$increment = (int)$this->wfv->{$loop}->increment;
+
+			if ($compare === '>') {
+				if ($counter > $value) { 
+					$this->wfv->{$loop}->counter = $counter + $increment;
+					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+				
+				} else {
+					$nextobj = $this->GetConnIdTask($workflow->links, $op);
+					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+				}
+			} else if ($compare === '<') {
+				if ($counter < $value) {
+					$this->wfv->{$loop}->counter = $counter + $increment;
+					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+				
+				} else {
+					$nextobj = $this->GetConnIdTask($workflow->links, $op);
+					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+				}
+					
+			} else if ($compare === '<=') {
+				if ($counter <= $value) {
+					$this->wfv->{$loop}->counter = $counter + $increment;
+					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+				
+				} else {
+					$nextobj = $this->GetConnIdTask($workflow->links, $op);
+					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+				}
+
+			} else if ($compare === '>=') {
+				if ($counter >= $value) {
+					$this->wfv->{$loop}->counter = $counter + $increment;
+					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+				
+				} else {
+					$nextobj = $this->GetConnIdTask($workflow->links, $op);
+					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+				}
+
+			} else if ($compare === '=') {
+				if ($counter = $value) {
+					$this->wfv->{$loop}->counter = $counter + $increment;
+					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+				
+				} else {
+					$nextobj = $this->GetConnIdTask($workflow->links, $op);
+					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+				}
+			}
+		} else if ($logic == 'break') {
+			$loop = $workflow->operators->{$op}->properties->loopid;
+                        $nextobj = $this->GetConnIdTask($workflow->links, $op);
+                        $this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);
+		}
         }
 
-        private function ProcessRoute ($taskout, $current_op, $outputid, $param, $compare, $value) {
-
-                $workflow = json_decode($this->wfdata);
-
-                foreach ($workflow->links as $key=>$link) {
-                        if ($current_op === $link->fromOperator && $link->fromConnector === $outputid) {
-                                $getnext = 0;
-                        if ($compare === '=') {
-                               if ($taskout->{$param} == $value) {
-                               $getnext = 1;
-                               }
-                        } else if ($compare === '>') {
-                                if ($taskout->{$param} > $value) {
-                                $getnext = 1;
-                                }
-                        } else if ($compare === '<') {
-                                if ($taskout->{$param} < $value) {
-                                $getnext = 1;
-                                }
-                        } else if ($compare === '>=') {
-                                if ($taskout->{$param} >= $value) {
-                                $getnext = 1;
-                                }
-                        } else if ($compare === '<=') {
-                                if ($taskout->{$param} <= $value) {
-                                $getnext = 1;
-                                }
-                        } else if ($compare === '<>') {
-                                if ($taskout->{$param} !== $value) {
-                                $getnext = 1;
-                                }
-                        } else if ($compare === 'LIKE') {
-                                $search = ".*".$taskout->{$param}.".*";
-                                if (preg_match("/$value/", $search) === 1) {
-                                $getnext = 1;
-                                }
-                        } else if ($compare === 'NOT LIKE') {
-                                $search = ".*".$taskout->{$param}.".*";
-                                if (preg_match("/$value/", $search) !== 1) {
-                                $getnext = 1;
-                                }
-                        }
-                        return $getnext;
-                }
-         }
-        }
 
         private function GetParams($params, $wfv){
 
@@ -358,9 +370,10 @@ Class WorkFlowExecute {
                 $this->ReturnData($status, $msg);
         }
 
-        function GetNextOperator($from_op, $from_conn_id, $to_op, $output=null){
+        private function GetNextOperator($from_op, $from_conn_id, $to_op, $output=null){
                 $workflow = json_decode($this->wfdata);
                 $wfname = $this->wfname;
+		$this->l->varErrorLog("Evaluating GetNextOperator params $from_op, $from_conn_id, $to_op");
 
                         //left off here, this seems to make sense.  Need to keep it from getting too stupid with all the loops.
                 foreach ($workflow->links as $key=>$link) {
@@ -368,8 +381,14 @@ Class WorkFlowExecute {
                                 $next_op = $to_op;
                                 if (preg_match('/task/', $next_op) === 1) {
                                         $this->RunTask($next_op);
-                                } else if (preg_match('/route/', $next_op) === 1){
-                                        $this->EvalRoute($next_op, $output);
+                                } else if (preg_match('/if-else/', $next_op) === 1){
+                                        $this->EvalRoute('if-else', $next_op, $output);
+                                } else if (preg_match('/while/', $next_op) === 1){
+                                        $this->EvalRoute('while', $next_op, $output);
+                                } else if (preg_match('/continue/', $next_op) === 1){
+                                        $this->EvalRoute('continue', $next_op, $output);
+                                } else if (preg_match('/break/', $next_op) === 1){
+                                        $this->EvalRoute('break', $next_op, $output);
                                 } else if (preg_match('/end/', $next_op) === 1) {
                                         $this->Stop($wfname, $this->con);
                                 }
@@ -419,6 +438,18 @@ Class WorkFlowExecute {
 
 
         }
+
+	private function GetConnIdTask($links, $op){
+	       $from_conn_id='';
+	       $to_op=''; 
+               foreach ($links as $key=>$val) {
+                       if ($val->fromOperator === $op) {
+                               $from_conn_id = $val->fromConnector;
+                               $to_op = $val->toOperator;
+                       }
+               }
+	       return array($from_conn_id, $to_op);
+	}
 
         private function ReturnData($status, $msg){
                         header('Content-Type: application/json');

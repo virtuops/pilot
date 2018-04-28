@@ -2,12 +2,16 @@ define(function (require) {
         var UTILS = require('../../client/utils/misc');
         var MESSAGES = require('../../client/messages/messages');
         var WFTC = require('../../client/workflow/taskconfig');
-        var WFRC = require('../../client/workflow/routeconfig');
+        var WFRCIE = require('../../client/workflow/routeconfig-ifelse');
+        var WFRCWL = require('../../client/workflow/routeconfig-whileloop');
+        var WFRCCONTINUE = require('../../client/workflow/routeconfig-continue');
+        var WFRCBREAK = require('../../client/workflow/routeconfig-break');
         var WFS = require('../../client/workflow/wfcontrols');
         var LISTFLOWS = require('../../client/workflow/listflows');
         var selectedTask = {};
         var selectedId = '';
         var workflowitems = [];
+
 
         var wfInitData = {
                           operators: {
@@ -73,10 +77,14 @@ define(function (require) {
                               multipleLinksOnOutput: true,
                               linkWidth: 2,
                               onOperatorSelect: function(operatorId) {
-                                //TODO:  On clicking an operator, bring up for to update/modify operator
-                                var taskId = $flowchart.flowchart('getOperatorTitle', operatorId);
-                                //var operatorData = $flowchart.flowchart('getData');
-                                var operatorData = $flowchart.flowchart('getOperatorData',operatorId)
+                                return true;
+                              },
+			      onOperatorCreate: function(operatorId, operatorData, fullElement){
+
+
+				fullElement.operator[0].addEventListener('dblclick',function(){
+				if (operatorId !== 'start' && operatorId !== 'end') {
+
                                 selectedId = operatorId;
                                 selectedTask = operatorData;
 
@@ -85,20 +93,33 @@ define(function (require) {
 				    if (selectedId.substring(0,4) == 'task') {
                                     WFTC.launch(selectedId,workflowname);
 				    } else if (selectedId.substring(0,5) == 'route') {
-                                    WFRC.launch(selectedId,workflowname);
+					if (selectedId.substring(6,13) == 'if-else') {
+                                    	WFRCIE.launch(selectedId,workflowname);
+					} else if (selectedId.substring(6,11) == 'while') {
+                                    	WFRCWL.launch(selectedId,workflowname);
+					} else if (selectedId.substring(6,14) == 'continue') {
+                                    	WFRCCONTINUE.launch(selectedId,workflowname);
+					} else if (selectedId.substring(6,11) == 'break') {
+                                    	WFRCBREAK.launch(selectedId,workflowname);
+					}
 				    }
                                  } else {
                                     MESSAGES.noworkflowname();
                                  }
-                                return true;
-                              },
+
+
+				}
+
+				},false);
+
+				return true;
+			      },
                               onOperatorDelete: function(operatorId) {
 
                                 selectedTask = {};
                                 return true;
                               },
                               onLinkSelect: function(linkId) {
-                                //TODO:  On clicking an operator, bring up for to update/modify Link data
                                 return true;
                               },
 
@@ -125,11 +146,18 @@ define(function (require) {
                                 { id: 'loadworkflow', type: 'button', caption: 'Load WF', img: 'workflowicon'},
                                 { id: 'controls', type: 'button', caption: 'Controls', img: 'controlsicon' },
                                 { id: 'break1', type: 'break'},
-                                { id: 'createtask', type: 'button', caption: 'Add Task', img: 'addicon' },
+                                { id: 'createtask', type: 'button', caption: 'Tasks', img: 'addicon' },
                                 { id: 'break2', type: 'break'},
-                                { id: 'createlogic', type: 'button', caption: 'Add Logic', img: 'logicicon' },
-                                { id: 'break3', type: 'break'},
-                                { id: 'createroute', type: 'button', group: 2, caption: 'Add RT', img: 'routeicon' },
+                                //{ id: 'createroute', type: 'button', group: 2, caption: 'Add RT', img: 'routeicon' },
+				{ id: 'route', type: 'menu', caption: 'Routes', img: 'routeicon', selected: 'id1',
+					items: [{ text: 'if-else', img: 'routeicon'},
+                			{ text: 'while', img: 'routeicon'},
+                			{ text: 'do-while', img: 'routeicon'},
+                			{ text: 'foreach', img: 'routeicon'},
+                			{ text: 'break', img: 'routeicon'},
+                			{ text: 'continue', img: 'routeicon'},
+					] 
+				},
                                 { id: 'break4', type: 'break'},
                                 { id: 'eraseobject', type: 'button', caption: 'Erase Object', img: 'cancelicon' },
                                 { id: 'break5', type: 'break'},
@@ -219,13 +247,13 @@ define(function (require) {
 					
 
                                 }
-                                else if (event.target == 'createroute') {
+				else if (event.target == 'route:break') {
                                         var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
-                                        var re = /route/;
+                                        var re = /route:break/;
                                         var highestNumber = 0;
                                         operatorNames.forEach(function(name){
                                                 if (re.test(name) === true){
-                                                        num = parseInt(name.replace('route',''));
+                                                        num = parseInt(name.replace('route:break',''));
                                                         if (num > highestNumber) {
                                                                 highestNumber = num;
                                                         }
@@ -233,15 +261,97 @@ define(function (require) {
                                         });
 
                                         var nextRoute = highestNumber + 1;
-                                        var operatorId = 'route' + nextRoute;
-
+                                        var operatorId = 'route:break' + nextRoute;
                                       var operatorData = {
                                         top: 60,
                                         left: 500,
                                         properties: {
-                                          objecttype: 'route',
+                                          objecttype: 'route:break',
+				          class: 'flowchart-route-operator-break',
+                                          title: 'Break',
+                                          inputs: {
+                                            input_1: {
+                                              label: 'In',
+                                              conntype: 'input'
+                                            }
+                                          },
+                                          outputs: {
+                                            output_1: {
+                                              label: 'Out',
+                                              conntype: 'output',
+                                            }
+                                          }
+                                        }
+                                      };
+
+                                      var $flowchart = $('#workflow_1');
+                                      $flowchart.flowchart('createOperator', operatorId, operatorData);
+
+
+				} 
+				else if (event.target == 'route:continue') {
+                                        var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
+                                        var re = /route:continue/;
+                                        var highestNumber = 0;
+                                        operatorNames.forEach(function(name){
+                                                if (re.test(name) === true){
+                                                        num = parseInt(name.replace('route:continue',''));
+                                                        if (num > highestNumber) {
+                                                                highestNumber = num;
+                                                        }
+                                                }
+                                        });
+
+                                        var nextRoute = highestNumber + 1;
+                                        var operatorId = 'route:continue' + nextRoute;
+                                      var operatorData = {
+                                        top: 60,
+                                        left: 500,
+                                        properties: {
+                                          objecttype: 'route:continue',
+				          class: 'flowchart-route-operator-continue',
+                                          title: 'Continue',
+                                          inputs: {
+                                            input_1: {
+                                              label: 'In',
+                                              conntype: 'input'
+                                            }
+                                          },
+                                          outputs: {
+                                            output_1: {
+                                              label: 'Out',
+                                              conntype: 'output',
+                                            }
+                                          }
+                                        }
+                                      };
+
+                                      var $flowchart = $('#workflow_1');
+                                      $flowchart.flowchart('createOperator', operatorId, operatorData);
+
+				}
+                                else if (event.target == 'route:if-else') {
+                                        var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
+                                        var re = /route:if-else/;
+                                        var highestNumber = 0;
+                                        operatorNames.forEach(function(name){
+                                                if (re.test(name) === true){
+                                                        num = parseInt(name.replace('route:if-else',''));
+                                                        if (num > highestNumber) {
+                                                                highestNumber = num;
+                                                        }
+                                                }
+                                        });
+
+                                        var nextRoute = highestNumber + 1;
+                                        var operatorId = 'route:if-else' + nextRoute;
+                                      var operatorData = {
+                                        top: 60,
+                                        left: 500,
+                                        properties: {
+                                          objecttype: 'route:if-else',
 				          class: 'flowchart-route-operator',
-                                          title: 'Route ' + nextRoute,
+                                          title: 'If Else',
                                           inputs: {
                                             input_1: {
                                               label: 'In',
@@ -269,7 +379,71 @@ define(function (require) {
 
                                       var $flowchart = $('#workflow_1');
                                       $flowchart.flowchart('createOperator', operatorId, operatorData);
+
+
+
+
+
+
+
                                 }
+				else if (event.target === 'route:while') {
+                                        var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
+                                        var re = /route:while/;
+                                        var highestNumber = 0;
+                                        operatorNames.forEach(function(name){
+                                                if (re.test(name) === true){
+                                                        num = parseInt(name.replace('route:while',''));
+                                                        if (num > highestNumber) {
+                                                                highestNumber = num;
+                                                        }
+                                                }
+                                        });
+
+                                        var nextRoute = highestNumber + 1;
+                                        var operatorId = 'route:while' + nextRoute;
+
+                                      var operatorData = {
+                                        top: 60,
+                                        left: 500,
+                                        properties: {
+                                          objecttype: 'route:while',
+				          class: 'flowchart-route-operator',
+                                          title: 'While',
+                                          inputs: {
+                                            input_1: {
+                                              label: 'In',
+                                              conntype: 'input'
+                                            }
+                                          },
+                                          outputs: {
+                                            output_1: {
+                                              label: 'Out 1',
+                                              conntype: 'output',
+                                              parameter: 'paramname',
+                                              comparison: 'LIKE',
+                                              value: 'somevalue'
+                                            }
+                                          }
+                                        }
+                                      };
+
+                                      var $flowchart = $('#workflow_1');
+                                      $flowchart.flowchart('createOperator', operatorId, operatorData);
+
+				} 
+				else if (event.target === 'route:do-while') {
+
+
+
+				}
+				else if (event.target === 'route:for') {
+
+
+				}
+				else if (event.target === 'route:foreach') {
+
+				}
                                 else if (event.target === 'controls') {
 
                                         var workflowname = w2ui.workflowadmin.toolbar.get('workflowname').value;
@@ -311,8 +485,12 @@ define(function (require) {
 
                                 else if (event.target == 'eraseobject') {
                                         var $flowchart = $('#workflow_1');
+					var selId = $flowchart.flowchart('getSelectedOperatorId');
+					var targetData = $flowchart.flowchart('getOperatorData',selId);
                                         var linkOrTaskRouter = '';
-                                        var title='';
+                                        var title=targetData.title;
+                                        var objtype=targetData.objecttype;
+					
 
                                         if ($flowchart.flowchart('getSelectedLinkId') !== null) {
                                         linkOrTaskRouter = 'link';
@@ -321,8 +499,7 @@ define(function (require) {
                                         }
 
                                         if (linkOrTaskRouter === 'taskroute') {
-                                        title = typeof selectedTask.properties.title != 'undefined' ? selectedTask.properties.title : '';
-                                                if (title === 'Start' || title === 'Stop') {
+                                                if (objtype === 'startnode' || objtype === 'endnode') {
                                                 MESSAGES.nodeletestartend();
 
                                                 } else {
@@ -336,7 +513,7 @@ define(function (require) {
                                 } else if (event.target === 'loadworkflow') {
                                         LISTFLOWS.launch();
                                 } else {
-                                        console.log('Something is not right');
+                                        //console.log('Something is not right');
                                 }
                         }
                 },

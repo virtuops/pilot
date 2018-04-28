@@ -4,6 +4,7 @@
 
 date_default_timezone_set('UTC');
 
+
 require_once 'utils/Log.php';
 require_once 'utils/Crud.php';
 $settings = parse_ini_file('config.ini');
@@ -18,6 +19,7 @@ $conn = new mysqli($host, $username, $password, $dbname, $port);
 
 $l = new Log();
 $c = new Crud();
+
 
 $request = array();
 $action = '';

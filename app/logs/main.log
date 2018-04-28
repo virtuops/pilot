@@ -1,0 +1,517 @@
+Sat, 28 Apr 2018 15:18:55 +0000 string(34) "In CrudOperation, workflowschedule"
+Sat, 28 Apr 2018 15:18:55 +0000 string(28) "WorkFlowScheduleRead PARAMS "
+Sat, 28 Apr 2018 15:18:55 +0000 array(1) {
+  ["workflowname"]=>
+  string(10) "First Flow"
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(33) "In CrudOperation, workflowexecute"
+Sat, 28 Apr 2018 15:18:58 +0000 string(47) "Operator key is fromOperator and value is start"
+Sat, 28 Apr 2018 15:18:58 +0000 string(15) "FIRST OPERATORS"
+Sat, 28 Apr 2018 15:18:58 +0000 array(1) {
+  [0]=>
+  string(12) "route:while1"
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(63) "Evaluating GetNextOperator params route:while1, output_1, task1"
+Sat, 28 Apr 2018 15:18:58 +0000 string(290) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{"host":"localhost"}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sat, 28 Apr 2018 10:18:58 -0500 string(16) "UserRead PARAMS "
+Sat, 28 Apr 2018 10:18:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 28 Apr 2018 10:18:58 -0500 string(19) "ReadRunbook PARAMS "
+Sat, 28 Apr 2018 10:18:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 28 Apr 2018 10:18:58 -0500 string(17) "ReadTasks PARAMS "
+Sat, 28 Apr 2018 10:18:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(28) "... Starting nochero runtask"
+Sat, 28 Apr 2018 15:18:58 +0000 string(2) "
+
+"
+Sat, 28 Apr 2018 15:18:58 +0000 string(12) "filetorun is"
+Sat, 28 Apr 2018 15:18:58 +0000 string(9) ""ping.pl""
+Sat, 28 Apr 2018 15:18:58 +0000 string(9) "params is"
+Sat, 28 Apr 2018 15:18:58 +0000 string(20) "{"host":"localhost"}"
+Sat, 28 Apr 2018 15:18:58 +0000 string(11) "taskdata is"
+Sat, 28 Apr 2018 15:18:58 +0000 string(1308) "{"taskname":"VP Ping Device","urlparams":"host","userparams":"","actiontext":"#\r\n# Ping a single device, bring back alive\r\n# Uses TCP Ping by default\r\n#\r\n\r\nuse strict;\r\nuse warnings;\r\nuse Net::Ping;\r\nuse Getopt::Long;\r\nuse JSON;\r\n\r\nmy $host='';\r\nmy %output;\r\nGetOptions(\"host=s\" => \\$host);\r\n\r\n\r\nmy $p = Net::Ping->new();\r\nif ($p->ping($host)) {\r\n$output{'host'} = $host;\r\n$output{'status'} = 'alive';\r\n} else {\r\n$output{'host'} = $host;\r\n$output{'status'} = 'unreachable';\r\n}\r\n$p->close();\r\n\r\nmy $result = encode_json(\\%output);\r\n\r\nprint $result;\r\n","actionlanguage":"perl","actionfilename":"ping.pl","taskdescription":"Synopsis:  Ping a device and get a result back.\r\n\r\nInput param:  host\r\nInput value expected:  hostname or IP address\r\n\r\nOutput param:  status\r\nOutput values:  alive, unreachable\r\n\r\nSample Params Config (fill in over on the left): \r\n{\r\n\"host\":\"10.23.16.193\"\r\n}","datatype":"JSON","jprop":"","fieldseparator":"","recordseparator":"","outputfields":"#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE\r\nhost, text,  true, true, Host, style=\"width: 300px\"\r\nstatus,  text,  false, true, Status, style=\"width: 300px\"","outputactions":"","recid":1,"username":"admin","runbookid":"WFTasks","taskmetadata":""}"
+Sat, 28 Apr 2018 15:18:58 +0000 string(2) "
+
+"
+Sat, 28 Apr 2018 15:18:58 +0000 string(20) "TASKMETA IN HERE????"
+Sat, 28 Apr 2018 15:18:58 +0000 array(22) {
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+  ["urlparams"]=>
+  string(4) "host"
+  ["userparams"]=>
+  string(0) ""
+  ["actiontext"]=>
+  string(471) "#
+# Ping a single device, bring back alive
+# Uses TCP Ping by default
+#
+
+use strict;
+use warnings;
+use Net::Ping;
+use Getopt::Long;
+use JSON;
+
+my $host='';
+my %output;
+GetOptions("host=s" => \$host);
+
+
+my $p = Net::Ping->new();
+if ($p->ping($host)) {
+$output{'host'} = $host;
+$output{'status'} = 'alive';
+} else {
+$output{'host'} = $host;
+$output{'status'} = 'unreachable';
+}
+$p->close();
+
+my $result = encode_json(\%output);
+
+print $result;
+"
+  ["actionlanguage"]=>
+  string(4) "perl"
+  ["actionfilename"]=>
+  string(7) "ping.pl"
+  ["taskdescription"]=>
+  string(259) "Synopsis:  Ping a device and get a result back.
+
+Input param:  host
+Input value expected:  hostname or IP address
+
+Output param:  status
+Output values:  alive, unreachable
+
+Sample Params Config (fill in over on the left): 
+{
+"host":"10.23.16.193"
+}"
+  ["datatype"]=>
+  string(4) "JSON"
+  ["jprop"]=>
+  string(0) ""
+  ["fieldseparator"]=>
+  string(0) ""
+  ["recordseparator"]=>
+  string(0) ""
+  ["outputfields"]=>
+  string(154) "#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE
+host, text,  true, true, Host, style="width: 300px"
+status,  text,  false, true, Status, style="width: 300px""
+  ["outputactions"]=>
+  string(0) ""
+  ["recid"]=>
+  int(1)
+  ["username"]=>
+  string(5) "admin"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+  ["taskmetadata"]=>
+  string(0) ""
+  ["taskstarttime"]=>
+  string(19) "2018-04-28 15:18:58"
+  ["taskstate"]=>
+  string(6) "before"
+  ["taskserial"]=>
+  string(15) "7v6bNHA2dw2JYkU"
+  ["taskpid"]=>
+  int(26126)
+  ["taskstatus"]=>
+  string(7) "RUNNING"
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(0) ""
+Sat, 28 Apr 2018 15:18:58 +0000 int(1)
+Sat, 28 Apr 2018 15:18:58 +0000 string(0) ""
+Sat, 28 Apr 2018 15:18:58 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 28 Apr 2018 15:18:58 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Sat, 28 Apr 2018 15:18:58 +0000 string(20) "TASKMETA IN HERE????"
+Sat, 28 Apr 2018 15:18:58 +0000 array(25) {
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+  ["urlparams"]=>
+  string(4) "host"
+  ["userparams"]=>
+  string(0) ""
+  ["actiontext"]=>
+  string(471) "#
+# Ping a single device, bring back alive
+# Uses TCP Ping by default
+#
+
+use strict;
+use warnings;
+use Net::Ping;
+use Getopt::Long;
+use JSON;
+
+my $host='';
+my %output;
+GetOptions("host=s" => \$host);
+
+
+my $p = Net::Ping->new();
+if ($p->ping($host)) {
+$output{'host'} = $host;
+$output{'status'} = 'alive';
+} else {
+$output{'host'} = $host;
+$output{'status'} = 'unreachable';
+}
+$p->close();
+
+my $result = encode_json(\%output);
+
+print $result;
+"
+  ["actionlanguage"]=>
+  string(4) "perl"
+  ["actionfilename"]=>
+  string(7) "ping.pl"
+  ["taskdescription"]=>
+  string(259) "Synopsis:  Ping a device and get a result back.
+
+Input param:  host
+Input value expected:  hostname or IP address
+
+Output param:  status
+Output values:  alive, unreachable
+
+Sample Params Config (fill in over on the left): 
+{
+"host":"10.23.16.193"
+}"
+  ["datatype"]=>
+  string(4) "JSON"
+  ["jprop"]=>
+  string(0) ""
+  ["fieldseparator"]=>
+  string(0) ""
+  ["recordseparator"]=>
+  string(0) ""
+  ["outputfields"]=>
+  string(154) "#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE
+host, text,  true, true, Host, style="width: 300px"
+status,  text,  false, true, Status, style="width: 300px""
+  ["outputactions"]=>
+  string(0) ""
+  ["recid"]=>
+  int(1)
+  ["username"]=>
+  string(5) "admin"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+  ["taskmetadata"]=>
+  string(0) ""
+  ["taskstarttime"]=>
+  string(19) "2018-04-28 15:18:58"
+  ["taskstate"]=>
+  string(5) "after"
+  ["taskserial"]=>
+  string(15) "7v6bNHA2dw2JYkU"
+  ["tasktime"]=>
+  float(0.054253101348877)
+  ["taskexit"]=>
+  int(0)
+  ["taskstatus"]=>
+  string(7) "STOPPED"
+  ["taskoutput"]=>
+  string(37) "{"status":"alive","host":"localhost"}"
+  ["taskerror"]=>
+  string(0) ""
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(0) ""
+Sat, 28 Apr 2018 15:18:58 +0000 int(1)
+Sat, 28 Apr 2018 15:18:58 +0000 string(0) ""
+Sat, 28 Apr 2018 15:18:58 +0000 string(19) "LAST OUTPUT IS ...."
+Sat, 28 Apr 2018 15:18:58 +0000 string(37) "{"status":"alive","host":"localhost"}"
+Sat, 28 Apr 2018 15:18:58 +0000 string(65) "Evaluating GetNextOperator params task1, output_1, route:if-else1"
+Sat, 28 Apr 2018 15:18:58 +0000 string(13) "TASKOUT IS..."
+Sat, 28 Apr 2018 15:18:58 +0000 object(stdClass)#538 (2) {
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(11) "PARAM IS..."
+Sat, 28 Apr 2018 15:18:58 +0000 string(6) "status"
+Sat, 28 Apr 2018 15:18:58 +0000 string(11) "VALUE IS..."
+Sat, 28 Apr 2018 15:18:58 +0000 string(11) "unreachable"
+Sat, 28 Apr 2018 15:18:58 +0000 string(13) "TASKOUT IS..."
+Sat, 28 Apr 2018 15:18:58 +0000 object(stdClass)#538 (2) {
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(11) "PARAM IS..."
+Sat, 28 Apr 2018 15:18:58 +0000 string(6) "status"
+Sat, 28 Apr 2018 15:18:58 +0000 string(11) "VALUE IS..."
+Sat, 28 Apr 2018 15:18:58 +0000 string(5) "alive"
+Sat, 28 Apr 2018 15:18:58 +0000 string(72) "Evaluating GetNextOperator params route:if-else1, output_2, route:break1"
+Sat, 28 Apr 2018 15:18:58 +0000 string(63) "Evaluating GetNextOperator params route:break1, output_1, task3"
+Sat, 28 Apr 2018 15:18:58 +0000 string(369) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{"filename":"\/var\/www\/html\/pilot\/tmp\/files\/breakwhile.txt","data":"Break while loop here"}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sat, 28 Apr 2018 10:18:58 -0500 string(16) "UserRead PARAMS "
+Sat, 28 Apr 2018 10:18:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 28 Apr 2018 10:18:58 -0500 string(19) "ReadRunbook PARAMS "
+Sat, 28 Apr 2018 10:18:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 28 Apr 2018 10:18:58 -0500 string(17) "ReadTasks PARAMS "
+Sat, 28 Apr 2018 10:18:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(28) "... Starting nochero runtask"
+Sat, 28 Apr 2018 15:18:58 +0000 string(2) "
+
+"
+Sat, 28 Apr 2018 15:18:58 +0000 string(12) "filetorun is"
+Sat, 28 Apr 2018 15:18:58 +0000 string(16) ""writetofile.pl""
+Sat, 28 Apr 2018 15:18:58 +0000 string(9) "params is"
+Sat, 28 Apr 2018 15:18:58 +0000 string(97) "{"filename":"\/var\/www\/html\/pilot\/tmp\/files\/breakwhile.txt","data":"Break while loop here"}"
+Sat, 28 Apr 2018 15:18:58 +0000 string(11) "taskdata is"
+Sat, 28 Apr 2018 15:18:58 +0000 string(1709) "{"taskname":"VP Write To File","urlparams":"filename, data","userparams":"","actiontext":"#\r\n#\r\n#  Writes data to a file for later use, one line at a time.\r\n#\r\n#\r\n\r\nuse strict;\r\nuse warnings;\r\nuse JSON;\r\nuse Getopt::Long;\r\n\r\nmy $filename='';\r\nmy $data='';\r\nmy %output;\r\n\r\nGetOptions(\r\n        \"filename=s\" => \\$filename,\r\n        \"data=s\" => \\$data\r\n        );\r\n\r\nopen (FILEDATA,\"+>> $filename\") || die \"{\\\"status\\\":\\\"Cannot open or write to \".$filename.\"\\\"}\\n\";\r\n\r\nprint FILEDATA \"$data\\n\";\r\n\r\n$output{'status'} = 'saved';\r\nmy $json = encode_json(\\%output);\r\nprint $json;\r\nclose (FILEDATA);","actionlanguage":"perl","actionfilename":"writetofile.pl","taskdescription":"\"Synopsis:  Utility that writes data to a file\r\n\r\n\r\nInput param:  \r\nfilename = File name to write to.  MAKE SURE that the file is writable by the web server user, we recommend you write to \/var\/www\/html\/pilot\/tmp\/filesdata = The data you are writing into the file.  The utility adds a new line char already\r\n\r\nOutput param:  status\r\n\r\nOutput values:  saved, <error, something like Cannot write to...>\r\n\r\nSample Params Config (fill in over on the left): \r\n{\r\n\"filename\":\"\/var\/www\/html\/pilot\/tmp\/files\/cooloutput.txt\",\r\n\"data\":\"Some data or a wfv usually\"\r\n}\r\n\t","datatype":"JSON","jprop":"","fieldseparator":"","recordseparator":"","outputfields":"#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE\r\nfilename, text,  true, true, Filename, style=\"width: 300px\"\r\nstatus,  text,  false, true, Status, style=\"width: 300px\"","outputactions":"","recid":1,"username":"admin","runbookid":"WFTasks","taskmetadata":""}"
+Sat, 28 Apr 2018 15:18:58 +0000 string(2) "
+
+"
+Sat, 28 Apr 2018 15:18:58 +0000 string(20) "TASKMETA IN HERE????"
+Sat, 28 Apr 2018 15:18:58 +0000 array(22) {
+  ["taskname"]=>
+  string(16) "VP Write To File"
+  ["urlparams"]=>
+  string(14) "filename, data"
+  ["userparams"]=>
+  string(0) ""
+  ["actiontext"]=>
+  string(501) "#
+#
+#  Writes data to a file for later use, one line at a time.
+#
+#
+
+use strict;
+use warnings;
+use JSON;
+use Getopt::Long;
+
+my $filename='';
+my $data='';
+my %output;
+
+GetOptions(
+        "filename=s" => \$filename,
+        "data=s" => \$data
+        );
+
+open (FILEDATA,"+>> $filename") || die "{\"status\":\"Cannot open or write to ".$filename."\"}\n";
+
+print FILEDATA "$data\n";
+
+$output{'status'} = 'saved';
+my $json = encode_json(\%output);
+print $json;
+close (FILEDATA);"
+  ["actionlanguage"]=>
+  string(4) "perl"
+  ["actionfilename"]=>
+  string(14) "writetofile.pl"
+  ["taskdescription"]=>
+  string(559) ""Synopsis:  Utility that writes data to a file
+
+
+Input param:  
+filename = File name to write to.  MAKE SURE that the file is writable by the web server user, we recommend you write to /var/www/html/pilot/tmp/filesdata = The data you are writing into the file.  The utility adds a new line char already
+
+Output param:  status
+
+Output values:  saved, <error, something like Cannot write to...>
+
+Sample Params Config (fill in over on the left): 
+{
+"filename":"/var/www/html/pilot/tmp/files/cooloutput.txt",
+"data":"Some data or a wfv usually"
+}
+	"
+  ["datatype"]=>
+  string(4) "JSON"
+  ["jprop"]=>
+  string(0) ""
+  ["fieldseparator"]=>
+  string(0) ""
+  ["recordseparator"]=>
+  string(0) ""
+  ["outputfields"]=>
+  string(162) "#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE
+filename, text,  true, true, Filename, style="width: 300px"
+status,  text,  false, true, Status, style="width: 300px""
+  ["outputactions"]=>
+  string(0) ""
+  ["recid"]=>
+  int(1)
+  ["username"]=>
+  string(5) "admin"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+  ["taskmetadata"]=>
+  string(0) ""
+  ["taskstarttime"]=>
+  string(19) "2018-04-28 15:18:59"
+  ["taskstate"]=>
+  string(6) "before"
+  ["taskserial"]=>
+  string(15) "fO9mOdXWy9isAQS"
+  ["taskpid"]=>
+  int(26131)
+  ["taskstatus"]=>
+  string(7) "RUNNING"
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(0) ""
+Sat, 28 Apr 2018 15:18:58 +0000 int(1)
+Sat, 28 Apr 2018 15:18:58 +0000 string(0) ""
+Sat, 28 Apr 2018 15:18:58 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 28 Apr 2018 15:18:58 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Sat, 28 Apr 2018 15:18:58 +0000 string(20) "TASKMETA IN HERE????"
+Sat, 28 Apr 2018 15:18:58 +0000 array(25) {
+  ["taskname"]=>
+  string(16) "VP Write To File"
+  ["urlparams"]=>
+  string(14) "filename, data"
+  ["userparams"]=>
+  string(0) ""
+  ["actiontext"]=>
+  string(501) "#
+#
+#  Writes data to a file for later use, one line at a time.
+#
+#
+
+use strict;
+use warnings;
+use JSON;
+use Getopt::Long;
+
+my $filename='';
+my $data='';
+my %output;
+
+GetOptions(
+        "filename=s" => \$filename,
+        "data=s" => \$data
+        );
+
+open (FILEDATA,"+>> $filename") || die "{\"status\":\"Cannot open or write to ".$filename."\"}\n";
+
+print FILEDATA "$data\n";
+
+$output{'status'} = 'saved';
+my $json = encode_json(\%output);
+print $json;
+close (FILEDATA);"
+  ["actionlanguage"]=>
+  string(4) "perl"
+  ["actionfilename"]=>
+  string(14) "writetofile.pl"
+  ["taskdescription"]=>
+  string(559) ""Synopsis:  Utility that writes data to a file
+
+
+Input param:  
+filename = File name to write to.  MAKE SURE that the file is writable by the web server user, we recommend you write to /var/www/html/pilot/tmp/filesdata = The data you are writing into the file.  The utility adds a new line char already
+
+Output param:  status
+
+Output values:  saved, <error, something like Cannot write to...>
+
+Sample Params Config (fill in over on the left): 
+{
+"filename":"/var/www/html/pilot/tmp/files/cooloutput.txt",
+"data":"Some data or a wfv usually"
+}
+	"
+  ["datatype"]=>
+  string(4) "JSON"
+  ["jprop"]=>
+  string(0) ""
+  ["fieldseparator"]=>
+  string(0) ""
+  ["recordseparator"]=>
+  string(0) ""
+  ["outputfields"]=>
+  string(162) "#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE
+filename, text,  true, true, Filename, style="width: 300px"
+status,  text,  false, true, Status, style="width: 300px""
+  ["outputactions"]=>
+  string(0) ""
+  ["recid"]=>
+  int(1)
+  ["username"]=>
+  string(5) "admin"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+  ["taskmetadata"]=>
+  string(0) ""
+  ["taskstarttime"]=>
+  string(19) "2018-04-28 15:18:59"
+  ["taskstate"]=>
+  string(5) "after"
+  ["taskserial"]=>
+  string(15) "fO9mOdXWy9isAQS"
+  ["tasktime"]=>
+  float(0.028200149536133)
+  ["taskexit"]=>
+  int(0)
+  ["taskstatus"]=>
+  string(7) "STOPPED"
+  ["taskoutput"]=>
+  string(18) "{"status":"saved"}"
+  ["taskerror"]=>
+  string(0) ""
+}
+Sat, 28 Apr 2018 15:18:58 +0000 string(0) ""
+Sat, 28 Apr 2018 15:18:58 +0000 int(1)
+Sat, 28 Apr 2018 15:18:58 +0000 string(0) ""
+Sat, 28 Apr 2018 15:18:58 +0000 string(19) "LAST OUTPUT IS ...."
+Sat, 28 Apr 2018 15:18:58 +0000 string(18) "{"status":"saved"}"
+Sat, 28 Apr 2018 15:18:58 +0000 string(54) "Evaluating GetNextOperator params task3, output_1, end"
+Sat, 28 Apr 2018 15:18:58 +0000 string(38) "START WORKFLOW TIME IS 1524928738.1308"
+Sat, 28 Apr 2018 15:18:58 +0000 string(37) "STOP WORKFLOW TIME IS 1524928738.8257"
+Sat, 28 Apr 2018 15:18:58 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.69483089447021"

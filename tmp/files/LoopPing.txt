@@ -1,0 +1,4 @@
+Pinged %host% %counter% times
+Pinged %host% %counter% times
+Pinged %host% %counter% times
+Pinged %host% %counter% times

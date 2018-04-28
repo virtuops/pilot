@@ -8,6 +8,7 @@ define(function (require) {
         operatorData = $('#workflow_1').flowchart('getOperatorData',selId);
 
         var objectname = operatorData.properties.title ? operatorData.properties.title : '';
+        var objid = selId;
         var taskname = typeof operatorData.properties.task !== 'undefined' ? operatorData.properties.task['taskname'] : '';
         var runbookid = typeof operatorData.properties.task !== 'undefined' ? operatorData.properties.task['runbookid'] : '';
         var runbookname = typeof operatorData.properties.task !== 'undefined' ? operatorData.properties.task['runbookname'] : '';
@@ -37,6 +38,7 @@ define(function (require) {
       onRender: function(event) {
 
         var taskname = w2ui.taskconfigform.record.taskname.id;
+	w2ui.tasksideform.record.objid = objid;
         var task_params = { taskname: taskname };
 
         UTILS.ajaxPost('get','tasks',task_params, function(data) {
@@ -51,10 +53,17 @@ define(function (require) {
 
       },
       fields: [
-        { name: 'taskdescription', type: 'textarea', required: false, html: { caption: 'Description', attr: 'rows="50" cols="150"' } }
+        { name: 'taskdescription', type: 'textarea', required: false, html: { caption: 'Description', attr: 'rows="50" cols="150"' } },
+	{ name: 'objid', type: 'text' }
       ],
       formHTML:
         '<div class="w2ui-page page-0">'+
+                '<div class="w2ui-field">'+
+                        '<label>ID:</label>'+
+                        '<div>'+
+                        '<input name="objid" type="text" maxlength="300" size="60" readonly/>'+
+                        '</div>'+
+                '</div>'+
                 '<div class="w2ui-field">'+
                         '<label>Description</label>'+
                         '<div>'+
@@ -85,7 +94,6 @@ define(function (require) {
                     });
         },
         onChange: function(event){
-                    console.log(event);
                         if (event.target === 'runbookname') {
 
                                     var runbookid = event.value_new.id;

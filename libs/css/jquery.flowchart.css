@@ -145,8 +145,17 @@
 .flowchart-task-operator .flowchart-operator-title {
     background-color: lightgreen;
 }
+.flowchart-logic-operator .flowchart-operator-title {
+    background-color: yellow;
+}
 .flowchart-route-operator .flowchart-operator-title {
     background-color: lightskyblue;
+}
+.flowchart-route-operator-break .flowchart-operator-title {
+    background-color: #F0B27A;
+}
+.flowchart-route-operator-continue .flowchart-operator-title {
+    background-color: #B2BABB;
 }
 .flowchart-start-operator .flowchart-operator-title {
     background-color: black;

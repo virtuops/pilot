@@ -1,0 +1,16 @@
+"Synopsis:  Utility that writes data to a file
+
+
+Input param:  
+filename = File name to write to.  MAKE SURE that the file is writable by the web server user, we recommend you write to /var/www/html/pilot/tmp/filesdata = The data you are writing into the file.  The utility adds a new line char already
+
+Output param:  status
+
+Output values:  saved, <error, something like Cannot write to...>
+
+Sample Params Config (fill in over on the left): 
+{
+"filename":"/var/www/html/pilot/tmp/files/cooloutput.txt",
+"data":"Some data or a wfv usually"
+}
+	

@@ -531,7 +531,6 @@ define(function (require) {
 
                         retrievedschedule = data.records[0].workflowschedule;
                         workflowstatus = data.records[0].workflowstatus;
-			console.log('WFSTATUS is '+workflowstatus);
                         //w2ui.wfcontrols.toolbar.set('save',{disabled: true});
                         if (workflowstatus == 'disabled') {
                         setSavedSchedule(retrievedschedule);
