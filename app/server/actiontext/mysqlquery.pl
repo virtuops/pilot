@@ -12,7 +12,7 @@ use DBD::mysql;
 use Getopt::Long;
 
 my %output;
-my ($status,$user,$password,$database,$query,$host,$port,$querytoutput);
+my ($status,$user,$password,$database,$query,$host,$port,$queryoutput,$arrayname);
 
 GetOptions(
                 "user=s" => \$user,
@@ -21,7 +21,8 @@ GetOptions(
                 "host=s" => \$host,
                 "query=s" => \$query,
                 "port:s" => \$port,
-                "queryoutput:s" => \$queryoutput
+                "queryoutput:s" => \$queryoutput,
+                "arrayname=s" => \$arrayname
         );
 
 open (FILEDATA,"+> $queryoutput") || die "Cannot open file.";
@@ -42,6 +43,7 @@ if ($sth->errstr()) {
         }
 }
 
+$output{"$arrayname"} = \@data;
 my $data = encode_json(\@data);
 print FILEDATA ($data);
 

@@ -22,18 +22,14 @@ define(function (require) {
         fields: [
             { name: 'loopid', type: 'text', required: true, html: { caption: 'Loop ID', attr: 'size="40" readonly'  } },
             { name: 'title', type: 'text', required: true, html: { caption: 'Route Title', attr: 'size="40" maxlength="40"' } },
-            { name: 'array', type: 'text', required: true, html: { caption: 'Array', attr: 'size="40" maxlength="40" value="counter"' } },
-            { name: 'key', type: 'text', required: true, html: { caption: 'Key', attr: 'size="40" maxlength="40" value="counter"' } },
-            { name: 'value', type: 'text', required: true, html: { caption: 'Value', attr: 'size="40"' } }
+            { name: 'targetobject', type: 'text', required: true, html: { caption: 'Target Obj', attr: 'size="40" maxlength="40" value="counter"' } }
         ],
 	onRender: function(event){
 		
 		event.onComplete = function(){
 		this.record.title = operatorData.properties.title;
 		this.record.loopid = loopid;
-		this.record.array = operatorData.properties.outputs['output_1'].array;
-		this.record.value = operatorData.properties.outputs['output_1'].value;
-		this.record.key = operatorData.properties.outputs['output_1'].key;
+		this.record.targetobject = operatorData.properties.outputs['output_1'].targetobject;
 		this.refresh();
 		}
 	},
@@ -63,10 +59,7 @@ define(function (require) {
                          operatorData.properties.outputs[outputx] = {};
                          operatorData.properties.outputs[outputx].conntype = 'output';
                          operatorData.properties.outputs[outputx].label = 'Out';
-                         operatorData.properties.outputs[outputx].array = route.array;
-                         operatorData.properties.outputs[outputx].key = route.key;
-                         operatorData.properties.outputs[outputx].value = route.value;
-                         operatorData.properties.outputs[outputx].increment = route.increment;
+                         operatorData.properties.outputs[outputx].targetobject = route.targetobject;
 
 
                             w2confirm('About to update route...are you sure?')

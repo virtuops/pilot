@@ -32,13 +32,6 @@ class RunTask
         $filetorun = $taskdata['actionfilename'];
         $language = $taskdata['actionlanguage'];
 
-        $nochero->log("\n\n");
-        $nochero->log("filetorun is");$nochero->log(json_encode($filetorun));
-        $nochero->log("params is");$nochero->log(json_encode($params));
-        $nochero->log("taskdata is");$nochero->log(json_encode($taskdata));
-        $nochero->log("\n\n");
-
-
         try {
             if (!$filetorun) {
                 $nochero->LogTaskStart(-1, $taskdata, $con);

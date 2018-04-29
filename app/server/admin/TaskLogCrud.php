@@ -35,8 +35,6 @@ Class TaskLog {
         private function CreateUpdate($params, $con) {
 
 
-                $this->l->varErrorLog('TASKMETA IN HERE????');
-                $this->l->varErrorLog($params);
                 $taskname = isset($params->taskname) ? $params->taskname : (isset($params['taskname']) ? $params['taskname'] : '');
                 $problems = isset($params->problems) ? $params->problems : (isset($params['problems']) ? $params['problems'] : '');
                 $taskpid = isset($params->taskpid) ? $params->taskpid : (isset($params['taskpid']) ? $params['taskpid'] : '');

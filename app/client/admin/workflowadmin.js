@@ -461,9 +461,7 @@ define(function (require) {
                                             output_1: {
                                               label: 'Out 1',
                                               conntype: 'output',
-                                              array: 'array',
-                                              key: 'key',
-                                              value: 'value'
+                                              targetobject: 'targetobject'
                                             }
                                           }
                                         }

@@ -203,6 +203,8 @@ Class WorkFlowExecute {
                 $wfv->{$k} = $v;
                 }
                 $this->wfv = $wfv;
+		$this->l->varErrorLog('WFV IS');
+		$this->l->varErrorLog($this->wfv);
         }
 
         private function EvalRoute($logic, $op, $output=null){
@@ -249,67 +251,102 @@ Class WorkFlowExecute {
 			$nextobj = $this->GetConnIdTask($workflow->links, $op);
 			$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
 
+		} else if ($logic == 'foreach') {
+
+			$targetobject = $workflow->operators->{$op}->properties->outputs->output_1->targetobject;
+			$this->wfv->{$op}->targetobject = $targetobject;
+			$this->wfv->{$op}->{$targetobject}->current_val = current($this->wfv->{$targetobject});
+			$this->wfv->{$op}->{$targetobject}->current_key = key($this->wfv->{$targetobject});
+			$this->wfv->{$op}->{$targetobject}->length = count($this->wfv->{$targetobject});
+			$this->wfv->{$op}->{$targetobject}->incr = 1;
+
+			$nextobj = $this->GetConnIdTask($workflow->links, $op);
+			$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+
 		} else if ($logic == 'continue') {
 			$loop = $workflow->operators->{$op}->properties->loopid;
-			$counter = (int)$this->wfv->{$loop}->counter;
-			$compare = $this->wfv->{$loop}->compare;
-			$value = (int)$this->wfv->{$loop}->value;
-			$increment = (int)$this->wfv->{$loop}->increment;
 
-			if ($compare === '>') {
-				if ($counter > $value) { 
-					$this->wfv->{$loop}->counter = $counter + $increment;
-					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
-					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
-				
-				} else {
-					$nextobj = $this->GetConnIdTask($workflow->links, $op);
-					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
-				}
-			} else if ($compare === '<') {
-				if ($counter < $value) {
-					$this->wfv->{$loop}->counter = $counter + $increment;
-					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
-					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
-				
-				} else {
-					$nextobj = $this->GetConnIdTask($workflow->links, $op);
-					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
-				}
+			if (substr($loop,6,5) == 'while') {
+				$counter = (int)$this->wfv->{$loop}->counter;
+				$compare = $this->wfv->{$loop}->compare;
+				$value = (int)$this->wfv->{$loop}->value;
+				$increment = (int)$this->wfv->{$loop}->increment;
+				if ($compare === '>') {
+					if ($counter > $value) { 
+						$this->wfv->{$loop}->counter = $counter + $increment;
+						$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+						$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
 					
-			} else if ($compare === '<=') {
-				if ($counter <= $value) {
-					$this->wfv->{$loop}->counter = $counter + $increment;
-					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
-					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
-				
-				} else {
-					$nextobj = $this->GetConnIdTask($workflow->links, $op);
-					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
-				}
+					} else {
+						$nextobj = $this->GetConnIdTask($workflow->links, $op);
+						$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+					}
+				} else if ($compare === '<') {
+					if ($counter < $value) {
+						$this->wfv->{$loop}->counter = $counter + $increment;
+						$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+						$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+					
+					} else {
+						$nextobj = $this->GetConnIdTask($workflow->links, $op);
+						$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+					}
+						
+				} else if ($compare === '<=') {
+					if ($counter <= $value) {
+						$this->wfv->{$loop}->counter = $counter + $increment;
+						$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+						$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+					
+					} else {
+						$nextobj = $this->GetConnIdTask($workflow->links, $op);
+						$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+					}
 
-			} else if ($compare === '>=') {
-				if ($counter >= $value) {
-					$this->wfv->{$loop}->counter = $counter + $increment;
-					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
-					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
-				
-				} else {
-					$nextobj = $this->GetConnIdTask($workflow->links, $op);
-					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
-				}
+				} else if ($compare === '>=') {
+					if ($counter >= $value) {
+						$this->wfv->{$loop}->counter = $counter + $increment;
+						$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+						$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+					
+					} else {
+						$nextobj = $this->GetConnIdTask($workflow->links, $op);
+						$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+					}
 
-			} else if ($compare === '=') {
-				if ($counter = $value) {
-					$this->wfv->{$loop}->counter = $counter + $increment;
-					$nextobj = $this->GetConnIdTask($workflow->links, $loop);
-					$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
-				
+				} else if ($compare === '=') {
+					if ($counter = $value) {
+						$this->wfv->{$loop}->counter = $counter + $increment;
+						$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+						$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+					
+					} else {
+						$nextobj = $this->GetConnIdTask($workflow->links, $op);
+						$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+					}
+				}
+			} else if (substr($loop,6,7) == 'foreach') {
+
+				$targetobject = $this->wfv->{$loop}->targetobject;
+				$size = $this->wfv->{$loop}->{$targetobject}->length;
+				$incr = $this->wfv->{$loop}->{$targetobject}->incr;
+
+				if ($incr < $size) {
+
+				$this->wfv->{$loop}->{$targetobject}->incr = $this->wfv->{$loop}->{$targetobject}->incr + 1;
+				$this->wfv->{$loop}->{$targetobject}->current_val = next($this->wfv->{$targetobject});
+				$this->wfv->{$loop}->{$targetobject}->current_key = key($this->wfv->{$targetobject});
+				$nextobj = $this->GetConnIdTask($workflow->links, $loop);
+				$this->GetNextOperator($loop, $nextobj[0], $nextobj[1], $taskout);	
+
 				} else {
-					$nextobj = $this->GetConnIdTask($workflow->links, $op);
-					$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
+
+				//You made it to the end of the array
+				$nextobj = $this->GetConnIdTask($workflow->links, $op);
+				$this->GetNextOperator($op, $nextobj[0], $nextobj[1], $taskout);	
 				}
 			}
+
 		} else if ($logic == 'break') {
 			$loop = $workflow->operators->{$op}->properties->loopid;
                         $nextobj = $this->GetConnIdTask($workflow->links, $op);
@@ -321,12 +358,92 @@ Class WorkFlowExecute {
         private function GetParams($params, $wfv){
 		
                 foreach ($wfv as $key=>$value) {
-			if (! is_object($value)) {
+			if (! is_object($value) && ! is_array($value)) {
+
 			$replace = $value;
 			$search = '/[%]'.$key.'[%]/';
 			$string = $params;
-			
 			$params = preg_replace($search, $replace, $string);
+
+			} else if (is_array($value)) {
+
+			/*
+			* 1) Get all of the %% matches
+			* 2) Parse the loop id as [0] for each match
+			* 3) Parse the array as [1] for each match
+			* 4) Parse the arraykey as [2] for each match
+			* 5) Using the loopid, get the  
+			*/
+
+			$string = $params;
+			$search = '/[%](\w+:\w+[|]\w+[|]\w+)[%]/';
+			preg_match_all($search, $string, $matches);
+
+			$searches = $matches[1];
+		
+			foreach ($searches as $search) {
+
+				$s = explode('|',$search);	
+				$loopid = $s[0];
+				$arrayname = $s[1];
+				$arraykey = $s[2];
+
+				$current_key = $this->wfv->{$loopid}->{$arrayname}->current_key;
+				$current_val = $this->wfv->{$loopid}->{$arrayname}->current_val;
+
+				if (is_object($current_val)) {
+
+				$replace = $current_val->{$arraykey};
+				$search = '/[%]'.$search.'[%]/';
+				$search = str_replace('|','[|]',$search);
+				$string = $params;
+				$params = preg_replace($search, $replace, $string);
+
+				} else if (is_array($current_val)) {
+
+				$replace = $current_val[$arraykey];
+				$search = '/[%]'.$search.'[%]/';
+				$search = str_replace('|','[|]',$search);
+				$string = $params;
+				$params = preg_replace($search, $replace, $string);
+
+				} else {
+
+				$replace = $current_val;
+				$search = '/[%]'.$search.'[%]/';
+				$search = str_replace('|','[|]',$search);
+				$string = $params;
+				$params = preg_replace($search, $replace, $string);
+
+				}
+
+			}
+					
+			} else if (is_object($value)) {
+
+				/* traverse object properties for single object */
+
+				$string = $params;
+				$search = '/[%](\w+:\w+[|]\w+[|]\w+)[%]/';
+				preg_match_all($search, $string, $matches);
+				$searches = $matches[1];
+
+				/* the params only has 2 values in the search like this loopid|objkey */
+
+				foreach ($searches as $search) {
+
+				$s = explode('|',$search);	
+				$loopid = $s[0];
+				$objkey = $s[1];
+
+				$replace = $value->{$objkey};
+				$search = '/[%]'.$search.'[%]/';
+				$search = str_replace('|','[|]',$search);
+				$string = $params;
+				$params = preg_replace($search, $replace, $string);
+
+				}
+				
 			}
                 }
 
@@ -363,6 +480,8 @@ Class WorkFlowExecute {
                                         $this->EvalRoute('if-else', $next_op, $output);
                                 } else if (preg_match('/while/', $next_op) === 1){
                                         $this->EvalRoute('while', $next_op, $output);
+                                } else if (preg_match('/foreach/', $next_op) === 1){
+                                        $this->EvalRoute('foreach', $next_op, $output);
                                 } else if (preg_match('/continue/', $next_op) === 1){
                                         $this->EvalRoute('continue', $next_op, $output);
                                 } else if (preg_match('/break/', $next_op) === 1){
