@@ -1,5 +1,5 @@
-Sun, 29 Apr 2018 19:14:05 +0000 string(33) "In CrudOperation, workflowexecute"
-Sun, 29 Apr 2018 19:14:05 +0000 string(514) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP MySQL Query","taskmetadata":"","params":{
+Sun, 29 Apr 2018 21:19:41 +0000 string(33) "In CrudOperation, workflowexecute"
+Sun, 29 Apr 2018 21:19:41 +0000 string(514) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP MySQL Query","taskmetadata":"","params":{
 "user":"root",
 "password":"Idlgeah2016!!",
 "database":"sampledata",
@@ -9,48 +9,48 @@ Sun, 29 Apr 2018 19:14:05 +0000 string(514) "WORKFLOWEXECUTE FIRING /bin/curl -s
 "arrayname":"customeraddrs",
 "queryoutput":"/var/www/html/pilot/tmp/files/cust.json"
 }}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Sun, 29 Apr 2018 14:14:05 -0500 string(16) "UserRead PARAMS "
-Sun, 29 Apr 2018 14:14:05 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:41 -0500 string(16) "UserRead PARAMS "
+Sun, 29 Apr 2018 16:19:41 -0500 array(2) {
   ["singleuser"]=>
   string(4) "true"
   ["username"]=>
   string(5) "admin"
 }
-Sun, 29 Apr 2018 14:14:05 -0500 string(19) "ReadRunbook PARAMS "
-Sun, 29 Apr 2018 14:14:05 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:41 -0500 string(19) "ReadRunbook PARAMS "
+Sun, 29 Apr 2018 16:19:41 -0500 array(2) {
   ["singlerunbook"]=>
   string(4) "true"
   ["runbookid"]=>
   string(7) "WFTasks"
 }
-Sun, 29 Apr 2018 14:14:05 -0500 string(17) "ReadTasks PARAMS "
-Sun, 29 Apr 2018 14:14:05 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:41 -0500 string(17) "ReadTasks PARAMS "
+Sun, 29 Apr 2018 16:19:41 -0500 array(2) {
   ["singletask"]=>
   string(4) "true"
   ["taskname"]=>
   string(14) "VP MySQL Query"
 }
-Sun, 29 Apr 2018 19:14:05 +0000 string(28) "... Starting nochero runtask"
-Sun, 29 Apr 2018 19:14:05 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:05 +0000 int(1)
-Sun, 29 Apr 2018 19:14:05 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:05 +0000 string(21) "
+Sun, 29 Apr 2018 21:19:41 +0000 string(28) "... Starting nochero runtask"
+Sun, 29 Apr 2018 21:19:41 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:41 +0000 int(1)
+Sun, 29 Apr 2018 21:19:41 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:41 +0000 string(21) "
 
 success, exit is 0
 "
-Sun, 29 Apr 2018 19:14:05 +0000 string(589) "output is "{\"customeraddrs\":[{\"custstate\":\"IL\",\"custcountry\":\"USA\",\"custcity\":\"Chicago\",\"custstreet\":\"123 WindyCity Lane\",\"custid\":\"1\",\"postalcode\":\"60657\",\"custname\":\"VirtuOps\"},{\"custstate\":\"AZ\",\"custcountry\":\"USA\",\"custcity\":\"Mesa\",\"custstreet\":\"204 Coyote Place\",\"custid\":\"2\",\"postalcode\":\"85200\",\"custname\":\"ACME\"},{\"custstate\":\"IL\",\"custcountry\":\"USA\",\"custcity\":\"Springfield\",\"custstreet\":\"234 Hero Ave\",\"custid\":\"3\",\"postalcode\":\"62629\",\"custname\":\"SuperCorp\"}],\"status\":\"OK\"}"
+Sun, 29 Apr 2018 21:19:41 +0000 string(589) "output is "{\"customeraddrs\":[{\"custstate\":\"IL\",\"custcountry\":\"USA\",\"custcity\":\"Chicago\",\"custstreet\":\"123 WindyCity Lane\",\"custid\":\"1\",\"postalcode\":\"60657\",\"custname\":\"VirtuOps\"},{\"custstate\":\"AZ\",\"custcountry\":\"USA\",\"custcity\":\"Mesa\",\"custstreet\":\"204 Coyote Place\",\"custid\":\"2\",\"postalcode\":\"85200\",\"custname\":\"ACME\"},{\"custstate\":\"IL\",\"custcountry\":\"USA\",\"custcity\":\"Springfield\",\"custstreet\":\"234 Hero Ave\",\"custid\":\"3\",\"postalcode\":\"62629\",\"custname\":\"SuperCorp\"}],\"status\":\"OK\"}"
 error is ""
 
 "
-Sun, 29 Apr 2018 19:14:05 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:05 +0000 int(1)
-Sun, 29 Apr 2018 19:14:05 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:05 +0000 string(6) "WFV IS"
-Sun, 29 Apr 2018 19:14:05 +0000 object(stdClass)#67 (2) {
+Sun, 29 Apr 2018 21:19:41 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:41 +0000 int(1)
+Sun, 29 Apr 2018 21:19:41 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:41 +0000 string(6) "WFV IS"
+Sun, 29 Apr 2018 21:19:41 +0000 object(stdClass)#67 (2) {
   ["customeraddrs"]=>
   array(3) {
     [0]=>
-    object(stdClass)#159 (7) {
+    object(stdClass)#193 (7) {
       ["custstate"]=>
       string(2) "IL"
       ["custcountry"]=>
@@ -67,7 +67,7 @@ Sun, 29 Apr 2018 19:14:05 +0000 object(stdClass)#67 (2) {
       string(8) "VirtuOps"
     }
     [1]=>
-    object(stdClass)#160 (7) {
+    object(stdClass)#194 (7) {
       ["custstate"]=>
       string(2) "AZ"
       ["custcountry"]=>
@@ -84,7 +84,7 @@ Sun, 29 Apr 2018 19:14:05 +0000 object(stdClass)#67 (2) {
       string(4) "ACME"
     }
     [2]=>
-    object(stdClass)#161 (7) {
+    object(stdClass)#195 (7) {
       ["custstate"]=>
       string(2) "IL"
       ["custcountry"]=>
@@ -104,139 +104,69 @@ Sun, 29 Apr 2018 19:14:05 +0000 object(stdClass)#67 (2) {
   ["status"]=>
   string(2) "OK"
 }
-Sun, 29 Apr 2018 19:14:05 +0000 string(28) "WHAT IS MY WFV AFTER FOREACH"
-Sun, 29 Apr 2018 19:14:05 +0000 object(stdClass)#67 (3) {
-  ["customeraddrs"]=>
-  array(3) {
-    [0]=>
-    object(stdClass)#159 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(7) "Chicago"
-      ["custstreet"]=>
-      string(18) "123 WindyCity Lane"
-      ["custid"]=>
-      string(1) "1"
-      ["postalcode"]=>
-      string(5) "60657"
-      ["custname"]=>
-      string(8) "VirtuOps"
-    }
-    [1]=>
-    object(stdClass)#160 (7) {
-      ["custstate"]=>
-      string(2) "AZ"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(4) "Mesa"
-      ["custstreet"]=>
-      string(16) "204 Coyote Place"
-      ["custid"]=>
-      string(1) "2"
-      ["postalcode"]=>
-      string(5) "85200"
-      ["custname"]=>
-      string(4) "ACME"
-    }
-    [2]=>
-    object(stdClass)#161 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(11) "Springfield"
-      ["custstreet"]=>
-      string(12) "234 Hero Ave"
-      ["custid"]=>
-      string(1) "3"
-      ["postalcode"]=>
-      string(5) "62629"
-      ["custname"]=>
-      string(9) "SuperCorp"
-    }
-  }
-  ["status"]=>
-  string(2) "OK"
-  ["route:foreach1"]=>
-  object(stdClass)#256 (2) {
-    ["targetobject"]=>
-    string(13) "customeraddrs"
-    ["customeraddrs"]=>
-    object(stdClass)#257 (2) {
-      ["current_val"]=>
-      object(stdClass)#159 (7) {
-        ["custstate"]=>
-        string(2) "IL"
-        ["custcountry"]=>
-        string(3) "USA"
-        ["custcity"]=>
-        string(7) "Chicago"
-        ["custstreet"]=>
-        string(18) "123 WindyCity Lane"
-        ["custid"]=>
-        string(1) "1"
-        ["postalcode"]=>
-        string(5) "60657"
-        ["custname"]=>
-        string(8) "VirtuOps"
-      }
-      ["current_key"]=>
-      int(0)
-    }
-  }
-}
-Sun, 29 Apr 2018 19:14:05 +0000 string(397) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+Sun, 29 Apr 2018 21:19:41 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:41 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:41 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:41 +0000 int(3)
+Sun, 29 Apr 2018 21:19:41 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:41 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:41 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:41 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:41 +0000 int(3)
+Sun, 29 Apr 2018 21:19:41 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:41 +0000 string(397) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
 "filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
 "data":"Customer VirtuOps is on street 123 WindyCity Lane"
 }
 }' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Sun, 29 Apr 2018 14:14:05 -0500 string(16) "UserRead PARAMS "
-Sun, 29 Apr 2018 14:14:05 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:41 -0500 string(16) "UserRead PARAMS "
+Sun, 29 Apr 2018 16:19:41 -0500 array(2) {
   ["singleuser"]=>
   string(4) "true"
   ["username"]=>
   string(5) "admin"
 }
-Sun, 29 Apr 2018 14:14:05 -0500 string(19) "ReadRunbook PARAMS "
-Sun, 29 Apr 2018 14:14:05 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:41 -0500 string(19) "ReadRunbook PARAMS "
+Sun, 29 Apr 2018 16:19:41 -0500 array(2) {
   ["singlerunbook"]=>
   string(4) "true"
   ["runbookid"]=>
   string(7) "WFTasks"
 }
-Sun, 29 Apr 2018 14:14:05 -0500 string(17) "ReadTasks PARAMS "
-Sun, 29 Apr 2018 14:14:05 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:41 -0500 string(17) "ReadTasks PARAMS "
+Sun, 29 Apr 2018 16:19:41 -0500 array(2) {
   ["singletask"]=>
   string(4) "true"
   ["taskname"]=>
   string(16) "VP Write To File"
 }
-Sun, 29 Apr 2018 19:14:05 +0000 string(28) "... Starting nochero runtask"
-Sun, 29 Apr 2018 19:14:05 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:05 +0000 int(1)
-Sun, 29 Apr 2018 19:14:05 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:05 +0000 string(21) "
+Sun, 29 Apr 2018 21:19:41 +0000 string(28) "... Starting nochero runtask"
+Sun, 29 Apr 2018 21:19:41 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:41 +0000 int(1)
+Sun, 29 Apr 2018 21:19:41 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:41 +0000 string(21) "
 
 success, exit is 0
 "
-Sun, 29 Apr 2018 19:14:05 +0000 string(48) "output is "{\"status\":\"saved\"}"
+Sun, 29 Apr 2018 21:19:41 +0000 string(48) "output is "{\"status\":\"saved\"}"
 error is ""
 
 "
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 int(1)
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 string(6) "WFV IS"
-Sun, 29 Apr 2018 19:14:06 +0000 object(stdClass)#67 (3) {
+Sun, 29 Apr 2018 21:19:41 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:41 +0000 int(1)
+Sun, 29 Apr 2018 21:19:41 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:41 +0000 string(6) "WFV IS"
+Sun, 29 Apr 2018 21:19:41 +0000 object(stdClass)#67 (3) {
   ["customeraddrs"]=>
   array(3) {
     [0]=>
-    object(stdClass)#159 (7) {
+    object(stdClass)#193 (7) {
       ["custstate"]=>
       string(2) "IL"
       ["custcountry"]=>
@@ -253,7 +183,7 @@ Sun, 29 Apr 2018 19:14:06 +0000 object(stdClass)#67 (3) {
       string(8) "VirtuOps"
     }
     [1]=>
-    object(stdClass)#160 (7) {
+    object(stdClass)#194 (7) {
       ["custstate"]=>
       string(2) "AZ"
       ["custcountry"]=>
@@ -270,7 +200,7 @@ Sun, 29 Apr 2018 19:14:06 +0000 object(stdClass)#67 (3) {
       string(4) "ACME"
     }
     [2]=>
-    object(stdClass)#161 (7) {
+    object(stdClass)#195 (7) {
       ["custstate"]=>
       string(2) "IL"
       ["custcountry"]=>
@@ -290,619 +220,13 @@ Sun, 29 Apr 2018 19:14:06 +0000 object(stdClass)#67 (3) {
   ["status"]=>
   string(5) "saved"
   ["route:foreach1"]=>
-  object(stdClass)#256 (2) {
+  object(stdClass)#324 (2) {
     ["targetobject"]=>
     string(13) "customeraddrs"
     ["customeraddrs"]=>
-    object(stdClass)#257 (2) {
+    object(stdClass)#325 (4) {
       ["current_val"]=>
-      object(stdClass)#159 (7) {
-        ["custstate"]=>
-        string(2) "IL"
-        ["custcountry"]=>
-        string(3) "USA"
-        ["custcity"]=>
-        string(7) "Chicago"
-        ["custstreet"]=>
-        string(18) "123 WindyCity Lane"
-        ["custid"]=>
-        string(1) "1"
-        ["postalcode"]=>
-        string(5) "60657"
-        ["custname"]=>
-        string(8) "VirtuOps"
-      }
-      ["current_key"]=>
-      int(0)
-    }
-  }
-}
-Sun, 29 Apr 2018 19:14:06 +0000 string(17) "CURRENT KEY IS 0!"
-Sun, 29 Apr 2018 19:14:06 +0000 string(391) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
-"filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
-"data":"Customer ACME is on street 204 Coyote Place"
-}
-}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Sun, 29 Apr 2018 14:14:06 -0500 string(16) "UserRead PARAMS "
-Sun, 29 Apr 2018 14:14:06 -0500 array(2) {
-  ["singleuser"]=>
-  string(4) "true"
-  ["username"]=>
-  string(5) "admin"
-}
-Sun, 29 Apr 2018 14:14:06 -0500 string(19) "ReadRunbook PARAMS "
-Sun, 29 Apr 2018 14:14:06 -0500 array(2) {
-  ["singlerunbook"]=>
-  string(4) "true"
-  ["runbookid"]=>
-  string(7) "WFTasks"
-}
-Sun, 29 Apr 2018 14:14:06 -0500 string(17) "ReadTasks PARAMS "
-Sun, 29 Apr 2018 14:14:06 -0500 array(2) {
-  ["singletask"]=>
-  string(4) "true"
-  ["taskname"]=>
-  string(16) "VP Write To File"
-}
-Sun, 29 Apr 2018 19:14:06 +0000 string(28) "... Starting nochero runtask"
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 int(1)
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 string(21) "
-
-success, exit is 0
-"
-Sun, 29 Apr 2018 19:14:06 +0000 string(48) "output is "{\"status\":\"saved\"}"
-error is ""
-
-"
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 int(1)
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 string(6) "WFV IS"
-Sun, 29 Apr 2018 19:14:06 +0000 object(stdClass)#67 (3) {
-  ["customeraddrs"]=>
-  array(3) {
-    [0]=>
-    object(stdClass)#159 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(7) "Chicago"
-      ["custstreet"]=>
-      string(18) "123 WindyCity Lane"
-      ["custid"]=>
-      string(1) "1"
-      ["postalcode"]=>
-      string(5) "60657"
-      ["custname"]=>
-      string(8) "VirtuOps"
-    }
-    [1]=>
-    object(stdClass)#160 (7) {
-      ["custstate"]=>
-      string(2) "AZ"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(4) "Mesa"
-      ["custstreet"]=>
-      string(16) "204 Coyote Place"
-      ["custid"]=>
-      string(1) "2"
-      ["postalcode"]=>
-      string(5) "85200"
-      ["custname"]=>
-      string(4) "ACME"
-    }
-    [2]=>
-    object(stdClass)#161 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(11) "Springfield"
-      ["custstreet"]=>
-      string(12) "234 Hero Ave"
-      ["custid"]=>
-      string(1) "3"
-      ["postalcode"]=>
-      string(5) "62629"
-      ["custname"]=>
-      string(9) "SuperCorp"
-    }
-  }
-  ["status"]=>
-  string(5) "saved"
-  ["route:foreach1"]=>
-  object(stdClass)#256 (2) {
-    ["targetobject"]=>
-    string(13) "customeraddrs"
-    ["customeraddrs"]=>
-    object(stdClass)#257 (2) {
-      ["current_val"]=>
-      object(stdClass)#160 (7) {
-        ["custstate"]=>
-        string(2) "AZ"
-        ["custcountry"]=>
-        string(3) "USA"
-        ["custcity"]=>
-        string(4) "Mesa"
-        ["custstreet"]=>
-        string(16) "204 Coyote Place"
-        ["custid"]=>
-        string(1) "2"
-        ["postalcode"]=>
-        string(5) "85200"
-        ["custname"]=>
-        string(4) "ACME"
-      }
-      ["current_key"]=>
-      int(1)
-    }
-  }
-}
-Sun, 29 Apr 2018 19:14:06 +0000 string(17) "CURRENT KEY IS 1!"
-Sun, 29 Apr 2018 19:14:06 +0000 string(392) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
-"filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
-"data":"Customer SuperCorp is on street 234 Hero Ave"
-}
-}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Sun, 29 Apr 2018 14:14:06 -0500 string(16) "UserRead PARAMS "
-Sun, 29 Apr 2018 14:14:06 -0500 array(2) {
-  ["singleuser"]=>
-  string(4) "true"
-  ["username"]=>
-  string(5) "admin"
-}
-Sun, 29 Apr 2018 14:14:06 -0500 string(19) "ReadRunbook PARAMS "
-Sun, 29 Apr 2018 14:14:06 -0500 array(2) {
-  ["singlerunbook"]=>
-  string(4) "true"
-  ["runbookid"]=>
-  string(7) "WFTasks"
-}
-Sun, 29 Apr 2018 14:14:06 -0500 string(17) "ReadTasks PARAMS "
-Sun, 29 Apr 2018 14:14:06 -0500 array(2) {
-  ["singletask"]=>
-  string(4) "true"
-  ["taskname"]=>
-  string(16) "VP Write To File"
-}
-Sun, 29 Apr 2018 19:14:06 +0000 string(28) "... Starting nochero runtask"
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 int(1)
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 string(21) "
-
-success, exit is 0
-"
-Sun, 29 Apr 2018 19:14:06 +0000 string(48) "output is "{\"status\":\"saved\"}"
-error is ""
-
-"
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 int(1)
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 string(6) "WFV IS"
-Sun, 29 Apr 2018 19:14:06 +0000 object(stdClass)#67 (3) {
-  ["customeraddrs"]=>
-  array(3) {
-    [0]=>
-    object(stdClass)#159 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(7) "Chicago"
-      ["custstreet"]=>
-      string(18) "123 WindyCity Lane"
-      ["custid"]=>
-      string(1) "1"
-      ["postalcode"]=>
-      string(5) "60657"
-      ["custname"]=>
-      string(8) "VirtuOps"
-    }
-    [1]=>
-    object(stdClass)#160 (7) {
-      ["custstate"]=>
-      string(2) "AZ"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(4) "Mesa"
-      ["custstreet"]=>
-      string(16) "204 Coyote Place"
-      ["custid"]=>
-      string(1) "2"
-      ["postalcode"]=>
-      string(5) "85200"
-      ["custname"]=>
-      string(4) "ACME"
-    }
-    [2]=>
-    object(stdClass)#161 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(11) "Springfield"
-      ["custstreet"]=>
-      string(12) "234 Hero Ave"
-      ["custid"]=>
-      string(1) "3"
-      ["postalcode"]=>
-      string(5) "62629"
-      ["custname"]=>
-      string(9) "SuperCorp"
-    }
-  }
-  ["status"]=>
-  string(5) "saved"
-  ["route:foreach1"]=>
-  object(stdClass)#256 (2) {
-    ["targetobject"]=>
-    string(13) "customeraddrs"
-    ["customeraddrs"]=>
-    object(stdClass)#257 (2) {
-      ["current_val"]=>
-      object(stdClass)#161 (7) {
-        ["custstate"]=>
-        string(2) "IL"
-        ["custcountry"]=>
-        string(3) "USA"
-        ["custcity"]=>
-        string(11) "Springfield"
-        ["custstreet"]=>
-        string(12) "234 Hero Ave"
-        ["custid"]=>
-        string(1) "3"
-        ["postalcode"]=>
-        string(5) "62629"
-        ["custname"]=>
-        string(9) "SuperCorp"
-      }
-      ["current_key"]=>
-      int(2)
-    }
-  }
-}
-Sun, 29 Apr 2018 19:14:06 +0000 string(17) "CURRENT KEY IS 2!"
-Sun, 29 Apr 2018 19:14:06 +0000 string(371) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
-"filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
-"data":"Customer  is on street "
-}
-}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Sun, 29 Apr 2018 14:14:06 -0500 string(16) "UserRead PARAMS "
-Sun, 29 Apr 2018 14:14:06 -0500 array(2) {
-  ["singleuser"]=>
-  string(4) "true"
-  ["username"]=>
-  string(5) "admin"
-}
-Sun, 29 Apr 2018 14:14:06 -0500 string(19) "ReadRunbook PARAMS "
-Sun, 29 Apr 2018 14:14:06 -0500 array(2) {
-  ["singlerunbook"]=>
-  string(4) "true"
-  ["runbookid"]=>
-  string(7) "WFTasks"
-}
-Sun, 29 Apr 2018 14:14:06 -0500 string(17) "ReadTasks PARAMS "
-Sun, 29 Apr 2018 14:14:06 -0500 array(2) {
-  ["singletask"]=>
-  string(4) "true"
-  ["taskname"]=>
-  string(16) "VP Write To File"
-}
-Sun, 29 Apr 2018 19:14:06 +0000 string(28) "... Starting nochero runtask"
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 int(1)
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 string(21) "
-
-success, exit is 0
-"
-Sun, 29 Apr 2018 19:14:06 +0000 string(48) "output is "{\"status\":\"saved\"}"
-error is ""
-
-"
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 int(1)
-Sun, 29 Apr 2018 19:14:06 +0000 string(0) ""
-Sun, 29 Apr 2018 19:14:06 +0000 string(6) "WFV IS"
-Sun, 29 Apr 2018 19:14:06 +0000 object(stdClass)#67 (3) {
-  ["customeraddrs"]=>
-  array(3) {
-    [0]=>
-    object(stdClass)#159 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(7) "Chicago"
-      ["custstreet"]=>
-      string(18) "123 WindyCity Lane"
-      ["custid"]=>
-      string(1) "1"
-      ["postalcode"]=>
-      string(5) "60657"
-      ["custname"]=>
-      string(8) "VirtuOps"
-    }
-    [1]=>
-    object(stdClass)#160 (7) {
-      ["custstate"]=>
-      string(2) "AZ"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(4) "Mesa"
-      ["custstreet"]=>
-      string(16) "204 Coyote Place"
-      ["custid"]=>
-      string(1) "2"
-      ["postalcode"]=>
-      string(5) "85200"
-      ["custname"]=>
-      string(4) "ACME"
-    }
-    [2]=>
-    object(stdClass)#161 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(11) "Springfield"
-      ["custstreet"]=>
-      string(12) "234 Hero Ave"
-      ["custid"]=>
-      string(1) "3"
-      ["postalcode"]=>
-      string(5) "62629"
-      ["custname"]=>
-      string(9) "SuperCorp"
-    }
-  }
-  ["status"]=>
-  string(5) "saved"
-  ["route:foreach1"]=>
-  object(stdClass)#256 (2) {
-    ["targetobject"]=>
-    string(13) "customeraddrs"
-    ["customeraddrs"]=>
-    object(stdClass)#257 (2) {
-      ["current_val"]=>
-      bool(false)
-      ["current_key"]=>
-      NULL
-    }
-  }
-}
-Sun, 29 Apr 2018 19:14:06 +0000 string(16) "CURRENT KEY IS !"
-Sun, 29 Apr 2018 19:14:06 +0000 string(38) "START WORKFLOW TIME IS 1525029245.4696"
-Sun, 29 Apr 2018 19:14:06 +0000 string(37) "STOP WORKFLOW TIME IS 1525029246.7955"
-Sun, 29 Apr 2018 19:14:06 +0000 string(38) "TOTAL WORKFLOW TIME IS 1.3259332180023"
-Sun, 29 Apr 2018 19:27:45 +0000 string(33) "In CrudOperation, workflowexecute"
-Sun, 29 Apr 2018 19:27:45 +0000 string(514) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP MySQL Query","taskmetadata":"","params":{
-"user":"root",
-"password":"Idlgeah2016!!",
-"database":"sampledata",
-"host":"localhost",
-"port":"3306",
-"query":"select * from sampledata.sample_customers",
-"arrayname":"customeraddrs",
-"queryoutput":"/var/www/html/pilot/tmp/files/cust.json"
-}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Sun, 29 Apr 2018 14:27:45 -0500 string(16) "UserRead PARAMS "
-Sun, 29 Apr 2018 14:27:45 -0500 array(2) {
-  ["singleuser"]=>
-  string(4) "true"
-  ["username"]=>
-  string(5) "admin"
-}
-Sun, 29 Apr 2018 14:27:46 -0500 string(19) "ReadRunbook PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
-  ["singlerunbook"]=>
-  string(4) "true"
-  ["runbookid"]=>
-  string(7) "WFTasks"
-}
-Sun, 29 Apr 2018 14:27:46 -0500 string(17) "ReadTasks PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
-  ["singletask"]=>
-  string(4) "true"
-  ["taskname"]=>
-  string(14) "VP MySQL Query"
-}
-Sun, 29 Apr 2018 19:27:46 +0000 string(28) "... Starting nochero runtask"
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 int(1)
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 string(21) "
-
-success, exit is 0
-"
-Sun, 29 Apr 2018 19:27:46 +0000 string(589) "output is "{\"customeraddrs\":[{\"custstate\":\"IL\",\"custcountry\":\"USA\",\"custcity\":\"Chicago\",\"custstreet\":\"123 WindyCity Lane\",\"custid\":\"1\",\"postalcode\":\"60657\",\"custname\":\"VirtuOps\"},{\"custstate\":\"AZ\",\"custcountry\":\"USA\",\"custcity\":\"Mesa\",\"custstreet\":\"204 Coyote Place\",\"custid\":\"2\",\"postalcode\":\"85200\",\"custname\":\"ACME\"},{\"custstate\":\"IL\",\"custcountry\":\"USA\",\"custcity\":\"Springfield\",\"custstreet\":\"234 Hero Ave\",\"custid\":\"3\",\"postalcode\":\"62629\",\"custname\":\"SuperCorp\"}],\"status\":\"OK\"}"
-error is ""
-
-"
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 int(1)
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 string(6) "WFV IS"
-Sun, 29 Apr 2018 19:27:46 +0000 object(stdClass)#67 (2) {
-  ["customeraddrs"]=>
-  array(3) {
-    [0]=>
-    object(stdClass)#159 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(7) "Chicago"
-      ["custstreet"]=>
-      string(18) "123 WindyCity Lane"
-      ["custid"]=>
-      string(1) "1"
-      ["postalcode"]=>
-      string(5) "60657"
-      ["custname"]=>
-      string(8) "VirtuOps"
-    }
-    [1]=>
-    object(stdClass)#160 (7) {
-      ["custstate"]=>
-      string(2) "AZ"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(4) "Mesa"
-      ["custstreet"]=>
-      string(16) "204 Coyote Place"
-      ["custid"]=>
-      string(1) "2"
-      ["postalcode"]=>
-      string(5) "85200"
-      ["custname"]=>
-      string(4) "ACME"
-    }
-    [2]=>
-    object(stdClass)#161 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(11) "Springfield"
-      ["custstreet"]=>
-      string(12) "234 Hero Ave"
-      ["custid"]=>
-      string(1) "3"
-      ["postalcode"]=>
-      string(5) "62629"
-      ["custname"]=>
-      string(9) "SuperCorp"
-    }
-  }
-  ["status"]=>
-  string(2) "OK"
-}
-Sun, 29 Apr 2018 19:27:46 +0000 string(397) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
-"filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
-"data":"Customer VirtuOps is on street 123 WindyCity Lane"
-}
-}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Sun, 29 Apr 2018 14:27:46 -0500 string(16) "UserRead PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
-  ["singleuser"]=>
-  string(4) "true"
-  ["username"]=>
-  string(5) "admin"
-}
-Sun, 29 Apr 2018 14:27:46 -0500 string(19) "ReadRunbook PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
-  ["singlerunbook"]=>
-  string(4) "true"
-  ["runbookid"]=>
-  string(7) "WFTasks"
-}
-Sun, 29 Apr 2018 14:27:46 -0500 string(17) "ReadTasks PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
-  ["singletask"]=>
-  string(4) "true"
-  ["taskname"]=>
-  string(16) "VP Write To File"
-}
-Sun, 29 Apr 2018 19:27:46 +0000 string(28) "... Starting nochero runtask"
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 int(1)
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 string(21) "
-
-success, exit is 0
-"
-Sun, 29 Apr 2018 19:27:46 +0000 string(48) "output is "{\"status\":\"saved\"}"
-error is ""
-
-"
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 int(1)
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 string(6) "WFV IS"
-Sun, 29 Apr 2018 19:27:46 +0000 object(stdClass)#67 (3) {
-  ["customeraddrs"]=>
-  array(3) {
-    [0]=>
-    object(stdClass)#159 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(7) "Chicago"
-      ["custstreet"]=>
-      string(18) "123 WindyCity Lane"
-      ["custid"]=>
-      string(1) "1"
-      ["postalcode"]=>
-      string(5) "60657"
-      ["custname"]=>
-      string(8) "VirtuOps"
-    }
-    [1]=>
-    object(stdClass)#160 (7) {
-      ["custstate"]=>
-      string(2) "AZ"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(4) "Mesa"
-      ["custstreet"]=>
-      string(16) "204 Coyote Place"
-      ["custid"]=>
-      string(1) "2"
-      ["postalcode"]=>
-      string(5) "85200"
-      ["custname"]=>
-      string(4) "ACME"
-    }
-    [2]=>
-    object(stdClass)#161 (7) {
-      ["custstate"]=>
-      string(2) "IL"
-      ["custcountry"]=>
-      string(3) "USA"
-      ["custcity"]=>
-      string(11) "Springfield"
-      ["custstreet"]=>
-      string(12) "234 Hero Ave"
-      ["custid"]=>
-      string(1) "3"
-      ["postalcode"]=>
-      string(5) "62629"
-      ["custname"]=>
-      string(9) "SuperCorp"
-    }
-  }
-  ["status"]=>
-  string(5) "saved"
-  ["route:foreach1"]=>
-  object(stdClass)#256 (2) {
-    ["targetobject"]=>
-    string(13) "customeraddrs"
-    ["customeraddrs"]=>
-    object(stdClass)#257 (4) {
-      ["current_val"]=>
-      object(stdClass)#159 (7) {
+      object(stdClass)#193 (7) {
         ["custstate"]=>
         string(2) "IL"
         ["custcountry"]=>
@@ -927,53 +251,69 @@ Sun, 29 Apr 2018 19:27:46 +0000 object(stdClass)#67 (3) {
     }
   }
 }
-Sun, 29 Apr 2018 19:27:46 +0000 string(391) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+Sun, 29 Apr 2018 21:19:41 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:41 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:41 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:41 +0000 int(3)
+Sun, 29 Apr 2018 21:19:41 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(4) "ACME"
+Sun, 29 Apr 2018 21:19:41 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:41 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:41 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:41 +0000 int(3)
+Sun, 29 Apr 2018 21:19:41 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:41 +0000 string(4) "ACME"
+Sun, 29 Apr 2018 21:19:41 +0000 string(390) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
 "filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
-"data":"Customer ACME is on street 204 Coyote Place"
+"data":"Customer ACME city is ACME and state is AZ"
 }
 }' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Sun, 29 Apr 2018 14:27:46 -0500 string(16) "UserRead PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:42 -0500 string(16) "UserRead PARAMS "
+Sun, 29 Apr 2018 16:19:42 -0500 array(2) {
   ["singleuser"]=>
   string(4) "true"
   ["username"]=>
   string(5) "admin"
 }
-Sun, 29 Apr 2018 14:27:46 -0500 string(19) "ReadRunbook PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:42 -0500 string(19) "ReadRunbook PARAMS "
+Sun, 29 Apr 2018 16:19:42 -0500 array(2) {
   ["singlerunbook"]=>
   string(4) "true"
   ["runbookid"]=>
   string(7) "WFTasks"
 }
-Sun, 29 Apr 2018 14:27:46 -0500 string(17) "ReadTasks PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:42 -0500 string(17) "ReadTasks PARAMS "
+Sun, 29 Apr 2018 16:19:42 -0500 array(2) {
   ["singletask"]=>
   string(4) "true"
   ["taskname"]=>
   string(16) "VP Write To File"
 }
-Sun, 29 Apr 2018 19:27:46 +0000 string(28) "... Starting nochero runtask"
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 int(1)
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 string(21) "
+Sun, 29 Apr 2018 21:19:42 +0000 string(28) "... Starting nochero runtask"
+Sun, 29 Apr 2018 21:19:42 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:42 +0000 int(1)
+Sun, 29 Apr 2018 21:19:42 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:42 +0000 string(21) "
 
 success, exit is 0
 "
-Sun, 29 Apr 2018 19:27:46 +0000 string(48) "output is "{\"status\":\"saved\"}"
+Sun, 29 Apr 2018 21:19:42 +0000 string(48) "output is "{\"status\":\"saved\"}"
 error is ""
 
 "
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 int(1)
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 string(6) "WFV IS"
-Sun, 29 Apr 2018 19:27:46 +0000 object(stdClass)#67 (3) {
+Sun, 29 Apr 2018 21:19:42 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:42 +0000 int(1)
+Sun, 29 Apr 2018 21:19:42 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:42 +0000 string(6) "WFV IS"
+Sun, 29 Apr 2018 21:19:42 +0000 object(stdClass)#67 (3) {
   ["customeraddrs"]=>
   array(3) {
     [0]=>
-    object(stdClass)#159 (7) {
+    object(stdClass)#193 (7) {
       ["custstate"]=>
       string(2) "IL"
       ["custcountry"]=>
@@ -990,7 +330,7 @@ Sun, 29 Apr 2018 19:27:46 +0000 object(stdClass)#67 (3) {
       string(8) "VirtuOps"
     }
     [1]=>
-    object(stdClass)#160 (7) {
+    object(stdClass)#194 (7) {
       ["custstate"]=>
       string(2) "AZ"
       ["custcountry"]=>
@@ -1007,7 +347,7 @@ Sun, 29 Apr 2018 19:27:46 +0000 object(stdClass)#67 (3) {
       string(4) "ACME"
     }
     [2]=>
-    object(stdClass)#161 (7) {
+    object(stdClass)#195 (7) {
       ["custstate"]=>
       string(2) "IL"
       ["custcountry"]=>
@@ -1027,13 +367,13 @@ Sun, 29 Apr 2018 19:27:46 +0000 object(stdClass)#67 (3) {
   ["status"]=>
   string(5) "saved"
   ["route:foreach1"]=>
-  object(stdClass)#256 (2) {
+  object(stdClass)#324 (2) {
     ["targetobject"]=>
     string(13) "customeraddrs"
     ["customeraddrs"]=>
-    object(stdClass)#257 (4) {
+    object(stdClass)#325 (4) {
       ["current_val"]=>
-      object(stdClass)#160 (7) {
+      object(stdClass)#194 (7) {
         ["custstate"]=>
         string(2) "AZ"
         ["custcountry"]=>
@@ -1058,53 +398,69 @@ Sun, 29 Apr 2018 19:27:46 +0000 object(stdClass)#67 (3) {
     }
   }
 }
-Sun, 29 Apr 2018 19:27:46 +0000 string(392) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+Sun, 29 Apr 2018 21:19:42 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:42 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:42 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:42 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:42 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:42 +0000 int(3)
+Sun, 29 Apr 2018 21:19:42 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:42 +0000 string(9) "SuperCorp"
+Sun, 29 Apr 2018 21:19:42 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:42 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:42 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:42 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:42 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:42 +0000 int(3)
+Sun, 29 Apr 2018 21:19:42 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:42 +0000 string(9) "SuperCorp"
+Sun, 29 Apr 2018 21:19:42 +0000 string(400) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
 "filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
-"data":"Customer SuperCorp is on street 234 Hero Ave"
+"data":"Customer SuperCorp city is SuperCorp and state is IL"
 }
 }' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Sun, 29 Apr 2018 14:27:46 -0500 string(16) "UserRead PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:42 -0500 string(16) "UserRead PARAMS "
+Sun, 29 Apr 2018 16:19:42 -0500 array(2) {
   ["singleuser"]=>
   string(4) "true"
   ["username"]=>
   string(5) "admin"
 }
-Sun, 29 Apr 2018 14:27:46 -0500 string(19) "ReadRunbook PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:42 -0500 string(19) "ReadRunbook PARAMS "
+Sun, 29 Apr 2018 16:19:42 -0500 array(2) {
   ["singlerunbook"]=>
   string(4) "true"
   ["runbookid"]=>
   string(7) "WFTasks"
 }
-Sun, 29 Apr 2018 14:27:46 -0500 string(17) "ReadTasks PARAMS "
-Sun, 29 Apr 2018 14:27:46 -0500 array(2) {
+Sun, 29 Apr 2018 16:19:42 -0500 string(17) "ReadTasks PARAMS "
+Sun, 29 Apr 2018 16:19:42 -0500 array(2) {
   ["singletask"]=>
   string(4) "true"
   ["taskname"]=>
   string(16) "VP Write To File"
 }
-Sun, 29 Apr 2018 19:27:46 +0000 string(28) "... Starting nochero runtask"
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 int(1)
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 string(21) "
+Sun, 29 Apr 2018 21:19:42 +0000 string(28) "... Starting nochero runtask"
+Sun, 29 Apr 2018 21:19:42 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:42 +0000 int(1)
+Sun, 29 Apr 2018 21:19:42 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:42 +0000 string(21) "
 
 success, exit is 0
 "
-Sun, 29 Apr 2018 19:27:46 +0000 string(48) "output is "{\"status\":\"saved\"}"
+Sun, 29 Apr 2018 21:19:42 +0000 string(48) "output is "{\"status\":\"saved\"}"
 error is ""
 
 "
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:46 +0000 int(1)
-Sun, 29 Apr 2018 19:27:46 +0000 string(0) ""
-Sun, 29 Apr 2018 19:27:47 +0000 string(6) "WFV IS"
-Sun, 29 Apr 2018 19:27:47 +0000 object(stdClass)#67 (3) {
+Sun, 29 Apr 2018 21:19:42 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:42 +0000 int(1)
+Sun, 29 Apr 2018 21:19:42 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:42 +0000 string(6) "WFV IS"
+Sun, 29 Apr 2018 21:19:42 +0000 object(stdClass)#67 (3) {
   ["customeraddrs"]=>
   array(3) {
     [0]=>
-    object(stdClass)#159 (7) {
+    object(stdClass)#193 (7) {
       ["custstate"]=>
       string(2) "IL"
       ["custcountry"]=>
@@ -1121,7 +477,7 @@ Sun, 29 Apr 2018 19:27:47 +0000 object(stdClass)#67 (3) {
       string(8) "VirtuOps"
     }
     [1]=>
-    object(stdClass)#160 (7) {
+    object(stdClass)#194 (7) {
       ["custstate"]=>
       string(2) "AZ"
       ["custcountry"]=>
@@ -1138,7 +494,7 @@ Sun, 29 Apr 2018 19:27:47 +0000 object(stdClass)#67 (3) {
       string(4) "ACME"
     }
     [2]=>
-    object(stdClass)#161 (7) {
+    object(stdClass)#195 (7) {
       ["custstate"]=>
       string(2) "IL"
       ["custcountry"]=>
@@ -1158,13 +514,13 @@ Sun, 29 Apr 2018 19:27:47 +0000 object(stdClass)#67 (3) {
   ["status"]=>
   string(5) "saved"
   ["route:foreach1"]=>
-  object(stdClass)#256 (2) {
+  object(stdClass)#324 (2) {
     ["targetobject"]=>
     string(13) "customeraddrs"
     ["customeraddrs"]=>
-    object(stdClass)#257 (4) {
+    object(stdClass)#325 (4) {
       ["current_val"]=>
-      object(stdClass)#161 (7) {
+      object(stdClass)#195 (7) {
         ["custstate"]=>
         string(2) "IL"
         ["custcountry"]=>
@@ -1189,6 +545,556 @@ Sun, 29 Apr 2018 19:27:47 +0000 object(stdClass)#67 (3) {
     }
   }
 }
-Sun, 29 Apr 2018 19:27:47 +0000 string(38) "START WORKFLOW TIME IS 1525030065.8118"
-Sun, 29 Apr 2018 19:27:47 +0000 string(37) "STOP WORKFLOW TIME IS 1525030067.0551"
-Sun, 29 Apr 2018 19:27:47 +0000 string(38) "TOTAL WORKFLOW TIME IS 1.2432408332825"
+Sun, 29 Apr 2018 21:19:42 +0000 string(38) "START WORKFLOW TIME IS 1525036781.3388"
+Sun, 29 Apr 2018 21:19:42 +0000 string(37) "STOP WORKFLOW TIME IS 1525036782.4574"
+Sun, 29 Apr 2018 21:19:42 +0000 string(38) "TOTAL WORKFLOW TIME IS 1.1186008453369"
+Sun, 29 Apr 2018 21:19:57 +0000 string(33) "In CrudOperation, workflowexecute"
+Sun, 29 Apr 2018 21:19:57 +0000 string(514) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP MySQL Query","taskmetadata":"","params":{
+"user":"root",
+"password":"Idlgeah2016!!",
+"database":"sampledata",
+"host":"localhost",
+"port":"3306",
+"query":"select * from sampledata.sample_customers",
+"arrayname":"customeraddrs",
+"queryoutput":"/var/www/html/pilot/tmp/files/cust.json"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sun, 29 Apr 2018 16:19:58 -0500 string(16) "UserRead PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sun, 29 Apr 2018 16:19:58 -0500 string(19) "ReadRunbook PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sun, 29 Apr 2018 16:19:58 -0500 string(17) "ReadTasks PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP MySQL Query"
+}
+Sun, 29 Apr 2018 21:19:58 +0000 string(28) "... Starting nochero runtask"
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 int(1)
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 string(21) "
+
+success, exit is 0
+"
+Sun, 29 Apr 2018 21:19:58 +0000 string(589) "output is "{\"customeraddrs\":[{\"custstate\":\"IL\",\"custcountry\":\"USA\",\"custcity\":\"Chicago\",\"custstreet\":\"123 WindyCity Lane\",\"custid\":\"1\",\"postalcode\":\"60657\",\"custname\":\"VirtuOps\"},{\"custstate\":\"AZ\",\"custcountry\":\"USA\",\"custcity\":\"Mesa\",\"custstreet\":\"204 Coyote Place\",\"custid\":\"2\",\"postalcode\":\"85200\",\"custname\":\"ACME\"},{\"custstate\":\"IL\",\"custcountry\":\"USA\",\"custcity\":\"Springfield\",\"custstreet\":\"234 Hero Ave\",\"custid\":\"3\",\"postalcode\":\"62629\",\"custname\":\"SuperCorp\"}],\"status\":\"OK\"}"
+error is ""
+
+"
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 int(1)
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 string(6) "WFV IS"
+Sun, 29 Apr 2018 21:19:58 +0000 object(stdClass)#67 (2) {
+  ["customeraddrs"]=>
+  array(3) {
+    [0]=>
+    object(stdClass)#193 (7) {
+      ["custstate"]=>
+      string(2) "IL"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(7) "Chicago"
+      ["custstreet"]=>
+      string(18) "123 WindyCity Lane"
+      ["custid"]=>
+      string(1) "1"
+      ["postalcode"]=>
+      string(5) "60657"
+      ["custname"]=>
+      string(8) "VirtuOps"
+    }
+    [1]=>
+    object(stdClass)#194 (7) {
+      ["custstate"]=>
+      string(2) "AZ"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(4) "Mesa"
+      ["custstreet"]=>
+      string(16) "204 Coyote Place"
+      ["custid"]=>
+      string(1) "2"
+      ["postalcode"]=>
+      string(5) "85200"
+      ["custname"]=>
+      string(4) "ACME"
+    }
+    [2]=>
+    object(stdClass)#195 (7) {
+      ["custstate"]=>
+      string(2) "IL"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(11) "Springfield"
+      ["custstreet"]=>
+      string(12) "234 Hero Ave"
+      ["custid"]=>
+      string(1) "3"
+      ["postalcode"]=>
+      string(5) "62629"
+      ["custname"]=>
+      string(9) "SuperCorp"
+    }
+  }
+  ["status"]=>
+  string(2) "OK"
+}
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:58 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:58 +0000 int(3)
+Sun, 29 Apr 2018 21:19:58 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:58 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:58 +0000 int(3)
+Sun, 29 Apr 2018 21:19:58 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:58 +0000 string(397) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
+"data":"Customer VirtuOps is on street 123 WindyCity Lane"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sun, 29 Apr 2018 16:19:58 -0500 string(16) "UserRead PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sun, 29 Apr 2018 16:19:58 -0500 string(19) "ReadRunbook PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sun, 29 Apr 2018 16:19:58 -0500 string(17) "ReadTasks PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Sun, 29 Apr 2018 21:19:58 +0000 string(28) "... Starting nochero runtask"
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 int(1)
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 string(21) "
+
+success, exit is 0
+"
+Sun, 29 Apr 2018 21:19:58 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 int(1)
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 string(6) "WFV IS"
+Sun, 29 Apr 2018 21:19:58 +0000 object(stdClass)#67 (3) {
+  ["customeraddrs"]=>
+  array(3) {
+    [0]=>
+    object(stdClass)#193 (7) {
+      ["custstate"]=>
+      string(2) "IL"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(7) "Chicago"
+      ["custstreet"]=>
+      string(18) "123 WindyCity Lane"
+      ["custid"]=>
+      string(1) "1"
+      ["postalcode"]=>
+      string(5) "60657"
+      ["custname"]=>
+      string(8) "VirtuOps"
+    }
+    [1]=>
+    object(stdClass)#194 (7) {
+      ["custstate"]=>
+      string(2) "AZ"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(4) "Mesa"
+      ["custstreet"]=>
+      string(16) "204 Coyote Place"
+      ["custid"]=>
+      string(1) "2"
+      ["postalcode"]=>
+      string(5) "85200"
+      ["custname"]=>
+      string(4) "ACME"
+    }
+    [2]=>
+    object(stdClass)#195 (7) {
+      ["custstate"]=>
+      string(2) "IL"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(11) "Springfield"
+      ["custstreet"]=>
+      string(12) "234 Hero Ave"
+      ["custid"]=>
+      string(1) "3"
+      ["postalcode"]=>
+      string(5) "62629"
+      ["custname"]=>
+      string(9) "SuperCorp"
+    }
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["route:foreach1"]=>
+  object(stdClass)#324 (2) {
+    ["targetobject"]=>
+    string(13) "customeraddrs"
+    ["customeraddrs"]=>
+    object(stdClass)#325 (4) {
+      ["current_val"]=>
+      object(stdClass)#193 (7) {
+        ["custstate"]=>
+        string(2) "IL"
+        ["custcountry"]=>
+        string(3) "USA"
+        ["custcity"]=>
+        string(7) "Chicago"
+        ["custstreet"]=>
+        string(18) "123 WindyCity Lane"
+        ["custid"]=>
+        string(1) "1"
+        ["postalcode"]=>
+        string(5) "60657"
+        ["custname"]=>
+        string(8) "VirtuOps"
+      }
+      ["current_key"]=>
+      int(0)
+      ["length"]=>
+      int(3)
+      ["incr"]=>
+      int(1)
+    }
+  }
+}
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:58 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:58 +0000 int(3)
+Sun, 29 Apr 2018 21:19:58 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(4) "ACME"
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:58 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:58 +0000 int(3)
+Sun, 29 Apr 2018 21:19:58 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(4) "ACME"
+Sun, 29 Apr 2018 21:19:58 +0000 string(390) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
+"data":"Customer ACME city is ACME and state is AZ"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sun, 29 Apr 2018 16:19:58 -0500 string(16) "UserRead PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sun, 29 Apr 2018 16:19:58 -0500 string(19) "ReadRunbook PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sun, 29 Apr 2018 16:19:58 -0500 string(17) "ReadTasks PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Sun, 29 Apr 2018 21:19:58 +0000 string(28) "... Starting nochero runtask"
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 int(1)
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 string(21) "
+
+success, exit is 0
+"
+Sun, 29 Apr 2018 21:19:58 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 int(1)
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 string(6) "WFV IS"
+Sun, 29 Apr 2018 21:19:58 +0000 object(stdClass)#67 (3) {
+  ["customeraddrs"]=>
+  array(3) {
+    [0]=>
+    object(stdClass)#193 (7) {
+      ["custstate"]=>
+      string(2) "IL"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(7) "Chicago"
+      ["custstreet"]=>
+      string(18) "123 WindyCity Lane"
+      ["custid"]=>
+      string(1) "1"
+      ["postalcode"]=>
+      string(5) "60657"
+      ["custname"]=>
+      string(8) "VirtuOps"
+    }
+    [1]=>
+    object(stdClass)#194 (7) {
+      ["custstate"]=>
+      string(2) "AZ"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(4) "Mesa"
+      ["custstreet"]=>
+      string(16) "204 Coyote Place"
+      ["custid"]=>
+      string(1) "2"
+      ["postalcode"]=>
+      string(5) "85200"
+      ["custname"]=>
+      string(4) "ACME"
+    }
+    [2]=>
+    object(stdClass)#195 (7) {
+      ["custstate"]=>
+      string(2) "IL"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(11) "Springfield"
+      ["custstreet"]=>
+      string(12) "234 Hero Ave"
+      ["custid"]=>
+      string(1) "3"
+      ["postalcode"]=>
+      string(5) "62629"
+      ["custname"]=>
+      string(9) "SuperCorp"
+    }
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["route:foreach1"]=>
+  object(stdClass)#324 (2) {
+    ["targetobject"]=>
+    string(13) "customeraddrs"
+    ["customeraddrs"]=>
+    object(stdClass)#325 (4) {
+      ["current_val"]=>
+      object(stdClass)#194 (7) {
+        ["custstate"]=>
+        string(2) "AZ"
+        ["custcountry"]=>
+        string(3) "USA"
+        ["custcity"]=>
+        string(4) "Mesa"
+        ["custstreet"]=>
+        string(16) "204 Coyote Place"
+        ["custid"]=>
+        string(1) "2"
+        ["postalcode"]=>
+        string(5) "85200"
+        ["custname"]=>
+        string(4) "ACME"
+      }
+      ["current_key"]=>
+      int(1)
+      ["length"]=>
+      int(3)
+      ["incr"]=>
+      int(2)
+    }
+  }
+}
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:58 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:58 +0000 int(3)
+Sun, 29 Apr 2018 21:19:58 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(9) "SuperCorp"
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "PARAM IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(39) "%route:foreach1|customeraddrs|custname%"
+Sun, 29 Apr 2018 21:19:58 +0000 string(11) "VALUE IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(8) "VirtuOps"
+Sun, 29 Apr 2018 21:19:58 +0000 string(14) "COUNT OF P IS "
+Sun, 29 Apr 2018 21:19:58 +0000 int(3)
+Sun, 29 Apr 2018 21:19:58 +0000 string(10) "COMP IS..."
+Sun, 29 Apr 2018 21:19:58 +0000 string(9) "SuperCorp"
+Sun, 29 Apr 2018 21:19:58 +0000 string(400) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/nameandstreet.txt",
+"data":"Customer SuperCorp city is SuperCorp and state is IL"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sun, 29 Apr 2018 16:19:58 -0500 string(16) "UserRead PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sun, 29 Apr 2018 16:19:58 -0500 string(19) "ReadRunbook PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sun, 29 Apr 2018 16:19:58 -0500 string(17) "ReadTasks PARAMS "
+Sun, 29 Apr 2018 16:19:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Sun, 29 Apr 2018 21:19:58 +0000 string(28) "... Starting nochero runtask"
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 int(1)
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 string(21) "
+
+success, exit is 0
+"
+Sun, 29 Apr 2018 21:19:58 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 int(1)
+Sun, 29 Apr 2018 21:19:58 +0000 string(0) ""
+Sun, 29 Apr 2018 21:19:58 +0000 string(6) "WFV IS"
+Sun, 29 Apr 2018 21:19:58 +0000 object(stdClass)#67 (3) {
+  ["customeraddrs"]=>
+  array(3) {
+    [0]=>
+    object(stdClass)#193 (7) {
+      ["custstate"]=>
+      string(2) "IL"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(7) "Chicago"
+      ["custstreet"]=>
+      string(18) "123 WindyCity Lane"
+      ["custid"]=>
+      string(1) "1"
+      ["postalcode"]=>
+      string(5) "60657"
+      ["custname"]=>
+      string(8) "VirtuOps"
+    }
+    [1]=>
+    object(stdClass)#194 (7) {
+      ["custstate"]=>
+      string(2) "AZ"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(4) "Mesa"
+      ["custstreet"]=>
+      string(16) "204 Coyote Place"
+      ["custid"]=>
+      string(1) "2"
+      ["postalcode"]=>
+      string(5) "85200"
+      ["custname"]=>
+      string(4) "ACME"
+    }
+    [2]=>
+    object(stdClass)#195 (7) {
+      ["custstate"]=>
+      string(2) "IL"
+      ["custcountry"]=>
+      string(3) "USA"
+      ["custcity"]=>
+      string(11) "Springfield"
+      ["custstreet"]=>
+      string(12) "234 Hero Ave"
+      ["custid"]=>
+      string(1) "3"
+      ["postalcode"]=>
+      string(5) "62629"
+      ["custname"]=>
+      string(9) "SuperCorp"
+    }
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["route:foreach1"]=>
+  object(stdClass)#324 (2) {
+    ["targetobject"]=>
+    string(13) "customeraddrs"
+    ["customeraddrs"]=>
+    object(stdClass)#325 (4) {
+      ["current_val"]=>
+      object(stdClass)#195 (7) {
+        ["custstate"]=>
+        string(2) "IL"
+        ["custcountry"]=>
+        string(3) "USA"
+        ["custcity"]=>
+        string(11) "Springfield"
+        ["custstreet"]=>
+        string(12) "234 Hero Ave"
+        ["custid"]=>
+        string(1) "3"
+        ["postalcode"]=>
+        string(5) "62629"
+        ["custname"]=>
+        string(9) "SuperCorp"
+      }
+      ["current_key"]=>
+      int(2)
+      ["length"]=>
+      int(3)
+      ["incr"]=>
+      int(3)
+    }
+  }
+}
+Sun, 29 Apr 2018 21:19:58 +0000 string(38) "START WORKFLOW TIME IS 1525036797.8579"
+Sun, 29 Apr 2018 21:19:58 +0000 string(37) "STOP WORKFLOW TIME IS 1525036798.9759"
+Sun, 29 Apr 2018 21:19:58 +0000 string(37) "TOTAL WORKFLOW TIME IS 1.117919921875"
