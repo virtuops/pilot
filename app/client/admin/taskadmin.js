@@ -62,7 +62,6 @@ define(function (require) {
       columns: [
         { field: 'recid', caption: 'RecID', size: '140px', hidden: true, sortable: true },
         { field: 'actionfilename', caption: 'File Name', size: '80px', sortable: true, hidden: true },
-        { field: 'actionlanguage', caption: 'Programming Language', size: '80px', sortable: true, hidden: true },
         { field: 'urlparams', caption: 'URL Params', size: '80px', sortable: true, hidden: true },
         { field: 'actiontext', caption: 'Action Text', size: '80px', sortable: true, hidden: true },
         { field: 'taskname', caption: 'Name', size: '20%', sortable: true },
@@ -123,8 +122,7 @@ define(function (require) {
             // The corresponding part of the record for dropdowns should be objects, but check just in case.
             if (record.tasktype instanceof Object)
                 record.tasktype = record.tasktype.text
-            if (record.actionlanguage instanceof Object)
-                record.actionlanguage = record.actionlanguage.text
+                record.actionlanguage = 'perl'
 
 	    var UTILS = require('../../client/utils/misc')
 	    UTILS.ajaxPost('save', 'tasks', record, function(response) { 
@@ -161,7 +159,6 @@ define(function (require) {
       fields: [
         { name: 'recid', type: 'text', html: { caption: 'ID', attr: 'size="10" readonly' }},
         { name: 'actionfilename', type: 'text', required: false, html: { caption: 'File Name', attr: 'size="80" maxlength="80"' } },
-        { name: 'actionlanguage',  type: 'list', required: false, options: { items: [ 'shell', 'perl', 'php', 'python', 'other' ] }, html: { caption: 'Prog. Language', attr: 'size="40" maxlength="40"' }},
         { name:'urlparams', type: 'text', required: false, html: { caption: 'URL Params', attr: 'size="80" maxlength="80"' } },
         //{ name: 'actiontext', type: 'textarea', required: false, html: { caption: 'Script', attr: 'rows="50" cols="150"' } },
         { name: 'taskname', type: 'text', required: false, html: { caption: 'Name', attr: 'size="40" maxlength="40"' }},

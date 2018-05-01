@@ -26,6 +26,9 @@ if ($data =~ /$exp/i) {
 
 $output{'status'} = $1;
 
+} else {
+
+$output{'status'} = 'Expression not found';
 }
 
 my $json = encode_json(\%output);

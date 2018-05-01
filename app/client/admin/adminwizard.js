@@ -67,7 +67,7 @@ define(function (require) {
                 formHTML: '<div>' +
                 '  <div style="padding:3px;font-weight:bold;color:#777">Admin Wizard</div>' +
                 '    <div class="w2ui-group" style="height:400px">' +
-                '      <div class="instructions2"><p>To add a new action/task library go <a href="http://www.virtuops.com/solutions-library" target="_blank">here</a> and download a package.  Next, click on the Task/Action Package field below, select the zip package you just downloaded, and hit submit in the top left of the tool bar.  This will automatically create a new action and task with all configurations loaded.<br><br>If you do not have a prerequisite loaded on your machine, it will prompt you to load that prerequisite.</p></div>' +
+                '      <div class="instructions2"><p>To add a new action/task library, drag and drop a zip package here.  The package must contain a perl script for the action code, a JSON file with parameters, and a description.txt file.  Go to <webroot_pilot>/tmp/files and take a look at the directory structure to get an idea of how these are built.  Once you drag a zip file into the input area below,  hit submit in the top left of the tool bar.  This will automatically create a new action and task with all configurations loaded.<br><br>If you do not have a prerequisite loaded on your machine, it will prompt you to load that prerequisite.  We recommend you run <webroot_pilot>/install/loadmodules.sh if you are missing pre-requisites.</p></div>' +
                 '      <div class="w2ui-field">' +
                 '        <label>Task/Action Package: </label>' +
                 '        <div><input name="actionpackage" type="text" maxlength="300" size="90"/></div>' +
