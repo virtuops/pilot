@@ -184,7 +184,6 @@ if (!isset($_SESSION['logged_in'])) {
                 else if (!$row || !password_verify($mypassword, $row['password']))
                     loginError('Your username/password is wrong!', $row, $con);
 
-                header("Refresh: 1");
                 $_SESSION['logged_in'] = true;
                 $_SESSION['user'] = $_POST['username'];
 
