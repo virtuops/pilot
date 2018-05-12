@@ -1,54 +1,36 @@
 <?php
 
 require_once __DIR__.'/../utils/Log.php';
+require_once 'WFParams.php';
 
 Class IfElse {
 
         private $l;
+        private $wfparams;
 
         public function __construct()
         {
                 $this->l = new Log();
-
+                $this->wfparams = new WFParams();
         }
 
         public function ProcessRoute ($wfv, $workflow, $taskout, $current_op, $outputid, $param, $compare, $value) {
-		$this->l->varErrorLog('PARAM IS...');
-		$this->l->varErrorLog($param);
-		$this->l->varErrorLog('VALUE IS...');
-		$this->l->varErrorLog($value);
 
-		$comp = '';
+                $comp = '';
+                $this->l->varErrorLog("PROCESSING $param, $compare, $value");
 
-		preg_match('/[%](.*)[%]/',$param,$matches);
-		
-		if (isset($matches[1])) {
-			$p = explode('|',$matches[1]);	
-			$loopid = '';
-			$targetarray = '';
-			$array_key = '';
-			$obj_key = '';
+                preg_match('/[%](.*)[%]/',$param,$matches);
 
-			$this->l->varErrorLog('COUNT OF P IS ');
-			$this->l->varErrorLog(count($p));
+                if (isset($matches[1])) {
 
-			if (count($p) === 3) {
-			$loop = $p[0];
-			$targetobject = $p[1];
-			$array_key = $p[2];
-			$comp = $wfv->{$loop}->{$targetobject}->current_val->{$array_key};
-			}
-			if (count($p) === 2) {
-			$loopid = $p[0];
-			$obj_key = $p[1];
-			$comp = $wfv->{$loop}->{$obj_key};
-			}
+                        $newparam = $this->wfparams->GetIfElseParams($matches[1], $wfv);
+                        $comp = $newparam;
+                        $this->l->varErrorLog("GETIFELSE RETURNED $newparam");
 
-		} else {
-			$comp = $taskout->{$param};
-		}
-		$this->l->varErrorLog('COMP IS...');
-		$this->l->varErrorLog($comp);
+
+                } else {
+                        $comp = $taskout->{$param};
+                }
 
                 foreach ($workflow->links as $key=>$link) {
                         if ($current_op === $link->fromOperator && $link->fromConnector === $outputid) {
@@ -95,3 +77,4 @@ Class IfElse {
 }
 
 ?>
+
