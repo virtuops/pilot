@@ -1,5 +1,9 @@
 #
-# Using a SQL query as input, this action needs to output a single row of data that will be stored in "output".
+#
+# Query Tabular Data Stream data sources (MSSQL, Netcool Object Server, Sybase, etc).
+# Freetds must be installed for this to work.  Your freetds.conf file also needs to be
+# updated with server connection information.  Visit www.freetds.org for more detail.
+#
 #
 
 use strict;
@@ -7,37 +11,29 @@ use warnings;
 use Data::Dumper;
 use JSON;
 use DBI;
-use DBD::DB2;
+use DBD::Sybase;
 use Getopt::Long;
 
 my %output;
-my ($status,$user,$password,$database,$query,$host,$port,$queryoutput,$arrayname,$db2home,$db2lib,$ldlibrarypath);
+my ($status,$user,$password,$server,$database,$query,$queryoutput,$arrayname);
 
 GetOptions(
                 "user=s" => \$user,
                 "password=s" => \$password,
                 "database:s" => \$database,
-                "host=s" => \$host,
                 "query=s" => \$query,
-                "port:s" => \$port,
                 "queryoutput:s" => \$queryoutput,
                 "arrayname=s" => \$arrayname,
-                "db2home=s" => \$db2home,
-                "db2lib=s" => \$db2lib,
-                "ldlibrarypath=s" => \$ldlibrarypath,
+                "server=s" => \$server,
         );
-
-$ENV{'DB2LIB'} = $db2lib;
-$ENV{'DB2_HOME'} = $db2home;
-$ENV{'LD_LIBRARY_PATH'} = $ldlibrarypath;
 
 
 open (FILEDATA,"+> $queryoutput") || die "Cannot open file.";
 
-my $dsn = "DATABASE=$database; HOSTNAME=$host; PORT=$port; PROTOCOL=TCPIP; UID=$user; PWD=$password;";
+my $dsn = "dbi:Sybase:server=$server";
 
-print "$dsn\n";
-my $dbh = DBI->connect("dbi:DB2:$dsn", $user, $password) || die "Connection failed with error: $DBI::errstr";
+# Connect to the database
+my $dbh = DBI->connect($dsn, $user, $password, { AutoCommit => 0 }) || die "Failed to connect!";
 
 my $sth = $dbh->prepare($query);
 $sth->execute();
@@ -55,14 +51,15 @@ if ($sth->errstr()) {
         }
 }
 
-
+$dbh->disconnect;
 my $meta = $arrayname."_meta";
 $output{"$arrayname"} = \@data;
 $output{"$meta"}{"count"} = $count;
-
 my $data = encode_json(\@data);
+$data =~ s/\\u0000//g;
 print FILEDATA ($data);
 
 my $json = encode_json(\%output);
+$json =~ s/\\u0000//g;
 print $json;
 close (FILEDATA);

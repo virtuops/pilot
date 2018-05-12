@@ -1776,3 +1776,297 @@ Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, a
 Sat, 12 May 2018 18:52:34 +0000 string(27) "TaskCreateUpdate DB Error: "
 Sat, 12 May 2018 18:52:34 +0000 int(1)
 Sat, 12 May 2018 18:52:34 +0000 string(0) ""
+Sat, 12 May 2018 18:54:52 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:54:52 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 18:54:52 +0000 string(550) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/db2query.pl
+output is ""
+err is "Can't locate DBD\/DB2.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/db2query.pl line 10.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/db2query.pl line 10.\n"
+exit is 2
+
+"
+Sat, 12 May 2018 18:55:24 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:55:24 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 18:55:24 +0000 string(550) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/db2query.pl
+output is ""
+err is "Can't locate DBD\/DB2.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/db2query.pl line 10.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/db2query.pl line 10.\n"
+exit is 2
+
+"
+Sat, 12 May 2018 18:55:44 +0000 string(24) "In CrudOperation, groups"
+Sat, 12 May 2018 18:55:44 +0000 string(20) "GroupRead DB Error: "
+Sat, 12 May 2018 18:55:44 +0000 string(0) ""
+Sat, 12 May 2018 18:55:44 +0000 string(10) "Returning:"
+Sat, 12 May 2018 18:55:44 +0000 string(84) "{"total":1,"records":[{"groupid":"admingroup","groupname":"Admin Group","recid":1}]}"
+Sat, 12 May 2018 18:55:44 +0000 string(24) "In CrudOperation, groups"
+Sat, 12 May 2018 18:55:44 +0000 string(20) "GroupRead DB Error: "
+Sat, 12 May 2018 18:55:44 +0000 string(0) ""
+Sat, 12 May 2018 18:55:44 +0000 string(10) "Returning:"
+Sat, 12 May 2018 18:55:44 +0000 string(84) "{"total":1,"records":[{"groupid":"admingroup","groupname":"Admin Group","recid":1}]}"
+Sat, 12 May 2018 18:55:57 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 18:55:57 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 18:55:57 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 18:55:57 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 18:55:57 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 18:55:59 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:55:59 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:56:59 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:56:59 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 18:56:59 +0000 string(222) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/generictask.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/generictask.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 18:56:59 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 18:56:59 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 18:56:59 +0000 int(1)
+Sat, 12 May 2018 18:56:59 +0000 string(0) ""
+Sat, 12 May 2018 18:57:46 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:57:46 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 18:57:46 +0000 string(220) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/mysqlquery.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/mysqlquery.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 18:57:46 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 18:57:46 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 18:57:46 +0000 int(2)
+Sat, 12 May 2018 18:57:46 +0000 string(0) ""
+Sat, 12 May 2018 18:58:15 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:58:15 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 18:58:15 +0000 string(218) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/restquery.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/restquery.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 18:58:15 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 18:58:15 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 18:58:15 +0000 int(2)
+Sat, 12 May 2018 18:58:15 +0000 string(0) ""
+Sat, 12 May 2018 18:58:41 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:58:41 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 18:58:41 +0000 string(222) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/writetofile.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/writetofile.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 18:58:41 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 18:58:41 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 18:58:41 +0000 int(1)
+Sat, 12 May 2018 18:58:41 +0000 string(0) ""
+Sat, 12 May 2018 18:58:46 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 18:58:46 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 18:58:46 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 18:58:46 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 18:58:46 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 18:58:47 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:58:48 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:59:47 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:59:47 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 18:59:47 +0000 string(553) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "Can't locate DBD\/Sybase.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\n"
+exit is 2
+
+"
+Sat, 12 May 2018 18:59:51 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:59:51 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 18:59:51 +0000 string(553) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "Can't locate DBD\/Sybase.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\n"
+exit is 2
+
+"
+Sat, 12 May 2018 19:00:04 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:00:04 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:00:04 +0000 string(553) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "Can't locate DBD\/Sybase.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\n"
+exit is 2
+
+"
+Sat, 12 May 2018 19:00:50 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:00:50 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:00:50 +0000 string(553) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "Can't locate DBD\/Sybase.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\n"
+exit is 2
+
+"
+Sat, 12 May 2018 19:00:59 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 19:00:59 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 19:00:59 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 19:00:59 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 19:00:59 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 19:01:01 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:01:01 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:01:49 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 19:01:49 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 19:01:49 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 19:01:49 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 19:01:49 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 19:01:51 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:01:51 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:02:45 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:02:45 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:02:45 +0000 string(553) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "Can't locate DBD\/Sybase.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\n"
+exit is 2
+
+"
+Sat, 12 May 2018 19:04:10 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 19:04:10 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 19:04:10 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 19:04:10 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 19:04:10 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 19:04:12 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:04:12 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:04:20 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 19:04:20 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 19:04:20 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 19:04:20 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 19:04:20 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 19:04:22 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:04:22 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:05:03 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:05:03 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:05:03 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 19:05:03 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 19:05:03 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 19:05:03 +0000 int(1)
+Sat, 12 May 2018 19:05:03 +0000 string(0) ""
+Sat, 12 May 2018 19:05:50 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:05:50 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:05:50 +0000 string(553) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "Can't locate DBD\/Sybase.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\n"
+exit is 2
+
+"
+Sat, 12 May 2018 19:05:57 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 19:05:57 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 19:05:57 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 19:05:57 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 19:05:57 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 19:06:00 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:06:00 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:06:24 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:06:24 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:06:24 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 19:06:24 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 19:06:24 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 19:06:24 +0000 int(2)
+Sat, 12 May 2018 19:06:24 +0000 string(0) ""
+Sat, 12 May 2018 19:06:43 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:06:43 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:06:43 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 19:06:43 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 19:06:44 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 19:06:44 +0000 int(2)
+Sat, 12 May 2018 19:06:44 +0000 string(0) ""
+Sat, 12 May 2018 19:07:15 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:07:15 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:07:15 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 19:07:15 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 19:07:15 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 19:07:15 +0000 int(2)
+Sat, 12 May 2018 19:07:15 +0000 string(0) ""
+Sat, 12 May 2018 19:07:20 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 19:07:20 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 19:07:20 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 19:07:20 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 19:07:20 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 19:07:30 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 19:07:30 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 19:07:30 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 19:07:30 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 19:07:30 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 19:07:32 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:07:32 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:07:55 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:07:55 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:07:55 +0000 string(553) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "Can't locate DBD\/Sybase.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl line 14.\n"
+exit is 2
+
+"
+Sat, 12 May 2018 19:08:22 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 19:08:22 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 19:08:22 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 19:08:22 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 19:08:22 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
