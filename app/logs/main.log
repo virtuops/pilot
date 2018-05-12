@@ -1753,3 +1753,26 @@ Fri, 04 May 2018 01:51:10 +0000 string(0) ""
 Fri, 04 May 2018 01:51:10 +0000 string(10) "Returning:"
 Fri, 04 May 2018 01:51:10 +0000 string(527) "{"total":9,"records":[{"taskname":"VP Read Data","taskorder":"1","recid":1},{"taskname":"VP Email Task","taskorder":"2","recid":2},{"taskname":"VP Ping Device","taskorder":"3","recid":3},{"taskname":"VP Empty File","taskorder":"4","recid":4},{"taskname":"VP REST Query","taskorder":"5","recid":5},{"taskname":"VP DNS Device","taskorder":"6","recid":6},{"taskname":"VP Count File Rows","taskorder":"7","recid":7},{"taskname":"VP Write To File","taskorder":"8","recid":8},{"taskname":"VP MySQL Query","taskorder":"9","recid":9}]}"
 Fri, 04 May 2018 01:51:10 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:51:31 +0000 string(26) "In CrudOperation, settings"
+Sat, 12 May 2018 18:51:31 +0000 string(15) "Getting Config:"
+Sat, 12 May 2018 18:51:31 +0000 string(17) "Returning Config:"
+Sat, 12 May 2018 18:51:31 +0000 string(10) "Got DB Con"
+Sat, 12 May 2018 18:51:31 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 18:51:34 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:51:34 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:52:34 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 18:52:34 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 18:52:34 +0000 string(218) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/createdir.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/createdir.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 18:52:34 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 18:52:34 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 18:52:34 +0000 int(1)
+Sat, 12 May 2018 18:52:34 +0000 string(0) ""
