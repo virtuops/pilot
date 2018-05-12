@@ -2070,3 +2070,37 @@ Sat, 12 May 2018 19:08:22 +0000 string(15) "Getting Config:"
 Sat, 12 May 2018 19:08:22 +0000 string(17) "Returning Config:"
 Sat, 12 May 2018 19:08:22 +0000 string(10) "Got DB Con"
 Sat, 12 May 2018 19:08:22 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Sat, 12 May 2018 19:11:23 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:11:23 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:13:12 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:13:12 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:13:12 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/tdsquery.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/tdsquery.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 19:13:12 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 19:13:12 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 19:13:12 +0000 int(2)
+Sat, 12 May 2018 19:13:12 +0000 string(0) ""
+Sat, 12 May 2018 19:14:49 +0000 string(23) "In CrudOperation, tasks"
+Sat, 12 May 2018 19:14:49 +0000 string(32) "TaskCreateUpdate: New Params are"
+Sat, 12 May 2018 19:14:49 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/db2query.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/db2query.pl syntax OK\n"
+exit is 0
+
+"
+Sat, 12 May 2018 19:14:49 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Sat, 12 May 2018 19:14:49 +0000 string(27) "TaskCreateUpdate DB Error: "
+Sat, 12 May 2018 19:14:49 +0000 int(2)
+Sat, 12 May 2018 19:14:49 +0000 string(0) ""

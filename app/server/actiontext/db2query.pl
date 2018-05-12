@@ -1,7 +1,7 @@
 #
 # Using a SQL query as input, this action needs to output a single row of data that will be stored in "output".
 #
-
+=begin REMOVE THIS WHEN YOU HAVE DB2 drivers installed and you have your Apache SetEnv LD_LIBRARY_PATH pointed at the db2 driver libs
 use strict;
 use warnings;
 use Data::Dumper;
@@ -43,7 +43,6 @@ my $sth = $dbh->prepare($query);
 $sth->execute();
 
 my @data;
-my $count = 0;
 if ($sth->errstr()) {
         $output{'status'} = $sth->errstr();
 } else {
@@ -51,18 +50,14 @@ if ($sth->errstr()) {
         while(my $ref = $sth->fetchrow_hashref)
         {
         push (@data, $ref);
-        $count++;
         }
 }
 
-
-my $meta = $arrayname."_meta";
 $output{"$arrayname"} = \@data;
-$output{"$meta"}{"count"} = $count;
-
 my $data = encode_json(\@data);
 print FILEDATA ($data);
 
 my $json = encode_json(\%output);
 print $json;
 close (FILEDATA);
+=end REMOVE THIS WHEN YOU HAVE DB2 drivers installed and DBD::DB2 installed properly.

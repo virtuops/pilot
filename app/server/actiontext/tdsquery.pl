@@ -6,6 +6,7 @@
 #
 #
 
+=begin REMOVE THIS WHEN YOU HAVE DBD::Sybase installed, then save it
 use strict;
 use warnings;
 use Data::Dumper;
@@ -63,3 +64,4 @@ my $json = encode_json(\%output);
 $json =~ s/\\u0000//g;
 print $json;
 close (FILEDATA);
+=end
