@@ -138,6 +138,8 @@ Class WorkFlowExecute {
                               $this->RunTask($op);
                       } else if (substr($op, 6, 5) === 'while') {
                                 $this->EvalRoute('while',$op);
+                      } else if (substr($op, 6, 7) === 'foreach') {
+                                $this->EvalRoute('while',$op);
                       } else if (substr($op, 6, 8) === 'continue') {
                                 $this->EvalRoute('continue',$op);
                       } else if (substr($op, 6, 5) === 'break') {

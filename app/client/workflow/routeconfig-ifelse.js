@@ -103,8 +103,8 @@ define(function (require) {
         fields: [
             { name: 'recid', type: 'text', html: { caption: 'ID', attr: 'size="10" readonly' } },
             { name: 'label', type: 'text', required: false, html: { caption: 'Label', attr: 'size="40" maxlength="40"' } },
-            { name: 'conntype', type: 'list', options:{items:['input','output']}, required: false, html: { caption: 'Conn Type', attr: 'size="40" maxlength="40"' } },
-            { name: 'parameter', type: 'text', required: false, html: { caption: 'Parameter', attr: 'size="40" maxlength="40"' } },
+            { name: 'conntype', type: 'list', options:{items:['input','output']}, required: false, html: { caption: 'Conn Type', attr: 'size="40"' } },
+            { name: 'parameter', type: 'text', required: false, html: { caption: 'Parameter', attr: 'size="40"' } },
             { name: 'comparison', type: 'list', options:{items:['=','>','<','>=','<=','<>','LIKE','NOT LIKE']}, html: { caption: 'Comparison', attr: 'size="30"' } },
             { name: 'value', type: 'text', html: { caption: 'Value', attr: 'size="40"' } }
         ],
