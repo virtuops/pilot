@@ -2120,3 +2120,113 @@ Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, a
 Sat, 12 May 2018 20:16:09 +0000 string(27) "TaskCreateUpdate DB Error: "
 Sat, 12 May 2018 20:16:09 +0000 int(1)
 Sat, 12 May 2018 20:16:09 +0000 string(0) ""
+Thu, 17 May 2018 03:09:50 +0000 string(26) "In CrudOperation, settings"
+Thu, 17 May 2018 03:09:50 +0000 string(15) "Getting Config:"
+Thu, 17 May 2018 03:09:50 +0000 string(17) "Returning Config:"
+Thu, 17 May 2018 03:09:50 +0000 string(10) "Got DB Con"
+Thu, 17 May 2018 03:09:50 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Thu, 17 May 2018 03:09:54 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 03:09:54 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 03:12:55 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 03:12:55 +0000 string(32) "TaskCreateUpdate: New Params are"
+Thu, 17 May 2018 03:12:55 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/snmpwalk.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/snmpwalk.pl syntax OK\n"
+exit is 0
+
+"
+Thu, 17 May 2018 03:12:55 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Thu, 17 May 2018 03:12:55 +0000 string(27) "TaskCreateUpdate DB Error: "
+Thu, 17 May 2018 03:12:55 +0000 int(1)
+Thu, 17 May 2018 03:12:55 +0000 string(0) ""
+Thu, 17 May 2018 03:14:23 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 03:14:23 +0000 string(32) "TaskCreateUpdate: New Params are"
+Thu, 17 May 2018 03:14:23 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/snmpwalk.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/snmpwalk.pl syntax OK\n"
+exit is 0
+
+"
+Thu, 17 May 2018 03:14:23 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Thu, 17 May 2018 03:14:23 +0000 string(27) "TaskCreateUpdate DB Error: "
+Thu, 17 May 2018 03:14:23 +0000 int(2)
+Thu, 17 May 2018 03:14:23 +0000 string(0) ""
+Thu, 17 May 2018 03:15:44 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 03:15:44 +0000 string(32) "TaskCreateUpdate: New Params are"
+Thu, 17 May 2018 03:15:44 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/snmpwalk.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/snmpwalk.pl syntax OK\n"
+exit is 0
+
+"
+Thu, 17 May 2018 03:15:44 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Thu, 17 May 2018 03:15:45 +0000 string(27) "TaskCreateUpdate DB Error: "
+Thu, 17 May 2018 03:15:45 +0000 int(2)
+Thu, 17 May 2018 03:15:45 +0000 string(0) ""
+Thu, 17 May 2018 03:18:02 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 03:18:02 +0000 string(32) "TaskCreateUpdate: New Params are"
+Thu, 17 May 2018 03:18:03 +0000 string(216) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/snmpwalk.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/snmpwalk.pl syntax OK\n"
+exit is 0
+
+"
+Thu, 17 May 2018 03:18:03 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Thu, 17 May 2018 03:18:03 +0000 string(27) "TaskCreateUpdate DB Error: "
+Thu, 17 May 2018 03:18:03 +0000 int(1)
+Thu, 17 May 2018 03:18:03 +0000 string(0) ""
+Thu, 17 May 2018 12:02:17 +0000 string(26) "In CrudOperation, settings"
+Thu, 17 May 2018 12:02:17 +0000 string(15) "Getting Config:"
+Thu, 17 May 2018 12:02:17 +0000 string(17) "Returning Config:"
+Thu, 17 May 2018 12:02:17 +0000 string(10) "Got DB Con"
+Thu, 17 May 2018 12:02:17 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Thu, 17 May 2018 16:31:23 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 16:31:23 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 16:31:46 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 16:31:46 +0000 string(32) "TaskCreateUpdate: New Params are"
+Thu, 17 May 2018 16:31:46 +0000 string(218) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/restquery.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/restquery.pl syntax OK\n"
+exit is 0
+
+"
+Thu, 17 May 2018 16:31:46 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Thu, 17 May 2018 16:31:46 +0000 string(27) "TaskCreateUpdate DB Error: "
+Thu, 17 May 2018 16:31:46 +0000 int(2)
+Thu, 17 May 2018 16:31:46 +0000 string(0) ""
+Thu, 17 May 2018 16:32:05 +0000 string(23) "In CrudOperation, tasks"
+Thu, 17 May 2018 16:32:05 +0000 string(32) "TaskCreateUpdate: New Params are"
+Thu, 17 May 2018 16:32:05 +0000 string(218) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/restquery.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/restquery.pl syntax OK\n"
+exit is 0
+
+"
+Thu, 17 May 2018 16:32:05 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Thu, 17 May 2018 16:32:05 +0000 string(27) "TaskCreateUpdate DB Error: "
+Thu, 17 May 2018 16:32:05 +0000 int(2)
+Thu, 17 May 2018 16:32:05 +0000 string(0) ""

@@ -53,19 +53,8 @@ $createcmd .= " -u '".$user."'";
 }
 
 if (defined($data)) {
-     my @dataitems = split(',',$data);
-     $postdata = '{';
-     my $count = 0;
-     foreach my $dataitem (@dataitems){
-        my @postitem = split('=',$dataitem);
-        if ($count < $#dataitems){
-        $postdata .= '"'.$postitem[0].'":"'.$postitem[1].'",';
-        } else {
-        $postdata .= '"'.$postitem[0].'":"'.$postitem[1].'"}';    
-        }
-        $count++;
-     }
-     $createcmd .= " -d '".$postdata."' ";
+     
+     $createcmd .= " -d '".$data."' ";
 }
 
 $createcmd .= " '".$url."' ";
