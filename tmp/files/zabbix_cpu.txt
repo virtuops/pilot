@@ -1,0 +1,1 @@
+Hostname = 192.168.1.1, Triggername = #769: High CPU utilization, Triggerdescription = Last value: 87 %., NSeverity = 3, Triggerstate = {TRIGGER.STATE}, Triggerstatus = PROBLEM, Eventtime = 18:08:41, LastValue = 87 %, Eventid = 5034204 ,Eventdate = 2018.05.31, Eventage = 0m, Eventackstatus = No, Ackmessage = {ACK.MESSAGE}, Triggerid = 22032

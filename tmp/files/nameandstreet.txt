@@ -1,3 +1,0 @@
-Customer VirtuOps is on street 123 WindyCity Lane
-Customer ACME city is ACME and state is AZ
-Customer SuperCorp city is SuperCorp and state is IL

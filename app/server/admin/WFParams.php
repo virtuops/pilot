@@ -5,9 +5,6 @@ require_once __DIR__.'/../utils/Log.php';
 Class WFParams {
 
         private $l;
-        private $levels = 0;
-        private $searchloop = array();
-        private $searchother = array();
 
         public function __construct()
         {

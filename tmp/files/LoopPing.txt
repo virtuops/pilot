@@ -1,7 +1,0 @@
-Pinged localhost is alive %counter% times
-Pinged localhost is alive %counter% times
-Pinged localhost is alive %counter% times
-Pinged localhost is alive %counter% times
-Pinged localhost is alive %counter% times
-Pinged localhost is alive %counter% times
-Pinged localhost is alive %counter% times
