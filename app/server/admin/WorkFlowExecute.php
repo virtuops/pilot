@@ -249,9 +249,9 @@ Class WorkFlowExecute {
                         }
                 } else if ($logic == 'while') {
 
-                        $this->wfv->{$op}->counter = 0;
+                        $this->wfv->{$op}->counter = 1;
                         $this->wfv->{$op}->compare = $workflow->operators->{$op}->properties->outputs->output_1->comparison->text;
-                        $this->wfv->{$op}->value = $workflow->operators->{$op}->properties->outputs->output_1->value;
+                        $this->wfv->{$op}->value = $workflow->operators->{$op}->properties->outputs->output_1->value - 1;
                         $this->wfv->{$op}->increment = $workflow->operators->{$op}->properties->outputs->output_1->increment;
 
                         $nextobj = $this->GetConnIdTask($workflow->links, $op);
@@ -277,6 +277,7 @@ Class WorkFlowExecute {
                                 $compare = $this->wfv->{$loop}->compare;
                                 $value = (int)$this->wfv->{$loop}->value;
                                 $increment = (int)$this->wfv->{$loop}->increment;
+				$this->l->varErrorLog("COUNTER IS $counter and VAL is $value");
                                 if ($compare === '>') {
                                         if ($counter > $value) {
                                                 $this->wfv->{$loop}->counter = $counter + $increment;

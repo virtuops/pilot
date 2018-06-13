@@ -1,107 +1,4396 @@
-Thu, 31 May 2018 16:46:51 -0500 string(16) "UserRead PARAMS "
-Thu, 31 May 2018 16:46:51 -0500 array(2) {
+Wed, 13 Jun 2018 17:01:39 +0000 string(33) "In CrudOperation, workflowexecute"
+Wed, 13 Jun 2018 17:01:39 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:39 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:39 -0500 array(2) {
   ["singleuser"]=>
   string(4) "true"
   ["username"]=>
   string(5) "admin"
 }
-Thu, 31 May 2018 16:49:01 -0500 string(16) "UserRead PARAMS "
-Thu, 31 May 2018 16:49:01 -0500 array(2) {
-  ["singleuser"]=>
-  string(4) "true"
-  ["username"]=>
-  string(5) "admin"
-}
-Thu, 31 May 2018 17:07:48 -0500 string(16) "UserRead PARAMS "
-Thu, 31 May 2018 17:07:48 -0500 array(2) {
-  ["singleuser"]=>
-  string(4) "true"
-  ["username"]=>
-  string(5) "admin"
-}
-Thu, 31 May 2018 22:07:49 +0000 string(36) "PROCESSING %triggername%, LIKE, Disk"
-Thu, 31 May 2018 22:07:49 +0000 string(45) "GETIFELSE RETURNED #769: High CPU utilization"
-Thu, 31 May 2018 22:07:49 +0000 string(40) "PROCESSING %triggername%, LIKE, High CPU"
-Thu, 31 May 2018 22:07:49 +0000 string(45) "GETIFELSE RETURNED #769: High CPU utilization"
-Thu, 31 May 2018 22:07:49 +0000 string(43) "PROCESSING %triggername%, LIKE, High memory"
-Thu, 31 May 2018 22:07:49 +0000 string(45) "GETIFELSE RETURNED #769: High CPU utilization"
-Thu, 31 May 2018 22:07:49 +0000 string(52) "PROCESSING %triggername%, LIKE, High bandwidth usage"
-Thu, 31 May 2018 22:07:49 +0000 string(45) "GETIFELSE RETURNED #769: High CPU utilization"
-Thu, 31 May 2018 22:07:49 +0000 string(686) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
-"filename":"/var/www/html/pilot/tmp/files/zabbix_cpu.txt",
-"data":"Hostname = 192.168.1.1, Triggername = #769: High CPU utilization, Triggerdescription = Last value: 87 %., NSeverity = 3, Triggerstate = {TRIGGER.STATE}, Triggerstatus = PROBLEM, Eventtime = 18:08:41, LastValue = 87 %, Eventid = 5034204 ,Eventdate = 2018.05.31, Eventage = 0m, Eventackstatus = No, Ackmessage = {ACK.MESSAGE}, Triggerid = 22032"
-}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
-Thu, 31 May 2018 17:07:49 -0500 string(16) "UserRead PARAMS "
-Thu, 31 May 2018 17:07:49 -0500 array(2) {
-  ["singleuser"]=>
-  string(4) "true"
-  ["username"]=>
-  string(5) "admin"
-}
-Thu, 31 May 2018 17:07:49 -0500 string(19) "ReadRunbook PARAMS "
-Thu, 31 May 2018 17:07:49 -0500 array(2) {
+Wed, 13 Jun 2018 12:01:39 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:39 -0500 array(2) {
   ["singlerunbook"]=>
   string(4) "true"
   ["runbookid"]=>
   string(7) "WFTasks"
 }
-Thu, 31 May 2018 17:07:49 -0500 string(17) "ReadTasks PARAMS "
-Thu, 31 May 2018 17:07:49 -0500 array(2) {
+Wed, 13 Jun 2018 12:01:39 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:39 -0500 array(2) {
   ["singletask"]=>
   string(4) "true"
   ["taskname"]=>
   string(16) "VP Write To File"
 }
-Thu, 31 May 2018 22:07:49 +0000 string(28) "... Starting nochero runtask"
-Thu, 31 May 2018 22:07:49 +0000 string(0) ""
-Thu, 31 May 2018 22:07:49 +0000 int(1)
-Thu, 31 May 2018 22:07:49 +0000 string(0) ""
-Thu, 31 May 2018 22:07:49 +0000 string(21) "
+Wed, 13 Jun 2018 17:01:39 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:39 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:39 +0000 int(1)
+Wed, 13 Jun 2018 17:01:39 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:39 +0000 string(21) "
 
 success, exit is 0
 "
-Thu, 31 May 2018 22:07:49 +0000 string(48) "output is "{\"status\":\"saved\"}"
+Wed, 13 Jun 2018 17:01:39 +0000 string(48) "output is "{\"status\":\"saved\"}"
 error is ""
 
 "
-Thu, 31 May 2018 22:07:49 +0000 string(0) ""
-Thu, 31 May 2018 22:07:49 +0000 int(1)
-Thu, 31 May 2018 22:07:49 +0000 string(0) ""
-Thu, 31 May 2018 22:07:49 +0000 string(6) "WFV IS"
-Thu, 31 May 2018 22:07:49 +0000 object(stdClass)#14 (16) {
-  ["hostname"]=>
-  string(11) "192.168.1.1"
-  ["hostdescription"]=>
-  string(0) ""
-  ["triggername"]=>
-  string(26) "#769: High CPU utilization"
-  ["triggerdescription"]=>
-  string(17) "Last value: 87 %."
-  ["nseverity"]=>
-  string(1) "3"
-  ["triggerstate"]=>
-  string(15) "{TRIGGER.STATE}"
-  ["triggerstatus"]=>
-  string(7) "PROBLEM"
-  ["eventtime"]=>
-  string(8) "18:08:41"
-  ["lastvalue"]=>
-  string(4) "87 %"
-  ["eventid"]=>
-  string(7) "5034204"
-  ["eventdate"]=>
-  string(10) "2018.05.31"
-  ["eventage"]=>
-  string(2) "0m"
-  ["eventackstatus"]=>
-  string(2) "No"
-  ["ackmessage"]=>
-  string(13) "{ACK.MESSAGE}"
-  ["triggerid"]=>
-  string(5) "22032"
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 int(1)
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:40 +0000 object(stdClass)#71 (2) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(0)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
   ["status"]=>
   string(5) "saved"
 }
-Thu, 31 May 2018 22:07:49 +0000 string(38) "START WORKFLOW TIME IS 1527804468.9499"
-Thu, 31 May 2018 22:07:49 +0000 string(37) "STOP WORKFLOW TIME IS 1527804469.3245"
-Thu, 31 May 2018 22:07:49 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.37450695037842"
+Wed, 13 Jun 2018 17:01:40 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:40 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:40 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:40 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:01:40 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 int(1)
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:40 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 int(1)
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:40 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(0)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:40 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:01:40 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:01:40 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:40 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:40 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:40 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:01:40 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 int(1)
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:40 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 int(1)
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:40 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(0)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:40 +0000 string(25) "COUNTER IS 0 and VAL is 3"
+Wed, 13 Jun 2018 17:01:40 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:40 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:40 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:40 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:01:40 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 int(1)
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:40 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 int(1)
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:40 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:40 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:40 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:40 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:40 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:40 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:01:40 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 int(1)
+Wed, 13 Jun 2018 17:01:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:40 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:40 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 int(1)
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:41 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:41 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:01:41 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:01:41 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:41 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:41 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:41 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:01:41 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 int(1)
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:41 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 int(1)
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:41 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:41 +0000 string(25) "COUNTER IS 1 and VAL is 3"
+Wed, 13 Jun 2018 17:01:41 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:41 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:41 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:41 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:01:41 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 int(1)
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:41 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 int(1)
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:41 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:41 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:41 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:41 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:41 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:01:41 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 int(1)
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:41 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 int(1)
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:41 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:41 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:01:41 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:01:41 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:41 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:41 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:41 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:41 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:01:41 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 int(1)
+Wed, 13 Jun 2018 17:01:41 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:41 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:41 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 int(1)
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:42 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:42 +0000 string(25) "COUNTER IS 2 and VAL is 3"
+Wed, 13 Jun 2018 17:01:42 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:42 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:42 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:42 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:01:42 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 int(1)
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:42 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 int(1)
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:42 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:42 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:42 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:42 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:42 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:01:42 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 int(1)
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:42 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 int(1)
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:42 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:42 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:01:42 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:01:42 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:42 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:42 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:42 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:01:42 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 int(1)
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:42 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 int(1)
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:42 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:42 +0000 string(25) "COUNTER IS 3 and VAL is 3"
+Wed, 13 Jun 2018 17:01:42 +0000 string(362) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/LogEnd.txt",
+"data":"Hey man, we are done!"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:01:42 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:01:42 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:01:42 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:01:42 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:01:42 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 int(1)
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:01:42 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 int(1)
+Wed, 13 Jun 2018 17:01:42 +0000 string(0) ""
+Wed, 13 Jun 2018 17:01:42 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:01:42 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:01:43 +0000 string(38) "START WORKFLOW TIME IS 1528909299.7085"
+Wed, 13 Jun 2018 17:01:43 +0000 string(37) "STOP WORKFLOW TIME IS 1528909303.0298"
+Wed, 13 Jun 2018 17:01:43 +0000 string(38) "TOTAL WORKFLOW TIME IS 3.3212959766388"
+Wed, 13 Jun 2018 17:02:11 +0000 string(27) "In CrudOperation, workflows"
+Wed, 13 Jun 2018 17:02:11 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Wed, 13 Jun 2018 17:02:11 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(5097) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":160,"left":740,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Device Dead","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/devicedead.txt\",\n\"data\":\"This device is status\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else1":{"top":40,"left":540,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Alive","parameter":"status","comparison":"=","value":"alive"},"output_2":{"conntype":"output","label":"Not Alive","parameter":"status","comparison":"=","value":"unreachable"}}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x <= 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<=","text":"<="},"value":"3","increment":"1"}},"loopid":"route:while2"}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Wed, 13 Jun 2018 17:02:11 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Wed, 13 Jun 2018 17:02:11 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Wed, 13 Jun 2018 17:02:11 +0000 int(2)
+Wed, 13 Jun 2018 17:02:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:02:40 +0000 string(27) "In CrudOperation, workflows"
+Wed, 13 Jun 2018 17:02:40 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Wed, 13 Jun 2018 17:02:40 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(5095) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":160,"left":740,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Device Dead","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/devicedead.txt\",\n\"data\":\"This device is status\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else1":{"top":40,"left":540,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Alive","parameter":"status","comparison":"=","value":"alive"},"output_2":{"conntype":"output","label":"Not Alive","parameter":"status","comparison":"=","value":"unreachable"}}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x <= 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<","text":"<"},"value":"3","increment":"1"}},"loopid":"route:while2"}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Wed, 13 Jun 2018 17:02:40 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Wed, 13 Jun 2018 17:02:40 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Wed, 13 Jun 2018 17:02:40 +0000 int(2)
+Wed, 13 Jun 2018 17:02:40 +0000 string(0) ""
+Wed, 13 Jun 2018 17:02:43 +0000 string(27) "In CrudOperation, workflows"
+Wed, 13 Jun 2018 17:02:43 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Wed, 13 Jun 2018 17:02:43 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(5095) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":160,"left":740,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Device Dead","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/devicedead.txt\",\n\"data\":\"This device is status\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else1":{"top":40,"left":540,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Alive","parameter":"status","comparison":"=","value":"alive"},"output_2":{"conntype":"output","label":"Not Alive","parameter":"status","comparison":"=","value":"unreachable"}}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x <= 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<","text":"<"},"value":"3","increment":"1"}},"loopid":"route:while2"}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Wed, 13 Jun 2018 17:02:43 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Wed, 13 Jun 2018 17:02:43 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Wed, 13 Jun 2018 17:02:43 +0000 int(0)
+Wed, 13 Jun 2018 17:02:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:02:47 +0000 string(34) "In CrudOperation, workflowschedule"
+Wed, 13 Jun 2018 17:02:47 +0000 string(28) "WorkFlowScheduleRead PARAMS "
+Wed, 13 Jun 2018 17:02:47 +0000 array(1) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+}
+Wed, 13 Jun 2018 17:03:02 +0000 string(33) "In CrudOperation, workflowexecute"
+Wed, 13 Jun 2018 17:03:02 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:02 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:02 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:02 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:02 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:02 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:02 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:03:02 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:02 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:02 +0000 int(1)
+Wed, 13 Jun 2018 17:03:02 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:02 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:02 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:02 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:02 +0000 int(1)
+Wed, 13 Jun 2018 17:03:02 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:02 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:02 +0000 object(stdClass)#71 (2) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(0)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+}
+Wed, 13 Jun 2018 17:03:02 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:02 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:02 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:02 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:02 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:02 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:02 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:03:02 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:02 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:02 +0000 int(1)
+Wed, 13 Jun 2018 17:03:02 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:02 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:02 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:02 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:02 +0000 int(1)
+Wed, 13 Jun 2018 17:03:02 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:02 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:02 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(0)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:02 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:03:02 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:03:02 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:02 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:02 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:02 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:02 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:02 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:02 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:03:02 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 int(1)
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:03 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 int(1)
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:03 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(0)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:03 +0000 string(25) "COUNTER IS 0 and VAL is 3"
+Wed, 13 Jun 2018 17:03:03 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:03 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:03 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:03 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:03:03 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 int(1)
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:03 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 int(1)
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:03 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:03 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:03 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:03 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:03 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:03:03 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 int(1)
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:03 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 int(1)
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:03 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:03 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:03:03 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:03:03 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:03 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:03 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:03 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:03:03 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 int(1)
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:03 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 int(1)
+Wed, 13 Jun 2018 17:03:03 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:03 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:03 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:03 +0000 string(25) "COUNTER IS 1 and VAL is 3"
+Wed, 13 Jun 2018 17:03:03 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:03 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:03 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:03:04 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 int(1)
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:04 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 int(1)
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:04 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:04 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:04 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:03:04 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 int(1)
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:04 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 int(1)
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:04 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:04 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:03:04 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:03:04 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:04 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:03:04 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 int(1)
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:04 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 int(1)
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:04 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:04 +0000 string(25) "COUNTER IS 2 and VAL is 3"
+Wed, 13 Jun 2018 17:03:04 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:04 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:03:04 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 int(1)
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:04 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 int(1)
+Wed, 13 Jun 2018 17:03:04 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:04 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:04 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:04 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:04 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:04 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:04 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:03:04 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 int(1)
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:05 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 int(1)
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:05 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:05 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:03:05 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:03:05 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:05 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:05 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:05 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:05 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:05 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:05 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:03:05 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 int(1)
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:05 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 int(1)
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:05 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:05 +0000 string(25) "COUNTER IS 3 and VAL is 3"
+Wed, 13 Jun 2018 17:03:05 +0000 string(362) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/LogEnd.txt",
+"data":"Hey man, we are done!"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:03:05 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:03:05 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:03:05 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:03:05 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:03:05 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:03:05 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:03:05 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 int(1)
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:03:05 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 int(1)
+Wed, 13 Jun 2018 17:03:05 +0000 string(0) ""
+Wed, 13 Jun 2018 17:03:05 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:03:05 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:03:05 +0000 string(38) "START WORKFLOW TIME IS 1528909382.2674"
+Wed, 13 Jun 2018 17:03:05 +0000 string(37) "STOP WORKFLOW TIME IS 1528909385.5776"
+Wed, 13 Jun 2018 17:03:05 +0000 string(38) "TOTAL WORKFLOW TIME IS 3.3101930618286"
+Wed, 13 Jun 2018 17:07:38 +0000 string(27) "In CrudOperation, workflows"
+Wed, 13 Jun 2018 17:07:38 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Wed, 13 Jun 2018 17:07:38 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(5097) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":160,"left":740,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Device Dead","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/devicedead.txt\",\n\"data\":\"This device is status\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else1":{"top":40,"left":540,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Alive","parameter":"status","comparison":"=","value":"alive"},"output_2":{"conntype":"output","label":"Not Alive","parameter":"status","comparison":"=","value":"unreachable"}}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x <= 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<=","text":"<="},"value":"3","increment":"1"}},"loopid":"route:while2"}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Wed, 13 Jun 2018 17:07:38 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Wed, 13 Jun 2018 17:07:38 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Wed, 13 Jun 2018 17:07:38 +0000 int(2)
+Wed, 13 Jun 2018 17:07:38 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:43 +0000 string(27) "In CrudOperation, workflows"
+Wed, 13 Jun 2018 17:07:43 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Wed, 13 Jun 2018 17:07:43 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(5097) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":160,"left":740,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Device Dead","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/devicedead.txt\",\n\"data\":\"This device is status\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else1":{"top":40,"left":540,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Alive","parameter":"status","comparison":"=","value":"alive"},"output_2":{"conntype":"output","label":"Not Alive","parameter":"status","comparison":"=","value":"unreachable"}}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x <= 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<=","text":"<="},"value":"3","increment":"1"}},"loopid":"route:while2"}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Wed, 13 Jun 2018 17:07:43 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Wed, 13 Jun 2018 17:07:43 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Wed, 13 Jun 2018 17:07:43 +0000 int(0)
+Wed, 13 Jun 2018 17:07:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:46 +0000 string(34) "In CrudOperation, workflowschedule"
+Wed, 13 Jun 2018 17:07:46 +0000 string(28) "WorkFlowScheduleRead PARAMS "
+Wed, 13 Jun 2018 17:07:46 +0000 array(1) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+}
+Wed, 13 Jun 2018 17:07:57 +0000 string(33) "In CrudOperation, workflowexecute"
+Wed, 13 Jun 2018 17:07:57 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:07:57 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:07:57 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:07:57 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:07:57 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:07:57 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:07:57 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:07:57 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:07:57 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:57 +0000 int(1)
+Wed, 13 Jun 2018 17:07:57 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:57 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:07:57 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 int(1)
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:07:58 +0000 object(stdClass)#71 (2) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(0)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+}
+Wed, 13 Jun 2018 17:07:58 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:07:58 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:07:58 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:07:58 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:07:58 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 int(1)
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:07:58 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 int(1)
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:07:58 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(0)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:07:58 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:07:58 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:07:58 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:07:58 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:07:58 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:07:58 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:07:58 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 int(1)
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:07:58 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 int(1)
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:07:58 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(0)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:07:58 +0000 string(25) "COUNTER IS 0 and VAL is 3"
+Wed, 13 Jun 2018 17:07:58 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:07:58 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:07:58 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:07:58 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:07:58 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 int(1)
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:07:58 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 int(1)
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:07:58 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:07:58 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:07:58 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:07:58 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:07:58 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:07:58 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:07:58 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 int(1)
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:07:58 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:58 +0000 int(1)
+Wed, 13 Jun 2018 17:07:58 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:07:59 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:07:59 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:07:59 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:07:59 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:07:59 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:07:59 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:07:59 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:07:59 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 int(1)
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:07:59 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 int(1)
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:07:59 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:07:59 +0000 string(25) "COUNTER IS 1 and VAL is 3"
+Wed, 13 Jun 2018 17:07:59 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:07:59 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:07:59 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:07:59 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:07:59 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 int(1)
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:07:59 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 int(1)
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:07:59 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:07:59 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:07:59 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:07:59 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:07:59 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:07:59 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 int(1)
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:07:59 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 int(1)
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:07:59 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:07:59 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:07:59 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:07:59 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:07:59 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:07:59 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:07:59 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:07:59 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:07:59 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 int(1)
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:07:59 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 int(1)
+Wed, 13 Jun 2018 17:07:59 +0000 string(0) ""
+Wed, 13 Jun 2018 17:07:59 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:07:59 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:07:59 +0000 string(25) "COUNTER IS 2 and VAL is 3"
+Wed, 13 Jun 2018 17:07:59 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:08:00 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:08:00 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:08:00 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:08:00 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 int(1)
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:08:00 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 int(1)
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:08:00 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:08:00 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:08:00 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:08:00 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:08:00 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:08:00 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 int(1)
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:08:00 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 int(1)
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:08:00 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:08:00 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:08:00 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:08:00 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:08:00 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:08:00 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:08:00 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:08:00 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 int(1)
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:08:00 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 int(1)
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:08:00 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:08:00 +0000 string(25) "COUNTER IS 3 and VAL is 3"
+Wed, 13 Jun 2018 17:08:00 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:08:00 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:08:00 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:08:00 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:08:00 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:08:00 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 int(1)
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:08:00 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 int(1)
+Wed, 13 Jun 2018 17:08:00 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:00 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:08:00 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(4)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:08:00 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:08:01 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:08:01 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:08:01 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:08:01 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:08:01 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:08:01 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:08:01 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 int(1)
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:08:01 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 int(1)
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:08:01 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(4)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:08:01 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:08:01 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:08:01 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:08:01 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:08:01 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:08:01 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:08:01 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:08:01 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:08:01 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:08:01 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 int(1)
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:08:01 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 int(1)
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:08:01 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(4)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:08:01 +0000 string(25) "COUNTER IS 4 and VAL is 3"
+Wed, 13 Jun 2018 17:08:01 +0000 string(362) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/LogEnd.txt",
+"data":"Hey man, we are done!"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:08:01 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:08:01 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:08:01 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:08:01 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:08:01 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:08:01 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:08:01 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 int(1)
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:08:01 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 int(1)
+Wed, 13 Jun 2018 17:08:01 +0000 string(0) ""
+Wed, 13 Jun 2018 17:08:01 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:08:01 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(4)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:08:01 +0000 string(38) "START WORKFLOW TIME IS 1528909677.6785"
+Wed, 13 Jun 2018 17:08:01 +0000 string(37) "STOP WORKFLOW TIME IS 1528909681.7624"
+Wed, 13 Jun 2018 17:08:01 +0000 string(38) "TOTAL WORKFLOW TIME IS 4.0839440822601"
+Wed, 13 Jun 2018 17:14:52 +0000 string(33) "In CrudOperation, workflowexecute"
+Wed, 13 Jun 2018 17:14:53 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:53 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:53 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:53 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:14:53 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 int(1)
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:53 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 int(1)
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:53 +0000 object(stdClass)#71 (2) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+}
+Wed, 13 Jun 2018 17:14:53 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:53 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:53 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:53 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:14:53 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 int(1)
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:53 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 int(1)
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:53 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:53 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:14:53 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:14:53 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:53 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:53 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:53 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:14:53 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 int(1)
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:53 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 int(1)
+Wed, 13 Jun 2018 17:14:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:53 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:53 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:53 +0000 string(25) "COUNTER IS 1 and VAL is 3"
+Wed, 13 Jun 2018 17:14:53 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:53 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:53 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:14:54 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 int(1)
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:54 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 int(1)
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:54 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:54 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:54 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:14:54 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 int(1)
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:54 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 int(1)
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:54 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:54 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:14:54 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:14:54 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:54 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:14:54 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 int(1)
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:54 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 int(1)
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:54 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:54 +0000 string(25) "COUNTER IS 2 and VAL is 3"
+Wed, 13 Jun 2018 17:14:54 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:54 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:14:54 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 int(1)
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:54 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 int(1)
+Wed, 13 Jun 2018 17:14:54 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:54 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:54 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:54 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:54 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:54 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:54 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:14:54 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 int(1)
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:55 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 int(1)
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:55 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:55 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:14:55 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:14:55 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:55 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:55 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:55 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:14:55 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 int(1)
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:55 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 int(1)
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:55 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:55 +0000 string(25) "COUNTER IS 3 and VAL is 3"
+Wed, 13 Jun 2018 17:14:55 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:55 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:55 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:55 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:14:55 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 int(1)
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:55 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 int(1)
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:55 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(4)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:55 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:55 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:55 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:55 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:14:55 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 int(1)
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:55 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 int(1)
+Wed, 13 Jun 2018 17:14:55 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:55 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:55 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(4)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:55 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:14:55 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:14:55 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:55 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:55 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:56 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:56 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:56 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:56 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:14:56 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:56 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:56 +0000 int(1)
+Wed, 13 Jun 2018 17:14:56 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:56 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:56 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:56 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:56 +0000 int(1)
+Wed, 13 Jun 2018 17:14:56 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:56 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:56 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(4)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:56 +0000 string(25) "COUNTER IS 4 and VAL is 3"
+Wed, 13 Jun 2018 17:14:56 +0000 string(362) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/LogEnd.txt",
+"data":"Hey man, we are done!"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:14:56 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:14:56 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:14:56 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:14:56 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:14:56 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:14:56 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:14:56 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:14:56 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:56 +0000 int(1)
+Wed, 13 Jun 2018 17:14:56 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:56 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:14:56 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:14:56 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:56 +0000 int(1)
+Wed, 13 Jun 2018 17:14:56 +0000 string(0) ""
+Wed, 13 Jun 2018 17:14:56 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:14:56 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(4)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    string(1) "3"
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:14:56 +0000 string(37) "START WORKFLOW TIME IS 1528910092.986"
+Wed, 13 Jun 2018 17:14:56 +0000 string(37) "STOP WORKFLOW TIME IS 1528910096.3914"
+Wed, 13 Jun 2018 17:14:56 +0000 string(37) "TOTAL WORKFLOW TIME IS 3.405345916748"
+Wed, 13 Jun 2018 17:17:43 +0000 string(33) "In CrudOperation, workflowexecute"
+Wed, 13 Jun 2018 17:17:43 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:43 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:43 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:43 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:43 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:43 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:43 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:17:43 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:43 +0000 int(1)
+Wed, 13 Jun 2018 17:17:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:43 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:43 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:43 +0000 int(1)
+Wed, 13 Jun 2018 17:17:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:43 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:43 +0000 object(stdClass)#71 (2) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+}
+Wed, 13 Jun 2018 17:17:43 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:43 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:43 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:43 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:43 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:43 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:43 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:17:43 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:43 +0000 int(1)
+Wed, 13 Jun 2018 17:17:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:43 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:43 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:43 +0000 int(1)
+Wed, 13 Jun 2018 17:17:43 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:44 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:17:44 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:17:44 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:17:44 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:44 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:44 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:44 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:17:44 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 int(1)
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:44 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 int(1)
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:44 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:17:44 +0000 string(25) "COUNTER IS 1 and VAL is 2"
+Wed, 13 Jun 2018 17:17:44 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:44 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:44 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:44 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:17:44 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 int(1)
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:44 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 int(1)
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:44 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:17:44 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:44 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:44 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:44 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:17:44 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 int(1)
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:44 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 int(1)
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:44 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:17:44 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:17:44 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:17:44 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:44 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:44 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:44 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:44 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:17:44 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 int(1)
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:44 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 int(1)
+Wed, 13 Jun 2018 17:17:44 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:44 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:44 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:17:44 +0000 string(25) "COUNTER IS 2 and VAL is 2"
+Wed, 13 Jun 2018 17:17:44 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:45 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:45 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:45 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:17:45 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 int(1)
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:45 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 int(1)
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:45 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:17:45 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:45 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:45 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:45 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:17:45 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 int(1)
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:45 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 int(1)
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:45 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:17:45 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:17:45 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:17:45 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:45 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:45 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:45 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:17:45 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 int(1)
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:45 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 int(1)
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:45 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:17:45 +0000 string(25) "COUNTER IS 3 and VAL is 2"
+Wed, 13 Jun 2018 17:17:45 +0000 string(362) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/LogEnd.txt",
+"data":"Hey man, we are done!"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:17:45 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:17:45 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:17:45 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:17:45 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:17:45 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 int(1)
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:17:45 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 int(1)
+Wed, 13 Jun 2018 17:17:45 +0000 string(0) ""
+Wed, 13 Jun 2018 17:17:45 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:17:45 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(3)
+    ["compare"]=>
+    string(2) "<="
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:17:45 +0000 string(38) "START WORKFLOW TIME IS 1528910263.4422"
+Wed, 13 Jun 2018 17:17:45 +0000 string(37) "STOP WORKFLOW TIME IS 1528910265.9821"
+Wed, 13 Jun 2018 17:17:45 +0000 string(38) "TOTAL WORKFLOW TIME IS 2.5398769378662"
+Wed, 13 Jun 2018 17:18:26 +0000 string(27) "In CrudOperation, workflows"
+Wed, 13 Jun 2018 17:18:26 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Wed, 13 Jun 2018 17:18:26 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(5095) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":160,"left":740,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Device Dead","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/devicedead.txt\",\n\"data\":\"This device is status\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else1":{"top":40,"left":540,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Alive","parameter":"status","comparison":"=","value":"alive"},"output_2":{"conntype":"output","label":"Not Alive","parameter":"status","comparison":"=","value":"unreachable"}}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x <= 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<","text":"<"},"value":"3","increment":"1"}},"loopid":"route:while2"}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Wed, 13 Jun 2018 17:18:26 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Wed, 13 Jun 2018 17:18:26 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Wed, 13 Jun 2018 17:18:26 +0000 int(2)
+Wed, 13 Jun 2018 17:18:26 +0000 string(0) ""
+Wed, 13 Jun 2018 17:20:53 +0000 string(27) "In CrudOperation, workflows"
+Wed, 13 Jun 2018 17:20:53 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Wed, 13 Jun 2018 17:20:53 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(5094) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":160,"left":740,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Device Dead","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/devicedead.txt\",\n\"data\":\"This device is status\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else1":{"top":40,"left":540,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Alive","parameter":"status","comparison":"=","value":"alive"},"output_2":{"conntype":"output","label":"Not Alive","parameter":"status","comparison":"=","value":"unreachable"}}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x < 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<","text":"<"},"value":"3","increment":"1"}},"loopid":"route:while2"}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Wed, 13 Jun 2018 17:20:53 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Wed, 13 Jun 2018 17:20:53 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Wed, 13 Jun 2018 17:20:53 +0000 int(2)
+Wed, 13 Jun 2018 17:20:53 +0000 string(0) ""
+Wed, 13 Jun 2018 17:20:56 +0000 string(27) "In CrudOperation, workflows"
+Wed, 13 Jun 2018 17:20:56 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Wed, 13 Jun 2018 17:20:56 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(5094) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":160,"left":740,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Device Dead","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/devicedead.txt\",\n\"data\":\"This device is status\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else1":{"top":40,"left":540,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Alive","parameter":"status","comparison":"=","value":"alive"},"output_2":{"conntype":"output","label":"Not Alive","parameter":"status","comparison":"=","value":"unreachable"}}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x < 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<","text":"<"},"value":"3","increment":"1"}},"loopid":"route:while2"}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Wed, 13 Jun 2018 17:20:56 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Wed, 13 Jun 2018 17:20:56 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Wed, 13 Jun 2018 17:20:56 +0000 int(0)
+Wed, 13 Jun 2018 17:20:56 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:00 +0000 string(34) "In CrudOperation, workflowschedule"
+Wed, 13 Jun 2018 17:21:00 +0000 string(28) "WorkFlowScheduleRead PARAMS "
+Wed, 13 Jun 2018 17:21:00 +0000 array(1) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+}
+Wed, 13 Jun 2018 17:21:10 +0000 string(33) "In CrudOperation, workflowexecute"
+Wed, 13 Jun 2018 17:21:10 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:21:10 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:21:10 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:21:10 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:21:10 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:21:10 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:21:10 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:21:10 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:21:10 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:10 +0000 int(1)
+Wed, 13 Jun 2018 17:21:10 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:10 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:21:10 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 int(1)
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:21:11 +0000 object(stdClass)#71 (2) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+}
+Wed, 13 Jun 2018 17:21:11 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:21:11 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:21:11 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:21:11 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:21:11 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 int(1)
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:21:11 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 int(1)
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:21:11 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:21:11 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:21:11 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:21:11 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:21:11 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:21:11 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:21:11 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:21:11 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 int(1)
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:21:11 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 int(1)
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:21:11 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(1)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:21:11 +0000 string(25) "COUNTER IS 1 and VAL is 2"
+Wed, 13 Jun 2018 17:21:11 +0000 string(370) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/outputA.txt",
+"data":"OutputA has been written to"
+}
+	}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:21:11 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:21:11 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:21:11 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:21:11 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 int(1)
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:21:11 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 int(1)
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:21:11 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:21:11 +0000 string(292) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Ping Device","taskmetadata":"","params":{
+"host":"localhost"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:21:11 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:21:11 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:21:11 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:21:11 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(14) "VP Ping Device"
+}
+Wed, 13 Jun 2018 17:21:11 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 int(1)
+Wed, 13 Jun 2018 17:21:11 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:11 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:21:11 +0000 string(71) "output is "{\"status\":\"alive\",\"host\":\"localhost\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 int(1)
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:21:12 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "alive"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:21:12 +0000 string(27) "PROCESSING status, =, alive"
+Wed, 13 Jun 2018 17:21:12 +0000 string(33) "PROCESSING status, =, unreachable"
+Wed, 13 Jun 2018 17:21:12 +0000 string(367) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/DeviceAlive.txt",
+"data":"This device is status"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:21:12 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:21:12 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:21:12 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:21:12 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:21:12 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:21:12 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:21:12 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 int(1)
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:21:12 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 int(1)
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:21:12 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:21:12 +0000 string(25) "COUNTER IS 2 and VAL is 2"
+Wed, 13 Jun 2018 17:21:12 +0000 string(362) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/LogEnd.txt",
+"data":"Hey man, we are done!"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Wed, 13 Jun 2018 12:21:12 -0500 string(16) "UserRead PARAMS "
+Wed, 13 Jun 2018 12:21:12 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 13 Jun 2018 12:21:12 -0500 string(19) "ReadRunbook PARAMS "
+Wed, 13 Jun 2018 12:21:12 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 13 Jun 2018 12:21:12 -0500 string(17) "ReadTasks PARAMS "
+Wed, 13 Jun 2018 12:21:12 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Wed, 13 Jun 2018 17:21:12 +0000 string(28) "... Starting nochero runtask"
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 int(1)
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 13 Jun 2018 17:21:12 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 int(1)
+Wed, 13 Jun 2018 17:21:12 +0000 string(0) ""
+Wed, 13 Jun 2018 17:21:12 +0000 string(6) "WFV IS"
+Wed, 13 Jun 2018 17:21:12 +0000 object(stdClass)#71 (3) {
+  ["route:while2"]=>
+  object(stdClass)#231 (4) {
+    ["counter"]=>
+    int(2)
+    ["compare"]=>
+    string(1) "<"
+    ["value"]=>
+    int(2)
+    ["increment"]=>
+    string(1) "1"
+  }
+  ["status"]=>
+  string(5) "saved"
+  ["host"]=>
+  string(9) "localhost"
+}
+Wed, 13 Jun 2018 17:21:12 +0000 string(38) "START WORKFLOW TIME IS 1528910470.7317"
+Wed, 13 Jun 2018 17:21:12 +0000 string(37) "STOP WORKFLOW TIME IS 1528910472.5511"
+Wed, 13 Jun 2018 17:21:12 +0000 string(38) "TOTAL WORKFLOW TIME IS 1.8193888664246"
