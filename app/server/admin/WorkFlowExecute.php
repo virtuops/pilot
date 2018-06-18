@@ -399,7 +399,7 @@ Class WorkFlowExecute {
                                         $this->EvalRoute('continue', $next_op, $output);
                                 } else if (preg_match('/break/', $next_op) === 1){
                                         $this->EvalRoute('break', $next_op, $output);
-                                } else if (preg_match('/end/', $next_op) === 1) {
+                                } else if (preg_match('/end/', $next_op) === 1 || preg_match('/stop/', $next_op) === 1) {
                                         $this->Stop($wfname, $this->con);
                                 }
                         }
