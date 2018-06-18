@@ -158,6 +158,7 @@ define(function (require) {
                 			{ text: 'foreach', img: 'routeicon'},
                 			{ text: 'break', img: 'routeicon'},
                 			{ text: 'continue', img: 'routeicon'},
+                			{ text: 'stop', img: 'routeicon'},
 					] 
 				},
                                 { id: 'break4', type: 'break'},
@@ -247,7 +248,44 @@ define(function (require) {
                                       $flowchart.flowchart('createOperator', operatorId, operatorData);
 					
 
-                                } else if (event.target == 'route:break') {
+                                } else if (event.target == 'route:stop') {
+
+                                var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
+                                var re = /route:stop/;
+                                var highestNumber = 0;
+                                operatorNames.forEach(function(name){
+                                        if (re.test(name) === true){
+                                                num = parseInt(name.replace('route:stop',''));
+                                                if (num > highestNumber) {
+                                                        highestNumber = num;
+                                                }
+                                        }
+                                });
+
+                                var nextRoute = highestNumber + 1;
+                                var operatorId = 'route:stop' + nextRoute;
+
+                                var operatorData ={
+                                          top: 20,
+                                          left: 1000,
+                                          properties: {
+                                            objecttype: 'endnode',
+                                            class: 'flowchart-end-operator',
+                                            runbookid: '',
+                                            runbookname: '',
+                                            title: 'Stop',
+                                            inputs: {
+                                              input_1: {
+                                                label: 'End',
+                                              },
+                                            },
+                                            outputs: {}
+                                          }
+                                        }
+                                      var $flowchart = $('#workflow_1');
+                                      $flowchart.flowchart('createOperator', operatorId, operatorData);
+
+				} else if (event.target == 'route:break') {
                                         var operatorNames = Object.getOwnPropertyNames($('#workflow_1').flowchart('getData').operators);
                                         var re = /route:break/;
                                         var highestNumber = 0;
