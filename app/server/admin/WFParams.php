@@ -22,7 +22,7 @@ Class WFParams {
 
         public function GetTaskParams($params, $wfv){
 
-                preg_match_all('/[%](.*)[%]/U',$params,$matches);
+                preg_match_all('/[<][%][>](.*)[<][%][>]/U',$params,$matches);
 
                 $searcharray = $matches[0];
                 $replacearray = $matches[1];
@@ -31,7 +31,7 @@ Class WFParams {
                 foreach ($replacearray as $search) {
                         $s = explode('|', $search);
                         $this->TraverseData($s, $wfv);
-                        $search = '/[%]'.$search.'[%]/';
+                        $search = '/[<][%][>]'.$search.'[<][%][>]/';
                         $search = str_replace('|','[|]',$search);
                         $params = preg_replace($search, $this->lookingfor, $params);
                         $x++;
@@ -65,6 +65,7 @@ Class WFParams {
                 return $params;
                 } else {
                 $params = str_replace("'", "\u0027", $params);
+                $params = str_replace("|", "\u007C", $params);
                 return $params;
                 }
 

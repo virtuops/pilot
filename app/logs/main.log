@@ -4416,3 +4416,61 @@ Mon, 18 Jun 2018 13:42:48 +0000 int(2)
 Mon, 18 Jun 2018 13:42:48 +0000 string(0) ""
 Mon, 18 Jun 2018 13:42:51 +0000 string(27) "In CrudOperation, workflows"
 Mon, 18 Jun 2018 13:42:55 +0000 string(27) "In CrudOperation, workflows"
+Tue, 19 Jun 2018 19:51:32 +0000 string(26) "In CrudOperation, settings"
+Tue, 19 Jun 2018 19:51:32 +0000 string(15) "Getting Config:"
+Tue, 19 Jun 2018 19:51:32 +0000 string(17) "Returning Config:"
+Tue, 19 Jun 2018 19:51:32 +0000 string(10) "Got DB Con"
+Tue, 19 Jun 2018 19:51:32 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Tue, 19 Jun 2018 19:51:35 +0000 string(23) "In CrudOperation, tasks"
+Tue, 19 Jun 2018 19:51:35 +0000 string(23) "In CrudOperation, tasks"
+Tue, 19 Jun 2018 19:52:42 +0000 string(23) "In CrudOperation, tasks"
+Tue, 19 Jun 2018 19:52:42 +0000 string(23) "In CrudOperation, tasks"
+Thu, 21 Jun 2018 15:27:43 +0000 string(26) "In CrudOperation, settings"
+Thu, 21 Jun 2018 15:27:43 +0000 string(15) "Getting Config:"
+Thu, 21 Jun 2018 15:27:43 +0000 string(17) "Returning Config:"
+Thu, 21 Jun 2018 15:27:43 +0000 string(10) "Got DB Con"
+Thu, 21 Jun 2018 15:27:43 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Mon, 25 Jun 2018 14:49:28 +0000 string(26) "In CrudOperation, settings"
+Mon, 25 Jun 2018 14:49:28 +0000 string(15) "Getting Config:"
+Mon, 25 Jun 2018 14:49:28 +0000 string(17) "Returning Config:"
+Mon, 25 Jun 2018 14:49:28 +0000 string(10) "Got DB Con"
+Mon, 25 Jun 2018 14:49:28 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Mon, 25 Jun 2018 14:50:13 +0000 string(23) "In CrudOperation, tasks"
+Mon, 25 Jun 2018 14:50:13 +0000 string(23) "In CrudOperation, tasks"
+Mon, 25 Jun 2018 14:51:08 +0000 string(23) "In CrudOperation, tasks"
+Mon, 25 Jun 2018 14:51:08 +0000 string(32) "TaskCreateUpdate: New Params are"
+Mon, 25 Jun 2018 14:51:08 +0000 string(536) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/ssh.pl
+output is ""
+err is "Can't locate Net\/SSH2.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/ssh.pl line 10.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/ssh.pl line 10.\n"
+exit is 2
+
+"
+Mon, 25 Jun 2018 14:51:18 +0000 string(23) "In CrudOperation, tasks"
+Mon, 25 Jun 2018 14:51:18 +0000 string(32) "TaskCreateUpdate: New Params are"
+Mon, 25 Jun 2018 14:51:18 +0000 string(536) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/ssh.pl
+output is ""
+err is "Can't locate Net\/SSH2.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/ssh.pl line 10.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/ssh.pl line 10.\n"
+exit is 2
+
+"
+Mon, 25 Jun 2018 14:51:23 +0000 string(26) "In CrudOperation, settings"
+Mon, 25 Jun 2018 14:51:23 +0000 string(15) "Getting Config:"
+Mon, 25 Jun 2018 14:51:23 +0000 string(17) "Returning Config:"
+Mon, 25 Jun 2018 14:51:23 +0000 string(10) "Got DB Con"
+Mon, 25 Jun 2018 14:51:23 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Mon, 25 Jun 2018 14:51:25 +0000 string(23) "In CrudOperation, tasks"
+Mon, 25 Jun 2018 14:51:25 +0000 string(23) "In CrudOperation, tasks"
+Mon, 25 Jun 2018 14:52:25 +0000 string(23) "In CrudOperation, tasks"
+Mon, 25 Jun 2018 14:52:25 +0000 string(32) "TaskCreateUpdate: New Params are"
+Mon, 25 Jun 2018 14:52:25 +0000 string(536) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/ssh.pl
+output is ""
+err is "Can't locate Net\/SSH2.pm in @INC (@INC contains: \/usr\/local\/lib64\/perl5 \/usr\/local\/share\/perl5 \/usr\/lib64\/perl5\/vendor_perl \/usr\/share\/perl5\/vendor_perl \/usr\/lib64\/perl5 \/usr\/share\/perl5 .) at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/ssh.pl line 10.\nBEGIN failed--compilation aborted at \/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/ssh.pl line 10.\n"
+exit is 2
+
+"

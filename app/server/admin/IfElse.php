@@ -19,7 +19,7 @@ Class IfElse {
                 $comp = '';
                 $this->l->varErrorLog("PROCESSING $param, $compare, $value");
 
-                preg_match('/[%](.*)[%]/',$param,$matches);
+                preg_match('/[<][%][>](.*)[<][%][>]/',$param,$matches);
 
                 if (isset($matches[1])) {
 
