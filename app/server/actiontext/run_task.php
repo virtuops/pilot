@@ -25,6 +25,7 @@ class RunTask
             $taskdata = $args["taskdata"];
         }
 
+
         // Parse the params and taskdata to setup initial logging.
         if (!$taskdata)
             $nochero->LogTaskEnd("Error", $output, "Invalid task specified.", $taskdata, $con);
@@ -53,7 +54,7 @@ class RunTask
                         $v = json_encode($v);
                         $paramString .= " --$k='$v'";
                     } else {
-                        $paramString .= " --$k=\"$v\"";
+                        $paramString .= " --$k='$v'";
                     }
 
                 if ($language == "php")

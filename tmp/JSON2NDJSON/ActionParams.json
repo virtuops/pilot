@@ -1,0 +1,14 @@
+
+	
+	{"taskname":"VP JSON to NDJSON",
+	"urlparams":"arrayname,jsonarray,beforeline,afterline,infile,outfile",
+	"actionlanguage":"perl",
+	"actionfilename":"json2ndjson.pl",
+	"tasktype":"Form",
+	"datatype":"JSON",
+	"fieldseparator":"",
+	"recordseparator":"",
+	"actioncodefile":"json2ndjson.pl",
+	"libs":[{"module1":"JSON"}]
+	}
+

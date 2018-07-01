@@ -23,6 +23,7 @@ class Tasks
         try {
             //$params_dec = json_decode($params);
             $params_dec = $params;
+        	Api::sendError("PARAMS API ARE '".json_encode($params_dec)."'");
             if (!$params_dec && $params) throw new Exception();
         } catch (Exception $e) {
             Api::sendError("Could not decode params.");

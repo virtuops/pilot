@@ -43,13 +43,16 @@ Class Task {
         private function CreateUpdate($params, $con)
         {
                 $this->l->varErrorLog("TaskCreateUpdate: New Params are");
+                $this->l->varErrorLog($params);
+		
 
                 $taskname = $params['taskname'];
                 $urlparams = isset($params['urlparams']) ? $params['urlparams'] : '';
                 $userparams = $params['userparams'] ? $params['userparams'] : '';
 
                 $actiontext = ($params['actiontext'] ? $params['actiontext'] : '');
-                $actionlanguage = ($params['actionlanguage'] ? $params['actionlanguage'] : '');
+                //$actionlanguage = ($params['actionlanguage'] ? $params['actionlanguage'] : '');
+                $actionlanguage = 'perl';  //simplifying this for now
                 $actionfilename = $params['actionfilename'] ? $params['actionfilename'] : '';
                 $taskdescription = $params['taskdescription'] ? $params['taskdescription'] : '';
                 $datatype = 'JSON';

@@ -10,7 +10,7 @@ use Data::Dumper;
 
 my %output;
 
-my ($method,$header1,$header2,$header3,$arrayname,$curlpath,$user,$url,$password,$data,$cmdoutput,$status);
+my ($method,$header1,$header2,$header3,$databinary,$arrayname,$curlpath,$user,$url,$password,$data,$cmdoutput,$status);
 
 
 GetOptions(
@@ -20,15 +20,19 @@ GetOptions(
         "url=s" => \$url,
         "password:s" => \$password,
         "data:s" => \$data,
+        "databinary:s" => \$databinary,
         "header1:s" => \$header1,
         "header2:s" => \$header2,
         "header3:s" => \$header3,
         "arrayname:s" => \$arrayname,
         "cmdoutput:s" => \$cmdoutput
         );
+        
+        
 
+if (defined($cmdoutput)){
 open (FILEDATA,"+> $cmdoutput");
-
+}
 #my $createcmd = $curlpath." -s -X ".$method." -H 'Content-Type: application/json' -d '".$data."' -u '".$user.":".$password."' https://".$domain."/api/now/table/".$table." 2>&1";
 
 my $createcmd = $curlpath." -s -X ".$method;
@@ -53,8 +57,22 @@ $createcmd .= " -u '".$user."'";
 }
 
 if (defined($data)) {
-     
-     $createcmd .= " -d '".$data."' ";
+     my @dataitems = split(',',$data);
+     $postdata = '{';
+     my $count = 0;
+     foreach my $dataitem (@dataitems){
+        my @postitem = split('=',$dataitem);
+        if ($count < $#dataitems){
+        $postdata .= '"'.$postitem[0].'":"'.$postitem[1].'",';
+        } else {
+        $postdata .= '"'.$postitem[0].'":"'.$postitem[1].'"}';    
+        }
+        $count++;
+     }
+     $createcmd .= " -d '".$postdata."' ";
+} elsif (defined($databinary)) {
+    $createcmd .= " --data-binary '".$databinary."' ";
+    
 }
 
 $createcmd .= " '".$url."' ";
@@ -64,8 +82,9 @@ my $meta = $arrayname."_meta";
 $output{"$arrayname"} = decode_json($createrequest);
 
 
-
+if (defined($cmdoutput)){
 print FILEDATA $createrequest;
+}
 
 if (length($createrequest) > 0) {
         $status = "Created";
@@ -80,4 +99,6 @@ $output{'status'} = $status;
 my $json = encode_json(\%output);
 print $json;
 
+if (defined($cmdoutput)){
 close(FILEDATA);
+}

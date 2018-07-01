@@ -1,0 +1,23 @@
+{
+  "took" : 90,
+  "errors" : false,
+  "items" : [
+    {
+      "index" : {
+        "_index" : "scnow_incidents",
+        "_type" : "incidents",
+        "_id" : "4jZ9UWQBARw2vWnaYqvw",
+        "_version" : 1,
+        "result" : "created",
+        "_shards" : {
+          "total" : 2,
+          "successful" : 1,
+          "failed" : 0
+        },
+        "_seq_no" : 1,
+        "_primary_term" : 1,
+        "status" : 201
+      }
+    }
+  ]
+}
