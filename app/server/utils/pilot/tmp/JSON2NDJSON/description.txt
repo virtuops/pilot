@@ -1,0 +1,23 @@
+Synopsis: This will read a file with JSON in it and convert it to NDJSON
+
+Input param:  
+infile = file containing json
+outfile = file that will be written to and will contain the resulting ndjson
+beforeline = json you want to insert before each line of target json
+aferline = json you want to insert after each line of targetjson
+jsonarray = if infile holds a target array inside of another property, specify the property here
+arrayname = wfv arrayname if you want to add to this
+
+Output param:  status
+Output values:  Either an empty string or error code reading or writing to files
+
+Sample Params Config (fill in over on the left): 
+{
+"infile":"/var/www/html/pilot/tmp/files/filewithjson.json",
+"outfile":"/var/www/html/pilot/tmp/files/ndjsonfile.json",
+"beforeline":"{"something":"value"}",
+"afterline":"{"something":"value"}",
+"jsonarray":"optional_property",
+"arrayname":"ndjsonwfv"
+}
+	

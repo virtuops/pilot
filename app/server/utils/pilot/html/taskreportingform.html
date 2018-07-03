@@ -1,0 +1,79 @@
+	<div class="w2ui-page page-0" style="width: 100%; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">
+                <div id="taskrunstitle" style="margin-bottom: 10px; margin-left: 25px; font-size: 18px; color: lightslategray">Task Runs</div>
+                <div style="height: 210px; width: 1350px;">
+                        <div id="taskslast24hours" style="float: left; height: 200px; width: 200px;"></div>
+                        <div id="taskslast7days" style="float: left; height: 200px; width: 200px; margin-left: 25px;"></div>
+                        <div id="taskslast30days" style="float: left; height: 200px; width: 200px; margin-left: 25px;"></div>
+                        <div id="tasks30dayavg" style="float: left; height: 200px; width: 200px; margin-left: 25px;"></div>
+                </div>
+                <div style="height: 400px; width: 1250px;">
+                        <div id="tasksperdaylast30title" style="margin-bottom: 10px; margin-left: 25px; font-size: 18px; color: lightslategray">Tasks Runs Per Day Last 30 Days</div>
+                        <div id="tasksperdaylast30" class="daybydaytasks" style="margin-bottom: 20px; height: 350px; width: 1200px;"></div>
+                </div>
+                <div id="taskfailstitle" style="margin-bottom: 10px; margin-left: 25px; font-size: 18px; color: lightslategray">Task Failures</div>
+                <div style="height: 210px; width: 1350px;">
+                        <div id="tasksfailedlast24hours" style="float: left; height: 200px; width: 200px; margin-left: 0px;"></div>
+                        <div id="tasksfailed7days" style="float: left; height: 200px; width: 200px; margin-left: 25px;"></div>
+                        <div id="tasksfailed30days" style="float: left; height: 200px; width: 200px; margin-left: 25px;"></div>
+                        <div id="tasksfailed30dayavg" style="float: left; height: 200px; width: 200px; margin-left: 25px;"></div>
+                </div>
+                <div style="height: 400px; width: 1250px;">
+                        <div id="tasksfailslast30title" style="margin-bottom: 10px; margin-left: 25px; font-size: 18px; color: lightslategray">Tasks Fails Per Day Last 30 Days</div>
+                        <div id="failsperdaylast30" class="daybydayfails" style="margin-bottom: 20px; height: 350px; width: 1200px;"></div>
+                </div>
+                <div id="taskavgruntitle" style="margin-bottom: 10px; margin-left: 25px; font-size: 18px; color: lightslategray">Task Avg Runtime (seconds)</div>
+                <div style="height: 210px; width: 1350px;">
+                        <div id="taskslast24hoursavgruntime" style="float: left; height: 200px; width: 200px; margin-left: 0px;"></div>
+                        <div id="tasks7daysavgruntime" style="float: left; height: 200px; width: 200px; margin-left: 25px;"></div>
+                        <div id="tasks15daysavgruntime" style="float: left; height: 200px; width: 200px; margin-left: 25px;"></div>
+                        <div id="tasks30daysavgruntime" style="float: left; height: 200px; width: 200px; margin-left: 25px;"></div>
+                </div>
+                <div style="height: 400px; width: 1250px;">
+                        <div id="tasksavglast30title" style="margin-bottom: 10px; margin-left: 25px; font-size: 18px; color: lightslategray">Tasks Avg Time Per Day Last 30 Days</div>
+                        <div id="avgperdaylast30" class="daybydayavg" style="margin-bottom: 20px; height: 350px; width: 1200px;"></div>
+                </div>
+        </div>
+        <div class="w2ui-page page-1" style="width: 100%; font-family:'Lucida Sans Unicode', 'Lucida Grande', sans-serif">
+                <div class="w2ui-field">
+                        <label>Task Name</label>
+                        <div>
+                        <input id="taskreport_taskname" name="taskname" type="text" maxlength="100" size="60"/>
+                        </div>
+                </div>
+                <div class="w2ui-field">
+                        <label>User Name</label>
+                        <div>
+                        <input id="taskreport_username" name="username" type="text" maxlength="100" size="60"/>
+                        </div>
+                </div>
+                <div class="w2ui-field">
+                        <label>Start Time</label>
+                        <div>
+                        <input name="taskstarttime" type="text" maxlength="100" size="60"/>
+                        </div>
+                </div>
+                <div class="w2ui-field">
+                        <label>End Time</label>
+                        <div>
+                        <input name="taskendtime" type="text" maxlength="100" size="60"/>
+                        </div>
+                </div>
+                <div class="w2ui-field">
+                        <label>Task MetaData</label>
+                        <div>
+                        <input name="taskmetadata" type="text" maxlength="100" size="60"/>
+                        </div>
+                </div>
+                <div style="height:75px; width: 1200px;">
+                        <div style="float: left; height: 50px; width: 75px; margin-left: 30px;">
+                                <button class="repbtn" id="taskreports" name="taskreports">Run</button>
+                        </div>
+                </div>
+                <div style="height: 250px; width: 1350px;">
+                        <div id="totaltasks" style="float: left; height: 200px; width: 300px;"></div>
+                        <div id="tasktime" style="float: left; height: 200px; width: 300px; margin-left: 25px;"></div>
+                </div>
+                        <div id="taskreport" style="height: 550px; width: 1250px;">
+                </div>
+
+        </div>

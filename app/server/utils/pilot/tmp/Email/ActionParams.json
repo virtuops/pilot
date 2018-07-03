@@ -1,0 +1,12 @@
+	{"taskname":"VP Email Task",
+	"urlparams":"smtpuser,smtppassword,smtpport,smtpserver,recipient,subject,body",
+	"actionlanguage":"perl",
+	"actionfilename":"email.pl",
+	"tasktype":"Form",
+	"datatype":"JSON",
+	"fieldseparator":"",
+	"recordseparator":"",
+	"actioncodefile":"email.pl",
+	"libs":[{"module1":"Net::SMTPS"}]
+	}
+

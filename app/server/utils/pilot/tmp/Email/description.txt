@@ -1,0 +1,25 @@
+Synopsis:  Send an Email using SMTPS.  All fields are mandatory or your email will fail.
+
+Input params:  smtpuser,smtppassword,smtpserver,smtpport,recipient,subject,body
+Input values expected:
+   smtpuser = user that can log into email and send email (the sender)
+   smtppassword = user password
+   smtpserver = the mail server (something like smtp.gmail.com)
+   smtpport = secure port used (587 works on gmail as of 2017)
+   recipient = email address of person receiving email
+   subject = email subjectline
+   body = body of email
+
+Output param:  status
+Output values:  Message Sent, FAILURE:  Message Not Sent
+
+Sample Params Config (fill in over on the left): 
+{
+"smtpuser":"me@company.com",
+"smtppassword":"em@1lp@55w0rd",
+"smtpserver":"smtp.gmail.com",
+"smtpport":"587",
+"recipient":"you@othercompany.com",
+"subject":"Some Email Subject",
+"body":"Here is an explanation of what is going on, I can really tell you a lot here....."
+}

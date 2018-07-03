@@ -1,0 +1,14 @@
+
+	
+	{"taskname":"VP DNS Device",
+	"urlparams":"host",
+	"actionlanguage":"perl",
+	"actionfilename":"dnsdevice.pl",
+	"tasktype":"Form",
+	"datatype":"JSON",
+	"fieldseparator":"",
+	"recordseparator":"",
+	"actioncodefile":"dnsdevice.pl",
+	"libs":[{"module1":"Net::DNS::Resolver"}]
+	}
+
