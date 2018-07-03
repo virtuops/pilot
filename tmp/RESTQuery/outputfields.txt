@@ -1,2 +1,0 @@
-#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE, LIST
-status,text,false,false,Status:,style="width: 300px"
