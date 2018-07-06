@@ -1,3 +1,0 @@
-#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE
-host, text,  true, true, Host, style="width: 300px"
-status,  text,  false, true, Status, style="width: 300px"
