@@ -383,7 +383,6 @@ Class WorkFlowExecute {
                 $workflow = json_decode($this->wfdata);
                 $wfname = $this->wfname;
 
-                        //left off here, this seems to make sense.  Need to keep it from getting too stupid with all the loops.
                 foreach ($workflow->links as $key=>$link) {
                         if ($link->fromOperator === $from_op && $link->fromConnector = $from_conn_id && $link->toOperator == $to_op) {
                                 $next_op = $to_op;
