@@ -19,7 +19,7 @@ define(function (require) {
     form: {
         name: 'routeconfigform',
         fields: [
-            { name: 'title', type: 'text', required: true, html: { caption: 'Title', attr: 'size="40" maxlength="40" readonly' } },
+            { name: 'title', type: 'text', required: true, html: { caption: 'Title', attr: 'size="40" maxlength="40"' } },
             { name: 'loopid', type: 'text', required: true, html: { caption: 'Loop ID', attr: 'size="40" maxlength="40"' } }
         ],
 	onRender: function(event){
