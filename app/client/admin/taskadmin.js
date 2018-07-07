@@ -126,6 +126,9 @@ define(function (require) {
 
 	    var UTILS = require('../../client/utils/misc')
 	    UTILS.ajaxPost('save', 'tasks', record, function(response) { 
+                if ($.type(response) === 'string') {
+                response = response.trim();
+                }
                 if ($.type(response) === 'string' && response.startsWith("LINTERROR:")) {
                   var checker = record.actionlanguage == 'php' ? " using 'php -l'" : (record.actionlanguage == 'perl' ? " using 'perl -cw'" : '')
                   w2confirm({ width: 600, height: 400, title: 'Confirmation', msg: 'Action Code failed syntax check' + checker + '. Do you wish to save anyways?<br><br>' + response.split('LINTERROR:')[1] })
