@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>report_1531084059</title>
+    <script src="../../libs/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script src="../../libs/w2ui/w2ui-1.5.rc1.min.js" type="text/javascript"></script>
+    <script src="../../libs/jquery/jquery-ui.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="../../libs/css/mkadvantage.css" />
+    <link rel="stylesheet" type="text/css" href="../../libs/css/custom.css" />
+</head>
+<body>
+
+<div id="grid" style="width: 100%; height: 700px;"></div>
+
+<script type="text/javascript">
+$(function () {
+    $('#grid').w2grid({ 
+        name: 'report_1531084059', 
+        show: { 
+            toolbar: true,
+            header: true,
+            footer: true
+        },
+	onRender: function(event){
+		event.onComplete = function(){
+			w2ui.report_1531084059.refresh();
+		}
+	},
+	header: 'Cool Report For Me',
+        records: [{"Identifier":"node2.corp.com:nodealerts1","recid":1,"Node":"node2.corp.com","Summary":"This node is bad","Severity":"5","AlertGroup":"Nodealerts"},{"Identifier":"node1.corp.com:nodealerts2","recid":2,"Node":"node1.corp.com","Summary":"This node is ok","Severity":"0","AlertGroup":"Nodealerts"},{"Identifier":"node1.corp.com:nodealerts3","recid":3,"Node":"node1.corp.com","Summary":"This node is ok","Severity":"0","AlertGroup":"Nodealerts"},{"Identifier":"node1.corp.com:nodealerts4","recid":4,"Node":"node1.corp.com","Summary":"This node is ok","Severity":"0","AlertGroup":"Nodealerts"},{"Identifier":"node1.corp.com:nodealerts5","recid":5,"Node":"node1.corp.com","Summary":"This node is ok","Severity":"0","AlertGroup":"Nodealerts"},{"Identifier":"node1.corp.com:nodealerts6","recid":6,"Node":"node1.corp.com","Summary":"This node is ok","Severity":"0","AlertGroup":"Nodealerts"},{"Identifier":"node1.corp.com:nodealerts7","recid":7,"Node":"node1.corp.com","Summary":"This node is ok","Severity":"0","AlertGroup":"Nodealerts"},{"Identifier":"node1.corp.com:nodealerts8","recid":8,"Node":"node1.corp.com","Summary":"This node is ok","Severity":"0","AlertGroup":"Nodealerts"},{"Identifier":"node1.corp.com:nodealerts9","recid":9,"Node":"node1.corp.com","Summary":"This node is ok","Severity":"0","AlertGroup":"Nodealerts"}],
+        method: 'GET',
+        columns: [{"caption":"RECID","hidden":"true","type":"int","size":"35px","field":"recid"},{"caption":"MyNode","type":"text","sortable":"true","size":"200px","field":"Node"},{"caption":"MySummary","type":"text","sortable":"true","size":"35%","field":"Summary"},{"caption":"Severity","type":"text","sortable":"true","size":"100px","field":"Severity"},{"caption":"AlertGroup","type":"text","sortable":"true","size":"150px","field":"AlertGroup"}]               
+    });    
+});
+</script>
+
+</body>
+</html>
+
