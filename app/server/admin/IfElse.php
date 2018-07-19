@@ -39,19 +39,19 @@ Class IfElse {
                                if ($comp == $value) {
                                $getnext = 1;
                                }
-                        } else if ($compare === '>') {
+                        } else if ($compare === '>' &&(is_numeric($comp) && is_numeric($value))) {
                                 if ($comp > $value) {
                                 $getnext = 1;
                                 }
-                        } else if ($compare === '<') {
+                        } else if ($compare === '<' &&(is_numeric($comp) && is_numeric($value))) {
                                 if ($comp < $value) {
                                 $getnext = 1;
                                 }
-                        } else if ($compare === '>=') {
+                        } else if ($compare === '>=' &&(is_numeric($comp) && is_numeric($value))) {
                                 if ($comp >= $value) {
                                 $getnext = 1;
                                 }
-                        } else if ($compare === '<=') {
+                        } else if ($compare === '<=' &&(is_numeric($comp) && is_numeric($value))) {
                                 if ($comp <= $value) {
                                 $getnext = 1;
                                 }

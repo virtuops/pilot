@@ -54,7 +54,7 @@ class RunTask
                         $v = json_encode($v);
                         $paramString .= " --$k='$v'";
                     } else {
-                        $paramString .= " --$k='$v'";
+                        $paramString .= " --$k=\"$v\"";
                     }
 
                 if ($language == "php")
