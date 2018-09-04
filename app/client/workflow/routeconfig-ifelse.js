@@ -47,10 +47,15 @@ define(function (require) {
         name: 'routeconfiggrid',
         show: {
             toolbar            : true,
-            toolbarDelete    : true
+            toolbarDelete    : false,
+	    toolbarSearch    : false,
+            toolbarColumns   : false,
+	    toolbarReload    : false
         },
         toolbar: {
                 items: [
+		{  type: 'button',  id: 'addoutput',  caption: 'New', img: 'addicon' },
+		{  type: 'button',  id: 'removeoutput',  caption: 'Delete', img: 'removeicon' },
                 { type: 'html',  id: 'routename', html: function (item) {
                     var html =
                       '<div style="padding: 3px 10px;">'+
@@ -62,7 +67,33 @@ define(function (require) {
                 }
             }
 
-                ]
+                ],
+		onClick: function(event) {
+			if (event.target === 'addoutput') {
+				recid = UTILS.getnextrecid(w2ui['routeconfiggrid'].records);
+				newrec = { "recid":recid,
+					   "label":"NewLabel",
+					   "conntype":"output",
+					   "parameter":"param",
+					   "comparison":"=",
+					   "value":"value"
+					}
+
+				w2ui['routeconfiggrid'].add(newrec);
+				w2ui['routeconfigform'].record = newrec;
+
+			} else if (event.target === 'removeoutput') {
+				w2ui['routeconfigform'].clear();
+				selArray = w2ui['routeconfiggrid'].get(w2ui['routeconfiggrid'].getSelection())
+				selArray.forEach(function(selection){
+					if (selection.conntype === 'output') {
+					w2ui['routeconfiggrid'].remove(selection.recid);
+					} else {
+					w2alert('You cannot delete the input');
+					}
+				});
+			}
+		}
 
         },
         onRender: function(event){
@@ -100,10 +131,12 @@ define(function (require) {
     form: {
         header: 'Configure Route',
         name: 'routeconfigform',
+	onRender: function(event){
+	},
         fields: [
             { name: 'recid', type: 'text', html: { caption: 'ID', attr: 'size="10" readonly' } },
             { name: 'label', type: 'text', required: false, html: { caption: 'Label', attr: 'size="40" maxlength="40"' } },
-            { name: 'conntype', type: 'list', options:{items:['input','output']}, required: false, html: { caption: 'Conn Type', attr: 'size="40"' } },
+            { name: 'conntype', type: 'text', required: false, html: { caption: 'Conn Type', attr: 'size="40" readonly' } },
             { name: 'parameter', type: 'text', required: false, html: { caption: 'Parameter', attr: 'size="40"' } },
             { name: 'comparison', type: 'list', options:{items:['=','>','<','>=','<=','<>','LIKE','NOT LIKE']}, html: { caption: 'Comparison', attr: 'size="30"' } },
             { name: 'value', type: 'text', html: { caption: 'Value', attr: 'size="40"' } }
@@ -112,30 +145,7 @@ define(function (require) {
             "Reset": function () {
                 this.clear();
             },
-            "Add/Update": function () {
-                var errors = this.validate();
-                if (errors.length > 0) return;
-                var formrecvals = {};
-                for (var prop in this.record) {
-                        if (typeof this.record[prop] === 'object') {
-                                formrecvals[prop] = this.record[prop].text;
-                        } else {
-                                formrecvals[prop] = this.record[prop];
-                        }
-                }
-                if (this.recid == 0) {
-                    formrecvals['recid'] = w2ui.routeconfiggrid.records.length + 1;
-                    //w2ui.routeconfiggrid.add($.extend(true, { recid: w2ui.routeconfiggrid.records.length + 1 }, formrecvals));
-                    w2ui.routeconfiggrid.add(formrecvals);
-                    w2ui.routeconfiggrid.selectNone();
-                    this.clear();
-                } else {
-                    w2ui.routeconfiggrid.set(this.recid, formrecvals);
-                    w2ui.routeconfiggrid.selectNone();
-                    this.clear();
-                }
-            },
-            "Save and Exit": function(){
+            "Save": function(){
                         // Save what's in the form
                         var errors = this.validate();
                         if (errors.length > 0) return;
@@ -160,58 +170,63 @@ define(function (require) {
                         }
 
                         //Need to update the JSON for the operatorData
-                        var routes = w2ui.routeconfiggrid.records;
-                        var inId = 1;
+                        var routes = w2ui['routeconfiggrid'].records;
                         var outId = 1;
                         operatorData.properties.title = w2ui.routeconfiggrid.toolbar.get('routename').value;
 
-
                         //clear out initial inputs and outputs;
 
-
                         //create new inputs and outputs based on the new config
+                       	newoutputs = {}; 
                         routes.forEach(function(route){
-                                if (route.conntype === 'input') {
-                                        var inputx = 'input_'+inId;
-                                        operatorData.properties.inputs[inputx] = {};
-                                        operatorData.properties.inputs[inputx].conntype = 'input';
-                                        operatorData.properties.inputs[inputx].label = route.label;
-                                        inId = inId + 1;
-
-                                } else if (route.conntype === 'output') {
+                                if (route.conntype === 'output') {
                                         var outputx = 'output_'+outId;
-                                        operatorData.properties.outputs[outputx] = {};
-                                        operatorData.properties.outputs[outputx].conntype = 'output';
-                                        operatorData.properties.outputs[outputx].label = route.label;
-                                        operatorData.properties.outputs[outputx].parameter = route.parameter;
-                                        operatorData.properties.outputs[outputx].comparison = route.comparison;
-                                        operatorData.properties.outputs[outputx].value = route.value;
+                                        newoutputs[outputx] = {};
+                                        newoutputs[outputx].conntype = 'output';
+                                        newoutputs[outputx].label = route.label;
+                                        newoutputs[outputx].parameter = route.parameter;
+                                        newoutputs[outputx].comparison = route.comparison;
+                                        newoutputs[outputx].value = route.value;
                                         outId = outId + 1;
                                 }
 
                         });
 
+			operatorData.properties.outputs = newoutputs;
+
                             w2confirm('About to update route...are you sure?')
                                     .yes(function () {
-                                                        operatorData.properties.title = typeof w2ui.routeconfiggrid.toolbar.get('routename').value !== 'undefined' ? w2ui.routeconfiggrid.toolbar.get('routename').value : curTitle;
-                                                        $('#workflow_1').flowchart('setOperatorData',selId, operatorData);
-                                                        var workflowdata = $('#workflow_1').flowchart('getData');
-                                                        workflowdata = JSON.stringify(workflowdata);
-                                                        workflowname = workflowname.trim();
-                                                        wfparams = {
-                                                                workflowname: workflowname,
-                                                                workflowdata: workflowdata
-                                                        };
-                                                        UTILS.ajaxPost('save','workflows',wfparams,function(data){
-                                                        });
-                                                        MESSAGES.routechanged();
-                                                })
+					 if (typeof operatorData.properties.outputs['output_1'] === 'undefined') {
+					 w2alert('You need at least one output');
+					 } else {
+                                         operatorData.properties.title = typeof w2ui.routeconfiggrid.toolbar.get('routename').value !== 'undefined' ? w2ui.routeconfiggrid.toolbar.get('routename').value : curTitle;
+                                         $('#workflow_1').flowchart('setOperatorData',selId, operatorData);
+                                         var workflowdata = $('#workflow_1').flowchart('getData');
+                                         workflowdata = JSON.stringify(workflowdata);
+                                         workflowname = workflowname.trim();
+                                         wfparams = {
+                                                 workflowname: workflowname,
+                                                 workflowdata: workflowdata
+                                         };
+					 
+                                         UTILS.ajaxPost('save','workflows',wfparams,function(data){
+						if (data.status === 'success') {
+						w2alert('Route Changes Saved');
+						} else {
+						w2alert('Route Changes NOT SAVED!  Try saving again');
+						}
+                                         });
+
+					 }
+                                    })
                                     .no(function () {
-                                                w2popup.close();
-                                                MESSAGES.routenotchanged();
+						w2alert('No Changes Made');
                                         });
 
-            }
+            },
+	    "Exit": function() {
+			w2popup.close();
+	    }
         }
     }
 };
