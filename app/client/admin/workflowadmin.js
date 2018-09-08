@@ -584,7 +584,7 @@ define(function (require) {
                 },
                 fields: [
                 ],
-                formHTML: '<div id="chart_container" style="height:1500px; width: 100%;">' +
+                formHTML: '<div id="chart_container" style="height:1000px; width: 100%;">' +
                         '<div style="height:100%; width: 100%;" class="flowchart-example-container flowchart-container" id="workflow_1"></div>'+
                 '</div>',
         },

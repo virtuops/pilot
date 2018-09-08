@@ -35,7 +35,8 @@
 }
 
 .flowchart-operator-connector-label {
-    font-size: small;
+    font-size: 10px;
+	
 }
 
 .flowchart-operator-inputs .flowchart-operator-connector-label {
@@ -45,6 +46,7 @@
 .flowchart-operator-outputs .flowchart-operator-connector-label {
     text-align: right;
     margin-right: 5px;
+    font-size: 10px;
 }
 
 .flowchart-operator-connector-arrow {
@@ -106,7 +108,8 @@
 
 .flowchart-operator {
     position: absolute;
-    width: 140px;
+    width: 100px;
+    border-radius: 10px;
     border: 1px solid #CCCCCC;
     background: #FAFAFA;
     pointer-events: initial;
@@ -120,6 +123,8 @@
     width: 100%;
     padding: 5px;
     font-weight: bold;
+    font-size: 8px;
+    border-radius: 10px 10px 0px 0px;
     box-sizing: border-box;
     border-bottom: 1px solid #DDDDDD;
     background: #F0F0F0;
