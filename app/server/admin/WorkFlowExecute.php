@@ -107,9 +107,9 @@ Class WorkFlowExecute {
         $this->wfstoptime = microtime(true);
         $wftime = $this->wfstoptime - $this->wfstarttime;
 
-        $this->l->varErrorLog("START WORKFLOW TIME IS $this->wfstarttime");
-        $this->l->varErrorLog("STOP WORKFLOW TIME IS $this->wfstoptime");
-        $this->l->varErrorLog("TOTAL WORKFLOW TIME IS $wftime");
+        $this->l->varWFLog("START WORKFLOW TIME IS $this->wfstarttime",$wfname);
+        $this->l->varWFLog("STOP WORKFLOW TIME IS $this->wfstoptime",$wfname);
+        $this->l->varWFLog("TOTAL WORKFLOW TIME IS $wftime",$wfname);
         $this->WFRecord($this->wfserial,$wfname,'null','null',$wfstop,'null',$wftime,'stop',$con);
         }
 
@@ -181,7 +181,7 @@ Class WorkFlowExecute {
                 if ($wfstate === 'running') {
                 $runtask = $curl.' -s -X POST -H "Content-Type: application/json" -u "'.$wfuser.':'.$wfpassword.'" -d\'{"runbook":"'.$runbookid.'","username":"'.$wfuser.'","taskname":"'.$taskname.'","taskmetadata":'.$taskmeta.',"params":'.$params.'}\' '.$weburl.'/app/server/api/index.php/task_run 2>&1';
 
-                $this->l->varErrorLog('WORKFLOWEXECUTE FIRING '.$runtask);
+                $this->l->varWFLog('WORKFLOWEXECUTE FIRING '.$runtask);
                 $taskoutput = `$runtask`;
                 $tout_array = preg_split("/\n+/",$taskoutput);
                 $taskserial = $tout_array[count($tout_array)-2];
@@ -196,7 +196,7 @@ Class WorkFlowExecute {
                 $this->GetNextOperator($from_op, $nextobj[0], $nextobj[1], $toutput);
 
                 } else {
-                        $this->l->varErrorLog("$wfname is not running");
+                        $this->l->varWFLog("$wfname is not running");
                         exit();
                 }
 
@@ -209,8 +209,8 @@ Class WorkFlowExecute {
                 $wfv->{$k} = $v;
                 }
                 $this->wfv = $wfv;
-                $this->l->varErrorLog('WFV IS');
-                $this->l->varErrorLog($this->wfv);
+                $this->l->varWFLog('WFV IS');
+                $this->l->varWFLog($this->wfv);
         }
 
         private function EvalRoute($logic, $op, $output=null){
@@ -277,7 +277,7 @@ Class WorkFlowExecute {
                                 $compare = $this->wfv->{$loop}->compare;
                                 $value = (int)$this->wfv->{$loop}->value;
                                 $increment = (int)$this->wfv->{$loop}->increment;
-				$this->l->varErrorLog("COUNTER IS $counter and VAL is $value");
+				$this->l->varWFLog("COUNTER IS $counter and VAL is $value");
                                 if ($compare === '>') {
                                         if ($counter > $value) {
                                                 $this->wfv->{$loop}->counter = $counter + $increment;

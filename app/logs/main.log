@@ -979,3 +979,495 @@ Sat, 08 Sep 2018 20:40:13 +0000 string(0) ""
 Sat, 08 Sep 2018 20:40:13 +0000 string(10) "Returning:"
 Sat, 08 Sep 2018 20:40:13 +0000 string(923) "{"total":16,"records":[{"taskname":"VP Read Data","taskorder":"1","recid":1},{"taskname":"VP REST Query","taskorder":"2","recid":2},{"taskname":"VP DNS Device","taskorder":"3","recid":3},{"taskname":"VP Count File Rows","taskorder":"4","recid":4},{"taskname":"VP Write To File","taskorder":"5","recid":5},{"taskname":"VP MySQL Query","taskorder":"6","recid":6},{"taskname":"VP SSH","taskorder":"7","recid":7},{"taskname":"VP SNMP Walk","taskorder":"8","recid":8},{"taskname":"VP Generic Task","taskorder":"9","recid":9},{"taskname":"VP DB2 Query","taskorder":"10","recid":10},{"taskname":"VP Create Dir","taskorder":"11","recid":11},{"taskname":"VP TDS Query","taskorder":"12","recid":12},{"taskname":"VP Email Task","taskorder":"13","recid":13},{"taskname":"VP Ping Device","taskorder":"14","recid":14},{"taskname":"VP Empty File","taskorder":"15","recid":15},{"taskname":"VP JSON to NDJSON","taskorder":"16","recid":16}]}"
 Sat, 08 Sep 2018 20:40:14 +0000 string(23) "In CrudOperation, tasks"
+Sun, 09 Sep 2018 13:39:15 +0000 string(27) "In CrudOperation, workflows"
+Sun, 09 Sep 2018 13:39:15 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Sun, 09 Sep 2018 13:39:15 +0000 array(2) {
+  ["workflowname"]=>
+  string(21) "Clean CMDB-Monitoring"
+  ["workflowdata"]=>
+  string(13130) "{"operators":{"start":{"top":20,"left":20,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":340,"left":1020,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"route:continue1":{"top":140,"left":760,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}}}},"route:continue4":{"top":540,"left":780,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}}}},"route:foreach1":{"top":220,"left":20,"properties":{"objecttype":"route:foreach","class":"flowchart-route-operator","title":"Foreach Zabbix Host","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","targetobject":"servercis"}},"loopid":"route:foreach1"}},"task2":{"top":100,"left":360,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Check SCNow CMDB","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else1":{"top":80,"left":520,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"In CMDB?","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"No","parameter":"paramname","comparison":"LIKE","value":"somevalue"},"output_2":{"conntype":"output","label":"Yes","parameter":"paramname","comparison":"LIKE","value":"somevalue"}}}},"task3":{"top":20,"left":660,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"CMDB Add CI","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task16":{"top":640,"left":660,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Add CMDB CI","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else4":{"top":200,"left":280,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"SNMP?","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Yes","parameter":"paramname","comparison":"LIKE","value":"somevalue"},"output_2":{"conntype":"output","label":"No","parameter":"paramname","comparison":"LIKE","value":"somevalue"}}}},"route:if-else5":{"top":420,"left":300,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"In Netcool?","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"No","parameter":"paramname","comparison":"LIKE","value":"somevalue"},"output_2":{"conntype":"output","label":"Yes","parameter":"paramname","comparison":"LIKE","value":"somevalue"}}}},"task15":{"top":400,"left":780,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Remove Zabbix Host","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task17":{"top":360,"left":440,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Check SCNow CMDB","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else6":{"top":360,"left":580,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"In CMDB?","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Yes","parameter":"paramname","comparison":"LIKE","value":"somevalue"},"output_2":{"conntype":"output","label":"No","parameter":"paramname","comparison":"LIKE","value":"somevalue"}}}},"task18":{"top":300,"left":740,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Remove CMDB CI","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task20":{"top":260,"left":420,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Slack Server Team","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task19":{"top":520,"left":400,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Check CMDB CI","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else7":{"top":540,"left":540,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"In CMDB?","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Yes","parameter":"paramname","comparison":"LIKE","value":"somevalue"},"output_2":{"conntype":"output","label":"No","parameter":"paramname","comparison":"LIKE","value":"somevalue"}}}},"task1":{"top":100,"left":60,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Get Zabbix Hosts","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"{\n\"user\":\"restuser\",\n\"password\":\"restpass\",\n\"method\":\"POST\",\n\"curlpath\":\"/bin/curl\",\n\"url\":\"https://mycompany.restinterface.com/some/rest/query/endpoint\",\n\"header1\":\"Accept:application/json\",\n\"cmdoutput\":\"/var/www/html/pilot/tmp/files/out.json\",\n\"data\":{\"field1\":\"value1\",\"field2\":\"value2\"}\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":320,"left":180,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Check SNMP","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP SNMP Walk","parameters":"{\n\"baseoid\":\"1.3.6.1.2.1.1\",\n\"hostname\":\"localhost\",\n\"port\":\"161\",\n\"community\":\"public\",\n\"version\":\"snmpv2c\",\n\"arrayname\":\"snmpresults\",\n\"cmdoutput\":\"/var/www/html/pilot/tmp/files/snmpresult.json\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task4":{"top":300,"left":20,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Check Avail","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"<%>zabbixdevices|deviceip<%>\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:if-else3":{"top":400,"left":80,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"Avail?","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Yes","parameter":"<%>pingresult|status<%>","comparison":"=","value":"alive"},"output_2":{"conntype":"output","label":"No","parameter":"<%>pingresult|status<%>","comparison":"=","value":"unreachable"}}}},"task12":{"top":500,"left":160,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Netcool History","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP DB2 Query","parameters":"{\n\"user\":\"user\",\n\"password\":\"pass\",\n\"database\":\"schema\",\n\"db2lib\":\"/path/to/db2/libs\",\n\"db2home\":\"/path/to/db2/drivers\",\n\"ldlibrarypath\":\"/path/to/libs/including/db2/libs\",\n\"host\":\"corpmysql.company.com\",\n\"arrayname\":\"db2output\",\n\"port\":\"50000\",\n\"query\":\"select * from sometable where somecolumn LIKE somevalue\",\n\"queryoutput\":\"/var/www/html/pilot/tmp/files/someoutput.txt\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}}},"links":{"0":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:foreach1","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"15":{"fromOperator":"route:if-else3","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"16":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else4","toConnector":"input_1","toSubConnector":0},"21":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0},"22":{"fromOperator":"route:if-else3","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task12","toConnector":"input_1","toSubConnector":0},"23":{"fromOperator":"task12","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else5","toConnector":"input_1","toSubConnector":0},"30":{"fromOperator":"task15","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue4","toConnector":"input_1","toSubConnector":0},"31":{"fromOperator":"route:continue4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0},"33":{"fromOperator":"task3","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"34":{"fromOperator":"route:foreach1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"36":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else3","toConnector":"input_1","toSubConnector":0},"37":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task3","toConnector":"input_1","toSubConnector":0},"38":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"39":{"fromOperator":"route:if-else4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"42":{"fromOperator":"task16","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue4","toConnector":"input_1","toSubConnector":0},"43":{"fromOperator":"route:if-else5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task17","toConnector":"input_1","toSubConnector":0},"44":{"fromOperator":"task17","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else6","toConnector":"input_1","toSubConnector":0},"45":{"fromOperator":"route:if-else6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task18","toConnector":"input_1","toSubConnector":0},"46":{"fromOperator":"task18","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task15","toConnector":"input_1","toSubConnector":0},"47":{"fromOperator":"route:if-else6","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task15","toConnector":"input_1","toSubConnector":0},"48":{"fromOperator":"route:if-else5","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task19","toConnector":"input_1","toSubConnector":0},"50":{"fromOperator":"route:if-else4","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task20","toConnector":"input_1","toSubConnector":0},"51":{"fromOperator":"task20","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"52":{"fromOperator":"task19","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else7","toConnector":"input_1","toSubConnector":0},"53":{"fromOperator":"route:if-else7","fromConnector":"output_2","fromSubConnector":0,"toOperator":"task16","toConnector":"input_1","toSubConnector":0},"54":{"fromOperator":"route:if-else7","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue4","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Sun, 09 Sep 2018 13:39:15 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Sun, 09 Sep 2018 13:39:16 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Sun, 09 Sep 2018 13:39:16 +0000 int(2)
+Sun, 09 Sep 2018 13:39:16 +0000 string(0) ""
+Sun, 09 Sep 2018 13:39:18 +0000 string(27) "In CrudOperation, workflows"
+Sun, 09 Sep 2018 13:39:56 +0000 string(27) "In CrudOperation, workflows"
+Sun, 09 Sep 2018 13:39:56 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Sun, 09 Sep 2018 13:39:56 +0000 array(2) {
+  ["workflowname"]=>
+  string(28) "Elastisearch with ServiceNow"
+  ["workflowdata"]=>
+  string(3065) "{"operators":{"start":{"top":20,"left":20,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":40,"left":660,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task6":{"top":60,"left":480,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Elastic Bulk Incidents","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"{\n\"method\":\"POST\",\n\"curlpath\":\"/bin/curl\",\n\"url\":\"http://dev1.virtuops.com:9200/scnow_incidents/_bulk?pretty\",\n\"header1\":\"Content-Type:application/x-ndjson\",\n\"cmdoutput\":\"/var/www/html/pilot/tmp/files/out.json\",\n\"databinary\":\"@/var/www/html/pilot/tmp/files/elastictickets.json\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":20,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"NDJSON Tickets","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP JSON to NDJSON","parameters":"{\n\"infile\":\"/var/www/html/pilot/tmp/files/ticketupdates.json\",\n\"outfile\":\"/var/www/html/pilot/tmp/files/elastictickets.json\",\n\"beforeline\":\"{\\\"index\\\":{\\\"_index\\\":\\\"scnow_incidents\\\",\\\"_type\\\":\\\"incidents\\\"}}\",\n\"jsonarray\":\"result\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task4":{"top":40,"left":180,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Get ServiceNow Incidents","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP REST Query","parameters":"{\n\"user\":\"blah\",\n\"password\":\"blah123\",\n\"method\":\"GET\",\n\"curlpath\":\"/bin/curl\",\n\"url\":\"'https://mycorp.service-now.com/api/now/table/incident?sysparm_query=sys_updated_onONLast minute@javascript:gs.minutesAgoStart(1)@javascript:gs.minutesAgoEnd(1)'\",\n\"header1\":\"Accept:application/json\",\n\"header2\":\"Content-Type:application/json\",\n\"arrayname\":\"active\",\n\"cmdoutput\":\"/var/www/html/pilot/tmp/files/ticketupdates.json\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}}},"links":{"0":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Sun, 09 Sep 2018 13:39:56 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Sun, 09 Sep 2018 13:39:56 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Sun, 09 Sep 2018 13:39:56 +0000 int(2)
+Sun, 09 Sep 2018 13:39:56 +0000 string(0) ""
+Mon, 10 Sep 2018 15:55:21 +0000 string(26) "In CrudOperation, settings"
+Mon, 10 Sep 2018 15:55:21 +0000 string(15) "Getting Config:"
+Mon, 10 Sep 2018 15:55:21 +0000 string(17) "Returning Config:"
+Mon, 10 Sep 2018 15:55:21 +0000 string(10) "Got DB Con"
+Mon, 10 Sep 2018 15:55:21 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Mon, 10 Sep 2018 15:55:26 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 15:56:02 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 15:56:02 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Mon, 10 Sep 2018 15:56:02 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(4244) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x < 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<","text":"<"},"value":"3","increment":"1"}},"loopid":"route:while2"}},"route:if-else1":{"top":80,"left":520,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Right","parameter":"param","comparison":"=","value":"value"}}}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Mon, 10 Sep 2018 15:56:02 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Mon, 10 Sep 2018 15:56:02 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Mon, 10 Sep 2018 15:56:02 +0000 int(2)
+Mon, 10 Sep 2018 15:56:02 +0000 string(0) ""
+Mon, 10 Sep 2018 15:56:13 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 15:56:13 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Mon, 10 Sep 2018 15:56:13 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(4346) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x < 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<","text":"<"},"value":"3","increment":"1"}},"loopid":"route:while2"}},"route:if-else1":{"top":80,"left":520,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Right","parameter":"param","comparison":"=","value":"value"},"output_2":{"conntype":"output","label":"Wrong","parameter":"param","comparison":"=","value":"value"}}}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Mon, 10 Sep 2018 15:56:13 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Mon, 10 Sep 2018 15:56:13 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Mon, 10 Sep 2018 15:56:13 +0000 int(2)
+Mon, 10 Sep 2018 15:56:13 +0000 string(0) ""
+Mon, 10 Sep 2018 15:56:35 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 15:56:35 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Mon, 10 Sep 2018 15:56:35 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(4346) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":40,"left":760,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":120,"left":920,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":140,"left":1100,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x < 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<","text":"<"},"value":"3","increment":"1"}},"loopid":"route:while2"}},"route:if-else1":{"top":80,"left":520,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Right","parameter":"param","comparison":"=","value":"value"},"output_2":{"conntype":"output","label":"Wrong","parameter":"param","comparison":"=","value":"value"}}}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Mon, 10 Sep 2018 15:56:35 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Mon, 10 Sep 2018 15:56:35 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Mon, 10 Sep 2018 15:56:35 +0000 int(0)
+Mon, 10 Sep 2018 15:56:35 +0000 string(0) ""
+Mon, 10 Sep 2018 15:56:59 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 15:56:59 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Mon, 10 Sep 2018 15:56:59 +0000 array(2) {
+  ["workflowname"]=>
+  string(9) "Read Data"
+  ["workflowdata"]=>
+  string(4345) "{"operators":{"start":{"top":140,"left":0,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1200,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task1":{"top":40,"left":340,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Ping Device","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Ping Device","parameters":"{\n\"host\":\"localhost\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task5":{"top":100,"left":680,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"DeviceAlive","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/DeviceAlive.txt\",\n\"data\":\"This device is status\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task4":{"top":160,"left":240,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Output A","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/outputA.txt\",\n\"data\":\"OutputA has been written to\"\n}\n\t","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":20,"left":780,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:while2"}},"task6":{"top":120,"left":920,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log Finish","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/LogEnd.txt\",\n\"data\":\"Hey man, we are done!\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:while2":{"top":40,"left":120,"properties":{"objecttype":"route:while","class":"flowchart-route-operator","title":"While x < 3","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","parameter":"counter","comparison":{"id":"<","text":"<"},"value":"3","increment":"1"}},"loopid":"route:while2"}},"route:if-else1":{"top":80,"left":520,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"If Else","inputs":{"input_1":{"conntype":"input","label":"status"}},"outputs":{"output_1":{"conntype":"output","label":"Right","parameter":"param","comparison":"=","value":"value"},"output_2":{"conntype":"output","label":"Wrong","parameter":"param","comparison":"=","value":"value"}}}}},"links":{"0":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task5","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task5","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:while2","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:while2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task4","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task6","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"task4","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"9":{"fromOperator":"task6","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Mon, 10 Sep 2018 15:56:59 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Mon, 10 Sep 2018 15:56:59 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Mon, 10 Sep 2018 15:56:59 +0000 int(2)
+Mon, 10 Sep 2018 15:56:59 +0000 string(0) ""
+Mon, 10 Sep 2018 15:59:31 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 15:59:43 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 16:00:04 +0000 string(26) "In CrudOperation, runbooks"
+Mon, 10 Sep 2018 16:00:04 +0000 string(15) "Runbook Id is  "
+Mon, 10 Sep 2018 16:00:04 +0000 string(5) "empty"
+Mon, 10 Sep 2018 16:00:04 +0000 string(16) "Runbook SQL is  "
+Mon, 10 Sep 2018 16:00:04 +0000 string(22) "select * from runbooks"
+Mon, 10 Sep 2018 16:00:04 +0000 string(10) "Returning:"
+Mon, 10 Sep 2018 16:00:04 +0000 string(141) "{"total":1,"records":[{"runbookid":"WFTasks","runbookname":"WF Tasks","runbookdescription":"Tasks that pertain to all workflows","recid":1}]}"
+Mon, 10 Sep 2018 16:00:04 +0000 string(31) "In CrudOperation, task_runbooks"
+Mon, 10 Sep 2018 16:00:04 +0000 string(23) "RunbookTaskRead SQL is "
+Mon, 10 Sep 2018 16:00:04 +0000 string(89) "select taskname, taskorder from task_runbooks where runbookid = '' order by taskorder asc"
+Mon, 10 Sep 2018 16:00:04 +0000 string(26) "RunbookTaskRead DB Error: "
+Mon, 10 Sep 2018 16:00:04 +0000 string(0) ""
+Mon, 10 Sep 2018 16:00:04 +0000 string(10) "Returning:"
+Mon, 10 Sep 2018 16:00:04 +0000 string(24) "{"total":0,"records":[]}"
+Mon, 10 Sep 2018 16:00:04 +0000 string(23) "In CrudOperation, tasks"
+Mon, 10 Sep 2018 16:00:11 +0000 string(31) "In CrudOperation, task_runbooks"
+Mon, 10 Sep 2018 16:00:11 +0000 string(23) "RunbookTaskRead SQL is "
+Mon, 10 Sep 2018 16:00:11 +0000 string(96) "select taskname, taskorder from task_runbooks where runbookid = 'WFTasks' order by taskorder asc"
+Mon, 10 Sep 2018 16:00:11 +0000 string(26) "RunbookTaskRead DB Error: "
+Mon, 10 Sep 2018 16:00:11 +0000 string(0) ""
+Mon, 10 Sep 2018 16:00:11 +0000 string(10) "Returning:"
+Mon, 10 Sep 2018 16:00:11 +0000 string(923) "{"total":16,"records":[{"taskname":"VP Read Data","taskorder":"1","recid":1},{"taskname":"VP REST Query","taskorder":"2","recid":2},{"taskname":"VP DNS Device","taskorder":"3","recid":3},{"taskname":"VP Count File Rows","taskorder":"4","recid":4},{"taskname":"VP Write To File","taskorder":"5","recid":5},{"taskname":"VP MySQL Query","taskorder":"6","recid":6},{"taskname":"VP SSH","taskorder":"7","recid":7},{"taskname":"VP SNMP Walk","taskorder":"8","recid":8},{"taskname":"VP Generic Task","taskorder":"9","recid":9},{"taskname":"VP DB2 Query","taskorder":"10","recid":10},{"taskname":"VP Create Dir","taskorder":"11","recid":11},{"taskname":"VP TDS Query","taskorder":"12","recid":12},{"taskname":"VP Email Task","taskorder":"13","recid":13},{"taskname":"VP Ping Device","taskorder":"14","recid":14},{"taskname":"VP Empty File","taskorder":"15","recid":15},{"taskname":"VP JSON to NDJSON","taskorder":"16","recid":16}]}"
+Mon, 10 Sep 2018 16:00:14 +0000 string(23) "In CrudOperation, tasks"
+Mon, 10 Sep 2018 16:00:29 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 16:00:29 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Mon, 10 Sep 2018 16:00:29 +0000 array(2) {
+  ["workflowname"]=>
+  string(13) "WF 1 Log Test"
+  ["workflowdata"]=>
+  string(878) "{"operators":{"start":{"top":20,"left":20,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1000,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task1":{"top":60,"left":380,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log WF 1","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/wf1.txt\",\n\"data\":\"Some data or a wfv usually\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}}},"links":{},"operatorTypes":{}}"
+}
+Mon, 10 Sep 2018 16:00:29 +0000 string(27) "Schedule is  and status is "
+Mon, 10 Sep 2018 16:00:29 +0000 string(30) "Adding a schedule of * * * * *"
+Mon, 10 Sep 2018 16:00:29 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Mon, 10 Sep 2018 16:00:29 +0000 int(1)
+Mon, 10 Sep 2018 16:00:29 +0000 string(0) ""
+Mon, 10 Sep 2018 16:00:36 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 16:00:36 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Mon, 10 Sep 2018 16:00:36 +0000 array(2) {
+  ["workflowname"]=>
+  string(13) "WF 1 Log Test"
+  ["workflowdata"]=>
+  string(1157) "{"operators":{"start":{"top":20,"left":20,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":20,"left":1000,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task1":{"top":60,"left":380,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Log WF 1","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/wf1.txt\",\n\"data\":\"Some data or a wfv usually\"\n}\n","runbookname":"WF Tasks","runbookid":"WFTasks"}}}},"links":{"0":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Mon, 10 Sep 2018 16:00:36 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Mon, 10 Sep 2018 16:00:36 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Mon, 10 Sep 2018 16:00:36 +0000 int(2)
+Mon, 10 Sep 2018 16:00:36 +0000 string(0) ""
+Mon, 10 Sep 2018 16:00:39 +0000 string(34) "In CrudOperation, workflowschedule"
+Mon, 10 Sep 2018 16:00:39 +0000 string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 10 Sep 2018 16:00:39 +0000 array(1) {
+  ["workflowname"]=>
+  string(13) "WF 1 Log Test"
+}
+Mon, 10 Sep 2018 16:00:51 +0000 string(33) "In CrudOperation, workflowexecute"
+Mon, 10 Sep 2018 11:00:51 -0500 string(16) "UserRead PARAMS "
+Mon, 10 Sep 2018 11:00:51 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Mon, 10 Sep 2018 11:00:51 -0500 string(19) "ReadRunbook PARAMS "
+Mon, 10 Sep 2018 11:00:51 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Mon, 10 Sep 2018 11:00:51 -0500 string(17) "ReadTasks PARAMS "
+Mon, 10 Sep 2018 11:00:51 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Mon, 10 Sep 2018 16:00:51 +0000 string(28) "... Starting nochero runtask"
+Mon, 10 Sep 2018 16:00:51 +0000 string(0) ""
+Mon, 10 Sep 2018 16:00:51 +0000 int(1)
+Mon, 10 Sep 2018 16:00:51 +0000 string(0) ""
+Mon, 10 Sep 2018 16:00:51 +0000 string(21) "
+
+failure, exit is 2
+"
+Mon, 10 Sep 2018 16:00:51 +0000 string(96) "output is ""
+error is "Can't open perl script \"writetofile.pl\": No such file or directory\n"
+
+"
+Mon, 10 Sep 2018 16:00:51 +0000 string(0) ""
+Mon, 10 Sep 2018 16:00:51 +0000 int(1)
+Mon, 10 Sep 2018 16:00:51 +0000 string(0) ""
+Mon, 10 Sep 2018 16:01:28 +0000 string(23) "In CrudOperation, tasks"
+Mon, 10 Sep 2018 16:01:28 +0000 string(23) "In CrudOperation, tasks"
+Mon, 10 Sep 2018 16:01:36 +0000 string(23) "In CrudOperation, tasks"
+Mon, 10 Sep 2018 16:01:36 +0000 string(32) "TaskCreateUpdate: New Params are"
+Mon, 10 Sep 2018 16:01:36 +0000 array(14) {
+  ["taskname"]=>
+  string(16) "VP Write To File"
+  ["urlparams"]=>
+  string(14) "filename, data"
+  ["userparams"]=>
+  string(0) ""
+  ["actiontext"]=>
+  string(501) "#
+#
+#  Writes data to a file for later use, one line at a time.
+#
+#
+
+use strict;
+use warnings;
+use JSON;
+use Getopt::Long;
+
+my $filename='';
+my $data='';
+my %output;
+
+GetOptions(
+        "filename=s" => \$filename,
+        "data=s" => \$data
+        );
+
+open (FILEDATA,"+>> $filename") || die "{\"status\":\"Cannot open or write to ".$filename."\"}\n";
+
+print FILEDATA "$data\n";
+
+$output{'status'} = 'saved';
+my $json = encode_json(\%output);
+print $json;
+close (FILEDATA);"
+  ["actionlanguage"]=>
+  string(4) "perl"
+  ["actionfilename"]=>
+  string(14) "writetofile.pl"
+  ["taskdescription"]=>
+  string(559) ""Synopsis:  Utility that writes data to a file
+
+
+Input param:  
+filename = File name to write to.  MAKE SURE that the file is writable by the web server user, we recommend you write to /var/www/html/pilot/tmp/filesdata = The data you are writing into the file.  The utility adds a new line char already
+
+Output param:  status
+
+Output values:  saved, <error, something like Cannot write to...>
+
+Sample Params Config (fill in over on the left): 
+{
+"filename":"/var/www/html/pilot/tmp/files/cooloutput.txt",
+"data":"Some data or a wfv usually"
+}
+	"
+  ["datatype"]=>
+  string(4) "JSON"
+  ["jprop"]=>
+  string(0) ""
+  ["fieldseparator"]=>
+  string(0) ""
+  ["recordseparator"]=>
+  string(0) ""
+  ["outputfields"]=>
+  string(162) "#ID, TYPE, PARAM, REQUIRED, CAPTION, STYLE
+filename, text,  true, true, Filename, style="width: 300px"
+status,  text,  false, true, Status, style="width: 300px""
+  ["outputactions"]=>
+  string(0) ""
+  ["recid"]=>
+  string(2) "16"
+}
+Mon, 10 Sep 2018 16:01:36 +0000 string(222) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/writetofile.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/writetofile.pl syntax OK\n"
+exit is 0
+
+"
+Mon, 10 Sep 2018 16:01:36 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Mon, 10 Sep 2018 16:01:36 +0000 string(27) "TaskCreateUpdate DB Error: "
+Mon, 10 Sep 2018 16:01:36 +0000 int(1)
+Mon, 10 Sep 2018 16:01:36 +0000 string(0) ""
+Mon, 10 Sep 2018 16:01:51 +0000 string(27) "In CrudOperation, workflows"
+Mon, 10 Sep 2018 16:01:57 +0000 string(34) "In CrudOperation, workflowschedule"
+Mon, 10 Sep 2018 16:01:57 +0000 string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 10 Sep 2018 16:01:57 +0000 array(1) {
+  ["workflowname"]=>
+  string(13) "WF 1 Log Test"
+}
+Mon, 10 Sep 2018 16:02:14 +0000 string(33) "In CrudOperation, workflowexecute"
+Mon, 10 Sep 2018 11:02:14 -0500 string(16) "UserRead PARAMS "
+Mon, 10 Sep 2018 11:02:14 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Mon, 10 Sep 2018 11:02:14 -0500 string(19) "ReadRunbook PARAMS "
+Mon, 10 Sep 2018 11:02:14 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Mon, 10 Sep 2018 11:02:14 -0500 string(17) "ReadTasks PARAMS "
+Mon, 10 Sep 2018 11:02:14 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Mon, 10 Sep 2018 16:02:14 +0000 string(28) "... Starting nochero runtask"
+Mon, 10 Sep 2018 16:02:14 +0000 string(0) ""
+Mon, 10 Sep 2018 16:02:14 +0000 int(1)
+Mon, 10 Sep 2018 16:02:14 +0000 string(0) ""
+Mon, 10 Sep 2018 16:02:14 +0000 string(21) "
+
+success, exit is 0
+"
+Mon, 10 Sep 2018 16:02:14 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Mon, 10 Sep 2018 16:02:15 +0000 string(0) ""
+Mon, 10 Sep 2018 16:02:15 +0000 int(1)
+Mon, 10 Sep 2018 16:02:15 +0000 string(0) ""
+Mon, 10 Sep 2018 16:03:05 +0000 string(33) "In CrudOperation, workflowexecute"
+Mon, 10 Sep 2018 11:03:06 -0500 string(16) "UserRead PARAMS "
+Mon, 10 Sep 2018 11:03:06 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Mon, 10 Sep 2018 11:03:06 -0500 string(19) "ReadRunbook PARAMS "
+Mon, 10 Sep 2018 11:03:06 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Mon, 10 Sep 2018 11:03:06 -0500 string(17) "ReadTasks PARAMS "
+Mon, 10 Sep 2018 11:03:06 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Mon, 10 Sep 2018 16:03:06 +0000 string(28) "... Starting nochero runtask"
+Mon, 10 Sep 2018 16:03:06 +0000 string(0) ""
+Mon, 10 Sep 2018 16:03:06 +0000 int(1)
+Mon, 10 Sep 2018 16:03:06 +0000 string(0) ""
+Mon, 10 Sep 2018 16:03:06 +0000 string(21) "
+
+success, exit is 0
+"
+Mon, 10 Sep 2018 16:03:06 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Mon, 10 Sep 2018 16:03:06 +0000 string(0) ""
+Mon, 10 Sep 2018 16:03:06 +0000 int(1)
+Mon, 10 Sep 2018 16:03:06 +0000 string(0) ""
+Mon, 10 Sep 2018 16:05:15 +0000 string(33) "In CrudOperation, workflowexecute"
+Mon, 10 Sep 2018 11:05:15 -0500 string(16) "UserRead PARAMS "
+Mon, 10 Sep 2018 11:05:15 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Mon, 10 Sep 2018 11:05:15 -0500 string(19) "ReadRunbook PARAMS "
+Mon, 10 Sep 2018 11:05:15 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Mon, 10 Sep 2018 11:05:15 -0500 string(17) "ReadTasks PARAMS "
+Mon, 10 Sep 2018 11:05:15 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Mon, 10 Sep 2018 16:05:15 +0000 string(28) "... Starting nochero runtask"
+Mon, 10 Sep 2018 16:05:15 +0000 string(0) ""
+Mon, 10 Sep 2018 16:05:15 +0000 int(1)
+Mon, 10 Sep 2018 16:05:15 +0000 string(0) ""
+Mon, 10 Sep 2018 16:05:15 +0000 string(21) "
+
+success, exit is 0
+"
+Mon, 10 Sep 2018 16:05:15 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Mon, 10 Sep 2018 16:05:15 +0000 string(0) ""
+Mon, 10 Sep 2018 16:05:15 +0000 int(1)
+Mon, 10 Sep 2018 16:05:15 +0000 string(0) ""
+Mon, 10 Sep 2018 16:07:53 +0000 string(33) "In CrudOperation, workflowexecute"
+Mon, 10 Sep 2018 16:07:53 +0000 string(22) "Name is unknown_wf.log"
+Mon, 10 Sep 2018 16:07:53 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:07:53 +0000 string(57) "Logfile is  /var/www/html/pilot/../../logs/unknown_wf.log"
+Mon, 10 Sep 2018 11:07:53 -0500 string(16) "UserRead PARAMS "
+Mon, 10 Sep 2018 11:07:53 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Mon, 10 Sep 2018 11:07:53 -0500 string(19) "ReadRunbook PARAMS "
+Mon, 10 Sep 2018 11:07:53 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Mon, 10 Sep 2018 11:07:53 -0500 string(17) "ReadTasks PARAMS "
+Mon, 10 Sep 2018 11:07:53 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Mon, 10 Sep 2018 16:07:53 +0000 string(28) "... Starting nochero runtask"
+Mon, 10 Sep 2018 16:07:53 +0000 string(0) ""
+Mon, 10 Sep 2018 16:07:53 +0000 int(1)
+Mon, 10 Sep 2018 16:07:53 +0000 string(0) ""
+Mon, 10 Sep 2018 16:07:53 +0000 string(21) "
+
+success, exit is 0
+"
+Mon, 10 Sep 2018 16:07:53 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Mon, 10 Sep 2018 16:07:53 +0000 string(0) ""
+Mon, 10 Sep 2018 16:07:53 +0000 int(1)
+Mon, 10 Sep 2018 16:07:53 +0000 string(0) ""
+Mon, 10 Sep 2018 16:07:53 +0000 string(22) "Name is unknown_wf.log"
+Mon, 10 Sep 2018 16:07:53 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:07:53 +0000 string(57) "Logfile is  /var/www/html/pilot/../../logs/unknown_wf.log"
+Mon, 10 Sep 2018 16:07:53 +0000 string(22) "Name is unknown_wf.log"
+Mon, 10 Sep 2018 16:07:53 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:07:53 +0000 string(57) "Logfile is  /var/www/html/pilot/../../logs/unknown_wf.log"
+Mon, 10 Sep 2018 16:07:53 +0000 string(21) "Name is WF_1_Log_Test"
+Mon, 10 Sep 2018 16:07:53 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:07:53 +0000 string(56) "Logfile is  /var/www/html/pilot/../../logs/WF_1_Log_Test"
+Mon, 10 Sep 2018 16:07:53 +0000 string(21) "Name is WF_1_Log_Test"
+Mon, 10 Sep 2018 16:07:53 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:07:53 +0000 string(56) "Logfile is  /var/www/html/pilot/../../logs/WF_1_Log_Test"
+Mon, 10 Sep 2018 16:07:53 +0000 string(21) "Name is WF_1_Log_Test"
+Mon, 10 Sep 2018 16:07:53 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:07:53 +0000 string(56) "Logfile is  /var/www/html/pilot/../../logs/WF_1_Log_Test"
+Mon, 10 Sep 2018 16:08:31 +0000 string(33) "In CrudOperation, workflowexecute"
+Mon, 10 Sep 2018 16:08:31 +0000 string(22) "Name is unknown_wf.log"
+Mon, 10 Sep 2018 16:08:31 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:08:31 +0000 string(55) "Logfile is  /var/www/html/pilot/app/logs/unknown_wf.log"
+Mon, 10 Sep 2018 11:08:31 -0500 string(16) "UserRead PARAMS "
+Mon, 10 Sep 2018 11:08:31 -0500 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Mon, 10 Sep 2018 11:08:31 -0500 string(19) "ReadRunbook PARAMS "
+Mon, 10 Sep 2018 11:08:31 -0500 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Mon, 10 Sep 2018 11:08:31 -0500 string(17) "ReadTasks PARAMS "
+Mon, 10 Sep 2018 11:08:31 -0500 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(16) "VP Write To File"
+}
+Mon, 10 Sep 2018 16:08:31 +0000 string(28) "... Starting nochero runtask"
+Mon, 10 Sep 2018 16:08:31 +0000 string(0) ""
+Mon, 10 Sep 2018 16:08:31 +0000 int(1)
+Mon, 10 Sep 2018 16:08:31 +0000 string(0) ""
+Mon, 10 Sep 2018 16:08:31 +0000 string(21) "
+
+success, exit is 0
+"
+Mon, 10 Sep 2018 16:08:31 +0000 string(48) "output is "{\"status\":\"saved\"}"
+error is ""
+
+"
+Mon, 10 Sep 2018 16:08:31 +0000 string(0) ""
+Mon, 10 Sep 2018 16:08:31 +0000 int(1)
+Mon, 10 Sep 2018 16:08:31 +0000 string(0) ""
+Mon, 10 Sep 2018 16:08:31 +0000 string(22) "Name is unknown_wf.log"
+Mon, 10 Sep 2018 16:08:31 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:08:31 +0000 string(55) "Logfile is  /var/www/html/pilot/app/logs/unknown_wf.log"
+Mon, 10 Sep 2018 16:08:31 +0000 string(22) "Name is unknown_wf.log"
+Mon, 10 Sep 2018 16:08:31 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:08:31 +0000 string(55) "Logfile is  /var/www/html/pilot/app/logs/unknown_wf.log"
+Mon, 10 Sep 2018 16:08:31 +0000 string(21) "Name is WF_1_Log_Test"
+Mon, 10 Sep 2018 16:08:31 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:08:31 +0000 string(54) "Logfile is  /var/www/html/pilot/app/logs/WF_1_Log_Test"
+Mon, 10 Sep 2018 16:08:31 +0000 string(21) "Name is WF_1_Log_Test"
+Mon, 10 Sep 2018 16:08:31 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:08:31 +0000 string(54) "Logfile is  /var/www/html/pilot/app/logs/WF_1_Log_Test"
+Mon, 10 Sep 2018 16:08:31 +0000 string(21) "Name is WF_1_Log_Test"
+Mon, 10 Sep 2018 16:08:31 +0000 string(31) "BaseDir is  /var/www/html/pilot"
+Mon, 10 Sep 2018 16:08:31 +0000 string(54) "Logfile is  /var/www/html/pilot/app/logs/WF_1_Log_Test"
