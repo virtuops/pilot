@@ -119,9 +119,17 @@ define(function (require) {
             event.onComplete = function () {
                 var sel = grid.getSelection();
                 if (sel.length == 1) {
+			
+		    var selrecord = grid.get(sel[0]);
+		    if (selrecord.conntype === 'input') {
+		    form.lock('No modification to input',false);
+		    form.refresh();
+		    } else {
+		    form.unlock();
                     form.recid  = sel[0];
-                    form.record = $.extend(true, {}, grid.get(sel[0]));
+                    form.record = $.extend(true, {}, selrecord);
                     form.refresh();
+		    }
                 } else {
                     form.clear();
                 }
@@ -188,7 +196,7 @@ define(function (require) {
                                         newoutputs[outputx].comparison = route.comparison;
                                         newoutputs[outputx].value = route.value;
                                         outId = outId + 1;
-                                }
+                                } 
 
                         });
 
