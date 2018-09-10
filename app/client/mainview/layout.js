@@ -10,7 +10,7 @@ define(function () {
         layoutmain: {
                 name: 'layoutmain',
                 panels: [
-                        { type: 'left', size: 275, resizable: true },
+                        { type: 'left', size: 175, resizable: true },
                         { type: 'main', resizable: true }
                 ]
         },

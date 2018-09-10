@@ -43,7 +43,7 @@ margin: 40px;
 }
 .w2ui-sidebar .w2ui-sidebar-div .w2ui-level-0 {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 17px;
+	font-size: 1em;
 	font-weight: 700;
 	color: #444444;
 	border-bottom: 1px solid lightgray;
@@ -51,7 +51,7 @@ margin: 40px;
 }
 .w2ui-sidebar .w2ui-sidebar-div .w2ui-node-group :nth-child(1) {
 	font-family: 'Raleway', sans-serif;
-	font-size: 15px;
+	font-size: 1em;
 	font-weight: 200;
 }
 .w2ui-sidebar .w2ui-sidebar-div .w2ui-node .w2ui-node-caption,
@@ -60,7 +60,7 @@ margin: 40px;
 .w2ui-sidebar .w2ui-sidebar-div .w2ui-node td.w2ui-node-dots {
 
         font-family: 'Proxima Nova', sans-serif;
-        font-size: 15px;
+        font-size: .9em;
         font-weight: 400;
         color: #444444;
 
