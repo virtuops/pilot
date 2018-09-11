@@ -54,6 +54,8 @@ define(function (require) {
                   { name: 'ldaphost', type: 'text', required: false },
                   { name: 'ldapport', type: 'text', required: false },
                   { name: 'ldapou', type: 'text', required: false },
+                  { name: 'eslhost', type: 'text', required: false },
+                  { name: 'eslport', type: 'text', required: false },
                 ],
                 formHTML: '<div>' +
                 '  <div style="padding:3px;font-weight:bold;color:#777">Database Server</div>' +
@@ -96,7 +98,7 @@ define(function (require) {
                 '      </div>' +
                 '    </div>' +
                 '  <div style="padding:3px;font-weight:bold;color:#777">Environment</div>' +
-                '    <div class="w2ui-group" style="height:210px">' +
+                '    <div class="w2ui-group" style="height:270px">' +
                 '      <div class="w2ui-field">' +
                 '        <label>Base Dir: </label>' +
                 '        <div><input name="basedir" type="text" maxlength="1024"></div>' +
@@ -120,6 +122,14 @@ define(function (require) {
                 '      <div class="w2ui-field">' +
                 '        <label>Perldoc Location: </label>' +
                 '        <div><input name="perldoc" type="text" maxlength="1024"></div>' +
+                '      </div>' +
+                '      <div class="w2ui-field">' +
+                '        <label>ES/Logstash Host: </label>' +
+                '        <div><input name="eslhost" type="text" maxlength="1024"></div>' +
+                '      </div>' +
+                '      <div class="w2ui-field">' +
+                '        <label>ES/Logstash Port: </label>' +
+                '        <div><input name="eslport" type="text" maxlength="1024"></div>' +
                 '      </div>' +
                 '    </div>' +
                 '  </div>' +

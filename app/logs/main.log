@@ -1,0 +1,64 @@
+Mon, 10 Sep 2018 20:13:32 +0000 string(26) "In CrudOperation, settings"
+Mon, 10 Sep 2018 20:13:32 +0000 string(15) "Getting Config:"
+Mon, 10 Sep 2018 20:13:32 +0000 string(17) "Returning Config:"
+Mon, 10 Sep 2018 20:13:32 +0000 string(10) "Got DB Con"
+Mon, 10 Sep 2018 20:13:32 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Mon, 10 Sep 2018 21:25:14 +0000 string(26) "In CrudOperation, settings"
+Mon, 10 Sep 2018 21:25:14 +0000 string(15) "Getting Config:"
+Mon, 10 Sep 2018 21:25:14 +0000 string(17) "Returning Config:"
+Mon, 10 Sep 2018 21:25:14 +0000 string(10) "Got DB Con"
+Mon, 10 Sep 2018 21:25:14 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Mon, 10 Sep 2018 21:56:46 +0000 string(26) "In CrudOperation, settings"
+Mon, 10 Sep 2018 21:56:46 +0000 string(15) "Getting Config:"
+Mon, 10 Sep 2018 21:56:46 +0000 string(17) "Returning Config:"
+Mon, 10 Sep 2018 21:56:46 +0000 string(10) "Got DB Con"
+Mon, 10 Sep 2018 21:56:46 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Mon, 10 Sep 2018 21:59:32 +0000 string(26) "In CrudOperation, settings"
+Mon, 10 Sep 2018 21:59:32 +0000 string(15) "Getting Config:"
+Mon, 10 Sep 2018 21:59:32 +0000 string(17) "Returning Config:"
+Mon, 10 Sep 2018 21:59:32 +0000 string(10) "Got DB Con"
+Mon, 10 Sep 2018 21:59:32 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Tue, 11 Sep 2018 19:07:57 +0000 string(26) "In CrudOperation, settings"
+Tue, 11 Sep 2018 19:07:57 +0000 string(15) "Getting Config:"
+Tue, 11 Sep 2018 19:07:57 +0000 string(17) "Returning Config:"
+Tue, 11 Sep 2018 19:07:57 +0000 string(10) "Got DB Con"
+Tue, 11 Sep 2018 19:07:57 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Tue, 11 Sep 2018 19:09:50 +0000 string(26) "In CrudOperation, settings"
+Tue, 11 Sep 2018 19:09:50 +0000 string(36) "SettingsCreateUpdate: New Params are"
+Tue, 11 Sep 2018 19:09:50 +0000 object(stdClass)#5 (17) {
+  ["dbhost"]=>
+  string(9) "localhost"
+  ["dbport"]=>
+  string(4) "3306"
+  ["dbuser"]=>
+  string(9) "nhp123!!!"
+  ["dbpass"]=>
+  string(9) "nhp123!!!"
+  ["dbname"]=>
+  string(13) "nochero_pilot"
+  ["basedir"]=>
+  string(19) "/var/www/html/pilot"
+  ["unzip"]=>
+  string(10) "/bin/unzip"
+  ["php"]=>
+  string(8) "/bin/php"
+  ["weburl"]=>
+  string(33) "https://secure.virtuops.com/pilot"
+  ["curl"]=>
+  string(9) "/bin/curl"
+  ["perldoc"]=>
+  string(12) "/bin/perldoc"
+  ["logfile"]=>
+  string(37) "/var/www/html/pilot/app/logs/main.log"
+  ["ldaphost"]=>
+  string(0) ""
+  ["ldapport"]=>
+  string(1) "0"
+  ["ldapou"]=>
+  string(0) ""
+  ["eslhost"]=>
+  string(14) "192.99.232.129"
+  ["eslport"]=>
+  string(4) "9200"
+}
+Tue, 11 Sep 2018 19:09:50 +0000 string(10) "Got DB Con"

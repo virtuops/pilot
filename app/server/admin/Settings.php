@@ -52,6 +52,8 @@ Class Settings {
                 $perldoc = isset($params->perldoc) ? $params->perldoc : (isset($params['perldoc']) ? $params['perldoc'] : '');
                 $curl = isset($params->curl) ? $params->curl : (isset($params['curl']) ? $params['curl'] : '');
                 $weburl = isset($params->weburl) ? $params->weburl : (isset($params['weburl']) ? $params['weburl'] : '');
+                $eslhost = isset($params->eslhost) ? $params->eslhost : (isset($params['eslhost']) ? $params['eslhost'] : '');
+                $eslport = isset($params->eslport) ? $params->eslport : (isset($params['eslport']) ? $params['eslport'] : '');
 
 $configfile = <<<EOT
 ;
@@ -70,7 +72,9 @@ perldoc = "$perldoc"
 php = "$php"
 curl = "$curl"
 weburl = "$weburl"
-logfile = "/var/www/html/nochero/app/logs/main.log"
+eslhost = "$eslhost"
+eslport = "$eslport"
+logfile = "/var/www/html/pilot/app/logs/main.log"
 EOT;
                 $confbytes = file_put_contents(__DIR__.'/../config.ini', $configfile);
 

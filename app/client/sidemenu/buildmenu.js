@@ -13,6 +13,7 @@ define(function (require) {
                                        { id: 'users', text: 'User Admin', img: 'usericon' },
                                        { id: 'groups', text: 'Group Admin', img: 'usergroupicon' },
                                        { id: 'runbookadmin', text: 'Runbook Admin', img: 'booksicon' },
+                                       { id: 'connectadmin', text: 'Connect Admin', img: 'connectionicon' },
                                        { id: 'workflowadmin', text: 'Workflow Admin', img: 'workflowicon' },
                                      ];
                 var reportmenu = { id: 'reports', text: 'Intel Center', group: true };

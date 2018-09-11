@@ -44,6 +44,9 @@ define(function (require) {
                         case 'helpabout':
                             MESSAGES.helpabout();
                             break;
+                        case 'connectadmin':
+                            MESSAGES.helpabout();
+                            break;
                         case 'runbookadmin':
                             w2ui.layoutmain.content('main',w2ui.layout2080);
                             w2ui.layout2080.content('top',w2ui.runbooktopgrid);
