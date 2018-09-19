@@ -1,64 +1,212 @@
-Mon, 10 Sep 2018 20:13:32 +0000 string(26) "In CrudOperation, settings"
-Mon, 10 Sep 2018 20:13:32 +0000 string(15) "Getting Config:"
-Mon, 10 Sep 2018 20:13:32 +0000 string(17) "Returning Config:"
-Mon, 10 Sep 2018 20:13:32 +0000 string(10) "Got DB Con"
-Mon, 10 Sep 2018 20:13:32 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
-Mon, 10 Sep 2018 21:25:14 +0000 string(26) "In CrudOperation, settings"
-Mon, 10 Sep 2018 21:25:14 +0000 string(15) "Getting Config:"
-Mon, 10 Sep 2018 21:25:14 +0000 string(17) "Returning Config:"
-Mon, 10 Sep 2018 21:25:14 +0000 string(10) "Got DB Con"
-Mon, 10 Sep 2018 21:25:14 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
-Mon, 10 Sep 2018 21:56:46 +0000 string(26) "In CrudOperation, settings"
-Mon, 10 Sep 2018 21:56:46 +0000 string(15) "Getting Config:"
-Mon, 10 Sep 2018 21:56:46 +0000 string(17) "Returning Config:"
-Mon, 10 Sep 2018 21:56:46 +0000 string(10) "Got DB Con"
-Mon, 10 Sep 2018 21:56:46 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
-Mon, 10 Sep 2018 21:59:32 +0000 string(26) "In CrudOperation, settings"
-Mon, 10 Sep 2018 21:59:32 +0000 string(15) "Getting Config:"
-Mon, 10 Sep 2018 21:59:32 +0000 string(17) "Returning Config:"
-Mon, 10 Sep 2018 21:59:32 +0000 string(10) "Got DB Con"
-Mon, 10 Sep 2018 21:59:32 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
-Tue, 11 Sep 2018 19:07:57 +0000 string(26) "In CrudOperation, settings"
-Tue, 11 Sep 2018 19:07:57 +0000 string(15) "Getting Config:"
-Tue, 11 Sep 2018 19:07:57 +0000 string(17) "Returning Config:"
-Tue, 11 Sep 2018 19:07:57 +0000 string(10) "Got DB Con"
-Tue, 11 Sep 2018 19:07:57 +0000 string(377) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","php":"\/bin\/php","weburl":"https:\/\/secure.virtuops.com\/pilot","curl":"\/bin\/curl","perldoc":"\/bin\/perldoc","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
-Tue, 11 Sep 2018 19:09:50 +0000 string(26) "In CrudOperation, settings"
-Tue, 11 Sep 2018 19:09:50 +0000 string(36) "SettingsCreateUpdate: New Params are"
-Tue, 11 Sep 2018 19:09:50 +0000 object(stdClass)#5 (17) {
-  ["dbhost"]=>
-  string(9) "localhost"
-  ["dbport"]=>
-  string(4) "3306"
-  ["dbuser"]=>
-  string(9) "nhp123!!!"
-  ["dbpass"]=>
-  string(9) "nhp123!!!"
-  ["dbname"]=>
-  string(13) "nochero_pilot"
-  ["basedir"]=>
-  string(19) "/var/www/html/pilot"
-  ["unzip"]=>
-  string(10) "/bin/unzip"
-  ["php"]=>
-  string(8) "/bin/php"
-  ["weburl"]=>
-  string(33) "https://secure.virtuops.com/pilot"
-  ["curl"]=>
-  string(9) "/bin/curl"
-  ["perldoc"]=>
-  string(12) "/bin/perldoc"
-  ["logfile"]=>
-  string(37) "/var/www/html/pilot/app/logs/main.log"
-  ["ldaphost"]=>
-  string(0) ""
-  ["ldapport"]=>
-  string(1) "0"
-  ["ldapou"]=>
-  string(0) ""
-  ["eslhost"]=>
-  string(14) "192.99.232.129"
-  ["eslport"]=>
-  string(4) "9200"
+Wed, 19 Sep 2018 23:48:46 +0000 string(16) "UserRead PARAMS "
+Wed, 19 Sep 2018 23:48:46 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
 }
-Tue, 11 Sep 2018 19:09:50 +0000 string(10) "Got DB Con"
+Wed, 19 Sep 2018 23:48:46 +0000 string(16) "UserRead PARAMS "
+Wed, 19 Sep 2018 23:48:46 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 19 Sep 2018 23:48:46 +0000 string(19) "ReadRunbook PARAMS "
+Wed, 19 Sep 2018 23:48:46 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 19 Sep 2018 23:48:46 +0000 string(17) "ReadTasks PARAMS "
+Wed, 19 Sep 2018 23:48:46 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(15) "VP Remove Files"
+}
+Wed, 19 Sep 2018 23:48:46 +0000 string(28) "... Starting nochero runtask"
+Wed, 19 Sep 2018 23:48:46 +0000 string(0) ""
+Wed, 19 Sep 2018 23:48:46 +0000 int(1)
+Wed, 19 Sep 2018 23:48:46 +0000 string(0) ""
+Wed, 19 Sep 2018 23:48:46 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 19 Sep 2018 23:48:46 +0000 string(40) "output is "{\"status\":1}"
+error is ""
+
+"
+Wed, 19 Sep 2018 23:48:46 +0000 string(0) ""
+Wed, 19 Sep 2018 23:48:46 +0000 int(1)
+Wed, 19 Sep 2018 23:48:46 +0000 string(0) ""
+Wed, 19 Sep 2018 23:49:40 +0000 string(26) "In CrudOperation, runbooks"
+Wed, 19 Sep 2018 23:49:40 +0000 string(15) "Runbook Id is  "
+Wed, 19 Sep 2018 23:49:40 +0000 string(5) "empty"
+Wed, 19 Sep 2018 23:49:40 +0000 string(16) "Runbook SQL is  "
+Wed, 19 Sep 2018 23:49:40 +0000 string(22) "select * from runbooks"
+Wed, 19 Sep 2018 23:49:40 +0000 string(10) "Returning:"
+Wed, 19 Sep 2018 23:49:40 +0000 string(141) "{"total":1,"records":[{"runbookid":"WFTasks","runbookname":"WF Tasks","runbookdescription":"Tasks that pertain to all workflows","recid":1}]}"
+Wed, 19 Sep 2018 23:49:40 +0000 string(31) "In CrudOperation, task_runbooks"
+Wed, 19 Sep 2018 23:49:40 +0000 string(23) "RunbookTaskRead SQL is "
+Wed, 19 Sep 2018 23:49:40 +0000 string(96) "select taskname, taskorder from task_runbooks where runbookid = 'WFTasks' order by taskorder asc"
+Wed, 19 Sep 2018 23:49:40 +0000 string(26) "RunbookTaskRead DB Error: "
+Wed, 19 Sep 2018 23:49:40 +0000 string(0) ""
+Wed, 19 Sep 2018 23:49:40 +0000 string(10) "Returning:"
+Wed, 19 Sep 2018 23:49:40 +0000 string(1045) "{"total":18,"records":[{"taskname":"VP Read Data","taskorder":"1","recid":1},{"taskname":"VP DNS Device","taskorder":"2","recid":2},{"taskname":"VP Count File Rows","taskorder":"3","recid":3},{"taskname":"VP Write To File","taskorder":"4","recid":4},{"taskname":"VP MySQL Query","taskorder":"5","recid":5},{"taskname":"VP SSH","taskorder":"6","recid":6},{"taskname":"VP SNMP Walk","taskorder":"7","recid":7},{"taskname":"VP Generic Task","taskorder":"8","recid":8},{"taskname":"VP List Files Linux","taskorder":"9","recid":9},{"taskname":"VP DB2 Query","taskorder":"10","recid":10},{"taskname":"VP Create Dir","taskorder":"11","recid":11},{"taskname":"VP TDS Query","taskorder":"12","recid":12},{"taskname":"VP Email Task","taskorder":"13","recid":13},{"taskname":"VP Ping Device","taskorder":"14","recid":14},{"taskname":"VP Empty File","taskorder":"15","recid":15},{"taskname":"VP JSON to NDJSON","taskorder":"16","recid":16},{"taskname":"VP REST Query","taskorder":"17","recid":17},{"taskname":"VP Remove Files","taskorder":"18","recid":18}]}"
+Wed, 19 Sep 2018 23:49:40 +0000 string(23) "In CrudOperation, tasks"
+Wed, 19 Sep 2018 23:52:49 +0000 string(16) "UserRead PARAMS "
+Wed, 19 Sep 2018 23:52:49 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 19 Sep 2018 23:52:49 +0000 string(16) "UserRead PARAMS "
+Wed, 19 Sep 2018 23:52:49 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Wed, 19 Sep 2018 23:52:50 +0000 string(19) "ReadRunbook PARAMS "
+Wed, 19 Sep 2018 23:52:50 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Wed, 19 Sep 2018 23:52:50 +0000 string(17) "ReadTasks PARAMS "
+Wed, 19 Sep 2018 23:52:50 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(15) "VP Remove Files"
+}
+Wed, 19 Sep 2018 23:52:50 +0000 string(28) "... Starting nochero runtask"
+Wed, 19 Sep 2018 23:52:50 +0000 string(0) ""
+Wed, 19 Sep 2018 23:52:50 +0000 int(1)
+Wed, 19 Sep 2018 23:52:50 +0000 string(0) ""
+Wed, 19 Sep 2018 23:52:50 +0000 string(21) "
+
+success, exit is 0
+"
+Wed, 19 Sep 2018 23:52:50 +0000 string(40) "output is "{\"status\":1}"
+error is ""
+
+"
+Wed, 19 Sep 2018 23:52:50 +0000 string(0) ""
+Wed, 19 Sep 2018 23:52:50 +0000 int(1)
+Wed, 19 Sep 2018 23:52:50 +0000 string(0) ""
+Wed, 19 Sep 2018 23:53:27 +0000 string(23) "In CrudOperation, tasks"
+Wed, 19 Sep 2018 23:53:27 +0000 string(23) "In CrudOperation, tasks"
+Wed, 19 Sep 2018 23:53:34 +0000 string(23) "In CrudOperation, tasks"
+Wed, 19 Sep 2018 23:53:34 +0000 string(32) "TaskCreateUpdate: New Params are"
+Wed, 19 Sep 2018 23:53:34 +0000 array(14) {
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+  ["urlparams"]=>
+  string(45) "dirname,match,unmatch,lspath,lsargs,arrayname"
+  ["userparams"]=>
+  string(0) ""
+  ["actiontext"]=>
+  string(1117) "#
+#
+# Using a SQL query as input, this action needs to output a single row of data that will be stored in "output".
+#
+
+use strict;
+use warnings;
+use Data::Dumper;
+use JSON;
+use Getopt::Long;
+
+my %output;
+my @data;
+my $count;
+my ($status,$cmd,$lscmd,$dirname,$match,$unmatch,$lspath,$lsargs,$arrayname);
+
+GetOptions(
+                "dirname=s" => \$dirname,
+                "match:s" => \$match,
+                "unmatch:s" => \$unmatch,
+                "lspath=s" => \$lspath,
+                "lsargs:s" => \$lsargs,
+                "arrayname=s" => \$arrayname
+        );
+
+$cmd = "$lspath ";
+
+if (defined($lsargs)){
+        $cmd .= " $lsargs $dirname";
+} else {
+        $cmd .= " -1 $dirname";
+}
+
+if (defined($match)) {
+        $cmd .= " | grep '$match' ";
+}
+
+if (defined($unmatch)){
+        $cmd .= " | grep -v '$unmatch' ";
+}
+
+print $cmd."\n";
+@data = `$cmd`;
+
+$count = scalar(@data);
+
+$_ =~ s/\n//g for @data;
+
+
+my $meta = $arrayname."_meta";
+$output{"$arrayname"} = \@data;
+$output{"$meta"}{"count"} = $count;
+
+my $json = encode_json(\%output);
+print $json;"
+  ["actionlanguage"]=>
+  string(4) "perl"
+  ["actionfilename"]=>
+  string(17) "listfileslinux.pl"
+  ["taskdescription"]=>
+  string(161) "List out Linux Files
+
+{
+"dirname":"/path/to/files",
+"match":".xml",
+"unmatch":"some_unwanted_files",
+"lspath":"/bin/ls",
+"lsargs":" -1 ",
+"arrayname":"myfiles"
+}"
+  ["datatype"]=>
+  string(4) "JSON"
+  ["jprop"]=>
+  string(0) ""
+  ["fieldseparator"]=>
+  string(0) ""
+  ["recordseparator"]=>
+  string(0) ""
+  ["outputfields"]=>
+  string(0) ""
+  ["outputactions"]=>
+  string(0) ""
+  ["recid"]=>
+  string(1) "9"
+}
+Wed, 19 Sep 2018 23:53:34 +0000 string(228) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/listfileslinux.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/listfileslinux.pl syntax OK\n"
+exit is 0
+
+"
+Wed, 19 Sep 2018 23:53:34 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Wed, 19 Sep 2018 23:53:34 +0000 string(27) "TaskCreateUpdate DB Error: "
+Wed, 19 Sep 2018 23:53:34 +0000 int(2)
+Wed, 19 Sep 2018 23:53:34 +0000 string(0) ""

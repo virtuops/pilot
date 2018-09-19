@@ -5,10 +5,12 @@ require_once __DIR__.'/../utils/Log.php';
 Class WFParams {
 
         private $l;
+        private $wfname;
 
         public function __construct()
         {
                 $this->l = new Log();
+		
         }
 
         public function GetIfElseParams($param, $wfv) {
@@ -20,7 +22,9 @@ Class WFParams {
 
         }
 
-        public function GetTaskParams($params, $wfv){
+        public function GetTaskParams($params, $wfv, $wfname){
+		$this->wfname = $wfname;
+
 
                 preg_match_all('/[<][%][>](.*)[<][%][>]/U',$params,$matches);
 
@@ -28,11 +32,14 @@ Class WFParams {
                 $replacearray = $matches[1];
                 $x = 0;
 
+		
+
                 foreach ($replacearray as $search) {
                         $s = explode('|', $search);
                         $this->TraverseData($s, $wfv);
                         $search = '/[<][%][>]'.$search.'[<][%][>]/';
                         $search = str_replace('|','[|]',$search);
+
                         $params = preg_replace($search, $this->lookingfor, $params);
                         $x++;
                 }

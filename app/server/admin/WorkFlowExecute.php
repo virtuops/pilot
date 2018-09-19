@@ -84,7 +84,7 @@ Class WorkFlowExecute {
                 $this->EvalFirstOperators($next);
                 $status = "success";
                 $msg = 'Started Workflow '.$this->wfname;
-                $this->ReturnData($status, $msg);
+                //$this->ReturnData($status, $msg);
 
         }
 
@@ -147,7 +147,7 @@ Class WorkFlowExecute {
                       } else if (substr($op, 6, 5) === 'break') {
                                 $this->EvalRoute('break',$op);
                       } else {
-                              $status = "Error";
+                              $status = "error";
                               $msg = "Logic or Task not found";
                               $this->ReturnData($status, $msg);
                       }
@@ -179,9 +179,9 @@ Class WorkFlowExecute {
                 $taskmeta = json_encode($taskmetadata);
 
                 if ($wfstate === 'running') {
-                $runtask = $curl.' -s -X POST -H "Content-Type: application/json" -u "'.$wfuser.':'.$wfpassword.'" -d\'{"runbook":"'.$runbookid.'","username":"'.$wfuser.'","taskname":"'.$taskname.'","taskmetadata":'.$taskmeta.',"params":'.$params.'}\' '.$weburl.'/app/server/api/index.php/task_run 2>&1';
+                $runtask = $curl.' -s -X POST -H "Content-Type: application/json" -u "'.$wfuser.':'.$wfpassword.'" -d\'{"runbook":"'.$runbookid.'","wfname":"'.$wfname.'","username":"'.$wfuser.'","taskname":"'.$taskname.'","taskmetadata":'.$taskmeta.',"params":'.$params.'}\' '.$weburl.'/app/server/api/index.php/task_run 2>&1';
 
-                $this->l->varWFLog('WORKFLOWEXECUTE FIRING '.$runtask);
+                $this->l->varWFLog('WORKFLOWEXECUTE FIRING '.$runtask,$wfname);
                 $taskoutput = `$runtask`;
                 $tout_array = preg_split("/\n+/",$taskoutput);
                 $taskserial = $tout_array[count($tout_array)-2];
@@ -196,7 +196,7 @@ Class WorkFlowExecute {
                 $this->GetNextOperator($from_op, $nextobj[0], $nextobj[1], $toutput);
 
                 } else {
-                        $this->l->varWFLog("$wfname is not running");
+                        $this->l->varWFLog("$wfname is not running",$wfname);
                         exit();
                 }
 
@@ -209,8 +209,8 @@ Class WorkFlowExecute {
                 $wfv->{$k} = $v;
                 }
                 $this->wfv = $wfv;
-                $this->l->varWFLog('WFV IS');
-                $this->l->varWFLog($this->wfv);
+                $this->l->varWFLog('WFV IS',$this->wfname);
+                $this->l->varWFLog($this->wfv,$this->wfname);
         }
 
         private function EvalRoute($logic, $op, $output=null){
@@ -277,7 +277,7 @@ Class WorkFlowExecute {
                                 $compare = $this->wfv->{$loop}->compare;
                                 $value = (int)$this->wfv->{$loop}->value;
                                 $increment = (int)$this->wfv->{$loop}->increment;
-				$this->l->varWFLog("COUNTER IS $counter and VAL is $value");
+				$this->l->varWFLog("COUNTER IS $counter and VAL is $value",$this->wfname);
                                 if ($compare === '>') {
                                         if ($counter > $value) {
                                                 $this->wfv->{$loop}->counter = $counter + $increment;
@@ -365,15 +365,16 @@ Class WorkFlowExecute {
 
                 //$loopparams = $this->wfparams->GetLoopParams($params, $wfv) !== 'NULL' && !is_bool($this->wfparams->GetLoopParams($params, $wfv)) ? $this->wfparams->GetLoopParams($params, $wfv) : $params;
 
-                $newparams = $this->wfparams->GetTaskParams($params, $wfv) !== 'NULL' && !is_bool($this->wfparams->GetTaskParams($params, $wfv)) ? $this->wfparams->GetTaskParams($params, $wfv) : $params;
+                $newparams = $this->wfparams->GetTaskParams($params, $wfv,$this->wfname) !== 'NULL' && !is_bool($this->wfparams->GetTaskParams($params, $wfv, $this->wfname)) ? $this->wfparams->GetTaskParams($params, $wfv,$this->wfname) : $params;
                 return $newparams;
         }
 
 
         private function Stop($wfname) {
                 $wfname = $this->wfname;
-                $status = "success";
-                $msg = "$wfname has stopped.";
+                $status = "Success: $wfname has stopped";
+                //$msg = "$wfname has stopped.";
+		$msg = $this->wfv;
                 //$this->UpdateTracker($this->wfname,'Stop','end');
                 $this->SetStateStopped($wfname, $this->con);
                 $this->ReturnData($status, $msg);
@@ -461,8 +462,12 @@ Class WorkFlowExecute {
         }
 
         private function ReturnData($status, $msg){
-                        header('Content-Type: application/json');
-                        echo '{"status": "'.$status.'","message":"'.$msg.'"}';
+			// $outmsg used to clean up empty key/value
+			$retdata = array();
+			$retdata['status'] = $status;
+			$retdata['msg'] = $msg;
+			$outputmsg = json_encode($retdata);
+                        echo $outputmsg;
                         if ($status === 'error') {
                                 exit();
                         }

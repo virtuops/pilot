@@ -2,6 +2,7 @@
 
 require_once __DIR__.'/../actiontext/run_task.php';
 require_once __DIR__.'/../admin/ApiUtils.php';
+require_once __DIR__.'/../utils/Log.php';
 require_once __DIR__.'/Api.php';
 
 class Tasks
@@ -10,9 +11,11 @@ class Tasks
     {
         $a = new ApiUtils();
         $r = new RunTask();
+	$l = new Log();
 	$con = $args['con'];
 
         $runbookid = $args['runbook'];
+        $wfname = $args['wfname'];
         $taskmetadata = $args['taskmetadata'];
         $taskname = $args['taskname'];
         $username = $args['_user'];
@@ -23,25 +26,25 @@ class Tasks
         try {
             //$params_dec = json_decode($params);
             $params_dec = $params;
-        	Api::sendError("PARAMS API ARE '".json_encode($params_dec)."'");
+        	$l->varWFLog("PARAMS API ARE '".json_encode($params_dec)."'",$wfname);
             if (!$params_dec && $params) throw new Exception();
         } catch (Exception $e) {
-            Api::sendError("Could not decode params.");
+            $l->varWFLog("Could not decode params.",$wfname);
             exit();
         }
-        Api::logDebug("... received task_run, params are runbook='$runbookid', taskname='$taskname', username='$username', params='".json_encode($params)."'");
+        $l->varWFLog("... received task_run, params are runbook='$runbookid', taskname='$taskname', username='$username', params='".json_encode($params)."'",$wfname);
 
         try {
             $rbparams = array("singlerunbook"=>"true", "runbookid"=>"$runbookid");
             $runbook = $a->ApiUtilsOperation('getrunbook',$rbparams, $con);
             if (!$runbook) {
-                Api::sendError("Runbook '$runbookid' does not exist.");
+                $l->varWFLog("Runbook '$runbookid' does not exist.",$wfname);
                 exit();
             }
             $tparams = array("singletask"=>"true", "taskname"=>"$taskname");
             $task = $a->ApiUtilsOperation('gettask',$tparams, $con);
             if (!$task) {
-                Api::sendError("Task '$taskname' does not exist.");
+                $l->varWFLog("Task '$taskname' does not exist.",$wfname);
                 exit();
             }
             //Add username and runbookid
@@ -52,7 +55,7 @@ class Tasks
             $output = $r->run(array('params' => $params_dec, 'taskdata' => $task, 'con' => $con));
             return true;
         } catch (Exception $e) {
-            Api::logError("Could not run task '$taskname':".$e->getMessage());
+            $l->varWFLog("Could not run task '$taskname':".$e->getMessage(),$wfname);
         }
     }
 }

@@ -124,6 +124,10 @@ define(function (require) {
                 '        <div><input name="perldoc" type="text" maxlength="1024"></div>' +
                 '      </div>' +
                 '      <div class="w2ui-field">' +
+                '        <label>Perldoc Location: </label>' +
+                '        <div><input name="perldoc" type="text" maxlength="1024"></div>' +
+                '      </div>' +
+                '      <div class="w2ui-field">' +
                 '        <label>ES/Logstash Host: </label>' +
                 '        <div><input name="eslhost" type="text" maxlength="1024"></div>' +
                 '      </div>' +

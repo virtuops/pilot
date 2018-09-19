@@ -16,7 +16,7 @@ Class Log {
                 error_log("$date $contents",3,$log);        // log contents of the result of var_dump( $object )
         }
 
-	public function varWFLog($object=null,$wfname="unknown_wf")
+	public function varWFLog($object=null,$wfname)
         {
                 $this->globalconf = parse_ini_file(__DIR__."/../config.ini");
 		$name = str_replace(' ','_',$wfname);

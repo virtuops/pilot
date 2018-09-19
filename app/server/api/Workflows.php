@@ -28,16 +28,18 @@ class Workflows
 
         try {
 
-        Api::logDebug("... received workflow_run, params are wfuser='$wfuser', wfpassword='$wfpassword', workflowname='$workflowname', wfv='$wfv', taskmeta='$taskmeta', wfmeta='$wfmeta'");
-        Api::logDebug("... running workflow workflowname='$workflowname'");
+        $l->varWFLog("... received workflow_run, params are wfuser='$wfuser', wfpassword='$wfpassword', workflowname='$workflowname', wfv='$wfv', taskmeta='$taskmeta', wfmeta='$wfmeta'",$workflowname);
+        $l->varWFLog("... running workflow workflowname='$workflowname'",$workflowname);
 
 
         $runwf = $php." ".__DIR__."/../admin/wfwrapper.php ".$wfuser." ".$wfpassword." '".$workflowname."' '".$wfv."' '".$taskmeta."' '".$wfmeta."'";
         $wfout = `$runwf`;
 
+	echo "$wfout";
+	
         return true;
         } catch (Exception $e) {
-            Api::logError("Could not run workflow '$workflowname':".$e->getMessage());
+            $l->varWFLog("Could not run workflow '$workflowname':".$e->getMessage(),$workflowname);
         }
     }
 }

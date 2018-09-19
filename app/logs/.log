@@ -1,0 +1,45 @@
+Wed, 19 Sep 2018 23:40:27 +0000 string(13) "WHAT IS MAP? "
+Wed, 19 Sep 2018 23:40:27 +0000 array(1) {
+  [0]=>
+  string(11) "_orderfile_"
+}
+Wed, 19 Sep 2018 23:40:27 +0000 string(13) "WHAT IS VAL? "
+Wed, 19 Sep 2018 23:40:27 +0000 array(1) {
+  [0]=>
+  object(stdClass)#14 (1) {
+    ["_orderfile_"]=>
+    string(14) "order_no_6.xml"
+  }
+}
+Wed, 19 Sep 2018 23:40:27 +0000 string(17) "FOUND MY VALUE!!!"
+Wed, 19 Sep 2018 23:40:27 +0000 NULL
+Wed, 19 Sep 2018 23:40:27 +0000 string(13) "WHAT IS MAP? "
+Wed, 19 Sep 2018 23:40:27 +0000 array(1) {
+  [0]=>
+  string(11) "_orderfile_"
+}
+Wed, 19 Sep 2018 23:40:27 +0000 string(13) "WHAT IS VAL? "
+Wed, 19 Sep 2018 23:40:27 +0000 array(1) {
+  [0]=>
+  object(stdClass)#14 (1) {
+    ["_orderfile_"]=>
+    string(14) "order_no_6.xml"
+  }
+}
+Wed, 19 Sep 2018 23:40:27 +0000 string(17) "FOUND MY VALUE!!!"
+Wed, 19 Sep 2018 23:40:27 +0000 NULL
+Wed, 19 Sep 2018 23:40:27 +0000 string(13) "WHAT IS MAP? "
+Wed, 19 Sep 2018 23:40:27 +0000 array(1) {
+  [0]=>
+  string(11) "_orderfile_"
+}
+Wed, 19 Sep 2018 23:40:27 +0000 string(13) "WHAT IS VAL? "
+Wed, 19 Sep 2018 23:40:27 +0000 array(1) {
+  [0]=>
+  object(stdClass)#14 (1) {
+    ["_orderfile_"]=>
+    string(14) "order_no_6.xml"
+  }
+}
+Wed, 19 Sep 2018 23:40:27 +0000 string(17) "FOUND MY VALUE!!!"
+Wed, 19 Sep 2018 23:40:27 +0000 NULL
