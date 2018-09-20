@@ -210,3 +210,112 @@ Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, a
 Wed, 19 Sep 2018 23:53:34 +0000 string(27) "TaskCreateUpdate DB Error: "
 Wed, 19 Sep 2018 23:53:34 +0000 int(2)
 Wed, 19 Sep 2018 23:53:34 +0000 string(0) ""
+Wed, 19 Sep 2018 23:55:01 +0000 string(23) "In CrudOperation, tasks"
+Wed, 19 Sep 2018 23:55:01 +0000 string(32) "TaskCreateUpdate: New Params are"
+Wed, 19 Sep 2018 23:55:01 +0000 array(14) {
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+  ["urlparams"]=>
+  string(45) "dirname,match,unmatch,lspath,lsargs,arrayname"
+  ["userparams"]=>
+  string(0) ""
+  ["actiontext"]=>
+  string(1117) "#
+#
+# Using a SQL query as input, this action needs to output a single row of data that will be stored in "output".
+#
+
+use strict;
+use warnings;
+use Data::Dumper;
+use JSON;
+use Getopt::Long;
+
+my %output;
+my @data;
+my $count;
+my ($status,$cmd,$lscmd,$dirname,$match,$unmatch,$lspath,$lsargs,$arrayname);
+
+GetOptions(
+                "dirname=s" => \$dirname,
+                "match:s" => \$match,
+                "unmatch:s" => \$unmatch,
+                "lspath=s" => \$lspath,
+                "lsargs:s" => \$lsargs,
+                "arrayname=s" => \$arrayname
+        );
+
+$cmd = "$lspath ";
+
+if (defined($lsargs)){
+        $cmd .= " $lsargs $dirname";
+} else {
+        $cmd .= " -1 $dirname";
+}
+
+if (defined($match)) {
+        $cmd .= " | grep '$match' ";
+}
+
+if (defined($unmatch)){
+        $cmd .= " | grep -v '$unmatch' ";
+}
+
+print $cmd."\n";
+@data = `$cmd`;
+
+$count = scalar(@data);
+
+$_ =~ s/\n//g for @data;
+
+
+my $meta = $arrayname."_meta";
+$output{"$arrayname"} = \@data;
+$output{"$meta"}{"count"} = $count;
+
+my $json = encode_json(\%output);
+print $json;"
+  ["actionlanguage"]=>
+  string(4) "perl"
+  ["actionfilename"]=>
+  string(17) "listfileslinux.pl"
+  ["taskdescription"]=>
+  string(161) "List out Linux Files
+
+{
+"dirname":"/path/to/files",
+"match":".xml",
+"unmatch":"some_unwanted_files",
+"lspath":"/bin/ls",
+"lsargs":" -1 ",
+"arrayname":"myfiles"
+}"
+  ["datatype"]=>
+  string(4) "JSON"
+  ["jprop"]=>
+  string(0) ""
+  ["fieldseparator"]=>
+  string(0) ""
+  ["recordseparator"]=>
+  string(0) ""
+  ["outputfields"]=>
+  string(0) ""
+  ["outputactions"]=>
+  string(0) ""
+  ["recid"]=>
+  string(1) "9"
+}
+Wed, 19 Sep 2018 23:55:01 +0000 string(228) "
+
+task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/listfileslinux.pl
+output is ""
+err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/listfileslinux.pl syntax OK\n"
+exit is 0
+
+"
+Wed, 19 Sep 2018 23:55:01 +0000 string(255) "
+Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+"
+Wed, 19 Sep 2018 23:55:01 +0000 string(27) "TaskCreateUpdate DB Error: "
+Wed, 19 Sep 2018 23:55:01 +0000 int(1)
+Wed, 19 Sep 2018 23:55:01 +0000 string(0) ""
