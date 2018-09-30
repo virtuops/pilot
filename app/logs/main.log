@@ -1,321 +1,1353 @@
-Wed, 19 Sep 2018 23:48:46 +0000 string(16) "UserRead PARAMS "
-Wed, 19 Sep 2018 23:48:46 +0000 array(2) {
+Fri, 21 Sep 2018 23:56:32 +0000 string(16) "UserRead PARAMS "
+Fri, 21 Sep 2018 23:56:32 +0000 array(2) {
   ["singleuser"]=>
   string(4) "true"
   ["username"]=>
   string(5) "admin"
 }
-Wed, 19 Sep 2018 23:48:46 +0000 string(16) "UserRead PARAMS "
-Wed, 19 Sep 2018 23:48:46 +0000 array(2) {
+Fri, 21 Sep 2018 23:56:32 +0000 string(16) "UserRead PARAMS "
+Fri, 21 Sep 2018 23:56:32 +0000 array(2) {
   ["singleuser"]=>
   string(4) "true"
   ["username"]=>
   string(5) "admin"
 }
-Wed, 19 Sep 2018 23:48:46 +0000 string(19) "ReadRunbook PARAMS "
-Wed, 19 Sep 2018 23:48:46 +0000 array(2) {
+Fri, 21 Sep 2018 23:56:32 +0000 string(19) "ReadRunbook PARAMS "
+Fri, 21 Sep 2018 23:56:32 +0000 array(2) {
   ["singlerunbook"]=>
   string(4) "true"
   ["runbookid"]=>
   string(7) "WFTasks"
 }
-Wed, 19 Sep 2018 23:48:46 +0000 string(17) "ReadTasks PARAMS "
-Wed, 19 Sep 2018 23:48:46 +0000 array(2) {
+Fri, 21 Sep 2018 23:56:32 +0000 string(17) "ReadTasks PARAMS "
+Fri, 21 Sep 2018 23:56:32 +0000 array(2) {
   ["singletask"]=>
   string(4) "true"
   ["taskname"]=>
   string(15) "VP Remove Files"
 }
-Wed, 19 Sep 2018 23:48:46 +0000 string(28) "... Starting nochero runtask"
-Wed, 19 Sep 2018 23:48:46 +0000 string(0) ""
-Wed, 19 Sep 2018 23:48:46 +0000 int(1)
-Wed, 19 Sep 2018 23:48:46 +0000 string(0) ""
-Wed, 19 Sep 2018 23:48:46 +0000 string(21) "
+Fri, 21 Sep 2018 23:56:32 +0000 string(28) "... Starting nochero runtask"
+Fri, 21 Sep 2018 23:56:32 +0000 string(0) ""
+Fri, 21 Sep 2018 23:56:32 +0000 int(1)
+Fri, 21 Sep 2018 23:56:32 +0000 string(0) ""
+Fri, 21 Sep 2018 23:56:32 +0000 string(21) "
 
 success, exit is 0
 "
-Wed, 19 Sep 2018 23:48:46 +0000 string(40) "output is "{\"status\":1}"
-error is ""
+Fri, 21 Sep 2018 23:56:32 +0000 string(173) "output is "{\"status\":0}"
+error is "Option filename requires an argument\nUse of uninitialized value $filename in concatenation (.) or string at removefile.pl line 24.\n"
 
 "
-Wed, 19 Sep 2018 23:48:46 +0000 string(0) ""
-Wed, 19 Sep 2018 23:48:46 +0000 int(1)
-Wed, 19 Sep 2018 23:48:46 +0000 string(0) ""
-Wed, 19 Sep 2018 23:49:40 +0000 string(26) "In CrudOperation, runbooks"
-Wed, 19 Sep 2018 23:49:40 +0000 string(15) "Runbook Id is  "
-Wed, 19 Sep 2018 23:49:40 +0000 string(5) "empty"
-Wed, 19 Sep 2018 23:49:40 +0000 string(16) "Runbook SQL is  "
-Wed, 19 Sep 2018 23:49:40 +0000 string(22) "select * from runbooks"
-Wed, 19 Sep 2018 23:49:40 +0000 string(10) "Returning:"
-Wed, 19 Sep 2018 23:49:40 +0000 string(141) "{"total":1,"records":[{"runbookid":"WFTasks","runbookname":"WF Tasks","runbookdescription":"Tasks that pertain to all workflows","recid":1}]}"
-Wed, 19 Sep 2018 23:49:40 +0000 string(31) "In CrudOperation, task_runbooks"
-Wed, 19 Sep 2018 23:49:40 +0000 string(23) "RunbookTaskRead SQL is "
-Wed, 19 Sep 2018 23:49:40 +0000 string(96) "select taskname, taskorder from task_runbooks where runbookid = 'WFTasks' order by taskorder asc"
-Wed, 19 Sep 2018 23:49:40 +0000 string(26) "RunbookTaskRead DB Error: "
-Wed, 19 Sep 2018 23:49:40 +0000 string(0) ""
-Wed, 19 Sep 2018 23:49:40 +0000 string(10) "Returning:"
-Wed, 19 Sep 2018 23:49:40 +0000 string(1045) "{"total":18,"records":[{"taskname":"VP Read Data","taskorder":"1","recid":1},{"taskname":"VP DNS Device","taskorder":"2","recid":2},{"taskname":"VP Count File Rows","taskorder":"3","recid":3},{"taskname":"VP Write To File","taskorder":"4","recid":4},{"taskname":"VP MySQL Query","taskorder":"5","recid":5},{"taskname":"VP SSH","taskorder":"6","recid":6},{"taskname":"VP SNMP Walk","taskorder":"7","recid":7},{"taskname":"VP Generic Task","taskorder":"8","recid":8},{"taskname":"VP List Files Linux","taskorder":"9","recid":9},{"taskname":"VP DB2 Query","taskorder":"10","recid":10},{"taskname":"VP Create Dir","taskorder":"11","recid":11},{"taskname":"VP TDS Query","taskorder":"12","recid":12},{"taskname":"VP Email Task","taskorder":"13","recid":13},{"taskname":"VP Ping Device","taskorder":"14","recid":14},{"taskname":"VP Empty File","taskorder":"15","recid":15},{"taskname":"VP JSON to NDJSON","taskorder":"16","recid":16},{"taskname":"VP REST Query","taskorder":"17","recid":17},{"taskname":"VP Remove Files","taskorder":"18","recid":18}]}"
-Wed, 19 Sep 2018 23:49:40 +0000 string(23) "In CrudOperation, tasks"
-Wed, 19 Sep 2018 23:52:49 +0000 string(16) "UserRead PARAMS "
-Wed, 19 Sep 2018 23:52:49 +0000 array(2) {
+Fri, 21 Sep 2018 23:56:32 +0000 string(0) ""
+Fri, 21 Sep 2018 23:56:32 +0000 int(1)
+Fri, 21 Sep 2018 23:56:32 +0000 string(0) ""
+Fri, 21 Sep 2018 23:57:22 +0000 string(16) "UserRead PARAMS "
+Fri, 21 Sep 2018 23:57:22 +0000 array(2) {
   ["singleuser"]=>
   string(4) "true"
   ["username"]=>
   string(5) "admin"
 }
-Wed, 19 Sep 2018 23:52:49 +0000 string(16) "UserRead PARAMS "
-Wed, 19 Sep 2018 23:52:49 +0000 array(2) {
+Fri, 21 Sep 2018 23:57:22 +0000 string(16) "UserRead PARAMS "
+Fri, 21 Sep 2018 23:57:22 +0000 array(2) {
   ["singleuser"]=>
   string(4) "true"
   ["username"]=>
   string(5) "admin"
 }
-Wed, 19 Sep 2018 23:52:50 +0000 string(19) "ReadRunbook PARAMS "
-Wed, 19 Sep 2018 23:52:50 +0000 array(2) {
+Fri, 21 Sep 2018 23:57:22 +0000 string(19) "ReadRunbook PARAMS "
+Fri, 21 Sep 2018 23:57:22 +0000 array(2) {
   ["singlerunbook"]=>
   string(4) "true"
   ["runbookid"]=>
   string(7) "WFTasks"
 }
-Wed, 19 Sep 2018 23:52:50 +0000 string(17) "ReadTasks PARAMS "
-Wed, 19 Sep 2018 23:52:50 +0000 array(2) {
+Fri, 21 Sep 2018 23:57:22 +0000 string(17) "ReadTasks PARAMS "
+Fri, 21 Sep 2018 23:57:22 +0000 array(2) {
   ["singletask"]=>
   string(4) "true"
   ["taskname"]=>
   string(15) "VP Remove Files"
 }
-Wed, 19 Sep 2018 23:52:50 +0000 string(28) "... Starting nochero runtask"
-Wed, 19 Sep 2018 23:52:50 +0000 string(0) ""
-Wed, 19 Sep 2018 23:52:50 +0000 int(1)
-Wed, 19 Sep 2018 23:52:50 +0000 string(0) ""
-Wed, 19 Sep 2018 23:52:50 +0000 string(21) "
+Fri, 21 Sep 2018 23:57:22 +0000 string(28) "... Starting nochero runtask"
+Fri, 21 Sep 2018 23:57:22 +0000 string(0) ""
+Fri, 21 Sep 2018 23:57:22 +0000 int(1)
+Fri, 21 Sep 2018 23:57:22 +0000 string(0) ""
+Fri, 21 Sep 2018 23:57:22 +0000 string(21) "
 
 success, exit is 0
 "
-Wed, 19 Sep 2018 23:52:50 +0000 string(40) "output is "{\"status\":1}"
+Fri, 21 Sep 2018 23:57:22 +0000 string(40) "output is "{\"status\":1}"
 error is ""
 
 "
-Wed, 19 Sep 2018 23:52:50 +0000 string(0) ""
-Wed, 19 Sep 2018 23:52:50 +0000 int(1)
-Wed, 19 Sep 2018 23:52:50 +0000 string(0) ""
-Wed, 19 Sep 2018 23:53:27 +0000 string(23) "In CrudOperation, tasks"
-Wed, 19 Sep 2018 23:53:27 +0000 string(23) "In CrudOperation, tasks"
-Wed, 19 Sep 2018 23:53:34 +0000 string(23) "In CrudOperation, tasks"
-Wed, 19 Sep 2018 23:53:34 +0000 string(32) "TaskCreateUpdate: New Params are"
-Wed, 19 Sep 2018 23:53:34 +0000 array(14) {
+Fri, 21 Sep 2018 23:57:22 +0000 string(0) ""
+Fri, 21 Sep 2018 23:57:22 +0000 int(1)
+Fri, 21 Sep 2018 23:57:22 +0000 string(0) ""
+Sat, 22 Sep 2018 00:08:37 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 00:08:37 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 00:08:37 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 00:08:37 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 00:08:37 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 00:08:37 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 00:08:37 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 00:08:37 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(15) "VP Remove Files"
+}
+Sat, 22 Sep 2018 00:08:37 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 00:08:37 +0000 string(0) ""
+Sat, 22 Sep 2018 00:08:37 +0000 int(1)
+Sat, 22 Sep 2018 00:08:37 +0000 string(0) ""
+Sat, 22 Sep 2018 00:08:37 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 00:08:37 +0000 string(40) "output is "{\"status\":1}"
+error is ""
+
+"
+Sat, 22 Sep 2018 00:08:37 +0000 string(0) ""
+Sat, 22 Sep 2018 00:08:37 +0000 int(1)
+Sat, 22 Sep 2018 00:08:37 +0000 string(0) ""
+Sat, 22 Sep 2018 00:08:54 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 00:08:54 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 00:08:54 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 00:08:54 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 00:08:54 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 00:08:54 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 00:08:54 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 00:08:54 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
   ["taskname"]=>
   string(19) "VP List Files Linux"
-  ["urlparams"]=>
-  string(45) "dirname,match,unmatch,lspath,lsargs,arrayname"
-  ["userparams"]=>
-  string(0) ""
-  ["actiontext"]=>
-  string(1117) "#
-#
-# Using a SQL query as input, this action needs to output a single row of data that will be stored in "output".
-#
-
-use strict;
-use warnings;
-use Data::Dumper;
-use JSON;
-use Getopt::Long;
-
-my %output;
-my @data;
-my $count;
-my ($status,$cmd,$lscmd,$dirname,$match,$unmatch,$lspath,$lsargs,$arrayname);
-
-GetOptions(
-                "dirname=s" => \$dirname,
-                "match:s" => \$match,
-                "unmatch:s" => \$unmatch,
-                "lspath=s" => \$lspath,
-                "lsargs:s" => \$lsargs,
-                "arrayname=s" => \$arrayname
-        );
-
-$cmd = "$lspath ";
-
-if (defined($lsargs)){
-        $cmd .= " $lsargs $dirname";
-} else {
-        $cmd .= " -1 $dirname";
 }
+Sat, 22 Sep 2018 00:08:54 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 00:08:54 +0000 string(0) ""
+Sat, 22 Sep 2018 00:08:54 +0000 int(1)
+Sat, 22 Sep 2018 00:08:54 +0000 string(0) ""
+Sat, 22 Sep 2018 00:08:54 +0000 string(21) "
 
-if (defined($match)) {
-        $cmd .= " | grep '$match' ";
-}
-
-if (defined($unmatch)){
-        $cmd .= " | grep -v '$unmatch' ";
-}
-
-print $cmd."\n";
-@data = `$cmd`;
-
-$count = scalar(@data);
-
-$_ =~ s/\n//g for @data;
-
-
-my $meta = $arrayname."_meta";
-$output{"$arrayname"} = \@data;
-$output{"$meta"}{"count"} = $count;
-
-my $json = encode_json(\%output);
-print $json;"
-  ["actionlanguage"]=>
-  string(4) "perl"
-  ["actionfilename"]=>
-  string(17) "listfileslinux.pl"
-  ["taskdescription"]=>
-  string(161) "List out Linux Files
-
-{
-"dirname":"/path/to/files",
-"match":".xml",
-"unmatch":"some_unwanted_files",
-"lspath":"/bin/ls",
-"lsargs":" -1 ",
-"arrayname":"myfiles"
-}"
-  ["datatype"]=>
-  string(4) "JSON"
-  ["jprop"]=>
-  string(0) ""
-  ["fieldseparator"]=>
-  string(0) ""
-  ["recordseparator"]=>
-  string(0) ""
-  ["outputfields"]=>
-  string(0) ""
-  ["outputactions"]=>
-  string(0) ""
-  ["recid"]=>
-  string(1) "9"
-}
-Wed, 19 Sep 2018 23:53:34 +0000 string(228) "
-
-task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/listfileslinux.pl
-output is ""
-err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/listfileslinux.pl syntax OK\n"
-exit is 0
+success, exit is 0
+"
+Sat, 22 Sep 2018 00:08:54 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
 
 "
-Wed, 19 Sep 2018 23:53:34 +0000 string(255) "
-Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-"
-Wed, 19 Sep 2018 23:53:34 +0000 string(27) "TaskCreateUpdate DB Error: "
-Wed, 19 Sep 2018 23:53:34 +0000 int(2)
-Wed, 19 Sep 2018 23:53:34 +0000 string(0) ""
-Wed, 19 Sep 2018 23:55:01 +0000 string(23) "In CrudOperation, tasks"
-Wed, 19 Sep 2018 23:55:01 +0000 string(32) "TaskCreateUpdate: New Params are"
-Wed, 19 Sep 2018 23:55:01 +0000 array(14) {
+Sat, 22 Sep 2018 00:08:54 +0000 string(0) ""
+Sat, 22 Sep 2018 00:08:54 +0000 int(1)
+Sat, 22 Sep 2018 00:08:54 +0000 string(0) ""
+Sat, 22 Sep 2018 12:53:01 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 12:53:01 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 12:53:02 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 12:53:02 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 12:53:02 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 12:53:02 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 12:53:02 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 12:53:02 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
   ["taskname"]=>
   string(19) "VP List Files Linux"
-  ["urlparams"]=>
-  string(45) "dirname,match,unmatch,lspath,lsargs,arrayname"
-  ["userparams"]=>
-  string(0) ""
-  ["actiontext"]=>
-  string(1117) "#
-#
-# Using a SQL query as input, this action needs to output a single row of data that will be stored in "output".
-#
-
-use strict;
-use warnings;
-use Data::Dumper;
-use JSON;
-use Getopt::Long;
-
-my %output;
-my @data;
-my $count;
-my ($status,$cmd,$lscmd,$dirname,$match,$unmatch,$lspath,$lsargs,$arrayname);
-
-GetOptions(
-                "dirname=s" => \$dirname,
-                "match:s" => \$match,
-                "unmatch:s" => \$unmatch,
-                "lspath=s" => \$lspath,
-                "lsargs:s" => \$lsargs,
-                "arrayname=s" => \$arrayname
-        );
-
-$cmd = "$lspath ";
-
-if (defined($lsargs)){
-        $cmd .= " $lsargs $dirname";
-} else {
-        $cmd .= " -1 $dirname";
 }
+Sat, 22 Sep 2018 12:53:02 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 12:53:02 +0000 string(0) ""
+Sat, 22 Sep 2018 12:53:02 +0000 int(1)
+Sat, 22 Sep 2018 12:53:02 +0000 string(0) ""
+Sat, 22 Sep 2018 12:53:02 +0000 string(21) "
 
-if (defined($match)) {
-        $cmd .= " | grep '$match' ";
-}
-
-if (defined($unmatch)){
-        $cmd .= " | grep -v '$unmatch' ";
-}
-
-print $cmd."\n";
-@data = `$cmd`;
-
-$count = scalar(@data);
-
-$_ =~ s/\n//g for @data;
-
-
-my $meta = $arrayname."_meta";
-$output{"$arrayname"} = \@data;
-$output{"$meta"}{"count"} = $count;
-
-my $json = encode_json(\%output);
-print $json;"
-  ["actionlanguage"]=>
-  string(4) "perl"
-  ["actionfilename"]=>
-  string(17) "listfileslinux.pl"
-  ["taskdescription"]=>
-  string(161) "List out Linux Files
-
-{
-"dirname":"/path/to/files",
-"match":".xml",
-"unmatch":"some_unwanted_files",
-"lspath":"/bin/ls",
-"lsargs":" -1 ",
-"arrayname":"myfiles"
-}"
-  ["datatype"]=>
-  string(4) "JSON"
-  ["jprop"]=>
-  string(0) ""
-  ["fieldseparator"]=>
-  string(0) ""
-  ["recordseparator"]=>
-  string(0) ""
-  ["outputfields"]=>
-  string(0) ""
-  ["outputactions"]=>
-  string(0) ""
-  ["recid"]=>
-  string(1) "9"
-}
-Wed, 19 Sep 2018 23:55:01 +0000 string(228) "
-
-task status of perl lint on file /var/www/html/pilot/app/server/admin/../actiontext/listfileslinux.pl
-output is ""
-err is "\/var\/www\/html\/pilot\/app\/server\/admin\/..\/actiontext\/listfileslinux.pl syntax OK\n"
-exit is 0
+success, exit is 0
+"
+Sat, 22 Sep 2018 12:53:02 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
 
 "
-Wed, 19 Sep 2018 23:55:01 +0000 string(255) "
-Executing sql replace into tasks (taskname, urlparams, userparams, actiontext, actionlanguage, actionfilename, outputfields, outputactions, taskdescription, datatype, jprop, fieldseparator, recordseparator) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Sat, 22 Sep 2018 12:53:02 +0000 string(0) ""
+Sat, 22 Sep 2018 12:53:02 +0000 int(1)
+Sat, 22 Sep 2018 12:53:02 +0000 string(0) ""
+Sat, 22 Sep 2018 12:55:41 +0000 string(34) "In CrudOperation, workflowschedule"
+Sat, 22 Sep 2018 12:55:41 +0000 string(28) "WorkFlowScheduleRead PARAMS "
+Sat, 22 Sep 2018 12:55:41 +0000 array(1) {
+  ["workflowname"]=>
+  string(22) "Clear Processed Orders"
+}
+Sat, 22 Sep 2018 12:55:44 +0000 string(27) "In CrudOperation, workflows"
+Sat, 22 Sep 2018 12:55:57 +0000 string(26) "In CrudOperation, runbooks"
+Sat, 22 Sep 2018 12:55:57 +0000 string(15) "Runbook Id is  "
+Sat, 22 Sep 2018 12:55:57 +0000 string(5) "empty"
+Sat, 22 Sep 2018 12:55:57 +0000 string(16) "Runbook SQL is  "
+Sat, 22 Sep 2018 12:55:57 +0000 string(22) "select * from runbooks"
+Sat, 22 Sep 2018 12:55:57 +0000 string(10) "Returning:"
+Sat, 22 Sep 2018 12:55:57 +0000 string(141) "{"total":1,"records":[{"runbookid":"WFTasks","runbookname":"WF Tasks","runbookdescription":"Tasks that pertain to all workflows","recid":1}]}"
+Sat, 22 Sep 2018 12:55:58 +0000 string(31) "In CrudOperation, task_runbooks"
+Sat, 22 Sep 2018 12:55:58 +0000 string(23) "RunbookTaskRead SQL is "
+Sat, 22 Sep 2018 12:55:58 +0000 string(96) "select taskname, taskorder from task_runbooks where runbookid = 'WFTasks' order by taskorder asc"
+Sat, 22 Sep 2018 12:55:58 +0000 string(26) "RunbookTaskRead DB Error: "
+Sat, 22 Sep 2018 12:55:58 +0000 string(0) ""
+Sat, 22 Sep 2018 12:55:58 +0000 string(10) "Returning:"
+Sat, 22 Sep 2018 12:55:58 +0000 string(1045) "{"total":18,"records":[{"taskname":"VP Read Data","taskorder":"1","recid":1},{"taskname":"VP DNS Device","taskorder":"2","recid":2},{"taskname":"VP Count File Rows","taskorder":"3","recid":3},{"taskname":"VP Write To File","taskorder":"4","recid":4},{"taskname":"VP MySQL Query","taskorder":"5","recid":5},{"taskname":"VP SSH","taskorder":"6","recid":6},{"taskname":"VP SNMP Walk","taskorder":"7","recid":7},{"taskname":"VP Generic Task","taskorder":"8","recid":8},{"taskname":"VP List Files Linux","taskorder":"9","recid":9},{"taskname":"VP DB2 Query","taskorder":"10","recid":10},{"taskname":"VP Create Dir","taskorder":"11","recid":11},{"taskname":"VP TDS Query","taskorder":"12","recid":12},{"taskname":"VP Email Task","taskorder":"13","recid":13},{"taskname":"VP Ping Device","taskorder":"14","recid":14},{"taskname":"VP Empty File","taskorder":"15","recid":15},{"taskname":"VP JSON to NDJSON","taskorder":"16","recid":16},{"taskname":"VP REST Query","taskorder":"17","recid":17},{"taskname":"VP Remove Files","taskorder":"18","recid":18}]}"
+Sat, 22 Sep 2018 12:55:58 +0000 string(23) "In CrudOperation, tasks"
+Sat, 22 Sep 2018 12:56:14 +0000 string(27) "In CrudOperation, workflows"
+Sat, 22 Sep 2018 12:56:14 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Sat, 22 Sep 2018 12:56:14 +0000 array(2) {
+  ["workflowname"]=>
+  string(18) "Process New Orders"
+  ["workflowdata"]=>
+  string(5114) "{"operators":{"start":{"top":20,"left":20,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":40,"left":1160,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"route:foreach1":{"top":100,"left":560,"properties":{"objecttype":"route:foreach","class":"flowchart-route-operator","title":"ForEach New Order","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","targetobject":"new_orders"}},"loopid":"route:foreach1"}},"task1":{"top":80,"left":160,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Find New Orders","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP MySQL Query","parameters":"{\n\"user\":\"opencart\",\n\"password\":\"opencart\",\n\"database\":\"opencart\",\n\"host\":\"localhost\",\n\"port\":\"3306\",\n\"query\":\"select * from oc_order where oc_order.tracking <> 'processed'\",\n\"queryoutput\":\"/var/www/html/pilot/tmp/files/orders.txt\",\n\"arrayname\":\"new_orders\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task3":{"top":40,"left":860,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Update Tracking","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP MySQL Query","parameters":"{\n\"user\":\"opencart\",\n\"password\":\"opencart\",\n\"database\":\"opencart\",\n\"host\":\"localhost\",\n\"port\":\"3306\",\n\"query\":\"update oc_order set tracking = 'processed' where oc_order.order_id = <%>route:foreach1|new_orders|current_val|order_id<%>\",\n\"queryoutput\":\"/var/www/html/pilot/tmp/files/processed_orders.txt\",\n\"arrayname\":\"processed_orders\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":40,"left":1000,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:foreach1"}},"route:if-else1":{"top":80,"left":320,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"Any New Orders?","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"conntype":"output","label":"No","parameter":"<%>new_orders_meta|count<%>","comparison":"=","value":"0"},"output_2":{"conntype":"output","label":"Yes","parameter":"<%>new_orders_meta|count<%>","comparison":">","value":"0"}}}},"route:stop1":{"top":20,"left":560,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":40,"left":720,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"New Order Doc","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/order_no_<%>route:foreach1|new_orders|current_val|order_id<%>.xml\",\n\"data\":\"<SalesDocument><CustomerCode>VirtuOps</CustomerCode><SalesRepCode>SUP-ASC</SalesRepCode><PayTermsCode>N30</PayTermsCode><LineItems><LineItem><Sequence>1</Sequence><ItemCode>102WHEELS</ItemCode><Description><%>route:foreach1|new_orders|current_val|comment<%></Description><Quantity>1.000000</Quantity><ItemPrice><%>route:foreach1|new_orders|current_val|total<%></ItemPrice></LineItem></LineItems></SalesDocument>\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}}},"links":{"0":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"2":{"fromOperator":"route:foreach1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task3","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"task3","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"route:foreach1","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:stop1","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Sat, 22 Sep 2018 12:56:14 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Sat, 22 Sep 2018 12:56:14 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Sat, 22 Sep 2018 12:56:14 +0000 int(2)
+Sat, 22 Sep 2018 12:56:14 +0000 string(0) ""
+Sat, 22 Sep 2018 12:56:56 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 12:56:56 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 12:56:56 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 12:56:56 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 12:56:56 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 12:56:56 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 12:56:56 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 12:56:56 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 12:56:56 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 12:56:56 +0000 string(0) ""
+Sat, 22 Sep 2018 12:56:56 +0000 int(1)
+Sat, 22 Sep 2018 12:56:56 +0000 string(0) ""
+Sat, 22 Sep 2018 12:56:56 +0000 string(21) "
+
+success, exit is 0
 "
-Wed, 19 Sep 2018 23:55:01 +0000 string(27) "TaskCreateUpdate DB Error: "
-Wed, 19 Sep 2018 23:55:01 +0000 int(1)
-Wed, 19 Sep 2018 23:55:01 +0000 string(0) ""
+Sat, 22 Sep 2018 12:56:56 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 12:56:56 +0000 string(0) ""
+Sat, 22 Sep 2018 12:56:56 +0000 int(1)
+Sat, 22 Sep 2018 12:56:56 +0000 string(0) ""
+Sat, 22 Sep 2018 13:05:00 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:05:00 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:05:01 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:05:01 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:05:01 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:05:01 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:05:01 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:05:01 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 13:05:01 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:05:01 +0000 string(0) ""
+Sat, 22 Sep 2018 13:05:01 +0000 int(1)
+Sat, 22 Sep 2018 13:05:01 +0000 string(0) ""
+Sat, 22 Sep 2018 13:05:01 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:05:01 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:05:01 +0000 string(0) ""
+Sat, 22 Sep 2018 13:05:01 +0000 int(1)
+Sat, 22 Sep 2018 13:05:01 +0000 string(0) ""
+Sat, 22 Sep 2018 13:25:20 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:25:20 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:25:21 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:25:21 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:25:21 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:25:21 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:25:21 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:25:21 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 13:25:21 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:25:21 +0000 string(0) ""
+Sat, 22 Sep 2018 13:25:21 +0000 int(1)
+Sat, 22 Sep 2018 13:25:21 +0000 string(0) ""
+Sat, 22 Sep 2018 13:25:21 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:25:21 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:25:21 +0000 string(0) ""
+Sat, 22 Sep 2018 13:25:21 +0000 int(1)
+Sat, 22 Sep 2018 13:25:21 +0000 string(0) ""
+Sat, 22 Sep 2018 13:38:02 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:38:02 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:38:03 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:38:03 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:38:03 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:38:03 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:38:03 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:38:03 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 13:38:03 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:38:03 +0000 string(0) ""
+Sat, 22 Sep 2018 13:38:03 +0000 int(1)
+Sat, 22 Sep 2018 13:38:03 +0000 string(0) ""
+Sat, 22 Sep 2018 13:38:03 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:38:03 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:38:03 +0000 string(0) ""
+Sat, 22 Sep 2018 13:38:03 +0000 int(1)
+Sat, 22 Sep 2018 13:38:03 +0000 string(0) ""
+Sat, 22 Sep 2018 13:42:55 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:42:55 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:42:55 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:42:55 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:42:55 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:42:55 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:42:55 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:42:55 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 13:42:55 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:42:55 +0000 string(0) ""
+Sat, 22 Sep 2018 13:42:55 +0000 int(1)
+Sat, 22 Sep 2018 13:42:55 +0000 string(0) ""
+Sat, 22 Sep 2018 13:42:55 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:42:55 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:42:55 +0000 string(0) ""
+Sat, 22 Sep 2018 13:42:55 +0000 int(1)
+Sat, 22 Sep 2018 13:42:55 +0000 string(0) ""
+Sat, 22 Sep 2018 13:49:37 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:49:37 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:49:37 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:49:37 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:49:37 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:49:37 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:49:37 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:49:37 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 13:49:37 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:49:37 +0000 string(0) ""
+Sat, 22 Sep 2018 13:49:37 +0000 int(1)
+Sat, 22 Sep 2018 13:49:37 +0000 string(0) ""
+Sat, 22 Sep 2018 13:49:37 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:49:37 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:49:37 +0000 string(0) ""
+Sat, 22 Sep 2018 13:49:37 +0000 int(1)
+Sat, 22 Sep 2018 13:49:37 +0000 string(0) ""
+Sat, 22 Sep 2018 13:51:08 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:51:08 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:51:08 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:51:08 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:51:08 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:51:08 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:51:08 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:51:08 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 13:51:08 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:51:08 +0000 string(0) ""
+Sat, 22 Sep 2018 13:51:08 +0000 int(1)
+Sat, 22 Sep 2018 13:51:08 +0000 string(0) ""
+Sat, 22 Sep 2018 13:51:08 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:51:08 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:51:08 +0000 string(0) ""
+Sat, 22 Sep 2018 13:51:08 +0000 int(1)
+Sat, 22 Sep 2018 13:51:08 +0000 string(0) ""
+Sat, 22 Sep 2018 13:52:21 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:52:21 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:52:21 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:52:21 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:52:22 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:52:22 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:52:22 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:52:22 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(15) "VP Remove Files"
+}
+Sat, 22 Sep 2018 13:52:22 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:52:22 +0000 string(0) ""
+Sat, 22 Sep 2018 13:52:22 +0000 int(1)
+Sat, 22 Sep 2018 13:52:22 +0000 string(0) ""
+Sat, 22 Sep 2018 13:52:22 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:52:22 +0000 string(40) "output is "{\"status\":1}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:52:22 +0000 string(0) ""
+Sat, 22 Sep 2018 13:52:22 +0000 int(1)
+Sat, 22 Sep 2018 13:52:22 +0000 string(0) ""
+Sat, 22 Sep 2018 13:57:34 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:57:34 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:57:35 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:57:35 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:57:35 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:57:35 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:57:35 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:57:35 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(15) "VP Remove Files"
+}
+Sat, 22 Sep 2018 13:57:35 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:57:35 +0000 string(0) ""
+Sat, 22 Sep 2018 13:57:35 +0000 int(1)
+Sat, 22 Sep 2018 13:57:35 +0000 string(0) ""
+Sat, 22 Sep 2018 13:57:35 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:57:35 +0000 string(40) "output is "{\"status\":1}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:57:35 +0000 string(0) ""
+Sat, 22 Sep 2018 13:57:35 +0000 int(1)
+Sat, 22 Sep 2018 13:57:35 +0000 string(0) ""
+Sat, 22 Sep 2018 13:57:58 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:57:58 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:57:58 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:57:58 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:57:58 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:57:58 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:57:58 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:57:58 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 13:57:58 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:57:58 +0000 string(0) ""
+Sat, 22 Sep 2018 13:57:58 +0000 int(1)
+Sat, 22 Sep 2018 13:57:58 +0000 string(0) ""
+Sat, 22 Sep 2018 13:57:58 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:57:58 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:57:58 +0000 string(0) ""
+Sat, 22 Sep 2018 13:57:58 +0000 int(1)
+Sat, 22 Sep 2018 13:57:58 +0000 string(0) ""
+Sat, 22 Sep 2018 13:59:39 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:59:39 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:59:39 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 13:59:39 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 13:59:39 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 13:59:39 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 13:59:39 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 13:59:39 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 13:59:39 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 13:59:39 +0000 string(0) ""
+Sat, 22 Sep 2018 13:59:39 +0000 int(1)
+Sat, 22 Sep 2018 13:59:39 +0000 string(0) ""
+Sat, 22 Sep 2018 13:59:39 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 13:59:39 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 13:59:39 +0000 string(0) ""
+Sat, 22 Sep 2018 13:59:39 +0000 int(1)
+Sat, 22 Sep 2018 13:59:39 +0000 string(0) ""
+Sat, 22 Sep 2018 14:00:13 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:00:13 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:00:13 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:00:13 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:00:13 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:00:13 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:00:13 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:00:13 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:00:13 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:00:13 +0000 string(0) ""
+Sat, 22 Sep 2018 14:00:13 +0000 int(1)
+Sat, 22 Sep 2018 14:00:13 +0000 string(0) ""
+Sat, 22 Sep 2018 14:00:13 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:00:13 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:00:13 +0000 string(0) ""
+Sat, 22 Sep 2018 14:00:13 +0000 int(1)
+Sat, 22 Sep 2018 14:00:13 +0000 string(0) ""
+Sat, 22 Sep 2018 14:00:46 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:00:46 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:00:47 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:00:47 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:00:47 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:00:47 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:00:47 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:00:47 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:00:47 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:00:47 +0000 string(0) ""
+Sat, 22 Sep 2018 14:00:47 +0000 int(1)
+Sat, 22 Sep 2018 14:00:47 +0000 string(0) ""
+Sat, 22 Sep 2018 14:00:47 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:00:47 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:00:47 +0000 string(0) ""
+Sat, 22 Sep 2018 14:00:47 +0000 int(1)
+Sat, 22 Sep 2018 14:00:47 +0000 string(0) ""
+Sat, 22 Sep 2018 14:01:16 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:01:16 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:01:17 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:01:17 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:01:17 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:01:17 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:01:17 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:01:17 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:01:17 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:01:17 +0000 string(0) ""
+Sat, 22 Sep 2018 14:01:17 +0000 int(1)
+Sat, 22 Sep 2018 14:01:17 +0000 string(0) ""
+Sat, 22 Sep 2018 14:01:17 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:01:17 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:01:17 +0000 string(0) ""
+Sat, 22 Sep 2018 14:01:17 +0000 int(1)
+Sat, 22 Sep 2018 14:01:17 +0000 string(0) ""
+Sat, 22 Sep 2018 14:04:16 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:04:16 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:04:17 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:04:17 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:04:17 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:04:17 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:04:17 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:04:17 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:04:17 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:04:17 +0000 string(0) ""
+Sat, 22 Sep 2018 14:04:17 +0000 int(1)
+Sat, 22 Sep 2018 14:04:17 +0000 string(0) ""
+Sat, 22 Sep 2018 14:04:17 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:04:17 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:04:17 +0000 string(0) ""
+Sat, 22 Sep 2018 14:04:17 +0000 int(1)
+Sat, 22 Sep 2018 14:04:17 +0000 string(0) ""
+Sat, 22 Sep 2018 14:27:28 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:27:28 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:27:28 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:27:28 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:27:28 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:27:28 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:27:28 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:27:28 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:27:28 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:27:28 +0000 string(0) ""
+Sat, 22 Sep 2018 14:27:28 +0000 int(1)
+Sat, 22 Sep 2018 14:27:28 +0000 string(0) ""
+Sat, 22 Sep 2018 14:27:28 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:27:28 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:27:28 +0000 string(0) ""
+Sat, 22 Sep 2018 14:27:28 +0000 int(1)
+Sat, 22 Sep 2018 14:27:28 +0000 string(0) ""
+Sat, 22 Sep 2018 14:28:21 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:28:21 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:28:21 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:28:21 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:28:21 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:28:21 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:28:21 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:28:21 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:28:21 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:28:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:28:21 +0000 int(1)
+Sat, 22 Sep 2018 14:28:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:28:21 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:28:21 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:28:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:28:21 +0000 int(1)
+Sat, 22 Sep 2018 14:28:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:37:48 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:37:48 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:37:48 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:37:48 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:37:48 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:37:48 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:37:48 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:37:48 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:37:48 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:37:48 +0000 string(0) ""
+Sat, 22 Sep 2018 14:37:48 +0000 int(1)
+Sat, 22 Sep 2018 14:37:48 +0000 string(0) ""
+Sat, 22 Sep 2018 14:37:48 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:37:48 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:37:48 +0000 string(0) ""
+Sat, 22 Sep 2018 14:37:48 +0000 int(1)
+Sat, 22 Sep 2018 14:37:48 +0000 string(0) ""
+Sat, 22 Sep 2018 14:43:20 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:43:20 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:43:21 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:43:21 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:43:21 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:43:21 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:43:21 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:43:21 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:43:21 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:43:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:43:21 +0000 int(1)
+Sat, 22 Sep 2018 14:43:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:43:21 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:43:21 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:43:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:43:21 +0000 int(1)
+Sat, 22 Sep 2018 14:43:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:43:21 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:43:21 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:43:21 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:43:21 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:43:21 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:43:21 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:43:21 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:43:21 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(15) "VP Remove Files"
+}
+Sat, 22 Sep 2018 14:43:21 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:43:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:43:21 +0000 int(1)
+Sat, 22 Sep 2018 14:43:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:43:21 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:43:21 +0000 string(40) "output is "{\"status\":1}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:43:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:43:21 +0000 int(1)
+Sat, 22 Sep 2018 14:43:21 +0000 string(0) ""
+Sat, 22 Sep 2018 14:45:03 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:45:03 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:45:03 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:45:03 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:45:03 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:45:03 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:45:03 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:45:03 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:45:03 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:45:03 +0000 string(0) ""
+Sat, 22 Sep 2018 14:45:03 +0000 int(1)
+Sat, 22 Sep 2018 14:45:03 +0000 string(0) ""
+Sat, 22 Sep 2018 14:45:03 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:45:03 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:45:03 +0000 string(0) ""
+Sat, 22 Sep 2018 14:45:03 +0000 int(1)
+Sat, 22 Sep 2018 14:45:03 +0000 string(0) ""
+Sat, 22 Sep 2018 14:47:01 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:47:01 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:47:02 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:47:02 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:47:02 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:47:02 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:47:02 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:47:02 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:47:02 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:47:02 +0000 string(0) ""
+Sat, 22 Sep 2018 14:47:02 +0000 int(1)
+Sat, 22 Sep 2018 14:47:02 +0000 string(0) ""
+Sat, 22 Sep 2018 14:47:02 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:47:02 +0000 string(165) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":1},\"get_orders\":[\"order_no_7.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:47:02 +0000 string(0) ""
+Sat, 22 Sep 2018 14:47:02 +0000 int(1)
+Sat, 22 Sep 2018 14:47:02 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:31 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:55:31 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:55:31 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:55:31 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:55:31 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:55:31 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:55:31 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:55:31 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(19) "VP List Files Linux"
+}
+Sat, 22 Sep 2018 14:55:31 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:55:31 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:31 +0000 int(1)
+Sat, 22 Sep 2018 14:55:31 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:31 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:55:31 +0000 string(184) "output is "\/bin\/ls   -1  \/var\/www\/html\/pilot\/tmp\/files | grep '.xml' \n{\"get_orders_meta\":{\"count\":2},\"get_orders\":[\"order_no_7.xml\",\"order_no_8.xml\"]}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:55:31 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:31 +0000 int(1)
+Sat, 22 Sep 2018 14:55:31 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:31 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:55:31 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:55:32 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:55:32 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:55:32 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(15) "VP Remove Files"
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:55:32 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:32 +0000 int(1)
+Sat, 22 Sep 2018 14:55:32 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:32 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:55:32 +0000 string(40) "output is "{\"status\":1}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:55:32 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:32 +0000 int(1)
+Sat, 22 Sep 2018 14:55:32 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:32 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:55:32 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(16) "UserRead PARAMS "
+Sat, 22 Sep 2018 14:55:32 +0000 array(2) {
+  ["singleuser"]=>
+  string(4) "true"
+  ["username"]=>
+  string(5) "admin"
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(19) "ReadRunbook PARAMS "
+Sat, 22 Sep 2018 14:55:32 +0000 array(2) {
+  ["singlerunbook"]=>
+  string(4) "true"
+  ["runbookid"]=>
+  string(7) "WFTasks"
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(17) "ReadTasks PARAMS "
+Sat, 22 Sep 2018 14:55:32 +0000 array(2) {
+  ["singletask"]=>
+  string(4) "true"
+  ["taskname"]=>
+  string(15) "VP Remove Files"
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(28) "... Starting nochero runtask"
+Sat, 22 Sep 2018 14:55:32 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:32 +0000 int(1)
+Sat, 22 Sep 2018 14:55:32 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:32 +0000 string(21) "
+
+success, exit is 0
+"
+Sat, 22 Sep 2018 14:55:32 +0000 string(40) "output is "{\"status\":1}"
+error is ""
+
+"
+Sat, 22 Sep 2018 14:55:32 +0000 string(0) ""
+Sat, 22 Sep 2018 14:55:32 +0000 int(1)
+Sat, 22 Sep 2018 14:55:32 +0000 string(0) ""
+Mon, 24 Sep 2018 16:59:21 +0000 string(26) "In CrudOperation, settings"
+Mon, 24 Sep 2018 16:59:21 +0000 string(15) "Getting Config:"
+Mon, 24 Sep 2018 16:59:21 +0000 string(17) "Returning Config:"
+Mon, 24 Sep 2018 16:59:21 +0000 string(10) "Got DB Con"
+Mon, 24 Sep 2018 16:59:21 +0000 string(421) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","perldoc":"\/bin\/perldoc","php":"\/bin\/php","curl":"\/bin\/curl","weburl":"https:\/\/secure.virtuops.com\/pilot","eslhost":"192.99.232.129","eslport":"9200","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Mon, 24 Sep 2018 16:59:26 +0000 string(27) "In CrudOperation, workflows"
+Mon, 24 Sep 2018 21:28:54 +0000 string(27) "In CrudOperation, workflows"
+Mon, 24 Sep 2018 21:28:54 +0000 string(36) "WorkFlowCreateUpdate: New Params are"
+Mon, 24 Sep 2018 21:28:54 +0000 array(2) {
+  ["workflowname"]=>
+  string(18) "Process New Orders"
+  ["workflowdata"]=>
+  string(5115) "{"operators":{"start":{"top":20,"left":20,"properties":{"objecttype":"startnode","class":"flowchart-start-operator","runbookid":"","runbookname":"","title":"Start","inputs":{},"outputs":{"output_1":{"label":"Begin"}}}},"end":{"top":40,"left":1160,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"route:foreach1":{"top":100,"left":560,"properties":{"objecttype":"route:foreach","class":"flowchart-route-operator","title":"ForEach New Order","inputs":{"input_1":{"conntype":"input","label":"In"}},"outputs":{"output_1":{"conntype":"output","label":"Out","targetobject":"new_orders"}},"loopid":"route:foreach1"}},"task1":{"top":80,"left":160,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Find New Orders","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP MySQL Query","parameters":"{\n\"user\":\"opencart\",\n\"password\":\"opencart\",\n\"database\":\"opencart\",\n\"host\":\"localhost\",\n\"port\":\"3306\",\n\"query\":\"select * from oc_order where oc_order.tracking <> 'processed'\",\n\"queryoutput\":\"/var/www/html/pilot/tmp/files/orders.txt\",\n\"arrayname\":\"new_orders\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"task3":{"top":40,"left":860,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"Update Tracking","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP MySQL Query","parameters":"{\n\"user\":\"opencart\",\n\"password\":\"opencart\",\n\"database\":\"opencart\",\n\"host\":\"localhost\",\n\"port\":\"3306\",\n\"query\":\"update oc_order set tracking = 'processed' where oc_order.order_id = <%>route:foreach1|new_orders|current_val|order_id<%>\",\n\"queryoutput\":\"/var/www/html/pilot/tmp/files/processed_orders.txt\",\n\"arrayname\":\"processed_orders\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}},"route:continue1":{"top":40,"left":1000,"properties":{"objecttype":"route:continue","class":"flowchart-route-operator-continue","title":"Continue","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"label":"Out","conntype":"output"}},"loopid":"route:foreach1"}},"route:if-else1":{"top":80,"left":320,"properties":{"objecttype":"route:if-else","class":"flowchart-route-operator","title":"Any New Orders?","inputs":{"input_1":{"label":"In","conntype":"input"}},"outputs":{"output_1":{"conntype":"output","label":"No","parameter":"<%>new_orders_meta|count<%>","comparison":"=","value":"0"},"output_2":{"conntype":"output","label":"Yes","parameter":"<%>new_orders_meta|count<%>","comparison":">","value":"0"}}}},"route:stop1":{"top":20,"left":560,"properties":{"objecttype":"endnode","class":"flowchart-end-operator","runbookid":"","runbookname":"","title":"Stop","inputs":{"input_1":{"label":"End"}},"outputs":{}}},"task2":{"top":140,"left":780,"properties":{"objecttype":"task","class":"flowchart-task-operator","runbookid":"","runbookname":"","title":"New Order Doc","inputs":{"input_1":{"label":"In"}},"outputs":{"output_1":{"label":"Out"}},"task":{"taskname":"VP Write To File","parameters":"{\n\"filename\":\"/var/www/html/pilot/tmp/files/order_no_<%>route:foreach1|new_orders|current_val|order_id<%>.xml\",\n\"data\":\"<SalesDocument><CustomerCode>VirtuOps</CustomerCode><SalesRepCode>SUP-ASC</SalesRepCode><PayTermsCode>N30</PayTermsCode><LineItems><LineItem><Sequence>1</Sequence><ItemCode>102WHEELS</ItemCode><Description><%>route:foreach1|new_orders|current_val|comment<%></Description><Quantity>1.000000</Quantity><ItemPrice><%>route:foreach1|new_orders|current_val|total<%></ItemPrice></LineItem></LineItems></SalesDocument>\"\n}","runbookname":"WF Tasks","runbookid":"WFTasks"}}}},"links":{"0":{"fromOperator":"start","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task1","toConnector":"input_1","toSubConnector":0},"1":{"fromOperator":"task1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:if-else1","toConnector":"input_1","toSubConnector":0},"3":{"fromOperator":"task2","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task3","toConnector":"input_1","toSubConnector":0},"4":{"fromOperator":"route:continue1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"end","toConnector":"input_1","toSubConnector":0},"5":{"fromOperator":"task3","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:continue1","toConnector":"input_1","toSubConnector":0},"6":{"fromOperator":"route:if-else1","fromConnector":"output_2","fromSubConnector":0,"toOperator":"route:foreach1","toConnector":"input_1","toSubConnector":0},"7":{"fromOperator":"route:if-else1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"route:stop1","toConnector":"input_1","toSubConnector":0},"8":{"fromOperator":"route:foreach1","fromConnector":"output_1","fromSubConnector":0,"toOperator":"task2","toConnector":"input_1","toSubConnector":0}},"operatorTypes":{}}"
+}
+Mon, 24 Sep 2018 21:28:54 +0000 string(43) "Schedule is * * * * * and status is enabled"
+Mon, 24 Sep 2018 21:28:54 +0000 string(31) "WorkFlowCreateUpdate DB Error: "
+Mon, 24 Sep 2018 21:28:54 +0000 int(2)
+Mon, 24 Sep 2018 21:28:54 +0000 string(0) ""
+Tue, 25 Sep 2018 10:35:23 +0000 string(26) "In CrudOperation, settings"
+Tue, 25 Sep 2018 10:35:23 +0000 string(15) "Getting Config:"
+Tue, 25 Sep 2018 10:35:23 +0000 string(17) "Returning Config:"
+Tue, 25 Sep 2018 10:35:23 +0000 string(10) "Got DB Con"
+Tue, 25 Sep 2018 10:35:23 +0000 string(421) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","perldoc":"\/bin\/perldoc","php":"\/bin\/php","curl":"\/bin\/curl","weburl":"https:\/\/secure.virtuops.com\/pilot","eslhost":"192.99.232.129","eslport":"9200","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Wed, 26 Sep 2018 17:51:44 +0000 string(26) "In CrudOperation, settings"
+Wed, 26 Sep 2018 17:51:44 +0000 string(15) "Getting Config:"
+Wed, 26 Sep 2018 17:51:44 +0000 string(17) "Returning Config:"
+Wed, 26 Sep 2018 17:51:44 +0000 string(10) "Got DB Con"
+Wed, 26 Sep 2018 17:51:44 +0000 string(421) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","perldoc":"\/bin\/perldoc","php":"\/bin\/php","curl":"\/bin\/curl","weburl":"https:\/\/secure.virtuops.com\/pilot","eslhost":"192.99.232.129","eslport":"9200","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
+Wed, 26 Sep 2018 17:59:06 +0000 string(27) "In CrudOperation, workflows"

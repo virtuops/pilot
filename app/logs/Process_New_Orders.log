@@ -1,0 +1,1584 @@
+Fri, 21 Sep 2018 23:31:05 +0000 string(569) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Process New Orders","username":"admin","taskname":"VP MySQL Query","taskmetadata":"","params":{
+"user":"opencart",
+"password":"opencart",
+"database":"opencart",
+"host":"localhost",
+"port":"3306",
+"query":"select * from oc_order where oc_order.tracking <> \u0027processed\u0027",
+"queryoutput":"/var/www/html/pilot/tmp/files/orders.txt",
+"arrayname":"new_orders"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 21 Sep 2018 23:31:06 +0000 string(274) "PARAMS API ARE '{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"select * from oc_order where oc_order.tracking <> 'processed'","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/orders.txt","arrayname":"new_orders"}'"
+Fri, 21 Sep 2018 23:31:06 +0000 string(364) "... received task_run, params are runbook='WFTasks', taskname='VP MySQL Query', username='admin', params='{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"select * from oc_order where oc_order.tracking <> 'processed'","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/orders.txt","arrayname":"new_orders"}'"
+Fri, 21 Sep 2018 23:31:06 +0000 string(6) "WFV IS"
+Fri, 21 Sep 2018 23:31:06 +0000 object(stdClass)#71 (0) {
+}
+Fri, 21 Sep 2018 23:34:49 +0000 string(569) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Process New Orders","username":"admin","taskname":"VP MySQL Query","taskmetadata":"","params":{
+"user":"opencart",
+"password":"opencart",
+"database":"opencart",
+"host":"localhost",
+"port":"3306",
+"query":"select * from oc_order where oc_order.tracking <> \u0027processed\u0027",
+"queryoutput":"/var/www/html/pilot/tmp/files/orders.txt",
+"arrayname":"new_orders"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 21 Sep 2018 23:34:49 +0000 string(274) "PARAMS API ARE '{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"select * from oc_order where oc_order.tracking <> 'processed'","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/orders.txt","arrayname":"new_orders"}'"
+Fri, 21 Sep 2018 23:34:49 +0000 string(364) "... received task_run, params are runbook='WFTasks', taskname='VP MySQL Query', username='admin', params='{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"select * from oc_order where oc_order.tracking <> 'processed'","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/orders.txt","arrayname":"new_orders"}'"
+Fri, 21 Sep 2018 23:34:50 +0000 string(6) "WFV IS"
+Fri, 21 Sep 2018 23:34:50 +0000 object(stdClass)#71 (3) {
+  ["status"]=>
+  string(2) "OK"
+  ["new_orders"]=>
+  array(1) {
+    [0]=>
+    object(stdClass)#207 (61) {
+      ["firstname"]=>
+      string(3) "Joe"
+      ["shipping_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["shipping_city"]=>
+      string(7) "Chicago"
+      ["payment_city"]=>
+      string(7) "Chicago"
+      ["payment_address_2"]=>
+      string(0) ""
+      ["shipping_zone"]=>
+      string(8) "Illinois"
+      ["payment_postcode"]=>
+      string(5) "60660"
+      ["email"]=>
+      string(12) "joe@blow.com"
+      ["payment_code"]=>
+      string(3) "cod"
+      ["store_name"]=>
+      string(10) "Your Store"
+      ["telephone"]=>
+      string(12) "773-555-1212"
+      ["currency_code"]=>
+      string(3) "USD"
+      ["user_agent"]=>
+      string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+      ["shipping_country_id"]=>
+      string(3) "223"
+      ["total"]=>
+      string(8) "105.0000"
+      ["currency_value"]=>
+      string(10) "1.00000000"
+      ["language_id"]=>
+      string(1) "1"
+      ["marketing_id"]=>
+      string(1) "0"
+      ["shipping_address_2"]=>
+      string(0) ""
+      ["payment_method"]=>
+      string(16) "Cash On Delivery"
+      ["shipping_country"]=>
+      string(13) "United States"
+      ["invoice_prefix"]=>
+      string(11) "INV-2018-00"
+      ["tracking"]=>
+      string(0) ""
+      ["custom_field"]=>
+      string(0) ""
+      ["shipping_code"]=>
+      string(9) "flat.flat"
+      ["payment_zone_id"]=>
+      string(4) "3635"
+      ["shipping_firstname"]=>
+      string(3) "Joe"
+      ["store_id"]=>
+      string(1) "0"
+      ["store_url"]=>
+      string(37) "https://secure.virtuops.com/opencart/"
+      ["payment_address_1"]=>
+      string(15) "123 Main Street"
+      ["ip"]=>
+      string(13) "67.184.36.189"
+      ["affiliate_id"]=>
+      string(1) "0"
+      ["payment_country"]=>
+      string(13) "United States"
+      ["shipping_lastname"]=>
+      string(4) "Blow"
+      ["forwarded_ip"]=>
+      string(0) ""
+      ["lastname"]=>
+      string(4) "Blow"
+      ["shipping_company"]=>
+      string(8) "ABC Corp"
+      ["shipping_address_1"]=>
+      string(15) "123 Main Street"
+      ["shipping_custom_field"]=>
+      string(2) "[]"
+      ["shipping_zone_id"]=>
+      string(4) "3635"
+      ["customer_id"]=>
+      string(1) "1"
+      ["invoice_no"]=>
+      string(1) "0"
+      ["fax"]=>
+      string(0) ""
+      ["order_status_id"]=>
+      string(1) "1"
+      ["customer_group_id"]=>
+      string(1) "1"
+      ["payment_company"]=>
+      string(8) "ABC Corp"
+      ["payment_zone"]=>
+      string(8) "Illinois"
+      ["commission"]=>
+      string(6) "0.0000"
+      ["payment_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["payment_custom_field"]=>
+      string(2) "[]"
+      ["currency_id"]=>
+      string(1) "2"
+      ["date_modified"]=>
+      string(19) "2018-09-21 19:30:53"
+      ["order_id"]=>
+      string(1) "7"
+      ["accept_language"]=>
+      string(14) "en-US,en;q=0.9"
+      ["shipping_postcode"]=>
+      string(5) "60660"
+      ["payment_lastname"]=>
+      string(4) "Blow"
+      ["payment_country_id"]=>
+      string(3) "223"
+      ["comment"]=>
+      string(43) "Need to process this, then remove the order"
+      ["shipping_method"]=>
+      string(18) "Flat Shipping Rate"
+      ["date_added"]=>
+      string(19) "2018-09-21 19:30:48"
+      ["payment_firstname"]=>
+      string(3) "Joe"
+    }
+  }
+  ["new_orders_meta"]=>
+  object(stdClass)#208 (1) {
+    ["count"]=>
+    int(1)
+  }
+}
+Fri, 21 Sep 2018 23:34:50 +0000 string(734) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Process New Orders","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/order_no_7.xml",
+"data":"<SalesDocument><CustomerCode>100111</CustomerCode><SalesRepCode>SUP-ASC</SalesRepCode><PayTermsCode>N30</PayTermsCode><LineItems><LineItem><Sequence>1</Sequence><ItemCode>102WHEELS</ItemCode><Description>Need to process this, then remove the order</Description><Quantity>1.000000</Quantity><ItemPrice>105.0000</ItemPrice></LineItem></LineItems></SalesDocument>"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 21 Sep 2018 23:34:50 +0000 string(464) "PARAMS API ARE '{"filename":"\/var\/www\/html\/pilot\/tmp\/files\/order_no_7.xml","data":"<SalesDocument><CustomerCode>100111<\/CustomerCode><SalesRepCode>SUP-ASC<\/SalesRepCode><PayTermsCode>N30<\/PayTermsCode><LineItems><LineItem><Sequence>1<\/Sequence><ItemCode>102WHEELS<\/ItemCode><Description>Need to process this, then remove the order<\/Description><Quantity>1.000000<\/Quantity><ItemPrice>105.0000<\/ItemPrice><\/LineItem><\/LineItems><\/SalesDocument>"}'"
+Fri, 21 Sep 2018 23:34:50 +0000 string(556) "... received task_run, params are runbook='WFTasks', taskname='VP Write To File', username='admin', params='{"filename":"\/var\/www\/html\/pilot\/tmp\/files\/order_no_7.xml","data":"<SalesDocument><CustomerCode>100111<\/CustomerCode><SalesRepCode>SUP-ASC<\/SalesRepCode><PayTermsCode>N30<\/PayTermsCode><LineItems><LineItem><Sequence>1<\/Sequence><ItemCode>102WHEELS<\/ItemCode><Description>Need to process this, then remove the order<\/Description><Quantity>1.000000<\/Quantity><ItemPrice>105.0000<\/ItemPrice><\/LineItem><\/LineItems><\/SalesDocument>"}'"
+Fri, 21 Sep 2018 23:34:50 +0000 string(6) "WFV IS"
+Fri, 21 Sep 2018 23:34:50 +0000 object(stdClass)#71 (4) {
+  ["status"]=>
+  string(5) "saved"
+  ["new_orders"]=>
+  array(1) {
+    [0]=>
+    object(stdClass)#207 (61) {
+      ["firstname"]=>
+      string(3) "Joe"
+      ["shipping_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["shipping_city"]=>
+      string(7) "Chicago"
+      ["payment_city"]=>
+      string(7) "Chicago"
+      ["payment_address_2"]=>
+      string(0) ""
+      ["shipping_zone"]=>
+      string(8) "Illinois"
+      ["payment_postcode"]=>
+      string(5) "60660"
+      ["email"]=>
+      string(12) "joe@blow.com"
+      ["payment_code"]=>
+      string(3) "cod"
+      ["store_name"]=>
+      string(10) "Your Store"
+      ["telephone"]=>
+      string(12) "773-555-1212"
+      ["currency_code"]=>
+      string(3) "USD"
+      ["user_agent"]=>
+      string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+      ["shipping_country_id"]=>
+      string(3) "223"
+      ["total"]=>
+      string(8) "105.0000"
+      ["currency_value"]=>
+      string(10) "1.00000000"
+      ["language_id"]=>
+      string(1) "1"
+      ["marketing_id"]=>
+      string(1) "0"
+      ["shipping_address_2"]=>
+      string(0) ""
+      ["payment_method"]=>
+      string(16) "Cash On Delivery"
+      ["shipping_country"]=>
+      string(13) "United States"
+      ["invoice_prefix"]=>
+      string(11) "INV-2018-00"
+      ["tracking"]=>
+      string(0) ""
+      ["custom_field"]=>
+      string(0) ""
+      ["shipping_code"]=>
+      string(9) "flat.flat"
+      ["payment_zone_id"]=>
+      string(4) "3635"
+      ["shipping_firstname"]=>
+      string(3) "Joe"
+      ["store_id"]=>
+      string(1) "0"
+      ["store_url"]=>
+      string(37) "https://secure.virtuops.com/opencart/"
+      ["payment_address_1"]=>
+      string(15) "123 Main Street"
+      ["ip"]=>
+      string(13) "67.184.36.189"
+      ["affiliate_id"]=>
+      string(1) "0"
+      ["payment_country"]=>
+      string(13) "United States"
+      ["shipping_lastname"]=>
+      string(4) "Blow"
+      ["forwarded_ip"]=>
+      string(0) ""
+      ["lastname"]=>
+      string(4) "Blow"
+      ["shipping_company"]=>
+      string(8) "ABC Corp"
+      ["shipping_address_1"]=>
+      string(15) "123 Main Street"
+      ["shipping_custom_field"]=>
+      string(2) "[]"
+      ["shipping_zone_id"]=>
+      string(4) "3635"
+      ["customer_id"]=>
+      string(1) "1"
+      ["invoice_no"]=>
+      string(1) "0"
+      ["fax"]=>
+      string(0) ""
+      ["order_status_id"]=>
+      string(1) "1"
+      ["customer_group_id"]=>
+      string(1) "1"
+      ["payment_company"]=>
+      string(8) "ABC Corp"
+      ["payment_zone"]=>
+      string(8) "Illinois"
+      ["commission"]=>
+      string(6) "0.0000"
+      ["payment_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["payment_custom_field"]=>
+      string(2) "[]"
+      ["currency_id"]=>
+      string(1) "2"
+      ["date_modified"]=>
+      string(19) "2018-09-21 19:30:53"
+      ["order_id"]=>
+      string(1) "7"
+      ["accept_language"]=>
+      string(14) "en-US,en;q=0.9"
+      ["shipping_postcode"]=>
+      string(5) "60660"
+      ["payment_lastname"]=>
+      string(4) "Blow"
+      ["payment_country_id"]=>
+      string(3) "223"
+      ["comment"]=>
+      string(43) "Need to process this, then remove the order"
+      ["shipping_method"]=>
+      string(18) "Flat Shipping Rate"
+      ["date_added"]=>
+      string(19) "2018-09-21 19:30:48"
+      ["payment_firstname"]=>
+      string(3) "Joe"
+    }
+  }
+  ["new_orders_meta"]=>
+  object(stdClass)#208 (1) {
+    ["count"]=>
+    int(1)
+  }
+  ["route:foreach1"]=>
+  object(stdClass)#481 (2) {
+    ["targetobject"]=>
+    string(10) "new_orders"
+    ["new_orders"]=>
+    object(stdClass)#482 (4) {
+      ["current_val"]=>
+      object(stdClass)#207 (61) {
+        ["firstname"]=>
+        string(3) "Joe"
+        ["shipping_address_format"]=>
+        string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+        ["shipping_city"]=>
+        string(7) "Chicago"
+        ["payment_city"]=>
+        string(7) "Chicago"
+        ["payment_address_2"]=>
+        string(0) ""
+        ["shipping_zone"]=>
+        string(8) "Illinois"
+        ["payment_postcode"]=>
+        string(5) "60660"
+        ["email"]=>
+        string(12) "joe@blow.com"
+        ["payment_code"]=>
+        string(3) "cod"
+        ["store_name"]=>
+        string(10) "Your Store"
+        ["telephone"]=>
+        string(12) "773-555-1212"
+        ["currency_code"]=>
+        string(3) "USD"
+        ["user_agent"]=>
+        string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+        ["shipping_country_id"]=>
+        string(3) "223"
+        ["total"]=>
+        string(8) "105.0000"
+        ["currency_value"]=>
+        string(10) "1.00000000"
+        ["language_id"]=>
+        string(1) "1"
+        ["marketing_id"]=>
+        string(1) "0"
+        ["shipping_address_2"]=>
+        string(0) ""
+        ["payment_method"]=>
+        string(16) "Cash On Delivery"
+        ["shipping_country"]=>
+        string(13) "United States"
+        ["invoice_prefix"]=>
+        string(11) "INV-2018-00"
+        ["tracking"]=>
+        string(0) ""
+        ["custom_field"]=>
+        string(0) ""
+        ["shipping_code"]=>
+        string(9) "flat.flat"
+        ["payment_zone_id"]=>
+        string(4) "3635"
+        ["shipping_firstname"]=>
+        string(3) "Joe"
+        ["store_id"]=>
+        string(1) "0"
+        ["store_url"]=>
+        string(37) "https://secure.virtuops.com/opencart/"
+        ["payment_address_1"]=>
+        string(15) "123 Main Street"
+        ["ip"]=>
+        string(13) "67.184.36.189"
+        ["affiliate_id"]=>
+        string(1) "0"
+        ["payment_country"]=>
+        string(13) "United States"
+        ["shipping_lastname"]=>
+        string(4) "Blow"
+        ["forwarded_ip"]=>
+        string(0) ""
+        ["lastname"]=>
+        string(4) "Blow"
+        ["shipping_company"]=>
+        string(8) "ABC Corp"
+        ["shipping_address_1"]=>
+        string(15) "123 Main Street"
+        ["shipping_custom_field"]=>
+        string(2) "[]"
+        ["shipping_zone_id"]=>
+        string(4) "3635"
+        ["customer_id"]=>
+        string(1) "1"
+        ["invoice_no"]=>
+        string(1) "0"
+        ["fax"]=>
+        string(0) ""
+        ["order_status_id"]=>
+        string(1) "1"
+        ["customer_group_id"]=>
+        string(1) "1"
+        ["payment_company"]=>
+        string(8) "ABC Corp"
+        ["payment_zone"]=>
+        string(8) "Illinois"
+        ["commission"]=>
+        string(6) "0.0000"
+        ["payment_address_format"]=>
+        string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+        ["payment_custom_field"]=>
+        string(2) "[]"
+        ["currency_id"]=>
+        string(1) "2"
+        ["date_modified"]=>
+        string(19) "2018-09-21 19:30:53"
+        ["order_id"]=>
+        string(1) "7"
+        ["accept_language"]=>
+        string(14) "en-US,en;q=0.9"
+        ["shipping_postcode"]=>
+        string(5) "60660"
+        ["payment_lastname"]=>
+        string(4) "Blow"
+        ["payment_country_id"]=>
+        string(3) "223"
+        ["comment"]=>
+        string(43) "Need to process this, then remove the order"
+        ["shipping_method"]=>
+        string(18) "Flat Shipping Rate"
+        ["date_added"]=>
+        string(19) "2018-09-21 19:30:48"
+        ["payment_firstname"]=>
+        string(3) "Joe"
+      }
+      ["current_key"]=>
+      int(0)
+      ["length"]=>
+      int(1)
+      ["incr"]=>
+      int(1)
+    }
+  }
+}
+Fri, 21 Sep 2018 23:34:50 +0000 string(594) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Process New Orders","username":"admin","taskname":"VP MySQL Query","taskmetadata":"","params":{
+"user":"opencart",
+"password":"opencart",
+"database":"opencart",
+"host":"localhost",
+"port":"3306",
+"query":"update oc_order set tracking = \u0027processed\u0027 where oc_order.order_id = 7",
+"queryoutput":"/var/www/html/pilot/tmp/files/processed_orders.txt",
+"arrayname":"processed_orders"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 21 Sep 2018 23:34:50 +0000 string(299) "PARAMS API ARE '{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"update oc_order set tracking = 'processed' where oc_order.order_id = 7","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/processed_orders.txt","arrayname":"processed_orders"}'"
+Fri, 21 Sep 2018 23:34:50 +0000 string(389) "... received task_run, params are runbook='WFTasks', taskname='VP MySQL Query', username='admin', params='{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"update oc_order set tracking = 'processed' where oc_order.order_id = 7","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/processed_orders.txt","arrayname":"processed_orders"}'"
+Fri, 21 Sep 2018 23:34:50 +0000 string(6) "WFV IS"
+Fri, 21 Sep 2018 23:34:50 +0000 object(stdClass)#71 (6) {
+  ["status"]=>
+  string(2) "OK"
+  ["new_orders"]=>
+  array(1) {
+    [0]=>
+    object(stdClass)#207 (61) {
+      ["firstname"]=>
+      string(3) "Joe"
+      ["shipping_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["shipping_city"]=>
+      string(7) "Chicago"
+      ["payment_city"]=>
+      string(7) "Chicago"
+      ["payment_address_2"]=>
+      string(0) ""
+      ["shipping_zone"]=>
+      string(8) "Illinois"
+      ["payment_postcode"]=>
+      string(5) "60660"
+      ["email"]=>
+      string(12) "joe@blow.com"
+      ["payment_code"]=>
+      string(3) "cod"
+      ["store_name"]=>
+      string(10) "Your Store"
+      ["telephone"]=>
+      string(12) "773-555-1212"
+      ["currency_code"]=>
+      string(3) "USD"
+      ["user_agent"]=>
+      string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+      ["shipping_country_id"]=>
+      string(3) "223"
+      ["total"]=>
+      string(8) "105.0000"
+      ["currency_value"]=>
+      string(10) "1.00000000"
+      ["language_id"]=>
+      string(1) "1"
+      ["marketing_id"]=>
+      string(1) "0"
+      ["shipping_address_2"]=>
+      string(0) ""
+      ["payment_method"]=>
+      string(16) "Cash On Delivery"
+      ["shipping_country"]=>
+      string(13) "United States"
+      ["invoice_prefix"]=>
+      string(11) "INV-2018-00"
+      ["tracking"]=>
+      string(0) ""
+      ["custom_field"]=>
+      string(0) ""
+      ["shipping_code"]=>
+      string(9) "flat.flat"
+      ["payment_zone_id"]=>
+      string(4) "3635"
+      ["shipping_firstname"]=>
+      string(3) "Joe"
+      ["store_id"]=>
+      string(1) "0"
+      ["store_url"]=>
+      string(37) "https://secure.virtuops.com/opencart/"
+      ["payment_address_1"]=>
+      string(15) "123 Main Street"
+      ["ip"]=>
+      string(13) "67.184.36.189"
+      ["affiliate_id"]=>
+      string(1) "0"
+      ["payment_country"]=>
+      string(13) "United States"
+      ["shipping_lastname"]=>
+      string(4) "Blow"
+      ["forwarded_ip"]=>
+      string(0) ""
+      ["lastname"]=>
+      string(4) "Blow"
+      ["shipping_company"]=>
+      string(8) "ABC Corp"
+      ["shipping_address_1"]=>
+      string(15) "123 Main Street"
+      ["shipping_custom_field"]=>
+      string(2) "[]"
+      ["shipping_zone_id"]=>
+      string(4) "3635"
+      ["customer_id"]=>
+      string(1) "1"
+      ["invoice_no"]=>
+      string(1) "0"
+      ["fax"]=>
+      string(0) ""
+      ["order_status_id"]=>
+      string(1) "1"
+      ["customer_group_id"]=>
+      string(1) "1"
+      ["payment_company"]=>
+      string(8) "ABC Corp"
+      ["payment_zone"]=>
+      string(8) "Illinois"
+      ["commission"]=>
+      string(6) "0.0000"
+      ["payment_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["payment_custom_field"]=>
+      string(2) "[]"
+      ["currency_id"]=>
+      string(1) "2"
+      ["date_modified"]=>
+      string(19) "2018-09-21 19:30:53"
+      ["order_id"]=>
+      string(1) "7"
+      ["accept_language"]=>
+      string(14) "en-US,en;q=0.9"
+      ["shipping_postcode"]=>
+      string(5) "60660"
+      ["payment_lastname"]=>
+      string(4) "Blow"
+      ["payment_country_id"]=>
+      string(3) "223"
+      ["comment"]=>
+      string(43) "Need to process this, then remove the order"
+      ["shipping_method"]=>
+      string(18) "Flat Shipping Rate"
+      ["date_added"]=>
+      string(19) "2018-09-21 19:30:48"
+      ["payment_firstname"]=>
+      string(3) "Joe"
+    }
+  }
+  ["new_orders_meta"]=>
+  object(stdClass)#208 (1) {
+    ["count"]=>
+    int(1)
+  }
+  ["route:foreach1"]=>
+  object(stdClass)#481 (2) {
+    ["targetobject"]=>
+    string(10) "new_orders"
+    ["new_orders"]=>
+    object(stdClass)#482 (4) {
+      ["current_val"]=>
+      object(stdClass)#207 (61) {
+        ["firstname"]=>
+        string(3) "Joe"
+        ["shipping_address_format"]=>
+        string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+        ["shipping_city"]=>
+        string(7) "Chicago"
+        ["payment_city"]=>
+        string(7) "Chicago"
+        ["payment_address_2"]=>
+        string(0) ""
+        ["shipping_zone"]=>
+        string(8) "Illinois"
+        ["payment_postcode"]=>
+        string(5) "60660"
+        ["email"]=>
+        string(12) "joe@blow.com"
+        ["payment_code"]=>
+        string(3) "cod"
+        ["store_name"]=>
+        string(10) "Your Store"
+        ["telephone"]=>
+        string(12) "773-555-1212"
+        ["currency_code"]=>
+        string(3) "USD"
+        ["user_agent"]=>
+        string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+        ["shipping_country_id"]=>
+        string(3) "223"
+        ["total"]=>
+        string(8) "105.0000"
+        ["currency_value"]=>
+        string(10) "1.00000000"
+        ["language_id"]=>
+        string(1) "1"
+        ["marketing_id"]=>
+        string(1) "0"
+        ["shipping_address_2"]=>
+        string(0) ""
+        ["payment_method"]=>
+        string(16) "Cash On Delivery"
+        ["shipping_country"]=>
+        string(13) "United States"
+        ["invoice_prefix"]=>
+        string(11) "INV-2018-00"
+        ["tracking"]=>
+        string(0) ""
+        ["custom_field"]=>
+        string(0) ""
+        ["shipping_code"]=>
+        string(9) "flat.flat"
+        ["payment_zone_id"]=>
+        string(4) "3635"
+        ["shipping_firstname"]=>
+        string(3) "Joe"
+        ["store_id"]=>
+        string(1) "0"
+        ["store_url"]=>
+        string(37) "https://secure.virtuops.com/opencart/"
+        ["payment_address_1"]=>
+        string(15) "123 Main Street"
+        ["ip"]=>
+        string(13) "67.184.36.189"
+        ["affiliate_id"]=>
+        string(1) "0"
+        ["payment_country"]=>
+        string(13) "United States"
+        ["shipping_lastname"]=>
+        string(4) "Blow"
+        ["forwarded_ip"]=>
+        string(0) ""
+        ["lastname"]=>
+        string(4) "Blow"
+        ["shipping_company"]=>
+        string(8) "ABC Corp"
+        ["shipping_address_1"]=>
+        string(15) "123 Main Street"
+        ["shipping_custom_field"]=>
+        string(2) "[]"
+        ["shipping_zone_id"]=>
+        string(4) "3635"
+        ["customer_id"]=>
+        string(1) "1"
+        ["invoice_no"]=>
+        string(1) "0"
+        ["fax"]=>
+        string(0) ""
+        ["order_status_id"]=>
+        string(1) "1"
+        ["customer_group_id"]=>
+        string(1) "1"
+        ["payment_company"]=>
+        string(8) "ABC Corp"
+        ["payment_zone"]=>
+        string(8) "Illinois"
+        ["commission"]=>
+        string(6) "0.0000"
+        ["payment_address_format"]=>
+        string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+        ["payment_custom_field"]=>
+        string(2) "[]"
+        ["currency_id"]=>
+        string(1) "2"
+        ["date_modified"]=>
+        string(19) "2018-09-21 19:30:53"
+        ["order_id"]=>
+        string(1) "7"
+        ["accept_language"]=>
+        string(14) "en-US,en;q=0.9"
+        ["shipping_postcode"]=>
+        string(5) "60660"
+        ["payment_lastname"]=>
+        string(4) "Blow"
+        ["payment_country_id"]=>
+        string(3) "223"
+        ["comment"]=>
+        string(43) "Need to process this, then remove the order"
+        ["shipping_method"]=>
+        string(18) "Flat Shipping Rate"
+        ["date_added"]=>
+        string(19) "2018-09-21 19:30:48"
+        ["payment_firstname"]=>
+        string(3) "Joe"
+      }
+      ["current_key"]=>
+      int(0)
+      ["length"]=>
+      int(1)
+      ["incr"]=>
+      int(1)
+    }
+  }
+  ["processed_orders"]=>
+  array(0) {
+  }
+  ["processed_orders_meta"]=>
+  object(stdClass)#752 (1) {
+    ["count"]=>
+    int(0)
+  }
+}
+Fri, 21 Sep 2018 23:34:50 +0000 string(38) "START WORKFLOW TIME IS 1537572889.7487"
+Fri, 21 Sep 2018 23:34:50 +0000 string(37) "STOP WORKFLOW TIME IS 1537572890.6041"
+Fri, 21 Sep 2018 23:34:50 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.85544300079346"
+Fri, 21 Sep 2018 23:41:13 +0000 string(38) "START WORKFLOW TIME IS 1537573273.3691"
+Fri, 21 Sep 2018 23:41:13 +0000 string(37) "STOP WORKFLOW TIME IS 1537573273.4047"
+Fri, 21 Sep 2018 23:41:13 +0000 string(40) "TOTAL WORKFLOW TIME IS 0.035565137863159"
+Fri, 21 Sep 2018 23:41:22 +0000 string(569) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Process New Orders","username":"admin","taskname":"VP MySQL Query","taskmetadata":"","params":{
+"user":"opencart",
+"password":"opencart",
+"database":"opencart",
+"host":"localhost",
+"port":"3306",
+"query":"select * from oc_order where oc_order.tracking <> \u0027processed\u0027",
+"queryoutput":"/var/www/html/pilot/tmp/files/orders.txt",
+"arrayname":"new_orders"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 21 Sep 2018 23:41:22 +0000 string(274) "PARAMS API ARE '{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"select * from oc_order where oc_order.tracking <> 'processed'","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/orders.txt","arrayname":"new_orders"}'"
+Fri, 21 Sep 2018 23:41:22 +0000 string(364) "... received task_run, params are runbook='WFTasks', taskname='VP MySQL Query', username='admin', params='{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"select * from oc_order where oc_order.tracking <> 'processed'","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/orders.txt","arrayname":"new_orders"}'"
+Fri, 21 Sep 2018 23:41:22 +0000 string(6) "WFV IS"
+Fri, 21 Sep 2018 23:41:22 +0000 object(stdClass)#71 (3) {
+  ["status"]=>
+  string(2) "OK"
+  ["new_orders"]=>
+  array(1) {
+    [0]=>
+    object(stdClass)#207 (61) {
+      ["firstname"]=>
+      string(3) "Joe"
+      ["shipping_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["shipping_city"]=>
+      string(7) "Chicago"
+      ["payment_city"]=>
+      string(7) "Chicago"
+      ["payment_address_2"]=>
+      string(0) ""
+      ["shipping_zone"]=>
+      string(8) "Illinois"
+      ["payment_postcode"]=>
+      string(5) "60660"
+      ["email"]=>
+      string(12) "joe@blow.com"
+      ["payment_code"]=>
+      string(3) "cod"
+      ["store_name"]=>
+      string(10) "Your Store"
+      ["telephone"]=>
+      string(12) "773-555-1212"
+      ["currency_code"]=>
+      string(3) "USD"
+      ["user_agent"]=>
+      string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+      ["shipping_country_id"]=>
+      string(3) "223"
+      ["total"]=>
+      string(8) "105.0000"
+      ["currency_value"]=>
+      string(10) "1.00000000"
+      ["language_id"]=>
+      string(1) "1"
+      ["marketing_id"]=>
+      string(1) "0"
+      ["shipping_address_2"]=>
+      string(0) ""
+      ["payment_method"]=>
+      string(16) "Cash On Delivery"
+      ["shipping_country"]=>
+      string(13) "United States"
+      ["invoice_prefix"]=>
+      string(11) "INV-2018-00"
+      ["tracking"]=>
+      string(0) ""
+      ["custom_field"]=>
+      string(0) ""
+      ["shipping_code"]=>
+      string(9) "flat.flat"
+      ["payment_zone_id"]=>
+      string(4) "3635"
+      ["shipping_firstname"]=>
+      string(3) "Joe"
+      ["store_id"]=>
+      string(1) "0"
+      ["store_url"]=>
+      string(37) "https://secure.virtuops.com/opencart/"
+      ["payment_address_1"]=>
+      string(15) "123 Main Street"
+      ["ip"]=>
+      string(13) "67.184.36.189"
+      ["affiliate_id"]=>
+      string(1) "0"
+      ["payment_country"]=>
+      string(13) "United States"
+      ["shipping_lastname"]=>
+      string(4) "Blow"
+      ["forwarded_ip"]=>
+      string(0) ""
+      ["lastname"]=>
+      string(4) "Blow"
+      ["shipping_company"]=>
+      string(8) "ABC Corp"
+      ["shipping_address_1"]=>
+      string(15) "123 Main Street"
+      ["shipping_custom_field"]=>
+      string(2) "[]"
+      ["shipping_zone_id"]=>
+      string(4) "3635"
+      ["customer_id"]=>
+      string(1) "1"
+      ["invoice_no"]=>
+      string(1) "0"
+      ["fax"]=>
+      string(0) ""
+      ["order_status_id"]=>
+      string(1) "1"
+      ["customer_group_id"]=>
+      string(1) "1"
+      ["payment_company"]=>
+      string(8) "ABC Corp"
+      ["payment_zone"]=>
+      string(8) "Illinois"
+      ["commission"]=>
+      string(6) "0.0000"
+      ["payment_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["payment_custom_field"]=>
+      string(2) "[]"
+      ["currency_id"]=>
+      string(1) "2"
+      ["date_modified"]=>
+      string(19) "2018-09-21 19:30:53"
+      ["order_id"]=>
+      string(1) "7"
+      ["accept_language"]=>
+      string(14) "en-US,en;q=0.9"
+      ["shipping_postcode"]=>
+      string(5) "60660"
+      ["payment_lastname"]=>
+      string(4) "Blow"
+      ["payment_country_id"]=>
+      string(3) "223"
+      ["comment"]=>
+      string(43) "Need to process this, then remove the order"
+      ["shipping_method"]=>
+      string(18) "Flat Shipping Rate"
+      ["date_added"]=>
+      string(19) "2018-09-21 19:30:48"
+      ["payment_firstname"]=>
+      string(3) "Joe"
+    }
+  }
+  ["new_orders_meta"]=>
+  object(stdClass)#208 (1) {
+    ["count"]=>
+    int(1)
+  }
+}
+Fri, 21 Sep 2018 23:41:22 +0000 string(734) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Process New Orders","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/order_no_7.xml",
+"data":"<SalesDocument><CustomerCode>100111</CustomerCode><SalesRepCode>SUP-ASC</SalesRepCode><PayTermsCode>N30</PayTermsCode><LineItems><LineItem><Sequence>1</Sequence><ItemCode>102WHEELS</ItemCode><Description>Need to process this, then remove the order</Description><Quantity>1.000000</Quantity><ItemPrice>105.0000</ItemPrice></LineItem></LineItems></SalesDocument>"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 21 Sep 2018 23:41:22 +0000 string(464) "PARAMS API ARE '{"filename":"\/var\/www\/html\/pilot\/tmp\/files\/order_no_7.xml","data":"<SalesDocument><CustomerCode>100111<\/CustomerCode><SalesRepCode>SUP-ASC<\/SalesRepCode><PayTermsCode>N30<\/PayTermsCode><LineItems><LineItem><Sequence>1<\/Sequence><ItemCode>102WHEELS<\/ItemCode><Description>Need to process this, then remove the order<\/Description><Quantity>1.000000<\/Quantity><ItemPrice>105.0000<\/ItemPrice><\/LineItem><\/LineItems><\/SalesDocument>"}'"
+Fri, 21 Sep 2018 23:41:22 +0000 string(556) "... received task_run, params are runbook='WFTasks', taskname='VP Write To File', username='admin', params='{"filename":"\/var\/www\/html\/pilot\/tmp\/files\/order_no_7.xml","data":"<SalesDocument><CustomerCode>100111<\/CustomerCode><SalesRepCode>SUP-ASC<\/SalesRepCode><PayTermsCode>N30<\/PayTermsCode><LineItems><LineItem><Sequence>1<\/Sequence><ItemCode>102WHEELS<\/ItemCode><Description>Need to process this, then remove the order<\/Description><Quantity>1.000000<\/Quantity><ItemPrice>105.0000<\/ItemPrice><\/LineItem><\/LineItems><\/SalesDocument>"}'"
+Fri, 21 Sep 2018 23:41:22 +0000 string(6) "WFV IS"
+Fri, 21 Sep 2018 23:41:22 +0000 object(stdClass)#71 (4) {
+  ["status"]=>
+  string(5) "saved"
+  ["new_orders"]=>
+  array(1) {
+    [0]=>
+    object(stdClass)#207 (61) {
+      ["firstname"]=>
+      string(3) "Joe"
+      ["shipping_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["shipping_city"]=>
+      string(7) "Chicago"
+      ["payment_city"]=>
+      string(7) "Chicago"
+      ["payment_address_2"]=>
+      string(0) ""
+      ["shipping_zone"]=>
+      string(8) "Illinois"
+      ["payment_postcode"]=>
+      string(5) "60660"
+      ["email"]=>
+      string(12) "joe@blow.com"
+      ["payment_code"]=>
+      string(3) "cod"
+      ["store_name"]=>
+      string(10) "Your Store"
+      ["telephone"]=>
+      string(12) "773-555-1212"
+      ["currency_code"]=>
+      string(3) "USD"
+      ["user_agent"]=>
+      string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+      ["shipping_country_id"]=>
+      string(3) "223"
+      ["total"]=>
+      string(8) "105.0000"
+      ["currency_value"]=>
+      string(10) "1.00000000"
+      ["language_id"]=>
+      string(1) "1"
+      ["marketing_id"]=>
+      string(1) "0"
+      ["shipping_address_2"]=>
+      string(0) ""
+      ["payment_method"]=>
+      string(16) "Cash On Delivery"
+      ["shipping_country"]=>
+      string(13) "United States"
+      ["invoice_prefix"]=>
+      string(11) "INV-2018-00"
+      ["tracking"]=>
+      string(0) ""
+      ["custom_field"]=>
+      string(0) ""
+      ["shipping_code"]=>
+      string(9) "flat.flat"
+      ["payment_zone_id"]=>
+      string(4) "3635"
+      ["shipping_firstname"]=>
+      string(3) "Joe"
+      ["store_id"]=>
+      string(1) "0"
+      ["store_url"]=>
+      string(37) "https://secure.virtuops.com/opencart/"
+      ["payment_address_1"]=>
+      string(15) "123 Main Street"
+      ["ip"]=>
+      string(13) "67.184.36.189"
+      ["affiliate_id"]=>
+      string(1) "0"
+      ["payment_country"]=>
+      string(13) "United States"
+      ["shipping_lastname"]=>
+      string(4) "Blow"
+      ["forwarded_ip"]=>
+      string(0) ""
+      ["lastname"]=>
+      string(4) "Blow"
+      ["shipping_company"]=>
+      string(8) "ABC Corp"
+      ["shipping_address_1"]=>
+      string(15) "123 Main Street"
+      ["shipping_custom_field"]=>
+      string(2) "[]"
+      ["shipping_zone_id"]=>
+      string(4) "3635"
+      ["customer_id"]=>
+      string(1) "1"
+      ["invoice_no"]=>
+      string(1) "0"
+      ["fax"]=>
+      string(0) ""
+      ["order_status_id"]=>
+      string(1) "1"
+      ["customer_group_id"]=>
+      string(1) "1"
+      ["payment_company"]=>
+      string(8) "ABC Corp"
+      ["payment_zone"]=>
+      string(8) "Illinois"
+      ["commission"]=>
+      string(6) "0.0000"
+      ["payment_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["payment_custom_field"]=>
+      string(2) "[]"
+      ["currency_id"]=>
+      string(1) "2"
+      ["date_modified"]=>
+      string(19) "2018-09-21 19:30:53"
+      ["order_id"]=>
+      string(1) "7"
+      ["accept_language"]=>
+      string(14) "en-US,en;q=0.9"
+      ["shipping_postcode"]=>
+      string(5) "60660"
+      ["payment_lastname"]=>
+      string(4) "Blow"
+      ["payment_country_id"]=>
+      string(3) "223"
+      ["comment"]=>
+      string(43) "Need to process this, then remove the order"
+      ["shipping_method"]=>
+      string(18) "Flat Shipping Rate"
+      ["date_added"]=>
+      string(19) "2018-09-21 19:30:48"
+      ["payment_firstname"]=>
+      string(3) "Joe"
+    }
+  }
+  ["new_orders_meta"]=>
+  object(stdClass)#208 (1) {
+    ["count"]=>
+    int(1)
+  }
+  ["route:foreach1"]=>
+  object(stdClass)#481 (2) {
+    ["targetobject"]=>
+    string(10) "new_orders"
+    ["new_orders"]=>
+    object(stdClass)#482 (4) {
+      ["current_val"]=>
+      object(stdClass)#207 (61) {
+        ["firstname"]=>
+        string(3) "Joe"
+        ["shipping_address_format"]=>
+        string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+        ["shipping_city"]=>
+        string(7) "Chicago"
+        ["payment_city"]=>
+        string(7) "Chicago"
+        ["payment_address_2"]=>
+        string(0) ""
+        ["shipping_zone"]=>
+        string(8) "Illinois"
+        ["payment_postcode"]=>
+        string(5) "60660"
+        ["email"]=>
+        string(12) "joe@blow.com"
+        ["payment_code"]=>
+        string(3) "cod"
+        ["store_name"]=>
+        string(10) "Your Store"
+        ["telephone"]=>
+        string(12) "773-555-1212"
+        ["currency_code"]=>
+        string(3) "USD"
+        ["user_agent"]=>
+        string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+        ["shipping_country_id"]=>
+        string(3) "223"
+        ["total"]=>
+        string(8) "105.0000"
+        ["currency_value"]=>
+        string(10) "1.00000000"
+        ["language_id"]=>
+        string(1) "1"
+        ["marketing_id"]=>
+        string(1) "0"
+        ["shipping_address_2"]=>
+        string(0) ""
+        ["payment_method"]=>
+        string(16) "Cash On Delivery"
+        ["shipping_country"]=>
+        string(13) "United States"
+        ["invoice_prefix"]=>
+        string(11) "INV-2018-00"
+        ["tracking"]=>
+        string(0) ""
+        ["custom_field"]=>
+        string(0) ""
+        ["shipping_code"]=>
+        string(9) "flat.flat"
+        ["payment_zone_id"]=>
+        string(4) "3635"
+        ["shipping_firstname"]=>
+        string(3) "Joe"
+        ["store_id"]=>
+        string(1) "0"
+        ["store_url"]=>
+        string(37) "https://secure.virtuops.com/opencart/"
+        ["payment_address_1"]=>
+        string(15) "123 Main Street"
+        ["ip"]=>
+        string(13) "67.184.36.189"
+        ["affiliate_id"]=>
+        string(1) "0"
+        ["payment_country"]=>
+        string(13) "United States"
+        ["shipping_lastname"]=>
+        string(4) "Blow"
+        ["forwarded_ip"]=>
+        string(0) ""
+        ["lastname"]=>
+        string(4) "Blow"
+        ["shipping_company"]=>
+        string(8) "ABC Corp"
+        ["shipping_address_1"]=>
+        string(15) "123 Main Street"
+        ["shipping_custom_field"]=>
+        string(2) "[]"
+        ["shipping_zone_id"]=>
+        string(4) "3635"
+        ["customer_id"]=>
+        string(1) "1"
+        ["invoice_no"]=>
+        string(1) "0"
+        ["fax"]=>
+        string(0) ""
+        ["order_status_id"]=>
+        string(1) "1"
+        ["customer_group_id"]=>
+        string(1) "1"
+        ["payment_company"]=>
+        string(8) "ABC Corp"
+        ["payment_zone"]=>
+        string(8) "Illinois"
+        ["commission"]=>
+        string(6) "0.0000"
+        ["payment_address_format"]=>
+        string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+        ["payment_custom_field"]=>
+        string(2) "[]"
+        ["currency_id"]=>
+        string(1) "2"
+        ["date_modified"]=>
+        string(19) "2018-09-21 19:30:53"
+        ["order_id"]=>
+        string(1) "7"
+        ["accept_language"]=>
+        string(14) "en-US,en;q=0.9"
+        ["shipping_postcode"]=>
+        string(5) "60660"
+        ["payment_lastname"]=>
+        string(4) "Blow"
+        ["payment_country_id"]=>
+        string(3) "223"
+        ["comment"]=>
+        string(43) "Need to process this, then remove the order"
+        ["shipping_method"]=>
+        string(18) "Flat Shipping Rate"
+        ["date_added"]=>
+        string(19) "2018-09-21 19:30:48"
+        ["payment_firstname"]=>
+        string(3) "Joe"
+      }
+      ["current_key"]=>
+      int(0)
+      ["length"]=>
+      int(1)
+      ["incr"]=>
+      int(1)
+    }
+  }
+}
+Fri, 21 Sep 2018 23:41:22 +0000 string(594) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Process New Orders","username":"admin","taskname":"VP MySQL Query","taskmetadata":"","params":{
+"user":"opencart",
+"password":"opencart",
+"database":"opencart",
+"host":"localhost",
+"port":"3306",
+"query":"update oc_order set tracking = \u0027processed\u0027 where oc_order.order_id = 7",
+"queryoutput":"/var/www/html/pilot/tmp/files/processed_orders.txt",
+"arrayname":"processed_orders"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 21 Sep 2018 23:41:22 +0000 string(299) "PARAMS API ARE '{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"update oc_order set tracking = 'processed' where oc_order.order_id = 7","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/processed_orders.txt","arrayname":"processed_orders"}'"
+Fri, 21 Sep 2018 23:41:22 +0000 string(389) "... received task_run, params are runbook='WFTasks', taskname='VP MySQL Query', username='admin', params='{"user":"opencart","password":"opencart","database":"opencart","host":"localhost","port":"3306","query":"update oc_order set tracking = 'processed' where oc_order.order_id = 7","queryoutput":"\/var\/www\/html\/pilot\/tmp\/files\/processed_orders.txt","arrayname":"processed_orders"}'"
+Fri, 21 Sep 2018 23:41:22 +0000 string(6) "WFV IS"
+Fri, 21 Sep 2018 23:41:22 +0000 object(stdClass)#71 (6) {
+  ["status"]=>
+  string(2) "OK"
+  ["new_orders"]=>
+  array(1) {
+    [0]=>
+    object(stdClass)#207 (61) {
+      ["firstname"]=>
+      string(3) "Joe"
+      ["shipping_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["shipping_city"]=>
+      string(7) "Chicago"
+      ["payment_city"]=>
+      string(7) "Chicago"
+      ["payment_address_2"]=>
+      string(0) ""
+      ["shipping_zone"]=>
+      string(8) "Illinois"
+      ["payment_postcode"]=>
+      string(5) "60660"
+      ["email"]=>
+      string(12) "joe@blow.com"
+      ["payment_code"]=>
+      string(3) "cod"
+      ["store_name"]=>
+      string(10) "Your Store"
+      ["telephone"]=>
+      string(12) "773-555-1212"
+      ["currency_code"]=>
+      string(3) "USD"
+      ["user_agent"]=>
+      string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+      ["shipping_country_id"]=>
+      string(3) "223"
+      ["total"]=>
+      string(8) "105.0000"
+      ["currency_value"]=>
+      string(10) "1.00000000"
+      ["language_id"]=>
+      string(1) "1"
+      ["marketing_id"]=>
+      string(1) "0"
+      ["shipping_address_2"]=>
+      string(0) ""
+      ["payment_method"]=>
+      string(16) "Cash On Delivery"
+      ["shipping_country"]=>
+      string(13) "United States"
+      ["invoice_prefix"]=>
+      string(11) "INV-2018-00"
+      ["tracking"]=>
+      string(0) ""
+      ["custom_field"]=>
+      string(0) ""
+      ["shipping_code"]=>
+      string(9) "flat.flat"
+      ["payment_zone_id"]=>
+      string(4) "3635"
+      ["shipping_firstname"]=>
+      string(3) "Joe"
+      ["store_id"]=>
+      string(1) "0"
+      ["store_url"]=>
+      string(37) "https://secure.virtuops.com/opencart/"
+      ["payment_address_1"]=>
+      string(15) "123 Main Street"
+      ["ip"]=>
+      string(13) "67.184.36.189"
+      ["affiliate_id"]=>
+      string(1) "0"
+      ["payment_country"]=>
+      string(13) "United States"
+      ["shipping_lastname"]=>
+      string(4) "Blow"
+      ["forwarded_ip"]=>
+      string(0) ""
+      ["lastname"]=>
+      string(4) "Blow"
+      ["shipping_company"]=>
+      string(8) "ABC Corp"
+      ["shipping_address_1"]=>
+      string(15) "123 Main Street"
+      ["shipping_custom_field"]=>
+      string(2) "[]"
+      ["shipping_zone_id"]=>
+      string(4) "3635"
+      ["customer_id"]=>
+      string(1) "1"
+      ["invoice_no"]=>
+      string(1) "0"
+      ["fax"]=>
+      string(0) ""
+      ["order_status_id"]=>
+      string(1) "1"
+      ["customer_group_id"]=>
+      string(1) "1"
+      ["payment_company"]=>
+      string(8) "ABC Corp"
+      ["payment_zone"]=>
+      string(8) "Illinois"
+      ["commission"]=>
+      string(6) "0.0000"
+      ["payment_address_format"]=>
+      string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+      ["payment_custom_field"]=>
+      string(2) "[]"
+      ["currency_id"]=>
+      string(1) "2"
+      ["date_modified"]=>
+      string(19) "2018-09-21 19:30:53"
+      ["order_id"]=>
+      string(1) "7"
+      ["accept_language"]=>
+      string(14) "en-US,en;q=0.9"
+      ["shipping_postcode"]=>
+      string(5) "60660"
+      ["payment_lastname"]=>
+      string(4) "Blow"
+      ["payment_country_id"]=>
+      string(3) "223"
+      ["comment"]=>
+      string(43) "Need to process this, then remove the order"
+      ["shipping_method"]=>
+      string(18) "Flat Shipping Rate"
+      ["date_added"]=>
+      string(19) "2018-09-21 19:30:48"
+      ["payment_firstname"]=>
+      string(3) "Joe"
+    }
+  }
+  ["new_orders_meta"]=>
+  object(stdClass)#208 (1) {
+    ["count"]=>
+    int(1)
+  }
+  ["route:foreach1"]=>
+  object(stdClass)#481 (2) {
+    ["targetobject"]=>
+    string(10) "new_orders"
+    ["new_orders"]=>
+    object(stdClass)#482 (4) {
+      ["current_val"]=>
+      object(stdClass)#207 (61) {
+        ["firstname"]=>
+        string(3) "Joe"
+        ["shipping_address_format"]=>
+        string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+        ["shipping_city"]=>
+        string(7) "Chicago"
+        ["payment_city"]=>
+        string(7) "Chicago"
+        ["payment_address_2"]=>
+        string(0) ""
+        ["shipping_zone"]=>
+        string(8) "Illinois"
+        ["payment_postcode"]=>
+        string(5) "60660"
+        ["email"]=>
+        string(12) "joe@blow.com"
+        ["payment_code"]=>
+        string(3) "cod"
+        ["store_name"]=>
+        string(10) "Your Store"
+        ["telephone"]=>
+        string(12) "773-555-1212"
+        ["currency_code"]=>
+        string(3) "USD"
+        ["user_agent"]=>
+        string(115) "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36"
+        ["shipping_country_id"]=>
+        string(3) "223"
+        ["total"]=>
+        string(8) "105.0000"
+        ["currency_value"]=>
+        string(10) "1.00000000"
+        ["language_id"]=>
+        string(1) "1"
+        ["marketing_id"]=>
+        string(1) "0"
+        ["shipping_address_2"]=>
+        string(0) ""
+        ["payment_method"]=>
+        string(16) "Cash On Delivery"
+        ["shipping_country"]=>
+        string(13) "United States"
+        ["invoice_prefix"]=>
+        string(11) "INV-2018-00"
+        ["tracking"]=>
+        string(0) ""
+        ["custom_field"]=>
+        string(0) ""
+        ["shipping_code"]=>
+        string(9) "flat.flat"
+        ["payment_zone_id"]=>
+        string(4) "3635"
+        ["shipping_firstname"]=>
+        string(3) "Joe"
+        ["store_id"]=>
+        string(1) "0"
+        ["store_url"]=>
+        string(37) "https://secure.virtuops.com/opencart/"
+        ["payment_address_1"]=>
+        string(15) "123 Main Street"
+        ["ip"]=>
+        string(13) "67.184.36.189"
+        ["affiliate_id"]=>
+        string(1) "0"
+        ["payment_country"]=>
+        string(13) "United States"
+        ["shipping_lastname"]=>
+        string(4) "Blow"
+        ["forwarded_ip"]=>
+        string(0) ""
+        ["lastname"]=>
+        string(4) "Blow"
+        ["shipping_company"]=>
+        string(8) "ABC Corp"
+        ["shipping_address_1"]=>
+        string(15) "123 Main Street"
+        ["shipping_custom_field"]=>
+        string(2) "[]"
+        ["shipping_zone_id"]=>
+        string(4) "3635"
+        ["customer_id"]=>
+        string(1) "1"
+        ["invoice_no"]=>
+        string(1) "0"
+        ["fax"]=>
+        string(0) ""
+        ["order_status_id"]=>
+        string(1) "1"
+        ["customer_group_id"]=>
+        string(1) "1"
+        ["payment_company"]=>
+        string(8) "ABC Corp"
+        ["payment_zone"]=>
+        string(8) "Illinois"
+        ["commission"]=>
+        string(6) "0.0000"
+        ["payment_address_format"]=>
+        string(97) "{firstname} {lastname}
+{company}
+{address_1}
+{address_2}
+{city}, {zone} {postcode}
+{country}"
+        ["payment_custom_field"]=>
+        string(2) "[]"
+        ["currency_id"]=>
+        string(1) "2"
+        ["date_modified"]=>
+        string(19) "2018-09-21 19:30:53"
+        ["order_id"]=>
+        string(1) "7"
+        ["accept_language"]=>
+        string(14) "en-US,en;q=0.9"
+        ["shipping_postcode"]=>
+        string(5) "60660"
+        ["payment_lastname"]=>
+        string(4) "Blow"
+        ["payment_country_id"]=>
+        string(3) "223"
+        ["comment"]=>
+        string(43) "Need to process this, then remove the order"
+        ["shipping_method"]=>
+        string(18) "Flat Shipping Rate"
+        ["date_added"]=>
+        string(19) "2018-09-21 19:30:48"
+        ["payment_firstname"]=>
+        string(3) "Joe"
+      }
+      ["current_key"]=>
+      int(0)
+      ["length"]=>
+      int(1)
+      ["incr"]=>
+      int(1)
+    }
+  }
+  ["processed_orders"]=>
+  array(0) {
+  }
+  ["processed_orders_meta"]=>
+  object(stdClass)#752 (1) {
+    ["count"]=>
+    int(0)
+  }
+}
+Fri, 21 Sep 2018 23:41:22 +0000 string(38) "START WORKFLOW TIME IS 1537573281.9868"
+Fri, 21 Sep 2018 23:41:22 +0000 string(37) "STOP WORKFLOW TIME IS 1537573282.9897"
+Fri, 21 Sep 2018 23:41:22 +0000 string(38) "TOTAL WORKFLOW TIME IS 1.0029499530792"

@@ -1,0 +1,144 @@
+Fri, 21 Sep 2018 23:56:32 +0000 string(165) "... received workflow_run, params are wfuser='admin', wfpassword='admin', workflowname='Clear Processed Orders', wfv='{"_orderfile_":""}', taskmeta='""', wfmeta='""'"
+Fri, 21 Sep 2018 23:56:32 +0000 string(58) "... running workflow workflowname='Clear Processed Orders'"
+Fri, 21 Sep 2018 23:56:32 +0000 string(365) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Clear Processed Orders","username":"admin","taskname":"VP Remove Files","taskmetadata":"","params":{
+"dirname":"/var/www/html/pilot/tmp/files",
+"filename":""
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 21 Sep 2018 23:56:32 +0000 string(80) "PARAMS API ARE '{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":""}'"
+Fri, 21 Sep 2018 23:56:32 +0000 string(171) "... received task_run, params are runbook='WFTasks', taskname='VP Remove Files', username='admin', params='{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":""}'"
+Fri, 21 Sep 2018 23:56:33 +0000 string(6) "WFV IS"
+Fri, 21 Sep 2018 23:56:33 +0000 object(stdClass)#14 (2) {
+  ["_orderfile_"]=>
+  string(0) ""
+  ["status"]=>
+  int(0)
+}
+Fri, 21 Sep 2018 23:56:33 +0000 string(38) "START WORKFLOW TIME IS 1537574192.6751"
+Fri, 21 Sep 2018 23:56:33 +0000 string(37) "STOP WORKFLOW TIME IS 1537574193.0373"
+Fri, 21 Sep 2018 23:56:33 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.36225509643555"
+Fri, 21 Sep 2018 23:57:22 +0000 string(179) "... received workflow_run, params are wfuser='admin', wfpassword='admin', workflowname='Clear Processed Orders', wfv='{"_orderfile_":"order_no_7.xml"}', taskmeta='""', wfmeta='""'"
+Fri, 21 Sep 2018 23:57:22 +0000 string(58) "... running workflow workflowname='Clear Processed Orders'"
+Fri, 21 Sep 2018 23:57:22 +0000 string(379) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Clear Processed Orders","username":"admin","taskname":"VP Remove Files","taskmetadata":"","params":{
+"dirname":"/var/www/html/pilot/tmp/files",
+"filename":"order_no_7.xml"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 21 Sep 2018 23:57:22 +0000 string(94) "PARAMS API ARE '{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Fri, 21 Sep 2018 23:57:22 +0000 string(185) "... received task_run, params are runbook='WFTasks', taskname='VP Remove Files', username='admin', params='{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Fri, 21 Sep 2018 23:57:22 +0000 string(6) "WFV IS"
+Fri, 21 Sep 2018 23:57:22 +0000 object(stdClass)#14 (2) {
+  ["_orderfile_"]=>
+  string(14) "order_no_7.xml"
+  ["status"]=>
+  int(1)
+}
+Fri, 21 Sep 2018 23:57:22 +0000 string(38) "START WORKFLOW TIME IS 1537574242.4816"
+Fri, 21 Sep 2018 23:57:22 +0000 string(37) "STOP WORKFLOW TIME IS 1537574242.8417"
+Fri, 21 Sep 2018 23:57:22 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.36006808280945"
+Sat, 22 Sep 2018 00:08:37 +0000 string(179) "... received workflow_run, params are wfuser='admin', wfpassword='admin', workflowname='Clear Processed Orders', wfv='{"_orderfile_":"order_no_7.xml"}', taskmeta='""', wfmeta='""'"
+Sat, 22 Sep 2018 00:08:37 +0000 string(58) "... running workflow workflowname='Clear Processed Orders'"
+Sat, 22 Sep 2018 00:08:37 +0000 string(379) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Clear Processed Orders","username":"admin","taskname":"VP Remove Files","taskmetadata":"","params":{
+"dirname":"/var/www/html/pilot/tmp/files",
+"filename":"order_no_7.xml"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sat, 22 Sep 2018 00:08:37 +0000 string(94) "PARAMS API ARE '{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 00:08:37 +0000 string(185) "... received task_run, params are runbook='WFTasks', taskname='VP Remove Files', username='admin', params='{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 00:08:37 +0000 string(6) "WFV IS"
+Sat, 22 Sep 2018 00:08:37 +0000 object(stdClass)#14 (2) {
+  ["_orderfile_"]=>
+  string(14) "order_no_7.xml"
+  ["status"]=>
+  int(1)
+}
+Sat, 22 Sep 2018 00:08:37 +0000 string(38) "START WORKFLOW TIME IS 1537574917.2758"
+Sat, 22 Sep 2018 00:08:37 +0000 string(37) "STOP WORKFLOW TIME IS 1537574917.6451"
+Sat, 22 Sep 2018 00:08:37 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.36926078796387"
+Sat, 22 Sep 2018 13:52:21 +0000 string(179) "... received workflow_run, params are wfuser='admin', wfpassword='admin', workflowname='Clear Processed Orders', wfv='{"_orderfile_":"order_no_7.xml"}', taskmeta='""', wfmeta='""'"
+Sat, 22 Sep 2018 13:52:21 +0000 string(58) "... running workflow workflowname='Clear Processed Orders'"
+Sat, 22 Sep 2018 13:52:21 +0000 string(379) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Clear Processed Orders","username":"admin","taskname":"VP Remove Files","taskmetadata":"","params":{
+"dirname":"/var/www/html/pilot/tmp/files",
+"filename":"order_no_7.xml"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sat, 22 Sep 2018 13:52:22 +0000 string(94) "PARAMS API ARE '{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 13:52:22 +0000 string(185) "... received task_run, params are runbook='WFTasks', taskname='VP Remove Files', username='admin', params='{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 13:52:22 +0000 string(6) "WFV IS"
+Sat, 22 Sep 2018 13:52:22 +0000 object(stdClass)#14 (2) {
+  ["_orderfile_"]=>
+  string(14) "order_no_7.xml"
+  ["status"]=>
+  int(1)
+}
+Sat, 22 Sep 2018 13:52:22 +0000 string(37) "START WORKFLOW TIME IS 1537624341.781"
+Sat, 22 Sep 2018 13:52:22 +0000 string(37) "STOP WORKFLOW TIME IS 1537624342.1176"
+Sat, 22 Sep 2018 13:52:22 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.33660817146301"
+Sat, 22 Sep 2018 13:57:34 +0000 string(179) "... received workflow_run, params are wfuser='admin', wfpassword='admin', workflowname='Clear Processed Orders', wfv='{"_orderfile_":"order_no_7.xml"}', taskmeta='""', wfmeta='""'"
+Sat, 22 Sep 2018 13:57:34 +0000 string(58) "... running workflow workflowname='Clear Processed Orders'"
+Sat, 22 Sep 2018 13:57:34 +0000 string(379) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Clear Processed Orders","username":"admin","taskname":"VP Remove Files","taskmetadata":"","params":{
+"dirname":"/var/www/html/pilot/tmp/files",
+"filename":"order_no_7.xml"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sat, 22 Sep 2018 13:57:35 +0000 string(94) "PARAMS API ARE '{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 13:57:35 +0000 string(185) "... received task_run, params are runbook='WFTasks', taskname='VP Remove Files', username='admin', params='{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 13:57:35 +0000 string(6) "WFV IS"
+Sat, 22 Sep 2018 13:57:35 +0000 object(stdClass)#14 (2) {
+  ["_orderfile_"]=>
+  string(14) "order_no_7.xml"
+  ["status"]=>
+  int(1)
+}
+Sat, 22 Sep 2018 13:57:35 +0000 string(37) "START WORKFLOW TIME IS 1537624654.793"
+Sat, 22 Sep 2018 13:57:35 +0000 string(37) "STOP WORKFLOW TIME IS 1537624655.2638"
+Sat, 22 Sep 2018 13:57:35 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.47073698043823"
+Sat, 22 Sep 2018 14:43:21 +0000 string(179) "... received workflow_run, params are wfuser='admin', wfpassword='admin', workflowname='Clear Processed Orders', wfv='{"_orderfile_":"order_no_7.xml"}', taskmeta='""', wfmeta='""'"
+Sat, 22 Sep 2018 14:43:21 +0000 string(58) "... running workflow workflowname='Clear Processed Orders'"
+Sat, 22 Sep 2018 14:43:21 +0000 string(379) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Clear Processed Orders","username":"admin","taskname":"VP Remove Files","taskmetadata":"","params":{
+"dirname":"/var/www/html/pilot/tmp/files",
+"filename":"order_no_7.xml"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sat, 22 Sep 2018 14:43:21 +0000 string(94) "PARAMS API ARE '{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 14:43:21 +0000 string(185) "... received task_run, params are runbook='WFTasks', taskname='VP Remove Files', username='admin', params='{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 14:43:21 +0000 string(6) "WFV IS"
+Sat, 22 Sep 2018 14:43:21 +0000 object(stdClass)#14 (2) {
+  ["_orderfile_"]=>
+  string(14) "order_no_7.xml"
+  ["status"]=>
+  int(1)
+}
+Sat, 22 Sep 2018 14:43:21 +0000 string(38) "START WORKFLOW TIME IS 1537627401.5178"
+Sat, 22 Sep 2018 14:43:21 +0000 string(37) "STOP WORKFLOW TIME IS 1537627401.8354"
+Sat, 22 Sep 2018 14:43:21 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.31757712364197"
+Sat, 22 Sep 2018 14:55:31 +0000 string(179) "... received workflow_run, params are wfuser='admin', wfpassword='admin', workflowname='Clear Processed Orders', wfv='{"_orderfile_":"order_no_7.xml"}', taskmeta='""', wfmeta='""'"
+Sat, 22 Sep 2018 14:55:31 +0000 string(58) "... running workflow workflowname='Clear Processed Orders'"
+Sat, 22 Sep 2018 14:55:31 +0000 string(379) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Clear Processed Orders","username":"admin","taskname":"VP Remove Files","taskmetadata":"","params":{
+"dirname":"/var/www/html/pilot/tmp/files",
+"filename":"order_no_7.xml"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sat, 22 Sep 2018 14:55:32 +0000 string(94) "PARAMS API ARE '{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 14:55:32 +0000 string(185) "... received task_run, params are runbook='WFTasks', taskname='VP Remove Files', username='admin', params='{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_7.xml"}'"
+Sat, 22 Sep 2018 14:55:32 +0000 string(6) "WFV IS"
+Sat, 22 Sep 2018 14:55:32 +0000 object(stdClass)#14 (2) {
+  ["_orderfile_"]=>
+  string(14) "order_no_7.xml"
+  ["status"]=>
+  int(1)
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(38) "START WORKFLOW TIME IS 1537628131.9261"
+Sat, 22 Sep 2018 14:55:32 +0000 string(37) "STOP WORKFLOW TIME IS 1537628132.2569"
+Sat, 22 Sep 2018 14:55:32 +0000 string(38) "TOTAL WORKFLOW TIME IS 0.3308470249176"
+Sat, 22 Sep 2018 14:55:32 +0000 string(179) "... received workflow_run, params are wfuser='admin', wfpassword='admin', workflowname='Clear Processed Orders', wfv='{"_orderfile_":"order_no_8.xml"}', taskmeta='""', wfmeta='""'"
+Sat, 22 Sep 2018 14:55:32 +0000 string(58) "... running workflow workflowname='Clear Processed Orders'"
+Sat, 22 Sep 2018 14:55:32 +0000 string(379) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"Clear Processed Orders","username":"admin","taskname":"VP Remove Files","taskmetadata":"","params":{
+"dirname":"/var/www/html/pilot/tmp/files",
+"filename":"order_no_8.xml"
+}}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Sat, 22 Sep 2018 14:55:32 +0000 string(94) "PARAMS API ARE '{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_8.xml"}'"
+Sat, 22 Sep 2018 14:55:32 +0000 string(185) "... received task_run, params are runbook='WFTasks', taskname='VP Remove Files', username='admin', params='{"dirname":"\/var\/www\/html\/pilot\/tmp\/files","filename":"order_no_8.xml"}'"
+Sat, 22 Sep 2018 14:55:32 +0000 string(6) "WFV IS"
+Sat, 22 Sep 2018 14:55:32 +0000 object(stdClass)#14 (2) {
+  ["_orderfile_"]=>
+  string(14) "order_no_8.xml"
+  ["status"]=>
+  int(1)
+}
+Sat, 22 Sep 2018 14:55:32 +0000 string(38) "START WORKFLOW TIME IS 1537628132.4848"
+Sat, 22 Sep 2018 14:55:32 +0000 string(37) "STOP WORKFLOW TIME IS 1537628132.8078"
+Sat, 22 Sep 2018 14:55:32 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.32296705245972"

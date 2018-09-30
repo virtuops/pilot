@@ -1,0 +1,1 @@
+<SalesDocument><CustomerCode>VirtuOps</CustomerCode><SalesRepCode>SUP-ASC</SalesRepCode><PayTermsCode>N30</PayTermsCode><LineItems><LineItem><Sequence>1</Sequence><ItemCode>102WHEELS</ItemCode><Description>Need to process this, then remove the order</Description><Quantity>1.000000</Quantity><ItemPrice>105.0000</ItemPrice></LineItem></LineItems></SalesDocument>
