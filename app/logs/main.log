@@ -1351,3 +1351,335 @@ Wed, 26 Sep 2018 17:51:44 +0000 string(17) "Returning Config:"
 Wed, 26 Sep 2018 17:51:44 +0000 string(10) "Got DB Con"
 Wed, 26 Sep 2018 17:51:44 +0000 string(421) "{"dbhost":"localhost","dbport":"3306","dbuser":"nhp123!!!","dbpass":"nhp123!!!","dbname":"nochero_pilot","basedir":"\/var\/www\/html\/pilot","unzip":"\/bin\/unzip","perldoc":"\/bin\/perldoc","php":"\/bin\/php","curl":"\/bin\/curl","weburl":"https:\/\/secure.virtuops.com\/pilot","eslhost":"192.99.232.129","eslport":"9200","logfile":"\/var\/www\/html\/pilot\/app\/logs\/main.log","ldaphost":"","ldapport":"0","ldapou":""}"
 Wed, 26 Sep 2018 17:59:06 +0000 string(27) "In CrudOperation, workflows"
+Mon, 01 Oct 2018 12:31:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:31:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:32:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:32:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:33:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:33:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:34:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:34:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:35:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:35:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:36:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:36:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:37:02 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:37:02 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:38:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:38:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:39:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:39:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:40:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:40:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:41:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:41:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:42:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:42:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:43:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:43:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:44:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:44:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:45:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:45:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:46:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:46:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:47:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:47:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:48:02 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:48:02 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:48:34 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'In CrudOperation, settings'</font> <i>(length=26)</i>
+</pre>Mon, 01 Oct 2018 12:48:34 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'Getting Config:'</font> <i>(length=15)</i>
+</pre>Mon, 01 Oct 2018 12:48:34 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'Returning Config:'</font> <i>(length=17)</i>
+</pre>Mon, 01 Oct 2018 12:48:34 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'Got DB Con'</font> <i>(length=10)</i>
+</pre>Mon, 01 Oct 2018 12:48:34 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'{&quot;dbhost&quot;:&quot;localhost&quot;,&quot;dbport&quot;:&quot;3306&quot;,&quot;dbuser&quot;:&quot;pilot&quot;,&quot;dbpass&quot;:&quot;pilot123!&quot;,&quot;dbname&quot;:&quot;pilot&quot;,&quot;basedir&quot;:&quot;\/var\/www\/html\/pilot&quot;,&quot;unzip&quot;:&quot;\/bin\/unzip&quot;,&quot;perldoc&quot;:&quot;\/bin\/perldoc&quot;,&quot;php&quot;:&quot;\/bin\/php&quot;,&quot;curl&quot;:&quot;\/bin\/curl&quot;,&quot;weburl&quot;:&quot;https:\/\/secure.virtuops.com\/pilot&quot;,&quot;eslhost&quot;:&quot;192.99.232.129&quot;,&quot;eslport&quot;:&quot;9200&quot;,&quot;logfile&quot;:&quot;\/var\/www\/html\/pilot\/app\/logs\/main.log&quot;,&quot;ldaphost&quot;:&quot;&quot;,&quot;ldapport&quot;:&quot;0&quot;,&quot;ldapou&quot;:&quot;&quot;}'</font> <i>(length=409)</i>
+</pre>Mon, 01 Oct 2018 12:48:38 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'In CrudOperation, tasks'</font> <i>(length=23)</i>
+</pre>Mon, 01 Oct 2018 12:48:38 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'In CrudOperation, tasks'</font> <i>(length=23)</i>
+</pre>Mon, 01 Oct 2018 12:49:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:49:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:50:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:50:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:51:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:51:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:52:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:52:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:53:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:53:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:54:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:54:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:55:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:55:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:56:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:56:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:57:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:57:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:58:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:58:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 12:58:58 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'In CrudOperation, settings'</font> <i>(length=26)</i>
+</pre>Mon, 01 Oct 2018 12:58:58 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'Getting Config:'</font> <i>(length=15)</i>
+</pre>Mon, 01 Oct 2018 12:58:58 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'Returning Config:'</font> <i>(length=17)</i>
+</pre>Mon, 01 Oct 2018 12:58:58 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'Got DB Con'</font> <i>(length=10)</i>
+</pre>Mon, 01 Oct 2018 12:58:58 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'{&quot;dbhost&quot;:&quot;localhost&quot;,&quot;dbport&quot;:&quot;3306&quot;,&quot;dbuser&quot;:&quot;pilot&quot;,&quot;dbpass&quot;:&quot;pilot123!&quot;,&quot;dbname&quot;:&quot;pilot&quot;,&quot;basedir&quot;:&quot;\/var\/www\/html\/pilot&quot;,&quot;unzip&quot;:&quot;\/bin\/unzip&quot;,&quot;perldoc&quot;:&quot;\/bin\/perldoc&quot;,&quot;php&quot;:&quot;\/bin\/php&quot;,&quot;curl&quot;:&quot;\/bin\/curl&quot;,&quot;weburl&quot;:&quot;https:\/\/secure.virtuops.com\/pilot&quot;,&quot;eslhost&quot;:&quot;192.99.232.129&quot;,&quot;eslport&quot;:&quot;9200&quot;,&quot;logfile&quot;:&quot;\/var\/www\/html\/pilot\/app\/logs\/main.log&quot;,&quot;ldaphost&quot;:&quot;&quot;,&quot;ldapport&quot;:&quot;0&quot;,&quot;ldapou&quot;:&quot;&quot;}'</font> <i>(length=409)</i>
+</pre>Mon, 01 Oct 2018 12:59:02 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 12:59:02 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 13:00:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 13:00:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 13:01:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 13:01:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 13:02:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 13:02:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 13:03:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+string(28) "WorkFlowScheduleRead PARAMS "
+Mon, 01 Oct 2018 13:03:01 +0000 /var/www/html/pilot/app/server/utils/Log.php:12:
+array(2) {
+  'wfuser' =>
+  string(5) "admin"
+  'wfpassword' =>
+  string(5) "admin"
+}
+Mon, 01 Oct 2018 13:03:20 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'In CrudOperation, settings'</font> <i>(length=26)</i>
+</pre>Mon, 01 Oct 2018 13:03:20 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'Getting Config:'</font> <i>(length=15)</i>
+</pre>Mon, 01 Oct 2018 13:03:20 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'Returning Config:'</font> <i>(length=17)</i>
+</pre>Mon, 01 Oct 2018 13:03:20 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'Got DB Con'</font> <i>(length=10)</i>
+</pre>Mon, 01 Oct 2018 13:03:20 +0000 <pre class='xdebug-var-dump' dir='ltr'>
+<small>/var/www/html/pilot/app/server/utils/Log.php:12:</small><small>string</small> <font color='#cc0000'>'{&quot;dbhost&quot;:&quot;localhost&quot;,&quot;dbport&quot;:&quot;3306&quot;,&quot;dbuser&quot;:&quot;pilot&quot;,&quot;dbpass&quot;:&quot;pilot123!&quot;,&quot;dbname&quot;:&quot;pilot&quot;,&quot;basedir&quot;:&quot;\/var\/www\/html\/pilot&quot;,&quot;unzip&quot;:&quot;\/bin\/unzip&quot;,&quot;perldoc&quot;:&quot;\/bin\/perldoc&quot;,&quot;php&quot;:&quot;\/bin\/php&quot;,&quot;curl&quot;:&quot;\/bin\/curl&quot;,&quot;weburl&quot;:&quot;https:\/\/secure.virtuops.com\/pilot&quot;,&quot;eslhost&quot;:&quot;192.99.232.129&quot;,&quot;eslport&quot;:&quot;9200&quot;,&quot;logfile&quot;:&quot;\/var\/www\/html\/pilot\/app\/logs\/main.log&quot;,&quot;ldaphost&quot;:&quot;&quot;,&quot;ldapport&quot;:&quot;0&quot;,&quot;ldapou&quot;:&quot;&quot;}'</font> <i>(length=409)</i>
+</pre>
