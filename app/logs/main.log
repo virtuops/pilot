@@ -1,0 +1,7 @@
+Sat, 13 Oct 2018 16:38:01 +0000 string(28) "WorkFlowScheduleRead PARAMS "
+Sat, 13 Oct 2018 16:38:01 +0000 array(2) {
+  ["wfuser"]=>
+  string(5) "admin"
+  ["wfpassword"]=>
+  string(5) "admin"
+}

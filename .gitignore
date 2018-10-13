@@ -1,1 +1,1 @@
-app/logs/main.log
+app/logs/*.log
