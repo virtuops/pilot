@@ -1,6 +1,6 @@
 <?php
 
-require_once("libs/NocHeroTask.php");
+require_once("libs/PilotTask.php");
 require_once(__DIR__."/../admin/Settings.php");
 
 class RunTask
@@ -9,13 +9,13 @@ class RunTask
     {
 
         date_default_timezone_set('UTC');
-        $nochero = new NocHeroTask();
+        $pilot = new PilotTask();
         $s = new Settings();
         $settings = $s->getSettings();
         $con = $args['con'];
 
 
-        $nochero->log("... Starting nochero runtask");
+        $pilot->log("... Starting Pilot runtask");
 
         if (!$args) {
             $params = $_POST["params"];
@@ -28,20 +28,20 @@ class RunTask
 
         // Parse the params and taskdata to setup initial logging.
         if (!$taskdata)
-            $nochero->LogTaskEnd("Error", $output, "Invalid task specified.", $taskdata, $con);
+            $pilot->LogTaskEnd("Error", $output, "Invalid task specified.", $taskdata, $con);
 
         $filetorun = $taskdata['actionfilename'];
         $language = $taskdata['actionlanguage'];
 
         try {
             if (!$filetorun) {
-                $nochero->LogTaskStart(-1, $taskdata, $con);
-                $nochero->LogTaskEnd("Error", $output, "No task code specified to run.", $taskdata, $con);
+                $pilot->LogTaskStart(-1, $taskdata, $con);
+                $pilot->LogTaskEnd("Error", $output, "No task code specified to run.", $taskdata, $con);
              }
 
             else if (!$language) {
-                $nochero->LogTaskStart(-1, $taskdata, $con);
-                $nochero->LogTaskEnd("Error", $output, "No programming language defined for task task code.", $taskdata, $con);
+                $pilot->LogTaskStart(-1, $taskdata, $con);
+                $pilot->LogTaskEnd("Error", $output, "No programming language defined for task task code.", $taskdata, $con);
              }
 
             // Process the task.
@@ -87,7 +87,7 @@ class RunTask
                 $proc_information = proc_get_status($process);
                 $pid = $proc_information['pid'];
 
-                $nochero->LogTaskStart($pid, $taskdata, $con);
+                $pilot->LogTaskStart($pid, $taskdata, $con);
 
                 // Read the stderr and stdout file descriptors directly.
                 $stdout = stream_get_contents($pipes[1]);
@@ -108,13 +108,13 @@ class RunTask
                 }
 
                 if ($exit === 0)
-                    $nochero->log("\n\nsuccess, exit is $exit\n");
+                    $pilot->log("\n\nsuccess, exit is $exit\n");
                 else
-                $nochero->log("\n\nfailure, exit is $exit\n");
-                $nochero->log("output is ".json_encode($stdout)."\nerror is ".json_encode($stderr)."\n\n");
+                $pilot->log("\n\nfailure, exit is $exit\n");
+                $pilot->log("output is ".json_encode($stdout)."\nerror is ".json_encode($stderr)."\n\n");
 
                 $taskdata['taskstate'] = 'after';
-                $nochero->LogTaskEnd($exit, $stdout, $stderr, $taskdata, $con);
+                $pilot->LogTaskEnd($exit, $stdout, $stderr, $taskdata, $con);
 
                 echo $taskserial."\n";
                 echo $stdout;
@@ -123,7 +123,7 @@ class RunTask
             }
 
         } catch (Exception $e) {
-            $nochero->LogTaskEnd("Error", '', $e->getMessage(), $taskdata, $con);
+            $pilot->LogTaskEnd("Error", '', $e->getMessage(), $taskdata, $con);
         }
     }
 

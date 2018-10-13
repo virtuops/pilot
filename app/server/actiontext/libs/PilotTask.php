@@ -3,7 +3,7 @@
 require_once __DIR__.'/../../admin/TaskLogCrud.php';
 require_once __DIR__.'/../../utils/Log.php';
 
-Class NocHeroTask {
+Class PilotTask {
 
         private $l;
         private $s;

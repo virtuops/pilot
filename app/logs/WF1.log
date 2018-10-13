@@ -1,0 +1,35 @@
+Fri, 12 Oct 2018 14:27:30 +0000 string(290) "... received workflow_run, params are wfuser='admin', wfpassword='admin', workflowname='WF1', wfv='{"name":"blah","email":"blah@blah.com","company":"mycorp","street":"blah","city":"blah","state":"lah","zipcode":"blah","phonenumber":"blah","question":"question"}', taskmeta='""', wfmeta='""'"
+Fri, 12 Oct 2018 14:27:30 +0000 string(39) "... running workflow workflowname='WF1'"
+Fri, 12 Oct 2018 14:27:30 +0000 string(366) "WORKFLOWEXECUTE FIRING /bin/curl -s -X POST -H "Content-Type: application/json" -u "admin:admin" -d'{"runbook":"WFTasks","wfname":"WF1","username":"admin","taskname":"VP Write To File","taskmetadata":"","params":{
+"filename":"/var/www/html/pilot/tmp/files/cooloutput.txt",
+"data":"mycorp"
+}
+}' https://secure.virtuops.com/pilot/app/server/api/index.php/task_run 2>&1"
+Fri, 12 Oct 2018 14:27:30 +0000 string(99) "PARAMS API ARE '{"filename":"\/var\/www\/html\/pilot\/tmp\/files\/cooloutput.txt","data":"mycorp"}'"
+Fri, 12 Oct 2018 14:27:30 +0000 string(191) "... received task_run, params are runbook='WFTasks', taskname='VP Write To File', username='admin', params='{"filename":"\/var\/www\/html\/pilot\/tmp\/files\/cooloutput.txt","data":"mycorp"}'"
+Fri, 12 Oct 2018 14:27:30 +0000 string(6) "WFV IS"
+Fri, 12 Oct 2018 14:27:30 +0000 object(stdClass)#14 (10) {
+  ["name"]=>
+  string(4) "blah"
+  ["email"]=>
+  string(13) "blah@blah.com"
+  ["company"]=>
+  string(6) "mycorp"
+  ["street"]=>
+  string(4) "blah"
+  ["city"]=>
+  string(4) "blah"
+  ["state"]=>
+  string(3) "lah"
+  ["zipcode"]=>
+  string(4) "blah"
+  ["phonenumber"]=>
+  string(4) "blah"
+  ["question"]=>
+  string(8) "question"
+  ["status"]=>
+  string(5) "saved"
+}
+Fri, 12 Oct 2018 14:27:30 +0000 string(38) "START WORKFLOW TIME IS 1539354450.5403"
+Fri, 12 Oct 2018 14:27:30 +0000 string(37) "STOP WORKFLOW TIME IS 1539354450.9989"
+Fri, 12 Oct 2018 14:27:30 +0000 string(39) "TOTAL WORKFLOW TIME IS 0.45863795280457"
